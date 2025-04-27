@@ -77,7 +77,7 @@ function LoginForm() {
       {showAlert && (<AlertPro variant={alert.variant} tittle={alert.tittle} body={alert.body} duration={alert.duration} />)}
         <div className='flex flex-col gap-2'>
           <label htmlFor="user" className="font-semibold  text-2xl flex-grow text-left">Usuario</label>
-          <input onChange={handlechange} name="user" required className='border border-black rounded-xl w-full py-3 px-3 text-xl' type="text" placeholder='Ingrese su número de usuario' autoFocus />
+          <input onChange={handlechange} pattern="[0-9]+" name="user" required className='border border-black rounded-xl w-full py-3 px-3 text-xl' type="text" placeholder='Ingrese su número de usuario' autoFocus />
         </div>
         <div className='flex flex-col gap-2'>
           <label htmlFor="user" className="font-semibold text-2xl flex-grow text-left">Contraseña</label>

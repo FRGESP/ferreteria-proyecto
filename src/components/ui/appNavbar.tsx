@@ -8,7 +8,7 @@ async function AppNavbar() {
       <SidebarTrigger className="ml-4" />
       <div className="ml-auto mr-10 flex items-center ">
         <p className="text-xl mr-3 font-bold">{`${session.name} ${session.lastname}`}</p>
-        <img src="/assets/Almacen/Usuario.png" alt="" className="w-10"/>
+        <img src="/assets/login/Usuario.png" alt="" className="w-10"/>
       </div>
     </div>
   );

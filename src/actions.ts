@@ -50,7 +50,7 @@ export const roles = async () => {
             redirect("/users/cajero");
             break;
         case 3:
-            redirect("/users/administrador");
+            redirect("/users/administrador/empleados");
             break;
         default:
             console.log("No se encontró el rol");
