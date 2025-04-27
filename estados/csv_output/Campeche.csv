@@ -1,0 +1,1292 @@
+d_codigo,d_asenta,d_tipo_asenta,D_mnpio,d_estado,d_ciudad,d_CP,c_estado,c_oficina,c_CP,c_tipo_asenta,c_mnpio,id_asenta_cpcons,d_zona,c_cve_ciudad
+24000,San Francisco de Campeche Centro,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1,Urbano,1.0
+24010,Guadalupe,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,9,Urbano,1.0
+24010,Pablo Garcia,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,10,Urbano,1.0
+24010,San Francisco,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,11,Urbano,1.0
+24010,Villa del Río,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,13,Urbano,1.0
+24010,Guadalupe,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,532,Urbano,1.0
+24014,Ah-kim-pech,Zona comercial,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,33,2,533,Urbano,1.0
+24020,Residencial del Bosque,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,4,Urbano,1.0
+24020,Bellavista,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,16,Urbano,1.0
+24020,Ampliación Bellavista,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,17,Urbano,1.0
+24020,Emiliano Zapata,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,18,Urbano,1.0
+24020,La Ermita,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,19,Urbano,1.0
+24020,San Joaquín,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,20,Urbano,1.0
+24020,Santa Lucia,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,21,Urbano,1.0
+24020,Camino Real,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,534,Urbano,1.0
+24020,Benito Juárez,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,535,Urbano,1.0
+24020,Buenos Aires,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,536,Urbano,1.0
+24020,San Caralampio,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,537,Urbano,1.0
+24020,Dzarbay,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,538,Urbano,1.0
+24020,Sotavento,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1066,Urbano,1.0
+24020,Villamar,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1170,Urbano,1.0
+24022,Montecarlo,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,35,Urbano,1.0
+24022,Carzabela,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,102,Urbano,1.0
+24023,Fidel Velázquez,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,23,Urbano,1.0
+24023,Las Murallas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,30,Urbano,1.0
+24023,Residencial Algarrobo,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,54,Urbano,1.0
+24023,Ernesto Zedillo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,539,Urbano,1.0
+24023,Residencial Campestre,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1021,Urbano,1.0
+24023,Nachi Cocom,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1059,Urbano,1.0
+24023,Quinta Hermosa,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1159,Urbano,1.0
+24023,Hacienda Real el Fenix,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1160,Urbano,1.0
+24024,Mártires de Río Blanco,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,24,Urbano,1.0
+24025,Solidaridad Nacional,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,26,Urbano,1.0
+24025,Paseo de los Sauces,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,119,Urbano,1.0
+24026,Granjas,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,28,Urbano,1.0
+24026,Morelos,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,29,Urbano,1.0
+24026,San José el Alto,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,32,Urbano,1.0
+24026,Divino Niño,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,100,Urbano,1.0
+24026,Minas,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,541,Urbano,1.0
+24026,Cumbres,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,542,Urbano,1.0
+24026,Valle Dorado,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,543,Urbano,1.0
+24026,Ampliación Josefa Ortiz de Domínguez,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,544,Urbano,1.0
+24026,Mirador,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,545,Urbano,1.0
+24026,Elvia María Pérez de González,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1013,Urbano,1.0
+24026,Viveros,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1051,Urbano,1.0
+24026,Diana Laura,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1063,Urbano,1.0
+24026,Luis Donaldo Colosio,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1064,Urbano,1.0
+24026,Palma Real,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1272,Urbano,1.0
+24027,Palmas,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,33,Urbano,1.0
+24027,San Miguel,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,715,Urbano,1.0
+24027,Villa Mercedes,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,716,Urbano,1.0
+24028,Villas de Ah-kim-Pech,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,36,Urbano,1.0
+24028,Cocotero de las Palmas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1067,Urbano,1.0
+24029,Centro SCT Campeche,Equipamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,17,2,37,Urbano,1.0
+24030,Bosques de Campeche,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,38,Urbano,1.0
+24030,Héroes de Chapultepec (FOVI),Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,40,Urbano,1.0
+24030,Resurgimiento,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,116,Urbano,1.0
+24030,CEDAR Campeche,Equipamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,17,2,118,Urbano,1.0
+24030,Residencial Campeche Hills,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,120,Urbano,1.0
+24030,Miramar,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,547,Urbano,1.0
+24030,Lomas del Castillo,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,548,Urbano,1.0
+24030,Villas Universidad,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1006,Urbano,1.0
+24035,Lomas del Rey,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,27,Urbano,1.0
+24035,Villas de Allende,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,109,Urbano,1.0
+24035,San Cayetano,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,549,Urbano,1.0
+24035,San Arturo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,550,Urbano,1.0
+24035,Burócratas Pensiones,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,551,Urbano,1.0
+24035,Cerro de La Eminencia,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,552,Urbano,1.0
+24035,Vicente Guerrero,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,553,Urbano,1.0
+24035,Prado,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,554,Urbano,1.0
+24035,Lomas del Pedregal,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,1054,Urbano,1.0
+24035,Residencial Pedregal,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1069,Urbano,1.0
+24035,Invasión San Arturo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1077,Urbano,1.0
+24036,Adolfo López Mateos (SUTERM),Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,42,Urbano,1.0
+24036,El Pedregal,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,110,Urbano,1.0
+24036,Electricistas,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,111,Urbano,1.0
+24037,Ciudad Militar,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,43,Urbano,1.0
+24038,Kanisté,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,44,Urbano,1.0
+24038,Kaniste,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,555,Urbano,1.0
+24038,Rinconada del Valle,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,556,Urbano,1.0
+24038,Monte Verde,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1296,Urbano,1.0
+24039,Buenavista,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,45,Urbano,1.0
+24040,San José,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,46,Urbano,1.0
+24040,San Román,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,47,Urbano,1.0
+24040,Privada Narciso Mendoza,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1031,Urbano,1.0
+24044,Montecristo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,557,Urbano,1.0
+24044,Lazareto,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,558,Urbano,1.0
+24044,Residencial Resurgimiento,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1078,Urbano,1.0
+24049,Bicentenario I y II,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,49,Urbano,1.0
+24050,FOVISSSTE Belén,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,50,Urbano,1.0
+24050,Santa Ana,Barrio,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,2,2,52,Urbano,1.0
+24050,Villa Tulipanes,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,112,Urbano,1.0
+24050,San Juan,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,114,Urbano,1.0
+24050,La Paz,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,559,Urbano,1.0
+24050,La Huerta,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,560,Urbano,1.0
+24050,Parque Residencial La Noria,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,561,Urbano,1.0
+24050,Privada Guadalupana,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,562,Urbano,1.0
+24050,Hollywood,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,563,Urbano,1.0
+24050,Campeche 1,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1048,Urbano,1.0
+24050,Santa Ana,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1061,Urbano,1.0
+24058,Caribe,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,53,Urbano,1.0
+24060,Valle del Águila,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,25,Urbano,1.0
+24060,El Polvorín,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,55,Urbano,1.0
+24060,Ampliación Polvorín,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,56,Urbano,1.0
+24060,Jardines,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,57,Urbano,1.0
+24060,Tomas Aznar,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,60,Urbano,1.0
+24060,Sector Las Flores,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,101,Urbano,1.0
+24060,Residencial Bugambilias,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,565,Urbano,1.0
+24060,Tabachines,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,566,Urbano,1.0
+24060,Lomas del Polvorín,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,567,Urbano,1.0
+24060,Leovigildo Gómez,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,568,Urbano,1.0
+24060,Unidad y Esperanza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,569,Urbano,1.0
+24060,Solidaridad Urbana,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,570,Urbano,1.0
+24060,Lomas de las Flores,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,571,Urbano,1.0
+24060,Montebello,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,572,Urbano,1.0
+24060,Naval Campeche III,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,573,Urbano,1.0
+24060,Residencial Delicias,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1009,Urbano,1.0
+24060,Lomas Delicias,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1010,Urbano,1.0
+24060,Lomas,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1011,Urbano,1.0
+24060,Las Quintas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1044,Urbano,1.0
+24060,Colinas del Sur,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1045,Urbano,1.0
+24060,Casa Blanca,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1047,Urbano,1.0
+24060,Altavista,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1065,Urbano,1.0
+24060,Lomas de las Flores II,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1079,Urbano,1.0
+24060,Villas de Monte Real,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1211,Urbano,1.0
+24060,Tacubaya,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1274,Urbano,1.0
+24060,Villareal,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1275,Urbano,1.0
+24069,Flor de Limón,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,63,Urbano,1.0
+24070,Aviación,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,64,Urbano,1.0
+24070,Cuatro Caminos,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,65,Urbano,1.0
+24070,Ampliación Cuatro Caminos,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,66,Urbano,1.0
+24070,Huanal,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,67,Urbano,1.0
+24070,Justo Sierra Méndez,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,68,Urbano,1.0
+24070,Santa Bárbara,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,69,Urbano,1.0
+24070,Cuatro Caminos,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,103,Urbano,1.0
+24070,Bello Horizonte,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,574,Urbano,1.0
+24070,Héroe de Nacozari,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,575,Urbano,1.0
+24070,Hacienda Santa María,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,576,Urbano,1.0
+24070,Colonia México,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,578,Urbano,1.0
+24070,Justicia Social,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,717,Urbano,1.0
+24070,Quinta de Los Españoles,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1171,Urbano,1.0
+24073,Siglo XXI,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1018,Urbano,1.0
+24075,El Carmelo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,70,Urbano,1.0
+24079,Campeche (Ing. Alberto Acuña Ongay),Aeropuerto,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,1,2,71,Urbano,1.0
+24080,Esperanza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,72,Urbano,1.0
+24080,Ampliación Esperanza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,73,Urbano,1.0
+24080,Pablo Garcia,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,74,Urbano,1.0
+24080,Revolución,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,75,Urbano,1.0
+24080,Ampliación Revolución,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,76,Urbano,1.0
+24080,Josefa Ortiz de Domínguez,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,579,Urbano,1.0
+24080,Ampliación Invasión Esperanza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1007,Urbano,1.0
+24080,Emiliano Zapata,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1169,Urbano,1.0
+24083,Fátima,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,77,Urbano,1.0
+24084,Siglo XXIII,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,31,Urbano,1.0
+24084,Nuevo San Antonio Ebulá,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,59,Urbano,1.0
+24085,Villas de Kala,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,5,Urbano,1.0
+24085,Altamira,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,22,Urbano,1.0
+24085,Ciudad Concordia,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,79,Urbano,1.0
+24085,Bosque Real,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,113,Urbano,1.0
+24085,Kala,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,580,Urbano,1.0
+24085,Ramón Espíndola Blanco,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,947,Urbano,1.0
+24085,Murallas FSTSE,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1008,Urbano,1.0
+24085,Residencial La Hacienda,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1049,Urbano,1.0
+24085,Ampliación Ciudad Concordia,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1050,Urbano,1.0
+24085,Invasión Esperanza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1060,Urbano,1.0
+24085,20 de Noviembre,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1062,Urbano,1.0
+24086,Villa Flora,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,106,Urbano,1.0
+24086,Santa Lucía,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,117,Urbano,1.0
+24086,Villa Turquesa,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1052,Urbano,1.0
+24087,Los Reyes,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,3,Urbano,1.0
+24087,Eduardo J. Lavalle Urbina,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,81,Urbano,1.0
+24087,Privada Exhacienda Kala,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,583,Urbano,1.0
+24087,Colonial Campeche,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,584,Urbano,1.0
+24087,Caminero,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,586,Urbano,1.0
+24087,Ampliación Kala,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,587,Urbano,1.0
+24087,Hacienda San Antonio,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1012,Urbano,1.0
+24087,Tula,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1022,Urbano,1.0
+24087,Vista Hermosa,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1025,Urbano,1.0
+24087,Privada Residencial Colonial,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1026,Urbano,1.0
+24087,Terranova,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1267,Urbano,1.0
+24088,Alameda,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,12,Urbano,1.0
+24088,Las Arboledas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,14,Urbano,1.0
+24088,Héroes de la Revolución,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,78,Urbano,1.0
+24088,Unidad y Trabajo Plan-chac,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,82,Urbano,1.0
+24088,Villa Naranjos,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,104,Urbano,1.0
+24088,Fénix,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,589,Urbano,1.0
+24088,Presidentes de México,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,590,Urbano,1.0
+24088,Paseo de Campeche,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,591,Urbano,1.0
+24088,Los Cedros,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1014,Urbano,1.0
+24088,Guadalupe Victoria,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1019,Urbano,1.0
+24088,VIVAH,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1020,Urbano,1.0
+24088,Villas la Hacienda,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1162,Urbano,1.0
+24088,El Vergel,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1261,Urbano,1.0
+24088,Los Álamos,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1271,Urbano,1.0
+24088,Reforma,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1299,Urbano,1.0
+24088,Colonia,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1300,Urbano,1.0
+24088,Insurgentes,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1301,Urbano,1.0
+24088,Independencia,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1302,Urbano,1.0
+24089,Peña,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,83,Urbano,1.0
+24090,Fracciorama 2000,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,84,Urbano,1.0
+24090,Samulá,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,85,Urbano,1.0
+24090,San Rafael,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,86,Urbano,1.0
+24090,Valle del Sol,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,87,Urbano,1.0
+24090,Residencial Villas Colosio,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,108,Urbano,1.0
+24090,Villas Residencial,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,115,Urbano,1.0
+24090,Nueva Era,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,592,Urbano,1.0
+24090,Los Sauces,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,593,Urbano,1.0
+24090,Villas de Samula,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,720,Urbano,1.0
+24090,La Vista,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,721,Urbano,1.0
+24090,Ampliación San Rafael,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1055,Urbano,1.0
+24090,Rinconada Samula,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1072,Urbano,1.0
+24090,Infonavit Samula,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1163,Urbano,1.0
+24090,Las Campanillas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1164,Urbano,1.0
+24090,Flor de Liz,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1165,Urbano,1.0
+24090,San Andrés,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1166,Urbano,1.0
+24090,Girasoles,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1167,Urbano,1.0
+24090,Villa Jazmín,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1212,Urbano,1.0
+24093,Villas Residencial (Ix-Lol-Be),Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,88,Urbano,1.0
+24093,Residencial La Arboleda,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1266,Urbano,1.0
+24094,Miguel Hidalgo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,89,Urbano,1.0
+24094,Ampliación Miguel Hidalgo,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,90,Urbano,1.0
+24094,La Cañada,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,105,Urbano,1.0
+24094,Ampliación Ignacio Zaragoza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,594,Urbano,1.0
+24094,Ampliación Samulá,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,595,Urbano,1.0
+24094,Miramar,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,596,Urbano,1.0
+24094,Villa Laureles II,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1029,Urbano,1.0
+24094,Esmeralda,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1297,Urbano,1.0
+24095,Residencial los Almendros,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,2,Urbano,1.0
+24095,Sascalum,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,91,Urbano,1.0
+24095,Residencial San Francisco,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,96,Urbano,1.0
+24095,Lázaro Cárdenas,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,598,Urbano,1.0
+24095,Reforma Agraria,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,599,Urbano,1.0
+24095,Villa Laureles,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1015,Urbano,1.0
+24095,Multunchac,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1027,Urbano,1.0
+24095,Villa Dalias,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1030,Urbano,1.0
+24095,18 de Marzo,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1176,Urbano,1.0
+24095,El Doral,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1289,Urbano,1.0
+24096,Lindavista C.T.M.,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,92,Urbano,1.0
+24096,Los Laureles,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,600,Urbano,1.0
+24096,Tepeyac,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,603,Urbano,1.0
+24096,Guadalajara,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1028,Urbano,1.0
+24097,Las Flores,Unidad habitacional,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,31,2,94,Urbano,1.0
+24097,Las Rosas,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,601,Urbano,1.0
+24097,Bugambilias,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,718,Urbano,1.0
+24097,Santa Cecilia,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,719,Urbano,1.0
+24098,Ignacio Zaragoza,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,97,Urbano,1.0
+24098,Lomas de Zaragoza,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,602,Urbano,1.0
+24099,Lomas de San Rafael,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,98,Urbano,1.0
+24099,San Antonio,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,99,Urbano,1.0
+24099,San Rafael,Fraccionamiento,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,21,2,1016,Urbano,1.0
+24099,Ampliación San Antonio,Colonia,Campeche,Campeche,San Francisco de Campeche,24003,4,24003,,9,2,1053,Urbano,1.0
+24100,Ciudad del Carmen Centro,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,100,Urbano,2.0
+24108,CERESO Ciudad del Carmen,Equipamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,17,3,102,Urbano,2.0
+24110,Caleta,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,104,Urbano,2.0
+24110,Héctor Pérez Martínez,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,105,Urbano,2.0
+24110,Fátima,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,106,Urbano,2.0
+24110,1 de Mayo (Playón),Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,108,Urbano,2.0
+24110,San Agustin del Palmar,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,747,Urbano,2.0
+24114,Justo Sierra,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,109,Urbano,2.0
+24115,Marina del Rey,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,111,Urbano,2.0
+24115,Morelos,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,112,Urbano,2.0
+24115,Miami,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,740,Urbano,2.0
+24115,Monte Bello,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,741,Urbano,2.0
+24115,Playa Norte,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,743,Urbano,2.0
+24116,San Carlos,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,113,Urbano,2.0
+24116,Boquerón del Palmar,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,957,Urbano,2.0
+24117,Obrera,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,115,Urbano,2.0
+24118,San Nicolás,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,116,Urbano,2.0
+24119,Ciudad del Carmen (Ciudad del Carmen),Aeropuerto,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,1,3,117,Urbano,2.0
+24119,Aeropuerto,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,727,Urbano,2.0
+24120,Electricistas,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,118,Urbano,2.0
+24120,Revolución,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,119,Urbano,2.0
+24120,Santa Margarita,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,120,Urbano,2.0
+24129,Puerto Pesquero,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,121,Urbano,2.0
+24130,Guadalupe,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,122,Urbano,2.0
+24130,San Miguel,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,123,Urbano,2.0
+24130,20 de Noviembre,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,124,Urbano,2.0
+24139,Guanal,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,125,Urbano,2.0
+24139,Puntilla,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,126,Urbano,2.0
+24140,Pallas,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,127,Urbano,2.0
+24150,Belisario Domínguez,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,128,Urbano,2.0
+24150,Luis Donaldo Colosio,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,737,Urbano,2.0
+24150,La Rivera,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1038,Urbano,2.0
+24153,Residencial Las Palmas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1,Urbano,2.0
+24153,Mundo Maya,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1157,Urbano,2.0
+24154,Arcila,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,728,Urbano,2.0
+24154,Compositores,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,729,Urbano,2.0
+24154,Isla del Carmen 2000,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,734,Urbano,2.0
+24154,Los Arcos,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,735,Urbano,2.0
+24154,Maderas,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,738,Urbano,2.0
+24154,Perla del Golfo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,742,Urbano,2.0
+24154,Puente de La Unidad,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,745,Urbano,2.0
+24154,San Francisco,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,748,Urbano,2.0
+24154,San Manuel,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,750,Urbano,2.0
+24154,Rafael del J Lozano Contreras,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,960,Urbano,2.0
+24154,Pueblo Maya,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1043,Urbano,2.0
+24154,Palmira,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1150,Urbano,2.0
+24154,Los Ríos,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1151,Urbano,2.0
+24155,Renovación I,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,129,Urbano,2.0
+24155,Renovación II,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,130,Urbano,2.0
+24155,23 de Julio,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,726,Urbano,2.0
+24155,Plutarco Elías Calles,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,744,Urbano,2.0
+24155,Solidaridad Urbana,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,754,Urbano,2.0
+24155,Volcanes,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,757,Urbano,2.0
+24155,Renovación III,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1036,Urbano,2.0
+24155,Isla de Tris,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1037,Urbano,2.0
+24155,Villa San José,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1133,Urbano,2.0
+24155,Villa Universitaria,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1134,Urbano,2.0
+24155,Villa Conejo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1135,Urbano,2.0
+24155,Bugambilias,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1138,Urbano,2.0
+24155,San Capistrano,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1153,Urbano,2.0
+24155,Santa Mónica,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1154,Urbano,2.0
+24155,Villas de Santa Ana,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1295,Urbano,2.0
+24156,Residencial El Cielo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,24,Urbano,2.0
+24156,Puerta de Hierro,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1139,Urbano,2.0
+24156,El Dorado,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1141,Urbano,2.0
+24156,Villa del Mar,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1142,Urbano,2.0
+24156,Villa Florencia,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1143,Urbano,2.0
+24156,Villa de Los Ángeles,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1144,Urbano,2.0
+24156,Villa Encantada,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1145,Urbano,2.0
+24156,Mediterráneo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1147,Urbano,2.0
+24157,Buenavista,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,3,Urbano,2.0
+24157,Turquesa,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,4,Urbano,2.0
+24157,Rinconada,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,6,Urbano,2.0
+24157,Residencial Vistancias,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,7,Urbano,2.0
+24157,Club Residencial Azul,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,11,Urbano,2.0
+24157,Mar Azul,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,14,Urbano,2.0
+24157,Bicentenario,Unidad habitacional,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,31,3,15,Urbano,2.0
+24157,Paseo de los Bosques,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,23,Urbano,2.0
+24157,San Joaquín,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,25,Urbano,2.0
+24157,Puesta del Sol,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,131,Urbano,2.0
+24157,San Joaquín,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,749,Urbano,2.0
+24157,Santa Isabel,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,751,Urbano,2.0
+24157,Residencial San Miguel,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,959,Urbano,2.0
+24157,Privada Santa Ana,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,969,Urbano,2.0
+24157,Privada San Joaquín,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,970,Urbano,2.0
+24157,Playa Palmas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1042,Urbano,2.0
+24157,Las Esperanzas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1080,Urbano,2.0
+24157,Real del Carmen,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1081,Urbano,2.0
+24157,Hacienda Dorada,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1125,Urbano,2.0
+24157,Girasoles,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1126,Urbano,2.0
+24157,Raíces,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1127,Urbano,2.0
+24157,Villas del Carmen,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1128,Urbano,2.0
+24157,Villa Magna,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1129,Urbano,2.0
+24157,Villa Marina,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1130,Urbano,2.0
+24157,Misión del Carmen,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1131,Urbano,2.0
+24157,Reforma II Sección,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1136,Urbano,2.0
+24157,La Esperanza,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1155,Urbano,2.0
+24157,Evergreén,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1156,Urbano,2.0
+24157,José Ortiz Ávila,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1172,Urbano,2.0
+24157,Hacienda del Mar,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1252,Urbano,2.0
+24157,San Román,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1255,Urbano,2.0
+24157,Canterías,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1270,Urbano,2.0
+24157,Villa Palmeras,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1281,Urbano,2.0
+24157,18 de Marzo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1287,Urbano,2.0
+24157,Privanzas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1288,Urbano,2.0
+24158,Orizaba,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,2,Urbano,2.0
+24158,Constelaciones,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,22,Urbano,2.0
+24158,Bivalbo,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,132,Urbano,2.0
+24158,Héroes de Nacozari,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,731,Urbano,2.0
+24158,Reforma,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,733,Urbano,2.0
+24158,Residencial del Lago,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,746,Urbano,2.0
+24158,Santa Rita,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,752,Urbano,2.0
+24158,Las Huertas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1040,Urbano,2.0
+24158,Mujeres Carmelitas,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1041,Urbano,2.0
+24158,El Potrero,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1269,Urbano,2.0
+24158,Constelaciones II,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,1294,Urbano,2.0
+24160,Burócrata,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,133,Urbano,2.0
+24166,Justo Sierra,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,135,Urbano,2.0
+24167,Lomas de Holche,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,136,Urbano,2.0
+24169,Camaroneros,Fraccionamiento,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,21,3,138,Urbano,2.0
+24169,Asa Poniente,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1254,Urbano,2.0
+24170,Aviación,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,139,Urbano,2.0
+24170,Cuauhtémoc,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,730,Urbano,2.0
+24170,Tila,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,755,Urbano,2.0
+24178,Tecolutla,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,140,Urbano,2.0
+24179,Petrolera,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,141,Urbano,2.0
+24180,Benito Juárez,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,142,Urbano,2.0
+24180,Benito Juárez 2,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,143,Urbano,2.0
+24180,Limonar,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,144,Urbano,2.0
+24180,Tacubaya,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,146,Urbano,2.0
+24185,Estrella,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,147,Urbano,2.0
+24186,Miguel de La Madrid,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,148,Urbano,2.0
+24187,Manigua,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,149,Urbano,2.0
+24188,Caracol,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,150,Urbano,2.0
+24189,Salitral,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,151,Urbano,2.0
+24190,Francisco I Madero,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,152,Urbano,2.0
+24195,Pedro Sainz de Baranda,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,153,Urbano,2.0
+24195,Las Pilas,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1039,Urbano,2.0
+24197,Insurgentes,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,154,Urbano,2.0
+24197,Malibrán,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,739,Urbano,2.0
+24197,Santa Rosalía,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,753,Urbano,2.0
+24197,Independencia,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,1035,Urbano,2.0
+24198,Emiliano Zapata,Colonia,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,9,3,155,Urbano,2.0
+24199,FOVISSSTE,Unidad habitacional,Carmen,Campeche,Ciudad del Carmen,24101,4,24101,,31,3,156,Urbano,2.0
+24200,Palizada Centro,Colonia,Palizada,Campeche,,86784,4,86784,,9,7,157,Rural,
+24200,Aviación,Colonia,Palizada,Campeche,,86784,4,86784,,9,7,723,Rural,
+24200,Justicia Social,Conjunto habitacional,Palizada,Campeche,,86784,4,86784,,12,7,724,Rural,
+24200,La Esperanza,Conjunto habitacional,Palizada,Campeche,,86784,4,86784,,12,7,725,Rural,
+24203,El Porvenir,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1230,Rural,
+24203,Lagón Dulce,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1233,Rural,
+24203,Puerto Arturo,Ejido,Palizada,Campeche,,86784,4,86784,,15,7,1282,Rural,
+24204,El Mangal,Pueblo,Palizada,Campeche,,86784,4,86784,,28,7,4,Rural,
+24204,Isla de San Isidro,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,10,Rural,
+24204,Rivera de la Viuda,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,21,Rural,
+24204,Ribera de la Corriente,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,165,Rural,
+24204,Tila,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,168,Rural,
+24204,Ribera San Eduardo,Pueblo,Palizada,Campeche,,86784,4,86784,,28,7,170,Rural,
+24204,Ribera Gómez,Pueblo,Palizada,Campeche,,86784,4,86784,,28,7,1263,Rural,
+24204,Las Bodegas,Ejido,Palizada,Campeche,,86784,4,86784,,15,7,1283,Rural,
+24205,Plan del Carmen,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,17,Rural,
+24205,Ribera del Playón,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,19,Rural,
+24205,San Agustín,Pueblo,Palizada,Campeche,,86784,4,86784,,28,7,22,Rural,
+24205,Alamilla,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,159,Rural,
+24205,San Juan,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,161,Rural,
+24205,Santa Isabel,Ejido,Palizada,Campeche,,86784,4,86784,,15,7,162,Rural,
+24205,Santa Cruz,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,163,Rural,
+24205,El Borbotón,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,166,Rural,
+24205,San Joaquín,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,167,Rural,
+24205,El Paraíso,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1234,Rural,
+24205,El Cuyo,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1235,Rural,
+24205,La Toza,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1237,Rural,
+24206,El Cuerno,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,3,Rural,
+24206,El Vergel,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,8,Rural,
+24206,La Envidia,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,12,Rural,
+24206,La Victoria,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,14,Rural,
+24206,San José,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,160,Rural,
+24206,Los Laureles,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,1231,Rural,
+24206,Santa Mónica (Santa Rita),Rancho,Palizada,Campeche,,86784,4,86784,,48,7,1236,Rural,
+24206,San Francisco,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1238,Rural,
+24206,Santa Elena,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1239,Rural,
+24206,Monterrey,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1241,Rural,
+24206,Paso de los Caballos,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1242,Rural,
+24207,Cronos,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1,Rural,
+24207,El Carmen (San Marcos),Rancho,Palizada,Campeche,,86784,4,86784,,48,7,2,Rural,
+24207,El Retiro,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,7,Rural,
+24207,Gardenias,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,9,Rural,
+24207,La Concepción,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,11,Rural,
+24207,La Guadalupe,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,13,Rural,
+24207,Mata del Chato,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,15,Rural,
+24207,Mata Larga,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,16,Rural,
+24207,Río Blanco,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,20,Rural,
+24207,San Carlos,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,23,Rural,
+24207,San Hilario,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,24,Rural,
+24207,Santa Rosa,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,27,Rural,
+24207,El Popistal,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,28,Rural,
+24207,Tumbo de la Montaña,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,224,Rural,
+24207,Santa Adelaida,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,227,Rural,
+24207,El Juncal,Ejido,Palizada,Campeche,,86784,4,86784,,15,7,1196,Rural,
+24207,Las Flores,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,1197,Rural,
+24207,San Antonio,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,1232,Rural,
+24207,San Ángel,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1243,Rural,
+24207,San Jorge,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1244,Rural,
+24207,La Nueva Esperanza,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1245,Rural,
+24207,La Candelaria,Ranchería,Palizada,Campeche,,86784,4,86784,,29,7,1246,Rural,
+24207,Villa Rosa,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,1247,Rural,
+24208,Ribera Boca Chica,Rancho,Palizada,Campeche,,86784,4,86784,,48,7,18,Rural,
+24300,Emiliano Zapata,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,17,Urbano,6.0
+24300,Nueva Emiliano Zapata,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,18,Urbano,6.0
+24300,El Paraíso,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,19,Urbano,6.0
+24300,Nueva,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,20,Urbano,6.0
+24300,Juan Pablo Cetina,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,21,Urbano,6.0
+24300,Sabancuy Centro,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,283,Rural,6.0
+24300,Benito Juárez,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,697,Urbano,6.0
+24300,Guadalupe,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,698,Urbano,6.0
+24300,Banco de Piedra,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,699,Urbano,6.0
+24300,Pénjamo,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,700,Urbano,6.0
+24300,Jabal,Colonia,Carmen,Campeche,Sabancuy,24401,4,24401,,9,3,701,Urbano,6.0
+24310,Oxcabal,Rancho,Carmen,Campeche,,24351,4,24351,,48,3,12,Rural,
+24310,Ignacio Gutiérrez,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,270,Rural,
+24310,Oxcabal,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,274,Rural,
+24310,San Antonio (Punta de Piedra),Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,891,Rural,
+24310,La Pita,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,941,Rural,
+24310,Anonal,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,943,Rural,
+24310,Calax,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,945,Rural,
+24313,General Abelardo L Rodriguez (el Jobal),Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,271,Rural,
+24313,Plan de Ayala,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,285,Rural,
+24313,Chic-bul,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,286,Rural,
+24313,Chekubul,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,287,Rural,
+24313,José María Pino Suárez,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,289,Rural,
+24313,Nicolás Bravo,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,291,Rural,
+24313,La Cristalina,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,295,Rural,
+24313,Independencia,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,296,Rural,
+24313,La Esperanza,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,921,Rural,
+24313,Colonia A López Mateos,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,922,Rural,
+24313,Santa Rosalía,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,937,Rural,
+24313,Los Manantiales,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,942,Rural,
+24313,Chivoja,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,944,Rural,
+24313,La Lupita,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,1082,Rural,
+24314,Las Delicias,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,255,Rural,
+24314,Enrique Rodriguez Cano,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,279,Rural,
+24314,18 de Marzo,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,758,Rural,
+24315,San Isidro,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,225,Rural,
+24315,Mamantel (Pancho Villa),Colonia,Carmen,Campeche,,24351,4,24351,,9,3,256,Rural,
+24315,Pital Nuevo,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,261,Rural,
+24315,Pital Viejo,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,262,Rural,
+24315,La Providencia,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,293,Rural,
+24315,Mamantel Viejo,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,924,Rural,
+24315,La Concepción,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,925,Rural,
+24316,Carlos Quinto,Rancho,Carmen,Campeche,,24351,4,24351,,48,3,8,Rural,
+24316,Nueva Chontalpa,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,187,Rural,
+24316,Felipe Ángeles,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,189,Rural,
+24316,Ojo de Agua,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,192,Rural,
+24316,El Encanto,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,199,Rural,
+24316,Quebranche,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,201,Rural,
+24316,Ignacio Zaragoza,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,263,Rural,
+24316,2 de Marzo,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,927,Rural,
+24316,San Jorge de Coyoc,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,928,Rural,
+24316,San Pablito Km. 59,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,929,Rural,
+24316,Las Cruces,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,930,Rural,
+24317,El Carmen,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,16,Rural,
+24317,La Estrella,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,172,Rural,
+24317,Sacrificio,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,173,Rural,
+24317,Conquista Campesina,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,185,Rural,
+24317,El Aguacatal,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,229,Rural,
+24317,Venustiano Carranza,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,232,Rural,
+24317,Cinco de Mayo,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,906,Rural,
+24317,El Triunfo,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,931,Rural,
+24317,Belisario Domínguez,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,932,Rural,
+24317,Allende Pejelagarto,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,933,Rural,
+24317,Centauro del Norte,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,934,Rural,
+24317,La Florida,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,935,Rural,
+24317,El Chinal,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,1210,Rural,
+24320,Bella Palizada,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,894,Rural,
+24320,Polvoxal,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,896,Rural,
+24320,María de La Luz,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,897,Rural,
+24322,Juan de la Cabada Vera,Colonia,Carmen,Campeche,,24351,4,24351,,9,3,26,Rural,
+24322,Arrozal,Pueblo,Carmen,Campeche,,24351,4,24351,,28,3,895,Rural,
+24322,San José (El Deshecho),Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,904,Rural,
+24323,Fernando Foglio Miramontes,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,899,Rural,
+24323,Murallas de Campeche,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,900,Rural,
+24323,Valle de Solidaridad,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,901,Rural,
+24323,Generalísimo Morelos,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,902,Rural,
+24323,Santa Rita,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,903,Rural,
+24323,El Mameyal,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,912,Rural,
+24323,El Refugio,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,914,Rural,
+24323,San José Marentes,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,1214,Rural,
+24324,El Popistal,Rancho,Carmen,Campeche,,24351,4,24351,,48,3,9,Rural,
+24324,El Zapote,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,223,Rural,
+24324,Paso San Juan,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,905,Rural,
+24324,Vista Alegre,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,915,Rural,
+24324,La Pimienta,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,916,Rural,
+24324,San Elpidio,Ranchería,Carmen,Campeche,,24351,4,24351,,29,3,917,Rural,
+24324,Tres Valles,Ejido,Carmen,Campeche,,24351,4,24351,,15,3,919,Rural,
+24325,Cantarell [Planta de Nitrógeno],Zona industrial,Carmen,Campeche,,24101,4,24101,,37,3,5,Rural,
+24325,Ribera de San Francisco,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,13,Rural,
+24325,San Antonio Cárdenas,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,299,Rural,
+24325,Emiliano Zapata,Ejido,Carmen,Campeche,,24101,4,24101,,15,3,302,Rural,
+24325,Nuevo Campechito,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,303,Rural,
+24325,Nuevo Progreso,Pueblo,Carmen,Campeche,,24101,4,24101,,28,3,304,Rural,
+24325,Ribera Media,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,876,Rural,
+24325,Ribera Alta,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,878,Rural,
+24325,El Pom,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,881,Rural,
+24325,La Esperanza,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,883,Rural,
+24326,Atasta,Pueblo,Carmen,Campeche,,24101,4,24101,,28,3,297,Rural,
+24326,San Salvador de los Cerrillos,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,298,Rural,
+24326,Puerto Rico,Ejido,Carmen,Campeche,,24101,4,24101,,15,3,301,Rural,
+24326,Punta Zacatal,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,882,Rural,
+24327,Reubicación,Colonia,Carmen,Campeche,,24101,4,24101,,9,3,10,Rural,
+24327,Isla Aguada Centro,Colonia,Carmen,Campeche,,24101,4,24101,,9,3,288,Rural,
+24327,Puerto Real,Rancho,Carmen,Campeche,,24101,4,24101,,48,3,292,Rural,
+24327,Boca Nueva,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,885,Rural,
+24327,La Lagartera,Ranchería,Carmen,Campeche,,24101,4,24101,,29,3,886,Rural,
+24330,Coahuilita,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,16,Rural,4.0
+24330,San Pablo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,85,Rural,
+24330,Candelaria Centro,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,171,Rural,4.0
+24330,Acalan,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,648,Rural,4.0
+24330,San Martín,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,649,Rural,4.0
+24330,Guanajuato,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,650,Rural,4.0
+24330,Independencia,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,651,Rural,4.0
+24330,Alejandría,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,652,Rural,4.0
+24330,Cuauhtémoc,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,654,Rural,4.0
+24330,San Isidro,Colonia,Candelaria,Campeche,Candelaria,24331,4,24331,,9,11,655,Rural,4.0
+24333,El Capulín,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,20,Rural,
+24333,El Sacrificio II,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,36,Rural,
+24333,Las Maravillas (Campo Menonita),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,60,Rural,
+24333,Pejelagarto II,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,74,Rural,
+24333,R-2007,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,75,Rural,
+24333,San Antonio,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,81,Rural,
+24333,Santo Domingo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,88,Rural,
+24333,Las Américas,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,98,Rural,
+24333,Vicente Lombardo Toledano,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,190,Rural,
+24333,La Nueva Lucha,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,198,Rural,
+24333,Nueva Rosita,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,203,Rural,
+24333,Pejelagarto,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,204,Rural,
+24333,Nueva Esperanza,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,210,Rural,
+24333,Miguel Alemán,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,211,Rural,
+24333,El Chilar,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,769,Rural,
+24333,La Fortuna,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,788,Rural,
+24333,La Unión,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,791,Rural,
+24333,El Pocito,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1194,Rural,
+24334,Hermanos Cruz,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,45,Rural,
+24334,La Calzada,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,47,Rural,
+24334,Nueva Esperanza,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,69,Rural,
+24334,Santo Domingo (El Cuyo),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,89,Rural,
+24334,Justo Sierra Méndez,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,213,Rural,
+24334,Lázaro Cárdenas,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,215,Rural,
+24334,El Ramonal,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,216,Rural,
+24334,Estrella del Sur,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,217,Rural,
+24334,Las Golondrinas,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,218,Rural,
+24334,El Tigre,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,220,Rural,
+24334,Pedro Baranda,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,242,Rural,
+24334,Nuevo Coahuila,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,246,Rural,
+24334,Monclova,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,249,Rural,
+24334,Miguel Hidalgo y Costilla,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,250,Rural,
+24334,Estado de México,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,251,Rural,
+24334,Esperanza,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,779,Rural,
+24334,Francisco I. Madero,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,781,Rural,
+24334,La Zanja (La Palma),Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,792,Rural,
+24334,Luinal,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,797,Rural,
+24335,El Treinta (Las Águilas),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,40,Rural,
+24335,San Miguel,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,84,Rural,
+24335,La Pelusa,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,178,Rural,
+24335,El Porvenir,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,226,Rural,
+24335,El Tintal,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,236,Rural,
+24335,El Mamey,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,240,Rural,
+24336,El Escondido,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,25,Rural,
+24336,El Esfuerzo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,26,Rural,
+24336,El Paso del Cuervo (El Cuervo),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,31,Rural,
+24336,El Ramonal II (Los Manguitos),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,34,Rural,
+24336,La Florida (El Cuatro),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,50,Rural,
+24336,La Florida Tres,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,51,Rural,
+24336,La Mojina,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,55,Rural,
+24336,Las Delicias,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,59,Rural,
+24336,Las Margaritas Dos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,61,Rural,
+24336,Los Jabines Uno,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,64,Rural,
+24336,Los Limones,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,65,Rural,
+24336,Rancho Alegre,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,77,Rural,
+24336,Rancho Alegre Tres,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,78,Rural,
+24336,San Antonio,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,80,Rural,
+24336,Tres Reyes,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,92,Rural,
+24336,Cuauhtémoc,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,234,Rural,
+24336,Paraíso Nuevo,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,235,Rural,
+24336,Pablo García,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,238,Rural,
+24336,El Suspiro,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,241,Rural,
+24336,El Naranjo,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,244,Rural,
+24336,El Machetazo,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,245,Rural,
+24336,California,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,247,Rural,
+24336,El Limón,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,248,Rural,
+24336,El Encanto,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,770,Rural,
+24336,El Piedral (El Muerto),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,775,Rural,
+24336,Las Campanas,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,785,Rural,
+24336,La Lucha,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,789,Rural,
+24336,Los Cuatro Hermanos,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,794,Rural,
+24336,San Lorenzo,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,801,Rural,
+24337,Santa Rita,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,5,Rural,
+24337,El Nuevo Ferrocarril,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,29,Rural,
+24337,El Otoño,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,30,Rural,
+24337,San Felipe,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,82,Rural,
+24337,Triunfo Dos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,93,Rural,
+24337,Triunfo Uno,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,94,Rural,
+24337,Corte Pajaral,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,219,Rural,
+24337,Venustiano Carranza,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,222,Rural,
+24337,La Amapola,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,784,Rural,
+24337,Las Palmitas,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,793,Rural,
+24338,El Borbonal,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,18,Rural,
+24338,La Isla del Esfuerzo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,54,Rural,
+24338,Champas Quemadas,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,95,Rural,
+24338,Benito Juárez Uno,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,196,Rural,
+24338,Primer Presidente de México (Guadalupe Victoria),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,202,Rural,
+24338,Vicente Guerrero,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,233,Rural,
+24338,General Francisco J. Mújica,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,782,Rural,
+24342,El Manantial,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,2,Rural,
+24342,El Carril,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,15,Rural,
+24342,El Diamante,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,23,Rural,
+24342,Ignacio Zaragoza (El Pulguero),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,33,Rural,
+24342,El Tablón,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,37,Rural,
+24342,Licenciado José Antonio González Curi,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,62,Rural,
+24342,Los Cardenales,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,63,Rural,
+24342,Las Maravillas (Nuevo Capricho),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,71,Rural,
+24342,Nuevo Progreso,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,72,Rural,
+24342,Río Caribe (Caribe),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,79,Rural,
+24342,San Cristóbal,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,96,Rural,
+24342,El Último Esfuerzo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,97,Rural,
+24342,Las Palmas,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,214,Rural,
+24342,Aguada Seca,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,760,Rural,
+24342,Sal Si Puedes,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,800,Rural,
+24342,Selva Negra,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,803,Rural,
+24342,Nuevo Comalcalco,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1277,Rural,
+24343,El Milagro,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,28,Rural,
+24343,Emiliano Zapata III,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,43,Rural,
+24343,Isla del Paraíso,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,46,Rural,
+24343,La Guadalupe,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,52,Rural,
+24343,Nueva Rosita II,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,70,Rural,
+24343,San Fernando,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,83,Rural,
+24343,San Román,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,86,Rural,
+24343,Tres Hermanos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,91,Rural,
+24343,San Rafael del Río Caribe,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,207,Rural,
+24343,Pablo Torres Burgos,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,208,Rural,
+24343,El Pedregal,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,230,Rural,
+24343,El Chinal,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,231,Rural,
+24343,La Olla,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,764,Rural,
+24343,El Marfil (Palo Alto),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,772,Rural,
+24343,Santa Lucía,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,802,Rural,
+24343,San José de las Montañas,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1279,Rural,
+24344,Tres de Mayo Tres,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,1,Rural,
+24344,Champas Quemadas,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,14,Rural,
+24344,El Calabozo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,19,Rural,
+24344,El Chechenal,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,22,Rural,
+24344,El Encanto,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,24,Rural,
+24344,El Fantasma (Los Chileros),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,27,Rural,
+24344,El Pimiental Dos,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,32,Rural,
+24344,La Esperancita,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,48,Rural,
+24344,Montecristo,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,66,Rural,
+24344,Naranjito,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,67,Rural,
+24344,Nuevo Tabasco,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,73,Rural,
+24344,San Juan,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,205,Rural,
+24344,Agua Azul,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1276,Rural,
+24345,Miguel de la Madrid (El Pañuelo),Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,3,Rural,
+24345,Balancancito,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,11,Rural,
+24345,El Cayuco,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,21,Rural,
+24345,El Taziztal,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,38,Rural,
+24345,Emiliano Zapata,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,42,Rural,
+24345,La Peregrina,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,56,Rural,
+24345,San Román,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,87,Rural,
+24345,Tres de Mayo Dos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,90,Rural,
+24345,La Misteriosa,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,195,Rural,
+24345,El Mirador Primero,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,774,Rural,
+24345,La Tómbola,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,790,Rural,
+24345,Los Pollos,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,795,Rural,
+24345,El Paraguas,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,799,Rural,
+24345,El Destino,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,1258,Rural,
+24346,Arroyo del Julubal,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,8,Rural,
+24346,Arroyo Veinticuatro de Mayo,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,10,Rural,
+24346,Balankax,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,12,Rural,
+24346,Blancas Mariposas,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,13,Rural,
+24346,Delicias I,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,17,Rural,
+24346,La Unión (Dos Arroyos),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,57,Rural,
+24346,Nego Eben-Ezer,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,68,Rural,
+24346,El Desengaño,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,174,Rural,
+24346,Alianza Productora,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,761,Rural,
+24346,Arroyo de Cuba,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,762,Rural,
+24346,Carlos Sansores Pérez (La Paz),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,765,Rural,
+24346,Solidaridad,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,804,Rural,
+24346,Tres Reyes,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,807,Rural,
+24346,San Dimas (Alianza II),Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1195,Rural,
+24346,Adolfo López Mateos,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1262,Rural,
+24346,Santa Rosa,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,1278,Rural,
+24347,El Tigre Dos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,39,Rural,
+24347,El Tulipán (El Imposible),Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,41,Rural,
+24347,Francisco Villa,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,44,Rural,
+24347,Rancho Alegre,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,76,Rural,
+24347,Santo Domingo,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,221,Rural,
+24347,San Miguel,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,239,Rural,
+24347,Flor de Chiapas,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,780,Rural,
+24347,Narcizo Mendoza,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,798,Rural,
+24347,Tenancingo,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,806,Rural,
+24347,Vicente Guerrero Número 2,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,808,Rural,
+24347,Nueva Delicias II,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,1257,Rural,
+24348,Laguna la Perdida,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,4,Rural,
+24348,Aguas Malas (Tres Cruces),Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,7,Rural,
+24348,Arroyo San Juan (Las Golondrinas),Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,9,Rural,
+24348,La Esperancita Dos,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,49,Rural,
+24348,La Ilusión,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,53,Rural,
+24348,Laguna San Ramón I,Rancho,Candelaria,Campeche,,24331,4,24331,,48,11,58,Rural,
+24348,Héctor Pérez Morales,Ejido,Candelaria,Campeche,,24331,4,24331,,15,11,206,Rural,
+24348,San Manuel Nuevo Canutillo,Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,209,Rural,
+24348,La Esmeralda,Ranchería,Candelaria,Campeche,,24331,4,24331,,29,11,212,Rural,
+24348,Ignacio Zaragoza (El Salvaje),Pueblo,Candelaria,Campeche,,24331,4,24331,,28,11,1259,Rural,
+24350,Escárcega Centro,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,252,Urbano,5.0
+24350,Emiliano Zapata,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,619,Urbano,5.0
+24350,Fátima,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,620,Urbano,5.0
+24350,Sal Si Puedes II,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,621,Urbano,5.0
+24350,Benito Juárez,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,622,Urbano,5.0
+24350,Sal Si Puedes I,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,623,Urbano,5.0
+24350,Jesús García,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,624,Urbano,5.0
+24350,Concordia,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,625,Urbano,5.0
+24350,10 de Mayo,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,626,Urbano,5.0
+24350,Flores Magón,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,627,Urbano,5.0
+24350,Revolución,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,628,Urbano,5.0
+24350,Morelos,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,629,Urbano,5.0
+24350,Fertimex,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,630,Urbano,5.0
+24350,Esperanza,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,631,Urbano,5.0
+24350,Unidad Esfuerzo y Trabajo II,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,632,Urbano,5.0
+24350,Unidad Esfuerzo y Trabajo I,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,633,Urbano,5.0
+24350,I. Zaragoza,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,634,Urbano,5.0
+24350,C. Salinas de Gortari,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,635,Urbano,5.0
+24350,Vicente Fox,Fraccionamiento,Escárcega,Campeche,Escárcega,24351,4,24351,,21,9,1249,Urbano,5.0
+24350,La Jeringa,Colonia,Escárcega,Campeche,Escárcega,24351,4,24351,,9,9,1250,Urbano,5.0
+24353,Miguel Hidalgo (Caracol),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1,Rural,
+24353,California,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,3,Rural,
+24353,Colonia San Francisco (El Cinco),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,5,Rural,
+24353,El Arbolito,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,6,Rural,
+24353,El Caracol,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,7,Rural,
+24353,Matamoros,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,258,Rural,
+24354,Don Samuel,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,200,Rural,
+24354,División del Norte,Pueblo,Escárcega,Campeche,,24351,4,24351,,28,9,254,Rural,
+24354,Haro,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,259,Rural,
+24355,El Calabozo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1201,Rural,
+24356,El Gallo Samuel (El Gallito),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,12,Rural,
+24357,Ignacio Magdaleno,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,21,Rural,
+24357,La Misteriosa,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,24,Rural,
+24357,Luna,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,186,Rural,
+24357,Francisco I. Madero,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,193,Rural,
+24357,Benito Juárez (La Polla),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,197,Rural,
+24357,La Flor,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1104,Rural,
+24358,El Corriental,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,9,Rural,
+24358,El Gallo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,11,Rural,
+24358,El Pozo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,14,Rural,
+24358,El Retiro,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,15,Rural,
+24358,Santa Cruz,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,35,Rural,
+24358,Santa Isabel,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,36,Rural,
+24358,Guadalajara,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,194,Rural,
+24358,El Huiro,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1099,Rural,
+24364,San José,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,32,Rural,
+24364,La Esperanza,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,272,Rural,
+24364,Kilómetro Setenta y Cuatro,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,273,Rural,
+24364,Juan Escutia,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,335,Rural,
+24364,Juan de la Barrera,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1202,Rural,
+24365,La Constancia,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,22,Rural,
+24365,San Carlos,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,30,Rural,
+24365,San Pedro,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,34,Rural,
+24365,La Victoria,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,260,Rural,
+24366,El Zacatecano,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,18,Rural,
+24366,María de la Luz,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,26,Rural,
+24366,San Luis,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,33,Rural,
+24367,El Diamante,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,10,Rural,
+24367,El Rosario (Puerto Escondido),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,16,Rural,
+24367,La Fe,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,23,Rural,
+24367,San José,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,31,Rural,
+24367,Santa Martha (El Naranjito),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,37,Rural,
+24367,Nuevo Progreso Dos,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,278,Rural,
+24368,Herradero,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,20,Rural,
+24368,San Alejandro,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,28,Rural,
+24368,José de la Cruz Blanco,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,280,Rural,
+24368,Kilómetro Treinta y Seis,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,281,Rural,
+24368,La Asunción,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1103,Rural,
+24369,Chambalita,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,4,Rural,
+24369,El Hular,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,13,Rural,
+24369,El Tornillo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,17,Rural,
+24369,Miguel Hidalgo y Costilla,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,27,Rural,
+24369,La Chiquita,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,282,Rural,
+24370,Altamira de Zináparo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,366,Rural,
+24370,Silvituc,Pueblo,Escárcega,Campeche,,24351,4,24351,,28,9,368,Rural,
+24370,Centenario,Pueblo,Escárcega,Campeche,,24351,4,24351,,28,9,370,Rural,
+24370,Flor de Chiapas,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1101,Rural,
+24370,Laguna Grande,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1105,Rural,
+24370,José López Portillo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1106,Rural,
+24370,Benito Juárez Número 3,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1107,Rural,
+24372,Emiliano Zapata,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,19,Rural,
+24373,Las Maravillas,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,373,Rural,
+24373,Chan Laguna,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,374,Rural,
+24373,El Jobal,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1100,Rural,
+24374,La Libertad,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,264,Rural,
+24374,Justicia Social,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,371,Rural,
+24374,Adolfo López Mateos,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,955,Rural,
+24374,El Lechugal,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1200,Rural,
+24374,Nuevo Campeche (Tres Aguadas),Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1204,Rural,
+24375,Belén,Ranchería,Escárcega,Campeche,,24351,4,24351,,29,9,257,Rural,
+24375,General Rodolfo Fierros,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1102,Rural,
+24375,Miguel de la Madrid,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,1203,Rural,
+24376,Alto Río Caribe,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,2,Rural,
+24377,El Conejo,Ejido,Escárcega,Campeche,,24351,4,24351,,15,9,8,Rural,
+24400,Tierra y Libertad,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,2,Urbano,8.0
+24400,Lindavista,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,3,Urbano,8.0
+24400,Champotón Centro,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,306,Urbano,8.0
+24400,Cristóbal Colon,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,508,Urbano,8.0
+24400,Pozo del Chenpek,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,509,Urbano,8.0
+24400,La Cruz,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,511,Urbano,8.0
+24400,Las Brisas,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,513,Urbano,8.0
+24400,INFONAVIT Miraflores,Fraccionamiento,Champotón,Campeche,Champotón,24401,4,24401,,21,4,515,Urbano,8.0
+24400,Moch-Cohuo,Unidad habitacional,Champotón,Campeche,Champotón,24401,4,24401,,31,4,516,Urbano,8.0
+24400,Nueva Esperanza,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,517,Urbano,8.0
+24400,Nueva Esperanza INFONAVIT,Unidad habitacional,Champotón,Campeche,Champotón,24401,4,24401,,31,4,518,Urbano,8.0
+24400,Plan-chac,Unidad habitacional,Champotón,Campeche,Champotón,24401,4,24401,,31,4,519,Urbano,8.0
+24400,Pozo del Monte,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,520,Urbano,8.0
+24400,San Patricio,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,526,Urbano,8.0
+24400,Tajonal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,529,Urbano,8.0
+24400,Venustiano Carranza,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,530,Urbano,8.0
+24400,Arenal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,972,Urbano,8.0
+24400,Arrocera,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,973,Urbano,8.0
+24400,Aserradero,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,974,Urbano,8.0
+24400,Avenida,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,975,Urbano,8.0
+24400,Cañaveral,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,976,Urbano,8.0
+24400,Cardenal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,977,Urbano,8.0
+24400,Carolinas,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,978,Urbano,8.0
+24400,Centenario,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,979,Urbano,8.0
+24400,Cocal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,980,Urbano,8.0
+24400,Concepción Duran,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,981,Urbano,8.0
+24400,Cuauhtémoc,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,983,Urbano,8.0
+24400,Flamboyan,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,984,Urbano,8.0
+24400,Guadalupe,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,985,Urbano,8.0
+24400,Guadalupe Victoria,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,986,Urbano,8.0
+24400,INFONAVIT,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,987,Urbano,8.0
+24400,ISSSTE,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,988,Urbano,8.0
+24400,La Playa,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,989,Urbano,8.0
+24400,La Santa,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,990,Urbano,8.0
+24400,Las Mercedes,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,992,Urbano,8.0
+24400,Las Palomas,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,993,Urbano,8.0
+24400,Laureles,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,994,Urbano,8.0
+24400,Lázaro Cárdenas,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,995,Urbano,8.0
+24400,Malecón,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,996,Urbano,8.0
+24400,Manguitos,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,997,Urbano,8.0
+24400,Nueva Jerusalén,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,998,Urbano,8.0
+24400,Paraíso,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,999,Urbano,8.0
+24400,Pedregal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1000,Urbano,8.0
+24400,Puente Viejo,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1002,Urbano,8.0
+24400,Ulises Sansores,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1004,Urbano,8.0
+24400,Huanal,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1032,Urbano,8.0
+24400,Camaroncito,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1033,Urbano,8.0
+24400,Microondas,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1034,Urbano,8.0
+24400,Mirador,Colonia,Champotón,Campeche,Champotón,24401,4,24401,,9,4,1183,Urbano,8.0
+24400,ISSFAM,Unidad habitacional,Champotón,Campeche,Champotón,24401,4,24401,,31,4,1265,Urbano,8.0
+24402,Ulumal,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,308,Rural,
+24402,Moquel,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,309,Rural,
+24402,El Zapote,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,311,Rural,
+24402,Canasayab,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,958,Rural,
+24402,San Antonio del Río,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1096,Rural,
+24404,San José Carpizo Uno (San Fernando),Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,313,Rural,
+24404,San José Carpizo Dos,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,314,Rural,
+24410,Ley Federal de Reforma Agraria,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,317,Rural,
+24410,San Luis Carpizo,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,318,Rural,
+24410,San Pablo,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,319,Rural,
+24410,Vicente Guerrero,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,320,Rural,
+24410,Punta Xen,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1095,Rural,
+24410,Villamar,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1181,Rural,
+24410,La Fraternidad,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1215,Rural,
+24410,San Felipe,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1216,Rural,
+24410,San Marcos,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1217,Rural,
+24410,El Caporal,Rancho,Champotón,Campeche,,24401,4,24401,,48,4,1219,Rural,
+24410,La Estrella,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1220,Rural,
+24411,Maya Tecún II,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,5,Rural,
+24411,López Mateos (La Desconfianza),Ejido,Champotón,Campeche,,24401,4,24401,,15,4,321,Rural,
+24411,Pustunich,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,322,Rural,
+24411,San Antonio Yacasay,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,329,Rural,
+24411,Maya Tecún I,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,378,Rural,
+24411,Nueva Esperanza Número 2 (Santo Domingo),Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1177,Rural,
+24413,San Pablo Pixtún,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,324,Rural,
+24413,Valle Hermoso,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1221,Rural,
+24414,Pixoyal,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,276,Rural,
+24414,Dzacabuchén,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,325,Rural,
+24414,José María Morelos y Pavón (El Pocito),Rancho,Champotón,Campeche,,24401,4,24401,,48,4,326,Rural,
+24414,José María Morelos y Pavón,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,327,Rural,
+24414,Revolución,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,336,Rural,
+24414,Aquiles Serdán (Chuiná),Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1084,Rural,
+24414,General Ortiz Ávila,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1088,Rural,
+24414,Lázaro Cárdenas,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1091,Rural,
+24414,Nueva Esperanza Uno (San Miguel Tobías),Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1175,Rural,
+24414,Monte Bravo,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1218,Rural,
+24415,Carrillo Puerto,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,328,Rural,
+24416,Xbacab,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,330,Rural,
+24418,Cinco de Febrero,Pueblo,Champotón,Campeche,,24351,4,24351,,28,4,275,Rural,
+24418,Miguel Colorado,Ranchería,Champotón,Campeche,,24351,4,24351,,29,4,277,Rural,
+24419,Profesor Graciano Sánchez,Ejido,Champotón,Campeche,,24351,4,24351,,15,4,334,Rural,
+24420,Arellano,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,337,Rural,
+24420,Santa Cruz de Rovira,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,345,Rural,
+24421,Villa de Guadalupe,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,339,Rural,
+24421,San Juan Carpizo,Hacienda,Champotón,Campeche,,24401,4,24401,,24,4,341,Rural,
+24421,San Miguel,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1097,Rural,
+24421,Cañaveral,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1178,Rural,
+24423,Nuevo Michoacán,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1179,Rural,
+24424,Nayarit Castellot,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,347,Rural,
+24424,Coronel Ortiz Ávila,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,372,Rural,
+24424,López Portillo 2 (Nilun),Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1092,Rural,
+24424,Valle de Quetzalcóatl,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1098,Rural,
+24440,Hool,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,349,Rural,
+24440,Santo Domingo Kesté,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1174,Rural,
+24441,Carlos Salinas de Gortari,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,350,Rural,
+24441,Buenaventura,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1085,Rural,
+24441,Dzitbalché Castellot,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1087,Rural,
+24443,Chac Chaito,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,343,Rural,
+24443,Yohaltún,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,344,Rural,
+24443,Ah Kim Pech,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1083,Rural,
+24443,Chilam Balam,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1086,Rural,
+24443,Ignacio López Rayón,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1089,Rural,
+24443,Kukulkán,Colonia,Champotón,Campeche,,24401,4,24401,,9,4,1090,Rural,
+24443,Miguel Allende,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1093,Rural,
+24443,Moch Cohuó,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1094,Rural,
+24443,La Providencia,Ejido,Champotón,Campeche,,24401,4,24401,,15,4,1180,Rural,
+24443,Nuevo Paraíso [Módulo],Colonia,Champotón,Campeche,,24401,4,24401,,9,4,1222,Rural,
+24450,Sihochac,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,351,Rural,
+24451,El Porvenir,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,312,Rural,
+24451,La Joya,Ranchería,Champotón,Campeche,,24401,4,24401,,29,4,352,Rural,
+24451,La Noria,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,1256,Rural,
+24459,Ciudad del Sol,Pueblo,Champotón,Campeche,,24401,4,24401,,28,4,354,Rural,
+24460,Seybaplaya Centro,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,1,Urbano,
+24460,Fátima,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,2,Urbano,
+24460,Carmelita,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,3,Urbano,
+24460,San Isidro,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,4,Urbano,
+24460,Hornos,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,5,Urbano,
+24460,Tizimín,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,6,Urbano,
+24460,Santa Cruz,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,7,Urbano,
+24460,Santa Clara,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,8,Urbano,
+24460,Guadalupe,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,9,Urbano,
+24460,La Jimba,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,10,Urbano,
+24460,Cristo Rey,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,11,Urbano,
+24460,16 de Septiembre,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,12,Urbano,
+24460,Frutales,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,13,Urbano,
+24460,San Rafael,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,14,Urbano,
+24460,Siho Playa (Hotel),Paraje,Seybaplaya,Campeche,,24001,4,24001,,45,12,19,Urbano,
+24460,Costa Blanca,Ranchería,Seybaplaya,Campeche,,24001,4,24001,,29,12,20,Rural,
+24460,El Sombrerón,Colonia,Seybaplaya,Campeche,,24001,4,24001,,9,12,21,Rural,
+24462,Nuevo Amanecer,Colonia,Seybaplaya,Campeche,,24401,4,24401,,9,12,15,Rural,
+24462,Villa Madero,Colonia,Seybaplaya,Campeche,,24401,4,24401,,9,12,16,Urbano,
+24462,Haltunchén,Colonia,Seybaplaya,Campeche,,24401,4,24401,,9,12,18,Rural,
+24464,Xkeulil,Pueblo,Seybaplaya,Campeche,,24001,4,24001,,28,12,17,Rural,
+24500,Lerma Centro,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,379,Rural,
+24500,Lázaro Cárdenas,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,381,Rural,
+24500,Chiapaneca,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,702,Rural,
+24500,Tepeyac,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,703,Rural,
+24500,Las Brisas,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,704,Rural,
+24500,San Antonio,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,705,Rural,
+24500,Tres Cruces,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,706,Rural,
+24500,Marañon,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,707,Rural,
+24500,Becan,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,708,Rural,
+24500,Playa Bonita,Zona comercial,Campeche,Campeche,,24003,4,24003,,33,2,709,Urbano,
+24500,Pesquera,Unidad habitacional,Campeche,Campeche,,24003,4,24003,,31,2,710,Rural,
+24500,Satélite,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,711,Urbano,
+24500,Huayita,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,712,Rural,
+24500,Lerma,Zona industrial,Campeche,Campeche,,24003,4,24003,,37,2,713,Rural,
+24500,Kila,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,714,Rural,
+24500,Espíritu Santo,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,1073,Rural,
+24500,La Guadalupana,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,1074,Rural,
+24500,Secretaria de Marina,Unidad habitacional,Campeche,Campeche,,24003,4,24003,,31,2,1075,Rural,
+24500,San Bartolo,Colonia,Campeche,Campeche,,24003,4,24003,,9,2,1076,Rural,
+24505,San Lorenzo,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,1193,Rural,
+24517,Castamay,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,383,Rural,
+24520,Campestre Los Almendros,Fraccionamiento,Campeche,Campeche,,24001,4,24001,,21,2,51,Rural,
+24520,China,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,384,Rural,
+24520,Hobomo,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,385,Rural,
+24520,Mucuychakan,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,386,Rural,
+24520,Uayamón,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,391,Rural,
+24522,San Agustin Ola,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,389,Rural,
+24523,Chulbac,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,1190,Rural,
+24532,Pocyaxum,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,392,Rural,
+24536,Sierra Verde de Cayal,Ranchería,Campeche,Campeche,,24001,4,24001,,29,2,62,Rural,
+24536,Uzahzil-Edzná (Nohyaxché),Ejido,Campeche,Campeche,,24001,4,24001,,15,2,393,Rural,
+24537,Nohakal,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,394,Rural,
+24540,Pueblo Nuevo,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,107,Rural,
+24540,Cayal,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,396,Rural,
+24540,San Antonio Cayal,Equipamiento,Campeche,Campeche,,24001,4,24001,,17,2,397,Rural,
+24550,Chencollí (Citro-Kampeche),Ejido,Campeche,Campeche,,24001,4,24001,,15,2,399,Rural,
+24550,Tikinmul,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,400,Rural,
+24550,San Antonio Bobolá,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,1119,Rural,
+24550,Miguel Alemán (X- Campeu),Ejido,Campeche,Campeche,,24001,4,24001,,15,2,1191,Rural,
+24552,Nilchi,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,401,Rural,
+24553,San Camilo (Chencollí),Ejido,Campeche,Campeche,,24001,4,24001,,15,2,1117,Rural,
+24557,Crucero OXA,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,402,Rural,
+24560,Río Verde,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,382,Rural,
+24560,Hampolol,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,404,Rural,
+24560,Imi,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,405,Rural,
+24560,San Francisco Koben,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,406,Rural,
+24561,CERESO San Francisco Kobén,Equipamiento,Campeche,Campeche,,24001,4,24001,,17,2,407,Rural,
+24562,Bethania,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,408,Rural,
+24564,Chemblas,Ejido,Campeche,Campeche,,24001,4,24001,,15,2,409,Rural,
+24570,San Isidro,Colonia,Campeche,Campeche,,24571,4,24571,,9,2,41,Rural,
+24570,Kikab,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,346,Rural,
+24570,Lubná,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,390,Rural,
+24570,Alfredo V. Bonfil,Pueblo,Campeche,Campeche,,24571,4,24571,,28,2,411,Rural,
+24570,Melchor Ocampo,Pueblo,Campeche,Campeche,,24571,4,24571,,28,2,413,Rural,
+24570,Tixmucuy,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,414,Rural,
+24570,Bolonchén Cahuich,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,419,Rural,
+24570,Nuevo Pénjamo,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1118,Rural,
+24570,Nueva Esperanza,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1285,Rural,
+24572,Pich,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,415,Rural,
+24572,San Luciano,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,416,Rural,
+24573,San Miguel Allende,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1120,Rural,
+24573,Carlos Cano Cruz (Los Tlaxcaltecas),Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1121,Rural,
+24573,Los Laureles,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1280,Rural,
+24574,Quetzal Edzná,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,395,Rural,
+24574,La Libertad,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,1192,Rural,
+24575,Adolfo Ruiz Cortinez,Ejido,Campeche,Campeche,,24571,4,24571,,15,2,418,Rural,
+24600,Hopelchen Centro,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,420,Rural,7.0
+24600,El Tamarindo,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,604,Rural,7.0
+24600,Santa Cruz,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,605,Rural,7.0
+24600,Campo de Aviación,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,606,Rural,7.0
+24600,Magisterial,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,607,Rural,7.0
+24600,Norte,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,608,Rural,7.0
+24600,San Román,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,609,Rural,7.0
+24600,San Isidro,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,610,Rural,7.0
+24600,San Luis,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,611,Rural,7.0
+24600,San Martín,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,612,Rural,7.0
+24600,Dolores Lanz,Colonia,Hopelchén,Campeche,Hopelchén,24001,4,24001,,9,6,656,Rural,7.0
+24604,El Poste,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,421,Rural,
+24604,San Juan Bautista Sahcabchén,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,422,Rural,
+24604,Ich-Ek,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,424,Rural,
+24604,Crucero San Luis,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,427,Rural,
+24604,San Francisco Suc-Tuc,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,428,Rural,
+24604,Santa Fe,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1268,Rural,
+24605,Xcupil,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,429,Rural,
+24606,Becanchén,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,430,Rural,
+24607,Komchén,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,431,Rural,
+24609,Pakchén,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,432,Rural,
+24610,Chencoh,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,433,Rural,
+24611,Dzibalchén,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,435,Rural,
+24612,Cancabchén,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,436,Rural,
+24612,Francisco J. Mújica (Los Ucán),Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,457,Rural,
+24612,San Isidro,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1198,Rural,
+24613,Chunchintok,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,438,Rural,
+24615,Ukum,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,439,Rural,
+24615,Xmejía,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,464,Rural,
+24620,Xcalot Akal,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,425,Rural,
+24620,San Bernardo Huechil,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,437,Rural,
+24620,Bolonchen de Rejón,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,440,Rural,
+24620,Xcanahaltún Huechil Unidos,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,441,Rural,
+24620,Katab,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1122,Rural,
+24622,Chunyaxnic,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,443,Rural,
+24622,San Antonio Yaxché,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,444,Rural,
+24622,Chuncedro,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,476,Rural,
+24622,Xculoc,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,477,Rural,
+24623,Yaxché Akal,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,426,Rural,
+24623,Rancho Sosa,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1124,Rural,
+24624,Campo Menonita,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1199,Rural,
+24640,Bellavista,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,1,Urbano,
+24640,10 de Mayo,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,2,Urbano,
+24640,Xpujil,Pueblo,Calakmul,Campeche,,24351,4,24351,,28,10,445,Rural,
+24640,Bugambilias,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,1290,Urbano,
+24640,Jardines,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,1291,Urbano,
+24640,Aviación,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,1292,Urbano,
+24640,Fundadores,Colonia,Calakmul,Campeche,,24351,4,24351,,9,10,1293,Urbano,
+24643,Becan,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,375,Rural,
+24643,Chicana,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,826,Rural,
+24643,El Chichonal,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,833,Rural,
+24643,Heriberto Jara Corona,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,840,Rural,
+24643,Plan de San Luis,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,862,Rural,
+24643,Valentín Gómez Farias,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,872,Rural,
+24644,Nuevo Becal,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,447,Rural,
+24644,Zoh-laguna (alvaro Obregón),Pueblo,Calakmul,Campeche,,24351,4,24351,,28,10,449,Rural,
+24644,Bel-ha,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,816,Rural,
+24644,Dos Lagunas,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,828,Rural,
+24644,El Refugio,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,836,Rural,
+24644,Nueva Vida,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,855,Rural,
+24644,Ricardo Flores Magón,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,865,Rural,
+24644,Tepeyac,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,868,Rural,
+24644,Unión 20 de Junio,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,871,Rural,
+24645,20 de Noviembre,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,448,Rural,
+24645,Cristóbal Colon,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,450,Rural,
+24645,Gral. Manuel Castilla Brito Km. 17,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,451,Rural,
+24645,ing. Ricardo Payro Jene (polo Norte),Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,453,Rural,
+24645,Los Ángeles,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,456,Rural,
+24645,Caña Brava,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,820,Rural,
+24645,Eugenio Echeverría Castellot (El Carrizal),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,831,Rural,
+24645,El Carmen II,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,832,Rural,
+24645,El Manantial,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,834,Rural,
+24645,El Porvenir,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,835,Rural,
+24645,Felipe Ángeles,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,838,Rural,
+24645,Gustavo Díaz Ordaz (San Antonio Soda),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,839,Rural,
+24645,Hermenegildo Galeana,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,841,Rural,
+24645,San José,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,846,Rural,
+24645,La Lucha,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,848,Rural,
+24645,Lucha,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,849,Rural,
+24645,La Victoria,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,850,Rural,
+24645,La Virgencita de La Candelaria,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,851,Rural,
+24645,Niños Héroes,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,854,Rural,
+24645,Nuevo Campanario,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,856,Rural,
+24645,Nuevo Progreso 3,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,857,Rural,
+24645,Tomas Aznar Barbachano,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,869,Rural,
+24645,Unidad y Trabajo,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,870,Rural,
+24645,21 de Mayo (Lechugal),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,1207,Rural,
+24645,Narciso Mendoza,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,1209,Rural,
+24646,Lázaro Cárdenas 2 (ojo de Agua),Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,454,Rural,
+24646,Los Alacranes,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,455,Rural,
+24646,16 de Septiembre,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,810,Rural,
+24646,Bella Unión de Veracruz,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,817,Rural,
+24646,Blasillo,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,818,Rural,
+24646,Carlos A Madrazo,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,821,Rural,
+24646,Cerro de las Flores (Sta. Rosa),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,824,Rural,
+24646,El Tesoro,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,837,Rural,
+24646,Josefa Ortíz de Domínguez (Icaiché),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,844,Rural,
+24646,Los Tambores de Emiliano Zapata,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,852,Rural,
+24646,Manuel Cresencio Rejón,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,853,Rural,
+24646,Nuevo San José,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,858,Rural,
+24646,Nuevo Veracruz,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,859,Rural,
+24646,Pioneros del Río Xnohá,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,860,Rural,
+24646,Quiche las Pailas,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,864,Rural,
+24646,Plan de Ayala (5 de Mayo),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,1205,Rural,
+24647,11 de Mayo,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,809,Rural,
+24647,Arroyo Negro,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,814,Rural,
+24647,Dos Naciones,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,829,Rural,
+24647,José Ma. Morelos y Pavón,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,843,Rural,
+24647,Justo Sierra Méndez,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,845,Rural,
+24647,San Miguel,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,866,Rural,
+24647,Santo Domingo,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,867,Rural,
+24647,Dos Lagunas,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,874,Rural,
+24647,Ley de Fomento Agropecuario (La Misteriosa),Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,1206,Rural,
+24648,Centauro del Norte,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,822,Rural,
+24648,La Guadalupe,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,847,Rural,
+24653,Nuevo Conhuas,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,365,Rural,
+24653,Balanku,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,815,Rural,
+24654,Felipe Ángeles II,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,369,Rural,
+24654,Ingeniero Eugenio Echeverría Castellot,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,830,Rural,
+24654,Puebla de Morelia,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,863,Rural,
+24654,Emiliano Zapata,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,1208,Rural,
+24656,Central Chiclera Villahermosa,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,823,Rural,
+24658,Xbonil,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,348,Rural,
+24658,Constitución,Ranchería,Calakmul,Campeche,,24351,4,24351,,29,10,362,Rural,
+24658,Pablo Garcia,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,363,Rural,
+24658,Santa Lucia,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,367,Rural,
+24658,Concepción,Ejido,Calakmul,Campeche,,24351,4,24351,,15,10,825,Rural,
+24660,Vicente Guerrero,Pueblo,Hopelchén,Campeche,,24001,4,24001,,28,6,458,Rural,
+24663,Ramón Corona,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,459,Rural,
+24667,X-Canhá,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,461,Rural,
+24667,Nuevo Chan Yaxché,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,1123,Rural,
+24668,Chun-Ek,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,434,Rural,
+24668,Pachuitz,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,460,Rural,
+24668,Chan-Chen,Ejido,Hopelchén,Campeche,,24001,4,24001,,15,6,462,Rural,
+24670,Xmabén,Ranchería,Hopelchén,Campeche,,24001,4,24001,,29,6,463,Rural,
+24700,Tenabo Centro,Colonia,Tenabo,Campeche,Tenabo,24801,4,24801,,9,8,465,Rural,13.0
+24703,Jacinto Canek,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,948,Rural,13.0
+24704,San Pedro,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,949,Rural,13.0
+24705,Procesadora,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,950,Rural,13.0
+24706,Lazareto,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,951,Rural,13.0
+24706,Esperanza,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,952,Rural,13.0
+24706,Ana María Farias,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,953,Rural,13.0
+24707,Guadalupe,Barrio,Tenabo,Campeche,Tenabo,24801,4,24801,,2,8,954,Rural,13.0
+24720,Kankí,Pueblo,Tenabo,Campeche,,24801,4,24801,,28,8,466,Rural,
+24723,Chilib,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1226,Rural,
+24730,Tinún,Pueblo,Tenabo,Campeche,,24801,4,24801,,28,8,467,Rural,
+24732,Santa Rita Corralché,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1,Rural,
+24732,Emiliano Zapata,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,468,Rural,
+24732,San Pedro Corralché,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1228,Rural,
+24733,Nachehá,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1225,Rural,
+24734,Xkuncheil,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1189,Rural,
+24740,Santa Rosa,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1188,Rural,
+24746,Orizaba,Ejido,Tenabo,Campeche,,24801,4,24801,,15,8,1223,Rural,
+24800,Centro Hecelchakán,Colonia,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,9,5,469,Rural,9.0
+24800,La Conquista,Barrio,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,2,5,510,Rural,9.0
+24800,San Antonio,Barrio,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,2,5,521,Rural,9.0
+24800,San Francisco,Colonia,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,9,5,523,Rural,9.0
+24800,San Juan,Barrio,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,2,5,525,Rural,9.0
+24800,Abraham Azar,Fraccionamiento,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,21,5,1186,Rural,9.0
+24800,Las Gardenias,Fraccionamiento,Hecelchakán,Campeche,Hecelchakán,24801,4,24801,,21,5,1187,Rural,9.0
+24810,Centro Pomuch,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,471,Rural,11.0
+24810,Benito Juárez,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,505,Rural,11.0
+24810,Colonia Nueva,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,507,Rural,11.0
+24810,La Soledad,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,512,Rural,11.0
+24810,San Diego,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,522,Rural,11.0
+24810,San Jerónimo,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,524,Rural,11.0
+24810,San Pedro,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,527,Rural,11.0
+24810,Santa Cristina,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,528,Rural,11.0
+24810,Villa Lucrecia,Colonia,Hecelchakán,Campeche,Pomuch,24801,4,24801,,9,5,531,Rural,11.0
+24813,Zodzil,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,472,Rural,
+24820,Cumpich,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,474,Rural,
+24826,Dzotchén,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,475,Rural,
+24828,Chicmuc,Rancho,Hecelchakán,Campeche,,24801,4,24801,,48,5,1,Rural,
+24828,Nohalal,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,478,Rural,
+24830,Pocboc,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,479,Rural,
+24830,Blanca Flor Hacienda,Ejido,Hecelchakán,Campeche,,24801,4,24801,,15,5,1108,Rural,
+24831,Chunkanán,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,480,Rural,
+24836,Blanca Flor,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,481,Rural,
+24837,Santa Cruz,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,482,Rural,
+24837,San Felipe Tikín,Ejido,Hecelchakán,Campeche,,24801,4,24801,,15,5,1109,Rural,
+24839,Dzitnup,Pueblo,Hecelchakán,Campeche,,24801,4,24801,,28,5,483,Rural,
+24860,Campo Menonita Yalnón,Ejido,Hecelchakán,Campeche,,24801,4,24801,,15,5,484,Rural,
+24863,Monte Bello,Ejido,Hecelchakán,Campeche,,24801,4,24801,,15,5,1112,Rural,
+24863,Campo Menonita Chaví Número Uno,Ejido,Hecelchakán,Campeche,,24801,4,24801,,15,5,1185,Rural,
+24900,Calkini Centro,Colonia,Calkiní,Campeche,Calkini,24901,4,24901,,9,1,485,Urbano,3.0
+24902,Fátima,Colonia,Calkiní,Campeche,Calkini,24901,4,24901,,9,1,636,Urbano,3.0
+24902,FOVISSSTE,Unidad habitacional,Calkiní,Campeche,Calkini,24901,4,24901,,31,1,637,Urbano,3.0
+24902,San Isidro,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,638,Urbano,3.0
+24902,San Juan,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,639,Urbano,3.0
+24903,La Concepción,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,642,Urbano,3.0
+24903,San Miguel Kukab,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,643,Urbano,3.0
+24903,Guadalupe,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,644,Urbano,3.0
+24903,San Luisito,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,646,Urbano,3.0
+24903,San Martín,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,647,Urbano,3.0
+24904,San Luis Obispo,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,640,Urbano,3.0
+24904,Las Flores,Fraccionamiento,Calkiní,Campeche,Calkini,24901,4,24901,,21,1,641,Urbano,3.0
+24904,Kilakan,Barrio,Calkiní,Campeche,Calkini,24901,4,24901,,2,1,645,Urbano,3.0
+24905,Tepakan,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,487,Rural,
+24910,El Gato Negro,Colonia,Calkiní,Campeche,,24901,4,24901,,9,1,4,Rural,
+24910,San Román,Colonia,Calkiní,Campeche,,24901,4,24901,,9,1,5,Rural,
+24910,Nunkini,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,488,Rural,
+24913,Santa Cruz Pueblo,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,497,Rural,
+24913,San Antonio Sahcabchén,Ranchería,Calkiní,Campeche,,24901,4,24901,,29,1,498,Rural,
+24914,Tankuche,Congregación,Calkiní,Campeche,,24901,4,24901,,11,1,490,Rural,
+24914,San Agustín Chunhuás,Ranchería,Calkiní,Campeche,,24901,4,24901,,29,1,499,Rural,
+24914,Concepción,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,502,Rural,
+24914,Xkakoch,Ejido,Calkiní,Campeche,,24901,4,24901,,15,1,1116,Rural,
+24915,Pucnachen,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,491,Rural,
+24915,Santa María,Hacienda,Calkiní,Campeche,,24901,4,24901,,24,1,492,Rural,
+24916,Santa Cruz,Exhacienda,Calkiní,Campeche,,24901,4,24901,,18,1,493,Rural,
+24917,San Nicolás,Pueblo,Calkiní,Campeche,,24901,4,24901,,28,1,494,Rural,
+24919,Isla Arena,Colonia,Calkiní,Campeche,,24901,4,24901,,9,1,495,Rural,
+24920,Dzitbalché Centro,Pueblo,Dzitbalché,Campeche,,24901,4,24901,,28,13,1,Urbano,
+24920,San Feliciano,Colonia,Dzitbalché,Campeche,,24901,4,24901,,9,13,2,Urbano,
+24920,Solidaridad,Colonia,Dzitbalché,Campeche,,24901,4,24901,,9,13,3,Urbano,
+24920,San Pedro,Colonia,Dzitbalché,Campeche,,24901,4,24901,,9,13,6,Urbano,
+24925,Bacabchén,Pueblo,Dzitbalché,Campeche,,24901,4,24901,,28,13,4,Urbano,
+24929,Chacnichén (El Pozo),Ejido,Dzitbalché,Campeche,,24901,4,24901,,15,13,5,Rural,
+24930,Bécal Centro,Colonia,Calkiní,Campeche,Bécal,24901,4,24901,,9,1,503,Rural,12.0
+24933,Los Tres Reyes,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,1,Rural,12.0
+24933,Fátima,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,966,Rural,12.0
+24934,Carlos Rivas,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,961,Rural,12.0
+24935,Pablo Garcia,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,962,Rural,12.0
+24935,Limón,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,964,Rural,12.0
+24935,Santa Cruz,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,965,Rural,12.0
+24935,El Pocito,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,968,Rural,12.0
+24936,San Diego,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,963,Rural,12.0
+24936,Estación,Barrio,Calkiní,Campeche,Bécal,24901,4,24901,,2,1,967,Rural,12.0
+24940,San Roque Xnolán,Ejido,Calkiní,Campeche,,24901,4,24901,,15,1,1114,Rural,

@@ -1,0 +1,897 @@
+d_codigo,d_asenta,d_tipo_asenta,D_mnpio,d_estado,d_ciudad,d_CP,c_estado,c_oficina,c_CP,c_tipo_asenta,c_mnpio,id_asenta_cpcons,d_zona,c_cve_ciudad
+28000,Colima Centro,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,1,Urbano,1.0
+28010,Lomas de Circunvalación,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,14,Urbano,1.0
+28010,Militar Lomas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,34,Urbano,1.0
+28014,Jardines de las Lomas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,17,Urbano,1.0
+28016,Lomas Vistahermosa,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,19,Urbano,1.0
+28017,Bugambilias,Condominio,Colima,Colima,Colima,28001,6,28001,,10,2,20,Urbano,1.0
+28017,Colinas de Santa Bárbara,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,21,Urbano,1.0
+28017,Jardines Vista Hermosa,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,22,Urbano,1.0
+28017,Las Palmas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,23,Urbano,1.0
+28017,Lomas Verdes,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,24,Urbano,1.0
+28017,Parque Royal,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,25,Urbano,1.0
+28017,Residencial Santa Bárbara,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,26,Urbano,1.0
+28017,Lomas del Valle,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,96,Urbano,1.0
+28017,Residencial Valle Verde,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,101,Urbano,1.0
+28017,Rincón del Colibrí,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,103,Urbano,1.0
+28017,Bosque de la Cantera,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,111,Urbano,1.0
+28017,Albaterra Residencial,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,114,Urbano,1.0
+28017,El Volantín,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,115,Urbano,1.0
+28017,Residencial Puerta del Sol,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,651,Urbano,1.0
+28017,Residencial Esmeralda,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,652,Urbano,1.0
+28017,Villanova,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,665,Urbano,1.0
+28017,Privada San Rafael,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,729,Urbano,1.0
+28017,Villas Colinas,Condominio,Colima,Colima,Colima,28001,6,28001,,10,2,738,Urbano,1.0
+28017,Residencial Esmeralda Norte,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,739,Urbano,1.0
+28017,Residencial Los Olivos,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,743,Urbano,1.0
+28017,Jardines de La Hacienda,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,761,Urbano,1.0
+28017,Residencial Real Santa Bárbara,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,762,Urbano,1.0
+28017,Residencial Victoria,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,763,Urbano,1.0
+28017,Paseo de la Hacienda,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,833,Urbano,1.0
+28017,Colinas de Santa Fe,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,834,Urbano,1.0
+28017,Paseo de la Cantera,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,835,Urbano,1.0
+28017,Santa Gertrudis,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,838,Urbano,1.0
+28018,El Diezmo,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,12,Urbano,1.0
+28018,Hacienda Real,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,15,Urbano,1.0
+28018,Loredo Residencial,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,112,Urbano,1.0
+28018,Real Vista Hermosa,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,661,Urbano,1.0
+28018,Girasoles,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,662,Urbano,1.0
+28018,Valle Dorado,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,735,Urbano,1.0
+28018,Puerta Paraíso,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,736,Urbano,1.0
+28018,Real Vista Hermosa III,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,742,Urbano,1.0
+28018,La Cantera,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,808,Urbano,1.0
+28018,Las Pérgolas,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,837,Urbano,1.0
+28018,Residencial Santa María,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,840,Urbano,1.0
+28019,El Porvenir,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,27,Urbano,1.0
+28019,Puerta del Camino Real,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,106,Urbano,1.0
+28020,La Armonía,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,28,Urbano,1.0
+28023,Jardines de Guadalupe,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,728,Urbano,1.0
+28025,Niños Héroes,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,29,Urbano,1.0
+28025,Villa los Prados,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,727,Urbano,1.0
+28030,Guadalajarita,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,30,Urbano,1.0
+28030,Jardines de La Corregidora,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,31,Urbano,1.0
+28030,Jardines Residenciales,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,32,Urbano,1.0
+28030,Magisterial,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,33,Urbano,1.0
+28030,Morelos,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,35,Urbano,1.0
+28035,Huertas del Sol,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,36,Urbano,1.0
+28037,Hidalgo,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,37,Urbano,1.0
+28040,Camino Real,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,38,Urbano,1.0
+28040,INFONAVIT La Estancia,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,39,Urbano,1.0
+28040,Las Víboras,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,40,Urbano,1.0
+28040,Burócratas Municipales,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,623,Urbano,1.0
+28043,INFONAVIT Camino Real,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,42,Urbano,1.0
+28044,FOVISSSTE,Unidad habitacional,Colima,Colima,Colima,28001,6,28001,,31,2,43,Urbano,1.0
+28045,Villa San Sebastián,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,44,Urbano,1.0
+28046,Oriental,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,45,Urbano,1.0
+28047,Lomas de Santa Elena,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,2,Urbano,1.0
+28047,Villa de los Pinos,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,3,Urbano,1.0
+28047,Andares del Jazmín,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,5,Urbano,1.0
+28047,Camino Real,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,46,Urbano,1.0
+28047,Francisco I Madero,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,47,Urbano,1.0
+28047,Jardines de La Estancia,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,48,Urbano,1.0
+28047,Josefa Ortiz de Domínguez,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,49,Urbano,1.0
+28047,La Virgencita,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,50,Urbano,1.0
+28047,Lázaro Cárdenas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,51,Urbano,1.0
+28047,Luis Donaldo Colosio,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,52,Urbano,1.0
+28047,Revolución,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,53,Urbano,1.0
+28047,San José Norte,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,54,Urbano,1.0
+28047,Rivera del Jazmín,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,97,Urbano,1.0
+28047,Real la Floresta,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,98,Urbano,1.0
+28047,IKAL,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,100,Urbano,1.0
+28047,Santa Elena,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,648,Urbano,1.0
+28047,Las Américas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,649,Urbano,1.0
+28047,Unidad Antorchista,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,650,Urbano,1.0
+28047,El Mirador de Colima,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,794,Urbano,1.0
+28047,Diamantes,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,813,Urbano,1.0
+28047,Margaritas,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,844,Urbano,1.0
+28048,Cuauhtémoc,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,55,Urbano,1.0
+28048,El Pedregal,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,56,Urbano,1.0
+28048,Insurgentes,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,57,Urbano,1.0
+28048,La Estancia,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,58,Urbano,1.0
+28048,La Guadalupe,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,59,Urbano,1.0
+28048,Los Ángeles,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,60,Urbano,1.0
+28048,Moctezuma,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,61,Urbano,1.0
+28048,Nuevo Paraíso,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,62,Urbano,1.0
+28048,Paraíso,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,63,Urbano,1.0
+28048,San José Sur,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,64,Urbano,1.0
+28048,San Rafael,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,65,Urbano,1.0
+28048,Santa Amalia,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,66,Urbano,1.0
+28048,Vicente Guerrero,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,67,Urbano,1.0
+28048,Milenio IV,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,117,Urbano,1.0
+28048,Cardona,Ejido,Colima,Colima,,28001,6,28001,,15,2,249,Rural,
+28048,Jardines del Sol,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,645,Urbano,1.0
+28048,Nuevo Milenio,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,667,Urbano,1.0
+28048,Mirador de La Cumbre,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,668,Urbano,1.0
+28048,Gustavo Vázquez Montes,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,723,Urbano,1.0
+28048,Los Jazmines,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,734,Urbano,1.0
+28048,Mirador de La Cumbre II,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,768,Urbano,1.0
+28048,Mirador de La Cumbre III,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,769,Urbano,1.0
+28048,Ignacio Zaragoza,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,770,Urbano,1.0
+28050,Fátima,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,68,Urbano,1.0
+28050,Placetas Estadio,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,69,Urbano,1.0
+28050,Villas del Bosque,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,70,Urbano,1.0
+28050,Villas Primaveras,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,724,Urbano,1.0
+28050,Rincón del Bosque,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,725,Urbano,1.0
+28050,Privada San Francisco,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,726,Urbano,1.0
+28060,El Moralete,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,71,Urbano,1.0
+28060,Residencial San Pablo,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,74,Urbano,1.0
+28063,Francisco Villa,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,77,Urbano,1.0
+28063,Santa Gertrudis,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,732,Urbano,1.0
+28063,Las Haciendas,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,733,Urbano,1.0
+28063,Los Volcanes,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,740,Urbano,1.0
+28063,Rinconada San Pablo,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,741,Urbano,1.0
+28063,San Carlos,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,827,Urbano,1.0
+28067,De los Trabajadores,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,78,Urbano,1.0
+28070,Benito Juárez,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,81,Urbano,1.0
+28070,Los Viveros,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,84,Urbano,1.0
+28070,Del Periodista,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,85,Urbano,1.0
+28070,Popular,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,86,Urbano,1.0
+28070,Patios de Ferrocarril,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,105,Urbano,1.0
+28075,Parque Industrial,Zona industrial,Colima,Colima,Colima,28001,6,28001,,37,2,87,Urbano,1.0
+28075,Hacienda El Balcón,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,107,Urbano,1.0
+28077,Rinconada del Pereyra,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,4,Urbano,1.0
+28077,Arboledas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,88,Urbano,1.0
+28077,José Pimentel Llerenas,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,89,Urbano,1.0
+28078,INDECO Albarrada,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,90,Urbano,1.0
+28078,Jardines de las Fuentes,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,102,Urbano,1.0
+28078,El Torreón,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,116,Urbano,1.0
+28078,Residencial Prados del Sur,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,666,Urbano,1.0
+28078,El Yaqui,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,721,Urbano,1.0
+28078,Las Fuentes,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,730,Urbano,1.0
+28078,La Rivera,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,731,Urbano,1.0
+28078,Valle Real,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,764,Urbano,1.0
+28078,Arboledas de La Hacienda,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,800,Urbano,1.0
+28078,La Albarrada,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,801,Urbano,1.0
+28078,Real de Don Juan,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,839,Urbano,1.0
+28078,El Prado,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,853,Urbano,1.0
+28079,Gregorio Torres Quintero,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,91,Urbano,1.0
+28079,Puerta del Valle,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,104,Urbano,1.0
+28079,Villas del Sur,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,775,Urbano,1.0
+28079,Parajes del Sur,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,828,Urbano,1.0
+28080,El Tivoli,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,92,Urbano,1.0
+28085,Juana de Asbaje,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,93,Urbano,1.0
+28085,El Alpuyeque,Ranchería,Colima,Colima,,28001,6,28001,,29,2,258,Rural,
+28085,Los Sauces,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,793,Rural,1.0
+28085,La Esperanza,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,836,Urbano,1.0
+28089,Leonardo B Gutiérrez,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,94,Urbano,1.0
+28089,Quinta El Tívoli,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,737,Urbano,1.0
+28089,Bosques del Sur,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,809,Urbano,1.0
+28090,El Tecolote,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,95,Urbano,1.0
+28090,Francisco Zaragoza Vázquez,Fraccionamiento,Colima,Colima,Colima,28001,6,28001,,21,2,113,Urbano,1.0
+28090,Las Bugambilias,Colonia,Colima,Colima,Colima,28001,6,28001,,9,2,858,Urbano,1.0
+28100,Tecomán Centro,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,96,Urbano,3.0
+28110,Tepeyac,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,98,Urbano,3.0
+28110,Manuel Álvarez,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,99,Urbano,3.0
+28110,Miguel Hidalgo,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,100,Urbano,3.0
+28110,Josefa Ortiz de Domínguez,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,653,Urbano,3.0
+28113,Elba Cecilia Vega,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,494,Urbano,3.0
+28114,Amalia Solórzano,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,454,Urbano,3.0
+28120,Valle las Palmas,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,3,Urbano,3.0
+28120,Cofradía de Juárez,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,102,Urbano,3.0
+28120,Valle Querido,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,103,Urbano,3.0
+28120,Noriega Pizano,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,560,Urbano,3.0
+28123,Real del Valle,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,830,Urbano,3.0
+28123,Real del Bosque,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,861,Urbano,3.0
+28130,Fátima,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,104,Urbano,3.0
+28130,Francisco Villa,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,105,Urbano,3.0
+28130,La Unión,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,106,Urbano,3.0
+28130,Vicente Guerrero,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,107,Urbano,3.0
+28133,Hacienda la Loma,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,788,Urbano,3.0
+28133,Loma Bonita,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,789,Urbano,3.0
+28134,San Ignacio,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,1,Urbano,3.0
+28134,El Limonero,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,11,Urbano,3.0
+28134,Lázaro Cárdenas,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,108,Urbano,3.0
+28134,Lázaro Cárdenas II,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,109,Urbano,3.0
+28134,Santa Elena,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,110,Urbano,3.0
+28134,Sor Juana Inés de La Cruz,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,111,Urbano,3.0
+28134,Griselda Álvarez,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,502,Urbano,3.0
+28134,Álvaro Obregón,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,563,Urbano,3.0
+28134,Reyes Heroles,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,584,Urbano,3.0
+28134,Luis Donaldo Colosio,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,657,Urbano,3.0
+28134,Niños Héroes,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,658,Urbano,3.0
+28134,Las Flores,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,659,Urbano,3.0
+28134,Palma Real,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,713,Urbano,3.0
+28140,Jardines del Chamizal,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,2,Urbano,3.0
+28140,El Chamizal,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,112,Urbano,3.0
+28140,La Floresta,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,113,Urbano,3.0
+28140,San Isidro,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,114,Urbano,3.0
+28140,Villa Florida,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,115,Urbano,3.0
+28140,INFONAVIT Las Huertas,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,116,Urbano,3.0
+28140,Jardines de Tecomán,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,510,Urbano,3.0
+28143,La Cuarta,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,518,Rural,3.0
+28150,Benito Juárez,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,117,Urbano,3.0
+28150,La Palmita,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,118,Urbano,3.0
+28159,INFONAVIT Las Palmas,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,121,Urbano,3.0
+28160,Pablo Silva García,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,122,Urbano,3.0
+28160,Ponciano Arriaga,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,123,Urbano,3.0
+28160,Estatuto Jurídico,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,496,Urbano,3.0
+28160,Sedena Militar,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,594,Urbano,3.0
+28170,Parque Las Flores (Elias Zamora Verduzco),Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,120,Urbano,3.0
+28170,Indeco,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,124,Urbano,3.0
+28170,Libertad,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,125,Urbano,3.0
+28180,Bugambilias,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,126,Urbano,3.0
+28180,La Floresta II,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,127,Urbano,3.0
+28180,Las Palmas,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,128,Urbano,3.0
+28180,Primaveras del Real,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,129,Urbano,3.0
+28180,Villa del Centenario,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,131,Urbano,3.0
+28180,Villas del Rey,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,132,Urbano,3.0
+28180,San Miguel,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,654,Urbano,3.0
+28184,San Carlos,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,133,Urbano,3.0
+28189,88 Batallón de Infantería,Equipamiento,Tecomán,Colima,Tecomán,28101,6,28101,,17,9,448,Rural,3.0
+28190,Gustavo Díaz Ordaz,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,134,Urbano,3.0
+28190,San José,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,135,Urbano,3.0
+28190,Tuxpan,Colonia,Tecomán,Colima,Tecomán,28101,6,28101,,9,9,136,Urbano,3.0
+28190,Llanos de San José,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,655,Urbano,3.0
+28190,Villas del Sol,Fraccionamiento,Tecomán,Colima,Tecomán,28101,6,28101,,21,9,663,Urbano,3.0
+28200,San José (Sector 3),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,78,Urbano,2.0
+28200,La Providencia (Sector 3),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,79,Urbano,2.0
+28200,El Vigia (Sector 1),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,80,Urbano,2.0
+28200,El Tamarindo (Sector 2),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,81,Urbano,2.0
+28200,Calle Nueva ( Sector 3),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,82,Urbano,2.0
+28200,Manzanillo Centro,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,137,Urbano,2.0
+28209,Manzanillo (Playa de Oro),Aeropuerto,Manzanillo,Colima,Manzanillo,28201,6,28201,,1,7,139,Rural,2.0
+28218,Las Brisas,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,140,Urbano,2.0
+28218,Morelos,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,141,Urbano,2.0
+28218,Playa Azul,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,142,Urbano,2.0
+28218,Fovissste,Fraccionamiento,Manzanillo,Colima,,28201,6,28201,,21,7,344,Urbano,
+28218,INFONAVIT Brisas del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,345,Urbano,2.0
+28218,Del Mar,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,477,Urbano,2.0
+28218,Brisas,Zona naval,Manzanillo,Colima,Manzanillo,28201,6,28201,,46,7,603,Urbano,2.0
+28218,Vista Roca,Condominio,Manzanillo,Colima,,28201,6,28201,,10,7,683,Urbano,
+28218,Del Pacífico,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,684,Urbano,
+28218,Las Garzas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,685,Urbano,2.0
+28218,Aeroméxico,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,814,Urbano,2.0
+28219,Lomas del Valle,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,12,Urbano,2.0
+28219,Playa Esmeralda,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,13,Urbano,2.0
+28219,Residencial Villa del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,14,Urbano,2.0
+28219,Residencial las Gaviotas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,16,Urbano,2.0
+28219,Los Corales,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,17,Urbano,2.0
+28219,Los Ciruelos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,18,Urbano,2.0
+28219,Rinconada del Valle,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,19,Urbano,2.0
+28219,Conjunto Primaveras,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,20,Urbano,2.0
+28219,Valle de las Garzas II,Barrio,Manzanillo,Colima,Manzanillo,28201,6,28201,,2,7,32,Urbano,2.0
+28219,Valle Esmeralda,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,34,Urbano,2.0
+28219,Valle Dorado,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,35,Urbano,2.0
+28219,Villa Bonita Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,44,Urbano,2.0
+28219,Viña del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,45,Urbano,2.0
+28219,Ponte Vedra Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,46,Urbano,2.0
+28219,Residencial Pelícanos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,47,Urbano,2.0
+28219,Villa Florencia,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,48,Urbano,2.0
+28219,Residencial Las Arekas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,49,Urbano,2.0
+28219,Torremolinos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,50,Urbano,2.0
+28219,Ibiza,Condominio,Manzanillo,Colima,Manzanillo,28201,6,28201,,10,7,51,Urbano,2.0
+28219,Puerta de Hierro,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,52,Urbano,2.0
+28219,Real Acuamarina,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,56,Urbano,2.0
+28219,Palma Real,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,58,Urbano,2.0
+28219,Nueva Esperanza,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,76,Urbano,2.0
+28219,Playa Azul,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,77,Urbano,2.0
+28219,Valle de las Garzas I,Barrio,Manzanillo,Colima,Manzanillo,28201,6,28201,,2,7,144,Urbano,2.0
+28219,Costa Azul,Condominio,Manzanillo,Colima,Manzanillo,28201,6,28201,,10,7,158,Urbano,2.0
+28219,Del Sol,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,478,Urbano,2.0
+28219,Parque industrial FONDEPORT,Zona industrial,Manzanillo,Colima,Manzanillo,28201,6,28201,,37,7,498,Urbano,2.0
+28219,FETSE,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,501,Urbano,2.0
+28219,Isla Real,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,509,Urbano,2.0
+28219,La Esperanza,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,519,Urbano,2.0
+28219,Playa Blanca,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,576,Urbano,2.0
+28219,Playa de Oro,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,577,Urbano,2.0
+28219,Playa Real,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,578,Urbano,2.0
+28219,Soleares,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,596,Urbano,2.0
+28219,Villa Mar,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,605,Urbano,2.0
+28219,Barrio 5,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,646,Urbano,2.0
+28219,Villa Océano,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,686,Urbano,2.0
+28219,Villa Caracol,Fraccionamiento,Manzanillo,Colima,Manzanillo,28201,6,28201,,21,7,823,Urbano,2.0
+28230,Las Joyas,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,145,Urbano,2.0
+28230,El Rocío,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,492,Urbano,2.0
+28230,Ignacio Zaragoza,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,506,Urbano,2.0
+28236,Manzanillo,Puerto,Manzanillo,Colima,Manzanillo,28201,6,28201,,40,7,859,Urbano,2.0
+28237,Benito Juárez,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,146,Urbano,2.0
+28237,La Gasera,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,522,Urbano,2.0
+28237,Las Torres,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,537,Urbano,2.0
+28237,Leandro Valle,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,541,Urbano,2.0
+28237,Punta Grande,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,582,Urbano,2.0
+28238,Bellavista,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,147,Urbano,2.0
+28239,Lomas de Gregorio Figueroa,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,21,Urbano,2.0
+28239,Loma Alta,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,22,Urbano,2.0
+28239,Primavera,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,23,Urbano,2.0
+28239,16 de Septiembre,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,148,Urbano,2.0
+28239,Tapeixtles,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,342,Urbano,2.0
+28239,INDECO,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,507,Urbano,2.0
+28239,La Negrita,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,559,Urbano,2.0
+28239,San Carlos,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,588,Urbano,2.0
+28240,Punta Chica,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,149,Urbano,2.0
+28250,Burócrata,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,150,Urbano,2.0
+28259,San Pedrito,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,151,Urbano,2.0
+28260,La Playita de en Medio,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,85,Urbano,2.0
+28260,La Peñita (Sector 6),Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,86,Urbano,2.0
+28260,Libertad,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,152,Urbano,2.0
+28269,Sector 5,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,33,Urbano,2.0
+28269,Constitución,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,84,Urbano,2.0
+28269,Cuauhtémoc,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,153,Urbano,2.0
+28269,Alameda,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,452,Urbano,2.0
+28270,Padre Hidalgo,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,154,Urbano,2.0
+28278,La Pedregoza,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,156,Urbano,2.0
+28279,El Chamizal,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,83,Urbano,2.0
+28279,Bonanza,Colonia,Manzanillo,Colima,Manzanillo,28201,6,28201,,9,7,157,Urbano,2.0
+28300,Armería Centro,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,159,Urbano,5.0
+28304,Cristo Rey,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,161,Urbano,5.0
+28304,Lázaro Cárdenas,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,162,Urbano,5.0
+28304,Lindavista,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,163,Urbano,5.0
+28305,Ejido,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,164,Urbano,5.0
+28306,Primaveras,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,2,Urbano,5.0
+28306,Ferrocarril,Fraccionamiento,Armería,Colima,Ciudad de Armería,28301,6,28301,,21,1,3,Urbano,5.0
+28306,Emiliano Zapata,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,165,Urbano,5.0
+28306,Independencia,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,166,Urbano,5.0
+28307,Hacienda las Primaveras,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,1,Urbano,5.0
+28307,El Campanario,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,167,Urbano,5.0
+28307,El Pelillo,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,168,Urbano,5.0
+28307,Gregorio Torres Quintero,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,169,Urbano,5.0
+28307,El Arenal,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,776,Urbano,5.0
+28307,Valle del Sol,Fraccionamiento,Armería,Colima,Ciudad de Armería,28301,6,28301,,21,1,777,Urbano,5.0
+28307,Sagrado Corazón,Colonia,Armería,Colima,Ciudad de Armería,28301,6,28301,,9,1,778,Rural,5.0
+28310,Rincón de López,Pueblo,Armería,Colima,,28301,6,28301,,28,1,170,Urbano,
+28313,El Banco de Jicotán,Ranchería,Armería,Colima,,28301,6,28301,,29,1,183,Rural,
+28315,El Puertecito,Ranchería,Armería,Colima,,28301,6,28301,,29,1,171,Rural,
+28317,Augusto Gómez Villanueva (Coalatilla),Ejido,Armería,Colima,,28301,6,28301,,15,1,172,Rural,
+28320,Cofradía de Juárez,Pueblo,Armería,Colima,,28301,6,28301,,28,1,174,Urbano,
+28330,Periquillo,Pueblo,Armería,Colima,,28301,6,28301,,28,1,175,Rural,
+28330,Flor de Coco,Colonia,Armería,Colima,,28301,6,28301,,9,1,497,Rural,
+28340,Los Reyes (Zorrillos),Ejido,Armería,Colima,,28301,6,28301,,15,1,177,Rural,
+28350,Cuyutlán,Ranchería,Armería,Colima,,28301,6,28301,,29,1,181,Rural,
+28350,El Paraíso [Balneario],Ranchería,Armería,Colima,,28301,6,28301,,29,1,182,Rural,
+28400,Valle de las Huertas,Fraccionamiento,Coquimatlán,Colima,,28401,6,28401,,21,4,1,Urbano,
+28400,Santa Rita,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,2,Urbano,
+28400,Coquimatlán,Pueblo,Coquimatlán,Colima,,28401,6,28401,,28,4,185,Urbano,
+28400,Camichines,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,462,Urbano,
+28400,Cazumba,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,465,Urbano,
+28400,Emiliano Zapata,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,480,Urbano,
+28400,Elías Zamora Verduzco,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,493,Urbano,
+28400,Jardines del Llano,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,511,Urbano,
+28400,Las Higueras,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,533,Urbano,
+28400,San Miguel,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,592,Urbano,
+28400,Las Moras,Colonia,Coquimatlán,Colima,,28401,6,28401,,9,4,791,Urbano,
+28402,El Poblado,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,191,Rural,
+28403,Hacienda Buenos Aires,Fraccionamiento,Coquimatlán,Colima,,28401,6,28401,,21,4,3,Rural,
+28403,Los Limones,Pueblo,Coquimatlán,Colima,,28401,6,28401,,28,4,719,Rural,
+28405,El Chical,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,186,Rural,
+28410,Agua Zarca,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,184,Rural,
+28410,Juárez (La Magdalena),Pueblo,Coquimatlán,Colima,,28401,6,28401,,28,4,193,Urbano,
+28413,Cruz de Piedra,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,4,Rural,
+28414,La Sidra,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,189,Rural,
+28414,El Algodonal,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,192,Rural,
+28420,La Esperanza,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,188,Rural,
+28424,Jala,Ranchería,Coquimatlán,Colima,,28401,6,28401,,29,4,187,Rural,
+28450,Ex-Hacienda de Nogueras Residencial,Fraccionamiento,Comala,Colima,,28451,6,28451,,21,3,1,Urbano,
+28450,Real de Comala,Fraccionamiento,Comala,Colima,,28451,6,28451,,21,3,2,Urbano,
+28450,Comala,Pueblo,Comala,Colima,,28451,6,28451,,28,3,194,Urbano,
+28450,Nogueras,Ranchería,Comala,Colima,,28451,6,28451,,29,3,198,Rural,
+28450,Los Llanitos,Colonia,Comala,Colima,,28451,6,28451,,9,3,199,Urbano,
+28450,Cuauhtémoc,Colonia,Comala,Colima,,28451,6,28451,,9,3,474,Urbano,
+28450,Lázaro Cárdenas,Colonia,Comala,Colima,,28451,6,28451,,9,3,538,Urbano,
+28450,Los Aguajes,Colonia,Comala,Colima,,28451,6,28451,,9,3,550,Urbano,
+28450,Francisco Ramírez Villarreal,Colonia,Comala,Colima,,28451,6,28451,,9,3,580,Urbano,
+28450,Celsa Virgen,Colonia,Comala,Colima,,28451,6,28451,,9,3,780,Urbano,
+28450,Santa Cecilia,Colonia,Comala,Colima,,28451,6,28451,,9,3,781,Urbano,
+28450,La Trinidad,Colonia,Comala,Colima,,28451,6,28451,,9,3,782,Urbano,
+28450,Miguel de La Madrid Hurtado,Colonia,Comala,Colima,,28451,6,28451,,9,3,785,Urbano,
+28450,Lomas de Comala,Colonia,Comala,Colima,,28451,6,28451,,9,3,786,Urbano,
+28450,Campo Verde,Colonia,Comala,Colima,,28451,6,28451,,9,3,845,Urbano,
+28450,Solidaridad Aguajitos,Colonia,Comala,Colima,,28451,6,28451,,9,3,846,Urbano,
+28450,Real Nogueras,Colonia,Comala,Colima,,28451,6,28451,,9,3,847,Urbano,
+28450,Lomas del Pedregal,Colonia,Comala,Colima,,28451,6,28451,,9,3,848,Urbano,
+28450,Lomas Altas,Colonia,Comala,Colima,,28451,6,28451,,9,3,849,Urbano,
+28450,Real de Mendoza,Colonia,Comala,Colima,,28451,6,28451,,9,3,850,Urbano,
+28450,Barrio Alto,Colonia,Comala,Colima,,28451,6,28451,,9,3,851,Urbano,
+28450,Campestre Comala,Colonia,Comala,Colima,,28451,6,28451,,9,3,852,Urbano,
+28452,La Caja,Ranchería,Comala,Colima,,28451,6,28451,,29,3,197,Rural,
+28454,Zacualpan,Pueblo,Comala,Colima,,28451,6,28451,,28,3,195,Rural,
+28455,Campo Cuatro,Ranchería,Comala,Colima,,28451,6,28451,,29,3,213,Rural,
+28456,Lagunitas,Ranchería,Comala,Colima,,28451,6,28451,,29,3,204,Rural,
+28459,Suchitlán,Pueblo,Comala,Colima,,28451,6,28451,,28,3,201,Urbano,
+28459,La Cañada,Colonia,Comala,Colima,,28451,6,28451,,9,3,784,Rural,
+28460,Cofradía de Suchitlán,Ranchería,Comala,Colima,,28451,6,28451,,29,3,202,Rural,
+28460,Agosto,Ranchería,Comala,Colima,,28451,6,28451,,29,3,210,Rural,
+28460,La Nogalera,Ranchería,Comala,Colima,,28451,6,28451,,29,3,720,Rural,
+28461,El Remate,Ranchería,Comala,Colima,,28451,6,28451,,29,3,203,Rural,
+28464,Mahakua (Hacienda San Antonio),Rancho,Comala,Colima,,28451,6,28451,,48,3,206,Rural,
+28464,La Becerrera,Ranchería,Comala,Colima,,28451,6,28451,,29,3,207,Rural,
+28464,La María,Ranchería,Comala,Colima,,28451,6,28451,,29,3,208,Rural,
+28464,La Yerbabuena,Ranchería,Comala,Colima,,28451,6,28451,,29,3,530,Rural,
+28466,Los Colomos,Ranchería,Comala,Colima,,28451,6,28451,,29,3,209,Rural,
+28466,Colomitos,Ranchería,Comala,Colima,,28451,6,28451,,29,3,211,Rural,
+28466,El Remudadero,Ranchería,Comala,Colima,,28451,6,28451,,29,3,212,Rural,
+28500,Cuauhtémoc,Pueblo,Cuauhtémoc,Colima,,28501,6,28501,,28,5,214,Urbano,
+28500,El Toreo,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,643,Urbano,
+28504,Lomas Santa Cruz,Fraccionamiento,Cuauhtémoc,Colima,,28501,6,28501,,21,5,3,Urbano,
+28504,La Escaramuza,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,9,Urbano,
+28504,Ricardo Flores Magón,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,10,Urbano,
+28504,La Mojonera,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,11,Urbano,
+28504,Griselda Alvarez Ponce de León,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,503,Urbano,
+28504,La Presa,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,525,Urbano,
+28504,Los Monos,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,551,Urbano,
+28504,San Rafael,Fraccionamiento,Cuauhtémoc,Colima,,28501,6,28501,,21,5,593,Urbano,
+28504,Campestre San Jerónimo,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,691,Urbano,
+28504,La Cayetana,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,692,Urbano,
+28504,La Escondida,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,695,Urbano,
+28506,Emiliano Zapata,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,495,Urbano,
+28506,San Jerónimo,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,760,Urbano,
+28507,Valle Real,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,1,Urbano,
+28507,Las Higueras,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,534,Urbano,
+28510,Santa Mariana,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,6,Urbano,
+28510,Quesería,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,217,Urbano,
+28510,La Cruz,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,516,Urbano,
+28510,Solidaridad,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,597,Urbano,
+28513,El Arenal,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,5,Urbano,
+28513,México,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,7,Urbano,
+28513,Ermita,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,790,Urbano,
+28514,Montitlán,Ranchería,Cuauhtémoc,Colima,,28511,6,28511,,29,5,226,Rural,
+28515,Concepción Barbosa,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,473,Urbano,
+28516,Arsenio Farell Cubillas,Colonia,Cuauhtémoc,Colima,,28511,6,28511,,9,5,564,Urbano,
+28520,Alcaraces,Ranchería,Cuauhtémoc,Colima,,28511,6,28511,,29,5,219,Rural,
+28521,Palmillas,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,220,Rural,
+28521,El Barro,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,221,Rural,
+28523,Cerro Colorado,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,222,Rural,
+28530,Altozano,Condominio,Cuauhtémoc,Colima,,28501,6,28501,,10,5,4,Rural,
+28530,Chiapa,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,223,Rural,
+28530,Ocotillo,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,225,Rural,
+28550,El Campanario,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,2,Urbano,
+28550,Lagunilla,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,8,Urbano,
+28550,El Trapiche,Pueblo,Cuauhtémoc,Colima,,28501,6,28501,,28,5,228,Urbano,
+28550,San Joaquín,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,229,Rural,
+28553,El Cóbano,Hacienda,Cuauhtémoc,Colima,,28501,6,28501,,24,5,230,Rural,
+28553,El Parián,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,231,Rural,
+28555,La Palma,Ranchería,Cuauhtémoc,Colima,,28501,6,28501,,29,5,232,Rural,
+28557,ISENCO,Equipamiento,Cuauhtémoc,Colima,,28001,6,28001,,17,5,856,Rural,
+28590,Buenavista,Ejido,Cuauhtémoc,Colima,,28501,6,28501,,15,5,233,Rural,
+28597,Alzada,Colonia,Cuauhtémoc,Colima,,28501,6,28501,,9,5,216,Rural,
+28597,Bajío de la Leona,Pueblo,Cuauhtémoc,Colima,,28501,6,28501,,28,5,799,Rural,
+28599,Colima (Lic. Miguel de la Madrid Hurtado),Aeropuerto,Cuauhtémoc,Colima,,28501,6,28501,,1,5,234,Rural,
+28600,Estapilla,Ejido,Colima,Colima,,28001,6,28001,,15,2,235,Rural,
+28600,Piscila,Ejido,Colima,Colima,,28001,6,28001,,15,2,236,Rural,
+28600,Puerta de Ánzar,Ranchería,Colima,Colima,,28001,6,28001,,29,2,237,Rural,
+28600,Los Tepames,Pueblo,Colima,Colima,,28001,6,28001,,28,2,238,Rural,
+28600,Ticuizitán,Ranchería,Colima,Colima,,28001,6,28001,,29,2,239,Rural,
+28600,Tinajas,Ranchería,Colima,Colima,,28001,6,28001,,29,2,240,Rural,
+28600,El Amarradero,Ranchería,Colima,Colima,,28001,6,28001,,29,2,482,Rural,
+28610,San Ángel Residencial,Fraccionamiento,Colima,Colima,,28001,6,28001,,21,2,110,Rural,
+28610,El Chanal,Colonia,Colima,Colima,,28001,6,28001,,9,2,244,Rural,
+28613,La Capacha,Ranchería,Colima,Colima,,28001,6,28001,,29,2,247,Rural,
+28620,Lo de Villa,Colonia,Colima,Colima,,28001,6,28001,,9,2,250,Urbano,
+28620,Ejidal,Colonia,Colima,Colima,,28001,6,28001,,9,2,803,Urbano,
+28620,J. Jesús Ríos,Colonia,Colima,Colima,,28001,6,28001,,9,2,804,Urbano,
+28626,El Alpuyequito,Ranchería,Colima,Colima,,28001,6,28001,,29,2,99,Rural,
+28627,Loma de Fátima,Ranchería,Colima,Colima,,28001,6,28001,,29,2,109,Rural,
+28627,Loma de Juárez (El Mezquite),Ranchería,Colima,Colima,,28001,6,28001,,29,2,252,Rural,
+28628,Los Mezcales,Ranchería,Colima,Colima,,28001,6,28001,,29,2,253,Rural,
+28629,Las Golondrinas,Ranchería,Colima,Colima,,28001,6,28001,,29,2,254,Rural,
+28630,El Bordo,Ranchería,Colima,Colima,,28001,6,28001,,29,2,255,Rural,
+28633,La Media Luna,Pueblo,Colima,Colima,,28001,6,28001,,28,2,797,Rural,
+28634,Corralitos,Ranchería,Colima,Colima,,28001,6,28001,,29,2,256,Rural,
+28634,El Astillero de Abajo,Ranchería,Colima,Colima,,28001,6,28001,,29,2,483,Rural,
+28634,El Astillero de Arriba,Ranchería,Colima,Colima,,28001,6,28001,,29,2,484,Rural,
+28634,Trapichillos,Ranchería,Colima,Colima,,28001,6,28001,,29,2,600,Rural,
+28635,Paso del Zarco,Ranchería,Colima,Colima,,28001,6,28001,,29,2,262,Rural,
+28635,La Loma de Ignacio Allende,Pueblo,Colima,Colima,,28001,6,28001,,28,2,798,Rural,
+28640,Nuevo,Rancho,Colima,Colima,,28001,6,28001,,48,2,108,Rural,
+28640,Los Asmoles,Ranchería,Colima,Colima,,28001,6,28001,,29,2,257,Rural,
+28645,Acatitán,Ranchería,Colima,Colima,,28001,6,28001,,29,2,259,Rural,
+28646,Las Guásimas (Las Borregas),Ranchería,Colima,Colima,,28001,6,28001,,29,2,260,Rural,
+28647,Los Ortices,Ranchería,Colima,Colima,,28001,6,28001,,29,2,261,Rural,
+28655,La Higuerita,Ranchería,Colima,Colima,,28001,6,28001,,29,2,263,Rural,
+28656,Las Tunas,Ranchería,Colima,Colima,,28001,6,28001,,29,2,264,Rural,
+28700,Los Gobernadores,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,1,Urbano,
+28700,Carlos de la Madrid Virgen,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,2,Urbano,
+28700,Daniel Contreras Lara,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,3,Urbano,
+28700,Ixtlahuacán,Pueblo,Ixtlahuacán,Colima,,28706,6,28706,,28,6,266,Urbano,
+28700,Mojotal,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,557,Urbano,
+28700,11 Pueblos,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,568,Urbano,
+28700,6 de Enero,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,595,Urbano,
+28703,Jiliotupa,Ejido,Ixtlahuacán,Colima,,28706,6,28706,,15,6,269,Rural,
+28704,Las Trancas,Ejido,Ixtlahuacán,Colima,,28706,6,28706,,15,6,270,Rural,
+28705,La Presa (Barranca del Rebozo),Ejido,Ixtlahuacán,Colima,,28706,6,28706,,15,6,274,Rural,
+28705,Lázaro Cárdenas,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,539,Rural,
+28720,Aquiles Serdán (Tamala),Ejido,Ixtlahuacán,Colima,,28706,6,28706,,15,6,276,Rural,
+28724,San Gabriel,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,277,Rural,
+28730,Zinacamitlán (Los Chicos),Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,267,Rural,
+28730,Chamila,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,275,Rural,
+28730,Santa Inés,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,280,Rural,
+28730,La Tunita,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,281,Rural,
+28733,La Tepamera,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,279,Rural,
+28733,Las Anonas,Colonia,Ixtlahuacán,Colima,,28706,6,28706,,9,6,531,Rural,
+28734,Agua de la Virgen,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,265,Rural,
+28734,El Camichín (Veintiséis de Julio),Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,271,Rural,
+28735,Las Conchas,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,268,Rural,
+28735,El Capire,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,283,Rural,
+28735,Higueras de Santa Rosa,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,802,Rural,
+28736,El Galaje,Ranchería,Ixtlahuacán,Colima,,28706,6,28706,,29,6,284,Rural,
+28750,27 de Octubre,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,1,Urbano,
+28750,Los Mangos,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,2,Urbano,
+28750,Minatitlán,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,285,Urbano,
+28750,Palo Verde,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,297,Rural,
+28750,Carlos de La Madrid Vejar,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,464,Urbano,
+28750,Infonavit,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,508,Urbano,
+28750,Progreso,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,581,Urbano,
+28760,Agua Salada,Ejido,Minatitlán,Colima,,28751,6,28751,,15,8,287,Rural,
+28760,La Loma,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,288,Rural,
+28764,Las Pesadas,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,5,Rural,
+28765,Benito Juárez de Peña Colorada (El Poblado),Fraccionamiento,Minatitlán,Colima,,28751,6,28751,,21,8,3,Rural,
+28765,El Platanar,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,4,Rural,
+28765,Peña Colorada (Fierro),Equipamiento,Minatitlán,Colima,,28751,6,28751,,17,8,716,Rural,
+28766,La Playa (La Playita),Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,294,Rural,
+28767,Paticajo,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,569,Rural,
+28770,El Sauz,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,289,Rural,
+28772,El Terrero,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,291,Rural,
+28773,San Antonio,Colonia,Minatitlán,Colima,,28751,6,28751,,9,8,290,Rural,
+28774,Ranchitos,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,292,Rural,
+28780,El Arrayanal,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,293,Rural,
+28784,Potrero Grande,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,295,Rural,
+28784,Las Guásimas,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,298,Rural,
+28784,El Nogal,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,299,Rural,
+28784,Agua Fría,Ranchería,Minatitlán,Colima,,28751,6,28751,,29,8,300,Rural,
+28800,Residencial el Colomo,Fraccionamiento,Manzanillo,Colima,,28201,6,28201,,21,7,24,Urbano,
+28800,Zona Centro El Colomo,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,301,Urbano,
+28800,Las Juntas (La Floreña),Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,302,Rural,
+28800,Arturo Noriega Pizano,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,457,Urbano,
+28800,5 de Mayo,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,468,Urbano,
+28800,El Garcero,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,488,Rural,
+28800,El Libramiento,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,489,Urbano,
+28800,El Paraíso,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,490,Urbano,
+28800,La Cima del Progreso,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,514,Rural,
+28800,La Lupita,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,523,Rural,
+28800,Lázaro Cárdenas,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,540,Urbano,
+28800,López Mateos,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,549,Urbano,
+28800,María Luisa Campero,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,554,Urbano,
+28800,Marina Nacional,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,555,Urbano,
+28800,Miguel de La Madrid,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,556,Urbano,
+28800,San Francisco,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,589,Urbano,
+28800,20 de Noviembre,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,602,Urbano,
+28800,La Calma,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,693,Urbano,
+28800,La Playita,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,694,Urbano,
+28807,Lic. Luis Echeverría Álvarez,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,27,Rural,
+28808,Villa Florida,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,304,Urbano,
+28808,Aquarium,Fraccionamiento,Manzanillo,Colima,,28201,6,28201,,21,7,688,Urbano,
+28809,Campos,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,305,Urbano,
+28810,Los Cedros,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,306,Rural,
+28810,Lomas de Ávila Camacho,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,307,Rural,
+28812,El Huizcolote,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,308,Rural,
+28813,Llano de la Marina,Colonia,Manzanillo,Colima,,28201,6,28201,,9,7,68,Rural,
+28813,Ciruelito de la Marina,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,309,Rural,
+28814,Camichín,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,310,Rural,
+28815,Puertecito de Lajas,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,311,Rural,
+28815,Canoas,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,312,Rural,
+28820,Veladero de los Otates,Ranchería,Manzanillo,Colima,,28861,6,28861,,29,7,316,Rural,
+28820,Aserradero de la Lima,Ranchería,Manzanillo,Colima,,28861,6,28861,,29,7,317,Rural,
+28826,Don Tomás,Ranchería,Manzanillo,Colima,,28861,6,28861,,29,7,318,Rural,
+28830,El Chavarín,Ranchería,Manzanillo,Colima,,48971,6,48971,,29,7,319,Rural,
+28833,El Charco,Ejido,Manzanillo,Colima,,48971,6,48971,,15,7,320,Rural,
+28834,Río Marabasco,Ejido,Manzanillo,Colima,,48971,6,48971,,15,7,321,Rural,
+28836,Emiliano Zapata,Ranchería,Manzanillo,Colima,,48971,6,48971,,29,7,322,Rural,
+28838,El Centinela de Arriba,Rancho,Manzanillo,Colima,,48971,6,48971,,48,7,324,Rural,
+28838,Isla Navidad,Fraccionamiento,Manzanillo,Colima,,48971,6,48971,,21,7,696,Rural,
+28838,La Culebra (Colimilla),Pueblo,Manzanillo,Colima,,48971,6,48971,,28,7,718,Rural,
+28840,Chandiablo,Ranchería,Manzanillo,Colima,,28861,6,28861,,29,7,325,Rural,
+28850,Camotlán de Miraflores,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,327,Rural,
+28855,La Rosa de San José de Lúmber,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,313,Rural,
+28855,San José de Lúmber (Piedra Redonda),Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,315,Rural,
+28855,Veladero de Camotlán,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,328,Rural,
+28860,La Querencia,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,11,Urbano,2.0
+28860,Río Colorado,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,70,Urbano,2.0
+28860,Santiago,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,331,Urbano,2.0
+28860,Olas Altas,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,567,Urbano,2.0
+28863,Bahía Azul,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,67,Urbano,2.0
+28863,Pipila,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,69,Urbano,2.0
+28863,Abelardo L. Rodríguez,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,449,Urbano,2.0
+28863,Colinas de Santiago,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,471,Urbano,2.0
+28863,El Cerrito,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,486,Urbano,2.0
+28863,Francisco Villa,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,500,Urbano,2.0
+28863,El Jabalí,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,512,Urbano,2.0
+28863,La Cruz,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,517,Urbano,2.0
+28863,Las Flores,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,532,Urbano,2.0
+28863,Obradores,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,562,Urbano,2.0
+28863,Perla de Occidente,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,574,Urbano,2.0
+28863,Porfirio Gaytán,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,579,Urbano,2.0
+28863,San Isidro Labrador,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,590,Urbano,2.0
+28863,San Martín,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,591,Urbano,2.0
+28863,Barrio Nuevo,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,620,Urbano,2.0
+28863,Pedro Núñez,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,621,Urbano,2.0
+28863,Vista del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,681,Urbano,2.0
+28864,Almendros Residencial II,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,1,Urbano,2.0
+28864,Cantamar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,5,Urbano,2.0
+28864,Villas del Pacífico,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,6,Urbano,2.0
+28864,Paseo del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,8,Urbano,2.0
+28864,Santa Carolina,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,10,Urbano,2.0
+28864,Las Camelinas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,26,Urbano,2.0
+28864,Jardines de Salagua,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,30,Urbano,2.0
+28864,Sol del Pacífico,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,31,Urbano,2.0
+28864,Hacienda Santa Clara,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,59,Urbano,2.0
+28864,Natura Pacífico,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,65,Urbano,2.0
+28864,Deportiva,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,479,Urbano,2.0
+28864,Hermosa Provincia,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,505,Urbano,2.0
+28864,Loma del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,547,Urbano,2.0
+28864,Lomas Verdes,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,548,Urbano,2.0
+28864,Montebello,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,558,Urbano,2.0
+28864,Obrera,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,565,Urbano,2.0
+28864,Valle Dorado,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,601,Urbano,2.0
+28864,Viveros Pelayo,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,612,Urbano,2.0
+28864,Jardines de Santiago,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,672,Urbano,2.0
+28864,Las Huertas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,673,Urbano,2.0
+28864,Valle Alto,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,674,Urbano,2.0
+28864,Valle del Coral,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,675,Urbano,2.0
+28864,Lomas de Santiago,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,677,Urbano,2.0
+28864,La Joya I,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,678,Urbano,2.0
+28864,Country Club,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,680,Urbano,2.0
+28864,Azul Marino Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,815,Urbano,2.0
+28864,Del Mar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,817,Urbano,2.0
+28865,Terraplena,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,25,Urbano,2.0
+28865,Monte Orquídea,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,29,Urbano,2.0
+28865,Residencial San Miguel,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,36,Urbano,2.0
+28865,Senderos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,37,Urbano,2.0
+28865,Miravalle,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,38,Urbano,2.0
+28865,Lomas del Carmen,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,39,Urbano,2.0
+28865,La Floresta,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,40,Urbano,2.0
+28865,Jardines del Valle,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,41,Urbano,2.0
+28865,Nuevo el Petatero,Ranchería,Manzanillo,Colima,,28861,6,28861,,29,7,326,Rural,
+28865,Valle Paraíso,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,831,Urbano,2.0
+28865,Orquídeas Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,862,Urbano,2.0
+28865,Los Altos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,863,Urbano,2.0
+28867,Bugambilias,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,7,Urbano,2.0
+28867,Las Hadas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,334,Urbano,2.0
+28867,Salagua,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,337,Urbano,2.0
+28867,La Punta,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,526,Urbano,2.0
+28867,Península de Santiago,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,573,Urbano,2.0
+28867,Villas del Faro,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,609,Urbano,2.0
+28867,Villas del Palmar,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,682,Urbano,2.0
+28868,Real de Santiago,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,53,Urbano,2.0
+28868,Real del Country,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,54,Urbano,2.0
+28868,Maravillas del Campo,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,55,Urbano,2.0
+28868,Esperanza de Miramar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,66,Urbano,2.0
+28868,El Naranjo,Ejido,Manzanillo,Colima,Manzanillo,28861,6,28861,,15,7,335,Rural,2.0
+28868,Ejidal Miramar,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,336,Urbano,2.0
+28868,Club Santiago,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,470,Urbano,2.0
+28868,La Joya,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,535,Urbano,2.0
+28868,Nuevo Miramar,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,561,Urbano,2.0
+28868,La Central,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,613,Rural,2.0
+28868,Club Maeva,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,816,Urbano,2.0
+28869,Rosa Morada,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,2,Urbano,2.0
+28869,Valle Salagua,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,4,Urbano,2.0
+28869,Aguazul,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,9,Urbano,2.0
+28869,Santa Sofía,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,15,Urbano,2.0
+28869,Cantalegre,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,28,Urbano,2.0
+28869,Agua Marina Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,42,Urbano,2.0
+28869,La Escondida Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,43,Urbano,2.0
+28869,Villa Coral,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,57,Urbano,2.0
+28869,El Dorado,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,60,Urbano,2.0
+28869,Vidaire,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,61,Urbano,2.0
+28869,Belona Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,62,Urbano,2.0
+28869,Mar de Plata,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,63,Urbano,2.0
+28869,Árbol de Agua,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,64,Urbano,2.0
+28869,Delfines,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,71,Urbano,2.0
+28869,Villas Marbella,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,72,Urbano,2.0
+28869,Lázaro Cárdenas,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,73,Urbano,2.0
+28869,Arboledas,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,74,Urbano,2.0
+28869,Las Perlas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,75,Urbano,2.0
+28869,Las Ceibas Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,87,Urbano,2.0
+28869,Las Parotas Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,88,Urbano,2.0
+28869,Puerta Dorada,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,89,Urbano,2.0
+28869,Punta Arena,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,90,Urbano,2.0
+28869,Barrio Nuevo Salagua,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,458,Urbano,2.0
+28869,Las Palmas,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,614,Urbano,2.0
+28869,Guadalupe Victoria,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,615,Urbano,2.0
+28869,López de Legaspi,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,616,Urbano,2.0
+28869,Arboledas,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,617,Urbano,2.0
+28869,Obispo Sergio Méndez Arceo,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,619,Urbano,2.0
+28869,La Joya II,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,679,Urbano,2.0
+28869,Villa Flamencos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,689,Urbano,2.0
+28869,Puerta del Sol,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,795,Urbano,2.0
+28869,El Campanario,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,818,Urbano,2.0
+28869,Elías Zamora Verduzco,Colonia,Manzanillo,Colima,Manzanillo,28861,6,28861,,9,7,819,Urbano,2.0
+28869,Los Mangos,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,820,Urbano,2.0
+28869,Nuevo Salagua,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,821,Urbano,2.0
+28869,Almendros Residencial,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,822,Urbano,2.0
+28869,Paraiso Salagua,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,855,Urbano,2.0
+28869,Marimar,Fraccionamiento,Manzanillo,Colima,Manzanillo,28861,6,28861,,21,7,857,Urbano,2.0
+28870,Jalipa,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,338,Rural,
+28870,Francisco Villa,Pueblo,Manzanillo,Colima,,28201,6,28201,,28,7,341,Rural,
+28872,Punta de Agua de Camotlán,Pueblo,Manzanillo,Colima,,28201,6,28201,,28,7,339,Rural,
+28880,San Buenaventura,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,347,Rural,
+28880,Santa Rita,Ranchería,Manzanillo,Colima,,28201,6,28201,,29,7,348,Rural,
+28880,Venustiano Carranza (Cualata),Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,349,Rural,
+28880,Nuevo Cuyutlán,Ejido,Manzanillo,Colima,,28201,6,28201,,15,7,717,Rural,
+28885,El Salto,Rancho,Manzanillo,Colima,,28201,6,28201,,48,7,351,Rural,
+28886,Agua Blanca,Rancho,Manzanillo,Colima,,28201,6,28201,,48,7,352,Rural,
+28900,Tecolapa,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,4,Urbano,
+28900,Progreso,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,5,Urbano,
+28900,El Bordo,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,6,Urbano,
+28900,El Rocio,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,7,Urbano,
+28900,Martín del Campo,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,8,Urbano,
+28900,Lindavista,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,10,Urbano,
+28900,San Antonio,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,130,Urbano,
+28900,Cerro de Ortega,Pueblo,Tecomán,Colima,,28901,6,28901,,28,9,355,Urbano,
+28900,Hermanos Leaños,Colonia,Tecomán,Colima,,28901,6,28901,,9,9,697,Urbano,
+28910,Madrid,Pueblo,Tecomán,Colima,,28101,6,28101,,28,9,358,Urbano,
+28910,Articulo 27 Constitucional,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,456,Urbano,
+28910,Conacar PRI,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,472,Urbano,
+28910,La Pedregal,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,524,Urbano,
+28915,El Rosario,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,360,Rural,
+28920,Tecolapa,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,361,Rural,
+28923,La Salada,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,17,Rural,
+28929,Cofradía de Hidalgo (Laguna de Alcuzahue),Pueblo,Tecomán,Colima,,28101,6,28101,,28,9,362,Rural,
+28930,Caleras,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,363,Rural,
+28930,Puerta de Caleras,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,364,Rural,
+28934,La Estación,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,12,Urbano,
+28934,Leonardo Jaramillo,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,13,Urbano,
+28934,Ruiz Cortines,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,14,Urbano,
+28934,San Martín de Porres,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,15,Urbano,
+28934,El Olivo,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,16,Urbano,
+28934,Bayardo,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,366,Urbano,
+28934,Luis Rodríguez Alcalá [La Báscula],Colonia,Tecomán,Colima,,28101,6,28101,,9,9,367,Urbano,
+28934,Antonio Salazar Salazar,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,455,Urbano,
+28934,María Esther Zuno de Echeverría,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,553,Urbano,
+28935,Cofradía de Morelos,Pueblo,Tecomán,Colima,,28101,6,28101,,28,9,368,Rural,
+28936,San Francisco,Rancho,Tecomán,Colima,,28101,6,28101,,48,9,119,Urbano,
+28936,Ladislao Moreno,Colonia,Tecomán,Colima,,28101,6,28101,,9,9,369,Rural,
+28937,El Real,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,370,Rural,
+28938,Tecuanillo,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,371,Rural,
+28940,Callejones,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,372,Rural,
+28944,El Saucito,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,373,Rural,
+28944,La Primavera,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,374,Rural,
+28945,Chanchopa,Ranchería,Tecomán,Colima,,28101,6,28101,,29,9,375,Rural,
+28947,San Miguel del Ojo de Agua,Ranchería,Tecomán,Colima,,28901,6,28901,,29,9,376,Rural,
+28950,Juluapan,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,377,Rural,
+28952,Los Picachos,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,378,Rural,
+28955,Agua Dulce,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,379,Rural,
+28958,El Mixcuate,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,381,Rural,
+28959,Pueblo Nuevo,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,382,Rural,
+28960,El Carrizal,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,383,Rural,
+28963,Pastores,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,384,Rural,
+28965,Las Joyitas,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,385,Rural,
+28965,El Chivato (Providencia),Ejido,Villa de Álvarez,Colima,,28971,6,28971,,15,10,386,Rural,
+28965,La Montrica,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,387,Rural,
+28968,El Nuevo Naranjal,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,18,Rural,
+28968,El Naranjal,Ranchería,Villa de Álvarez,Colima,,28971,6,28971,,29,10,388,Rural,
+28970,Villa de Álvarez Centro,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,389,Urbano,4.0
+28970,Villas del Sol,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,610,Urbano,4.0
+28973,Floresta,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,391,Urbano,4.0
+28973,Manuel M. Diéguez,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,392,Urbano,4.0
+28973,Real los Arcos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,393,Urbano,4.0
+28973,Santa Teresa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,394,Urbano,4.0
+28973,Villas del Río,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,395,Urbano,4.0
+28973,Villas Adriana,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,607,Urbano,4.0
+28973,Villas de Mayo,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,634,Urbano,4.0
+28973,Santa Cristina,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,636,Urbano,4.0
+28973,Privada Villa San Agustín,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,641,Urbano,4.0
+28973,Rancho Santo,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,756,Urbano,4.0
+28974,Las Palomas Residencial,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,10,Urbano,4.0
+28974,San Isidro,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,396,Urbano,4.0
+28974,Villas Coliman,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,397,Urbano,4.0
+28975,López Mateos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,398,Urbano,4.0
+28975,Santa Martha,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,399,Urbano,4.0
+28975,Morelos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,402,Urbano,4.0
+28975,Villa Carlo,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,707,Urbano,4.0
+28975,La Frontera,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,746,Urbano,4.0
+28975,La Cajita del Agua,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,747,Urbano,4.0
+28975,Privada Villas del Palmar,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,757,Urbano,4.0
+28976,Liberación,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,400,Urbano,4.0
+28976,Villas del Centro,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,401,Urbano,4.0
+28976,Francisco Hernández,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,499,Urbano,4.0
+28976,Rosario Ibarra de Piedra,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,585,Urbano,4.0
+28977,Las Parotas,Condominio,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,10,10,714,Urbano,4.0
+28978,Residencial Bosque Real,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,1,Urbano,4.0
+28978,Real de Caná,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,19,Urbano,4.0
+28978,Colinas del Real,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,21,Urbano,4.0
+28978,Arboledas del Carmen,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,403,Urbano,4.0
+28978,Azaleas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,404,Urbano,4.0
+28978,Colinas del Carmen,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,405,Urbano,4.0
+28978,FOVISSSTE,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,406,Urbano,4.0
+28978,Golondrinas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,407,Urbano,4.0
+28978,Jardines de Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,408,Urbano,4.0
+28978,Primaveras,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,409,Urbano,4.0
+28978,Rinconada de La Hacienda,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,410,Urbano,4.0
+28978,Senderos del Carmen,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,411,Urbano,4.0
+28978,Real Hacienda,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,759,Urbano,4.0
+28978,Real Santa Fe,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,807,Urbano,4.0
+28978,Hacienda del Carmen,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,832,Urbano,4.0
+28979,Colinas de las Lagunas,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,12,Urbano,4.0
+28979,Alfredo V. Bonfil,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,412,Urbano,4.0
+28979,Las Águilas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,413,Urbano,4.0
+28979,Lindavista,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,414,Urbano,4.0
+28979,Lomas de las Flores,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,415,Urbano,4.0
+28979,Loma Hermosa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,416,Urbano,4.0
+28979,Lomas de La Higuera,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,417,Urbano,4.0
+28979,Los Almendros,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,418,Urbano,4.0
+28979,Solidaridad,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,419,Urbano,4.0
+28979,Villa Izcalli Caxitlán,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,420,Urbano,4.0
+28979,Villas de Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,624,Urbano,4.0
+28979,Real Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,626,Urbano,4.0
+28979,Carlos de La Madrid,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,699,Urbano,4.0
+28979,Lomas Altas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,702,Urbano,4.0
+28979,Villas del Cañaveral,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,703,Urbano,4.0
+28979,El Angel,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,704,Urbano,4.0
+28979,Cruz de Comala,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,705,Urbano,4.0
+28979,Lomas de La Villa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,706,Urbano,4.0
+28979,Vista Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,744,Urbano,4.0
+28979,Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,749,Urbano,4.0
+28979,Las Colinas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,750,Urbano,4.0
+28979,Las Lagunas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,751,Urbano,4.0
+28979,Lomas de La Herradura,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,752,Urbano,4.0
+28979,Residencial Colinas del Rey,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,765,Urbano,4.0
+28979,Salomón Preciado,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,811,Urbano,4.0
+28979,Colinas del Sol,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,812,Urbano,4.0
+28980,La Gloria,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,421,Urbano,4.0
+28982,Villas San José Segunda Sección,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,2,Urbano,4.0
+28982,Villas de Alameda,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,637,Urbano,4.0
+28982,La Joya,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,638,Urbano,4.0
+28982,El Cortijo,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,639,Urbano,4.0
+28982,Santa Fe,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,755,Urbano,4.0
+28982,Los Olivos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,767,Urbano,4.0
+28982,Jacarandas,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,772,Urbano,4.0
+28982,Hacienda El Nogal,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,805,Urbano,4.0
+28982,Hacienda del Cortijo,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,806,Urbano,4.0
+28982,Las Rosas,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,860,Urbano,4.0
+28983,Valle del Sol,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,6,Urbano,4.0
+28983,Puerta Higueras,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,11,Urbano,4.0
+28983,Jardines del Llano,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,627,Urbano,4.0
+28983,Rinconada del Centenario,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,632,Urbano,4.0
+28983,Jardines del Centenario,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,633,Urbano,4.0
+28983,Alfonso Rolón Michel,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,700,Urbano,4.0
+28983,Tabachines,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,708,Urbano,4.0
+28983,Senderos de Rancho Blanco,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,709,Urbano,4.0
+28983,Villa Flores,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,710,Urbano,4.0
+28983,Villas Rancho Blanco,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,715,Urbano,4.0
+28983,El Haya,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,825,Urbano,4.0
+28983,Puerta de Rolón,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,841,Urbano,4.0
+28983,Residencial Tulipanes,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,842,Urbano,4.0
+28983,Villa Flores II,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,843,Urbano,4.0
+28984,Patria Residencial,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,3,Urbano,4.0
+28984,Palo Alto,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,4,Urbano,4.0
+28984,Villafuentes,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,5,Urbano,4.0
+28984,Punta Diamante Residencial,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,7,Urbano,4.0
+28984,Residencial Los Robles,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,8,Urbano,4.0
+28984,Vista Volcanes,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,14,Urbano,4.0
+28984,La Fortuna,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,15,Urbano,4.0
+28984,Real del Seis,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,16,Urbano,4.0
+28984,La Esperanza,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,24,Urbano,4.0
+28984,Real del Siete,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,25,Urbano,4.0
+28984,Benito Juárez,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,26,Rural,4.0
+28984,Azteca,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,423,Urbano,4.0
+28984,El Centenario,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,424,Urbano,4.0
+28984,Juan José Ríos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,426,Urbano,4.0
+28984,Loma Bonita,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,429,Urbano,4.0
+28984,Lomas del Centenario,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,431,Urbano,4.0
+28984,Manuel Álvarez,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,432,Urbano,4.0
+28984,Ramón Serrano,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,433,Urbano,4.0
+28984,Real Centenario,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,434,Urbano,4.0
+28984,Villas de San José,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,435,Urbano,4.0
+28984,Jardines de La Villa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,635,Urbano,4.0
+28984,Los Triángulos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,745,Urbano,4.0
+28984,Puerta del Centenario,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,753,Urbano,4.0
+28984,Centenario II,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,754,Urbano,4.0
+28984,La Reserva,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,774,Urbano,4.0
+28984,Buenavista,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,796,Urbano,4.0
+28984,Verde Valle,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,826,Urbano,4.0
+28984,Higueras del Espinal,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,829,Urbano,4.0
+28985,Del Valle,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,436,Urbano,4.0
+28985,Villa de Oro,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,437,Urbano,4.0
+28985,San Miguel,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,711,Urbano,4.0
+28986,Residencial Santa Sofía,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,13,Urbano,4.0
+28986,Emiliano Zapata,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,438,Urbano,4.0
+28986,Villas Diamante,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,766,Urbano,4.0
+28987,Alta Villa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,439,Urbano,4.0
+28987,La Haciendita,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,440,Urbano,4.0
+28987,San Carlos,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,628,Urbano,4.0
+28987,Villas Providencia,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,642,Urbano,4.0
+28988,Real de San Jorge,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,17,Urbano,4.0
+28988,Campestre,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,441,Urbano,4.0
+28988,El Llano,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,442,Urbano,4.0
+28989,Montellano,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,9,Urbano,4.0
+28989,Ciudad Natura,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,20,Rural,4.0
+28989,Montellano II,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,22,Urbano,4.0
+28989,Acueducto Residencial,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,23,Urbano,4.0
+28989,Burócratas del Estado,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,443,Urbano,4.0
+28989,Las Tunas,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,444,Urbano,4.0
+28989,Leandro Valle,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,445,Urbano,4.0
+28989,Prados de La Villa,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,446,Urbano,4.0
+28989,Villa de Alba,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,447,Urbano,4.0
+28989,Puerta de Hierro,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,698,Urbano,4.0
+28989,Campestre Bugambilias,Colonia,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,9,10,771,Urbano,4.0
+28989,Real de Minas,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,773,Urbano,4.0
+28989,La Comarca,Fraccionamiento,Villa de Álvarez,Colima,Ciudad de Villa de Álvarez,28971,6,28971,,21,10,810,Urbano,4.0

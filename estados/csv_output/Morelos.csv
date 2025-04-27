@@ -1,0 +1,1828 @@
+d_codigo,d_asenta,d_tipo_asenta,D_mnpio,d_estado,d_ciudad,d_CP,c_estado,c_oficina,c_CP,c_tipo_asenta,c_mnpio,id_asenta_cpcons,d_zona,c_cve_ciudad
+62000,Cuernavaca Centro,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1,Urbano,2.0
+62010,Altavista,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,5,Urbano,2.0
+62010,Las Piletas,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1030,Urbano,2.0
+62017,Margarita Maza de Juárez,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,6,Urbano,2.0
+62018,Altavista Barrancas,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,7,Urbano,2.0
+62019,Loma Hermosa,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,8,Urbano,2.0
+62019,Plan de Ayala Barrancas,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1008,Urbano,2.0
+62019,Provinciana,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1009,Urbano,2.0
+62019,Tepeyehualco,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1026,Rural,2.0
+62020,Lomas de San Antón,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,9,Urbano,2.0
+62020,José López Portillo,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,10,Urbano,2.0
+62020,Sacatierra,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,11,Rural,2.0
+62020,San Antón,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,12,Urbano,2.0
+62020,Las Terrazas,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,31,7,1029,Urbano,2.0
+62020,Ampliación Sacatierra,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1911,Urbano,2.0
+62028,Loma de los Amates (Loma de la Lagunilla),Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,45,Rural,2.0
+62028,Nueva Santa María,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1013,Urbano,2.0
+62028,Santa Fe,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1014,Urbano,2.0
+62029,Chulavista,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,13,Urbano,2.0
+62030,Club de Golf,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,14,Urbano,2.0
+62037,Jardines del Edén,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,2,Urbano,2.0
+62037,Benito Juárez (Lagunilla),Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,15,Urbano,2.0
+62037,Tenochtitlan,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,50,Rural,2.0
+62037,La Unión,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1017,Rural,2.0
+62038,Lagunillas Barrancas,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,16,Rural,2.0
+62039,Lagunilla del Salto,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,17,Urbano,2.0
+62040,Miguel Hidalgo,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,19,Urbano,2.0
+62050,Benito Juárez (Centro),Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,20,Urbano,2.0
+62050,Las Palmas,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,21,Urbano,2.0
+62057,Pilares,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,23,Urbano,2.0
+62059,Bondies,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,25,Urbano,2.0
+62060,Quintana Roo,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,27,Urbano,2.0
+62070,Chipitlán,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,28,Urbano,2.0
+62070,Mina Cinco,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,720,Urbano,2.0
+62076,El Polvorín,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,29,Urbano,2.0
+62076,Adolfo López Mateos (Polvorín),Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,722,Urbano,2.0
+62076,Bosques de Palmira,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1023,Urbano,2.0
+62080,Lázaro Cárdenas,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,30,Urbano,2.0
+62080,Loma Bonita,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,721,Urbano,2.0
+62083,Lázaro Cárdenas 1ra. Ampliación,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1018,Urbano,2.0
+62083,Lázaro Cárdenas 2da. Ampliación,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1024,Urbano,2.0
+62084,La Parota,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1020,Urbano,2.0
+62100,Santa María Ahuacatitlán,Pueblo,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,28,7,31,Urbano,2.0
+62100,Ocotitla,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,42,Rural,2.0
+62103,Santa Elena de La Cruz,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,32,Rural,2.0
+62115,Independencia,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,34,Urbano,2.0
+62115,La Caminera,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,36,Rural,2.0
+62115,Loma Bonita,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,696,Urbano,2.0
+62115,Adolfo López Mateos,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,698,Urbano,2.0
+62115,Ocotera,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,704,Urbano,2.0
+62116,Balcones de Tepuente,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,35,Rural,2.0
+62116,Tepuente,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,37,Urbano,2.0
+62116,Valle Tepuente,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,38,Rural,2.0
+62116,Cruz de La Misión,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,687,Urbano,2.0
+62116,Mirador Universidad,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,702,Urbano,2.0
+62116,Paraje de Tepuente,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,705,Urbano,2.0
+62117,Provincias de Jerusalén,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,39,Urbano,2.0
+62120,Rancho Cortes,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,41,Urbano,2.0
+62130,Buenavista,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,43,Urbano,2.0
+62130,Tetela del Monte,Pueblo,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,28,7,44,Urbano,2.0
+62130,Lomas de Ahuatlán,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,662,Urbano,2.0
+62130,Jardines de Ahuatlán,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,978,Urbano,2.0
+62130,Terrazas Ahuatlán,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1169,Urbano,2.0
+62130,Ahuatlán Tzompantle,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1170,Urbano,2.0
+62130,Real de Tetela,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1171,Urbano,2.0
+62136,Jardín Tetela,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,47,Urbano,2.0
+62137,La Mojonera,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,48,Urbano,2.0
+62137,Lienzo El Charro,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,49,Urbano,2.0
+62139,Loma Linda,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,51,Urbano,2.0
+62140,Bellavista,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,52,Urbano,2.0
+62143,Zona Militar,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,979,Urbano,2.0
+62144,Condominios Bugambilias,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,53,Urbano,2.0
+62144,El Ángel,Condominio,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,10,7,658,Urbano,2.0
+62144,Trevi I,Condominio,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,10,7,675,Urbano,2.0
+62144,Trevi II,Condominio,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,10,7,676,Urbano,2.0
+62144,Trevi III,Condominio,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,10,7,677,Urbano,2.0
+62145,Lomas de La Selva Norte,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,989,Urbano,2.0
+62145,Conjunto Colorines,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1034,Urbano,2.0
+62150,Del Bosque,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,54,Urbano,2.0
+62150,Campo El Alambrado,Ranchería,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,29,7,72,Rural,2.0
+62154,Lomas del Pinar,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1037,Urbano,2.0
+62156,Lomas de Tetela,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,56,Urbano,2.0
+62156,Lomas del Sol,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,977,Urbano,2.0
+62157,Lomas de Tzompantle,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,58,Urbano,2.0
+62159,Adolfo Ruiz Cortines,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,60,Urbano,2.0
+62160,Hacienda Tetela,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,61,Urbano,2.0
+62160,Rancho Tetela,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,62,Urbano,2.0
+62160,La Cañada,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1022,Urbano,2.0
+62165,Lomas de Coyuca,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,63,Urbano,2.0
+62165,Tonintana,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,987,Urbano,2.0
+62166,Analco,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,64,Urbano,2.0
+62170,Jiquilpan,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,65,Urbano,2.0
+62170,La Pradera,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,66,Urbano,2.0
+62170,Tlaltenango,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,67,Urbano,2.0
+62173,Jardines de Tlaltenango,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,1031,Urbano,2.0
+62175,Lomas de La Pradera,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,988,Urbano,2.0
+62179,San Jerónimo,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,68,Urbano,2.0
+62180,Lomas de Atzingo,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,21,7,69,Urbano,2.0
+62180,Plan de Ayala,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,70,Urbano,2.0
+62180,Minas de Atzingo,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1006,Urbano,2.0
+62180,El Tecolote,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1007,Urbano,2.0
+62190,La Carolina,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,71,Urbano,2.0
+62193,La Esperanza,Colonia,Cuernavaca,Morelos,Cuernavaca,62001,17,62001,,9,7,1005,Urbano,2.0
+62200,Insurgentes,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,73,Urbano,2.0
+62200,Cuauhtémoc,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,102,Urbano,2.0
+62203,El Ocote,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,691,Urbano,2.0
+62203,Salvador Elizarragaz,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,692,Urbano,2.0
+62203,Tehuiztitlán,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,709,Urbano,2.0
+62210,Chamilpa,Pueblo,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,28,7,74,Urbano,2.0
+62210,Benito Juárez (Chamilpa),Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,76,Urbano,2.0
+62210,Los Ciruelos,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,699,Urbano,2.0
+62210,Morelos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,703,Urbano,2.0
+62210,Tlahuica,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,711,Urbano,2.0
+62215,Blanca Universidad,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,77,Urbano,2.0
+62215,Río Balsas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,78,Urbano,2.0
+62215,Universidad,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,713,Urbano,2.0
+62215,Veranda,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,714,Urbano,2.0
+62218,Lomas de Chamilpa,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,80,Urbano,2.0
+62219,Centro SCT Morelos,Equipamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,17,7,81,Urbano,2.0
+62220,Ocotepec,Pueblo,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,28,7,82,Urbano,2.0
+62226,Texcaltepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,83,Urbano,2.0
+62227,Ampliación Ocotepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,84,Urbano,2.0
+62228,Conjunto Aries,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,85,Urbano,2.0
+62228,Ampliación Emiliano Zapata,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,682,Urbano,2.0
+62229,Nogales,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,86,Urbano,2.0
+62230,Maravillas,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,87,Urbano,2.0
+62230,San Cristóbal,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,88,Urbano,2.0
+62233,Tlaltepexco,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,712,Urbano,2.0
+62233,La Paloma,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,980,Urbano,2.0
+62237,Los Faroles,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,90,Urbano,2.0
+62239,Prados de Cuernavaca,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,92,Urbano,2.0
+62240,Lomas de Cortes,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,93,Urbano,2.0
+62240,Rincón del Valle,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,94,Urbano,2.0
+62243,El Veladero,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,983,Urbano,2.0
+62243,San Salvador,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,984,Urbano,2.0
+62245,Recursos Hidráulicos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,95,Urbano,2.0
+62247,Lomas de Cortes INFONAVIT,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,96,Urbano,2.0
+62248,Residencial las Flores,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,671,Urbano,2.0
+62249,Tecomulco,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,97,Urbano,2.0
+62249,Ixtacpan (Zigapan),Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,715,Urbano,2.0
+62250,Base Tranquilidad,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,98,Urbano,2.0
+62250,Del Empleado,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,99,Urbano,2.0
+62250,Tezontepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,100,Urbano,2.0
+62253,Lomas de La Selva Oriente,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1002,Urbano,2.0
+62253,Pilancón,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1003,Urbano,2.0
+62260,Reforma,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,103,Urbano,2.0
+62269,Jardines de Reforma,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,105,Urbano,2.0
+62269,Valle Sol,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,679,Urbano,2.0
+62270,Lomas de La Selva,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,106,Urbano,2.0
+62270,Miraval,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,107,Urbano,2.0
+62270,Lomas de Miraval,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1004,Urbano,2.0
+62280,Gualupita,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,108,Urbano,2.0
+62283,La Estación,Barrio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,2,7,1001,Urbano,2.0
+62284,Teopanzolco,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,1000,Urbano,2.0
+62285,Patios de la Estación,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,660,Urbano,2.0
+62290,Vista Hermosa,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,109,Urbano,2.0
+62293,Lomas de Vista Hermosa,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,990,Urbano,2.0
+62293,La Fuente,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1942,Urbano,2.0
+62294,Ahuehuetitla,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,654,Urbano,2.0
+62294,Providencia,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,669,Urbano,2.0
+62294,Tlalquiltompan,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,981,Urbano,2.0
+62294,Federación,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,985,Urbano,2.0
+62295,Extensión Vista Hermosa,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,991,Urbano,2.0
+62296,Extensión Delicias,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,993,Urbano,2.0
+62300,Ahuatepec,Pueblo,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,28,7,110,Urbano,2.0
+62303,Lomas de La Herradura,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,111,Rural,2.0
+62304,Gloria Almada de Bejarano,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,112,Urbano,2.0
+62304,El Mirador,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,690,Rural,2.0
+62304,Los Limoneros,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,700,Urbano,2.0
+62304,San Isidro Loma Bonita,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1948,Urbano,2.0
+62305,Jardines de Ahuatepec,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,113,Urbano,2.0
+62305,Los Ramos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,114,Urbano,2.0
+62305,Tepepan,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,710,Urbano,2.0
+62306,Villa Santiago,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,115,Urbano,2.0
+62306,Rodolfo López de Nava (Los Naranjos),Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,697,Rural,2.0
+62306,La Herradura,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1377,Urbano,2.0
+62306,Cruz de la Curva,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1913,Rural,2.0
+62306,Jubilados y Pencionados,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1915,Urbano,2.0
+62306,Residencial Vista Alta,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1916,Urbano,2.0
+62309,Paraje Alarcón,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,116,Urbano,2.0
+62320,Antonio Barona Centro,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,118,Urbano,2.0
+62323,Tierra Colorada,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,674,Rural,2.0
+62323,México Lindo,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1897,Rural,2.0
+62323,Papayos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1898,Rural,2.0
+62324,El Universo,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,678,Rural,2.0
+62324,La Cañada,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,694,Rural,2.0
+62324,Lomas de Ahuatepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,972,Rural,2.0
+62324,Cerritos de García,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,974,Rural,2.0
+62324,Las Flores,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1372,Rural,2.0
+62324,Unidad Deportiva,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1373,Rural,2.0
+62324,Vista Real Ahuatepec,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1899,Rural,2.0
+62324,Ampliación la Cañada,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1914,Urbano,2.0
+62325,Rancho Alegre,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,706,Rural,2.0
+62325,El Copalito,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,973,Rural,2.0
+62325,Lomas Verdes de Ahuatepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1376,Rural,2.0
+62325,Bosques de la Florida,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1940,Urbano,2.0
+62326,Paraíso Montessori,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1374,Rural,2.0
+62326,Cerritos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1375,Rural,2.0
+62326,Paraíso,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1932,Urbano,2.0
+62326,San Antonio del Jagüey,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1935,Rural,2.0
+62326,Jardines de Zoquipa,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1936,Rural,2.0
+62326,Tlaltecuáhuitl,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1937,Rural,2.0
+62326,Los Guayabos,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1938,Urbano,2.0
+62328,Antonio Barona 3a Secc.,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,119,Urbano,2.0
+62329,Antonio Barona 1a Secc.,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,120,Urbano,2.0
+62329,Antonio Barona 2a Secc.,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,121,Urbano,2.0
+62330,Delicias,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,122,Urbano,2.0
+62330,Conjunto Paraíso,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,667,Urbano,2.0
+62330,Residencial Primavera,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,672,Urbano,2.0
+62334,Amate Redondo,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,655,Urbano,2.0
+62335,Rinconada Vista Hermosa,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1021,Urbano,2.0
+62340,Bello Horizonte,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,123,Urbano,2.0
+62340,Lomas de Cortes Oriente,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,663,Urbano,2.0
+62340,Bosques de Cuernavaca,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,986,Rural,2.0
+62340,Loma Bonita,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1904,Urbano,2.0
+62343,Jardines de Delicias,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,661,Urbano,2.0
+62343,Provincias del Canadá,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,670,Urbano,2.0
+62343,San Jerónimo Ahuatepec,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,673,Urbano,2.0
+62343,El Mascareño,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,992,Urbano,2.0
+62345,Rinconada Florida,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,125,Urbano,2.0
+62350,Los Volcanes,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,126,Urbano,2.0
+62350,Lomas del Mirador,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,127,Urbano,2.0
+62350,Teopanzolco,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,128,Urbano,2.0
+62360,Chapultepec,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,129,Urbano,2.0
+62360,Jardines de Cuernavaca,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,130,Urbano,2.0
+62363,Cuatro Estaciones,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,657,Urbano,2.0
+62363,La Estrella,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,999,Urbano,2.0
+62370,Ricardo Flores Magón,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,131,Urbano,2.0
+62373,Flores Magón 2a Fracción,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,995,Urbano,2.0
+62374,Villas Deportivas,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,22,Urbano,2.0
+62374,Villas del Lago,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,994,Urbano,2.0
+62375,Puerta del Sol,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,997,Urbano,2.0
+62376,Flores Magón 1a Fracción,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,998,Urbano,2.0
+62380,Zodiaco,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,133,Urbano,2.0
+62382,Joyas de los Jilgueros,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,719,Urbano,2.0
+62384,Mártires de Río Blanco,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,134,Urbano,2.0
+62384,Flores Magón 3a Fracción,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1035,Urbano,2.0
+62385,Ramón Hernandez Navarro,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,135,Urbano,2.0
+62385,Flores Magón 5a Fracción,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,996,Urbano,2.0
+62387,Los Limones,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,55,Rural,2.0
+62387,Santa Martha Ahuatepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,138,Urbano,2.0
+62387,Milpillas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,665,Rural,2.0
+62388,Los Tulipanes,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,139,Urbano,2.0
+62389,Morelos,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,140,Urbano,2.0
+62390,Revolución,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,141,Urbano,2.0
+62398,Ciudad Chapultepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,142,Urbano,2.0
+62399,Ciudad Chapultepec,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,144,Urbano,2.0
+62400,El Vergel,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,145,Urbano,2.0
+62409,Santa Veracruz,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,147,Urbano,2.0
+62410,Amatitlán,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,148,Urbano,2.0
+62420,Jacarandas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,149,Urbano,2.0
+62420,Quintas Martha,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,150,Urbano,2.0
+62428,Copa de Oro,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,151,Urbano,2.0
+62430,Condominios Cuauhnahuac,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,153,Urbano,2.0
+62430,Vicente Guerrero,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,154,Urbano,2.0
+62430,Conjunto Omeyoacan,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1033,Urbano,2.0
+62433,Bosques de Chapultepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1011,Urbano,2.0
+62440,Poblado Acapatzingo,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,155,Urbano,2.0
+62445,Los Cizos,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,157,Urbano,2.0
+62446,San Miguel Acapantzingo,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,158,Urbano,2.0
+62447,Jardines de Acapatzingo,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,159,Urbano,2.0
+62448,Cantarranas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,160,Urbano,2.0
+62448,Primavera,Condominio,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,10,7,668,Urbano,2.0
+62448,Cantarranas,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,1010,Urbano,2.0
+62450,Las Quintas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,156,Urbano,2.0
+62450,Chapultepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,161,Urbano,2.0
+62450,Manantiales,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,162,Urbano,2.0
+62460,El Laurel Residencial,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,26,Urbano,2.0
+62460,Las Granjas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,164,Urbano,2.0
+62460,Satélite,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,165,Urbano,2.0
+62460,Vicente Estrada Cajigal,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,166,Urbano,2.0
+62460,Ampliación Satélite,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1012,Urbano,2.0
+62466,Emiliano Zapata,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,167,Urbano,2.0
+62469,Lotes Alegría,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,170,Urbano,2.0
+62470,Del Lago,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,171,Urbano,2.0
+62470,Las Águilas,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,172,Urbano,2.0
+62473,Lomas del Águila,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1016,Urbano,2.0
+62474,FOVISSSTE las Águilas,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,1015,Urbano,2.0
+62474,Potrero Verde,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,1028,Urbano,2.0
+62475,Chapultepec FOVISSSTE,Unidad habitacional,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,31,7,173,Urbano,2.0
+62480,Ampliación Chapultepec,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,174,Urbano,2.0
+62490,Palmira Tinguindin,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,175,Urbano,2.0
+62493,Internado Palmira,Colonia,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,9,7,1019,Urbano,2.0
+62493,Acapatzingo,Ejido,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,15,7,1905,Urbano,2.0
+62494,Lomas de Acapatzingo,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,1907,Urbano,2.0
+62496,El Palmar,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,176,Urbano,2.0
+62497,Rinconada Palmira,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,177,Urbano,2.0
+62498,Club de golf Tabachines,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,178,Urbano,2.0
+62499,Las Garzas,Fraccionamiento,Cuernavaca,Morelos,Cuernavaca,62241,17,62241,,21,7,180,Urbano,2.0
+62508,El Cebadal,Ranchería,Cuernavaca,Morelos,,62241,17,62241,,29,7,24,Rural,
+62508,Buenavista del Monte,Colonia,Cuernavaca,Morelos,,62241,17,62241,,9,7,187,Rural,
+62510,Teochalco (Pueblo Nuevo),Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,1,Rural,
+62510,Tlacotepec,Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,11,Rural,
+62510,San José,Barrio,Huitzilac,Morelos,,62511,17,62511,,2,9,12,Rural,
+62510,Real Montecassino,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,13,Rural,
+62510,Sierra Encantada,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,14,Rural,
+62510,Monte Bello,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,15,Rural,
+62510,Tezontlalpa,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,16,Rural,
+62510,Rincón del Bosque (La Palma),Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,17,Rural,
+62510,Tetecuintla,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,18,Rural,
+62510,Ajahuayo,Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,19,Rural,
+62510,Cuacometla,Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,20,Rural,
+62510,San Martín Ajahuayo (El Reposo),Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,21,Rural,
+62510,Monte Cristo,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,22,Rural,
+62510,Monte Rubí (Los Pinos del 62),Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,23,Rural,
+62510,Los Pinos (Cuexcontitla),Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,24,Rural,
+62510,Gualupita,Barrio,Huitzilac,Morelos,,62511,17,62511,,2,9,25,Rural,
+62510,Villa Suiza (Coto del Marqués),Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,26,Rural,
+62510,De la Cruz,Barrio,Huitzilac,Morelos,,62511,17,62511,,2,9,27,Rural,
+62510,Coajomulco,Pueblo,Huitzilac,Morelos,,62511,17,62511,,28,9,189,Rural,
+62510,Huitzilac,Pueblo,Huitzilac,Morelos,,62511,17,62511,,28,9,190,Urbano,
+62510,San José de La Montaña,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,191,Rural,
+62510,Huertas de San Pedro,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,194,Rural,
+62510,Monte Casino (Piamonte y Ensueño),Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,195,Rural,
+62510,Guayacahuala,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,693,Rural,
+62510,María Candelaria,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,701,Rural,
+62514,Fierro del Toro,Pueblo,Huitzilac,Morelos,,62511,17,62511,,28,9,192,Rural,
+62514,Kilómetro 47 (Entrada al Capulín),Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,689,Rural,
+62515,Tezoyo (El Cuartel),Barrio,Huitzilac,Morelos,,62511,17,62511,,2,9,2,Rural,
+62515,Kilómetro 49,Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,3,Rural,
+62515,Camino a la Mina,Ranchería,Huitzilac,Morelos,,62511,17,62511,,29,9,4,Rural,
+62515,Antonio Segura,Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,5,Rural,
+62515,San Rafael (Tepetlixpa),Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,6,Rural,
+62515,Zacapexco,Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,7,Rural,
+62515,Los Olivos,Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,8,Rural,
+62515,Huayatitla (Ampliación San Bartolo),Colonia,Huitzilac,Morelos,,62511,17,62511,,9,9,9,Rural,
+62515,Atlixtac,Fraccionamiento,Huitzilac,Morelos,,62511,17,62511,,21,9,10,Rural,
+62515,Tres Marías,Pueblo,Huitzilac,Morelos,,62511,17,62511,,28,9,193,Urbano,
+62520,Xilotepec,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1,Urbano,
+62520,Xolatlaco,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,6,Rural,
+62520,Tepoztlán Centro,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,199,Urbano,
+62520,Tierra Blanca,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,913,Urbano,
+62520,San Pedro,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,914,Urbano,
+62520,Los Reyes,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,915,Urbano,
+62520,Santo Domingo,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,916,Urbano,
+62520,La Santísima,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,917,Urbano,
+62520,San Miguel,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,918,Urbano,
+62520,San José,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,919,Urbano,
+62520,San Sebastián,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,920,Urbano,
+62520,Santa Cruz,Barrio,Tepoztlán,Morelos,,62521,17,62521,,2,20,921,Urbano,
+62520,Achichipico,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1271,Rural,
+62520,El Tesoro,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1918,Urbano,
+62520,Los Ocotes,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1920,Urbano,
+62523,San Juan Tlacotenco,Pueblo,Tepoztlán,Morelos,,62521,17,62521,,28,20,200,Rural,
+62524,Santo Domingo Ocotitlán,Pueblo,Tepoztlán,Morelos,,62521,17,62521,,28,20,202,Rural,
+62524,Del Carmen,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1266,Rural,
+62525,La Palapa,Ranchería,Tepoztlán,Morelos,,62521,17,62521,,29,20,7,Rural,
+62525,Huilotepec,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,203,Rural,
+62525,Ixcatepec,Pueblo,Tepoztlán,Morelos,,62521,17,62521,,28,20,204,Rural,
+62525,Amatlán de Quetzalcóatl,Ranchería,Tepoztlán,Morelos,,62521,17,62521,,29,20,205,Rural,
+62525,Tecmilco,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1267,Rural,
+62525,El Pedregal,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1268,Rural,
+62525,Chichco (Chisco),Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1269,Rural,
+62526,San Andrés de la Cal,Ranchería,Tepoztlán,Morelos,,62521,17,62521,,29,20,196,Rural,
+62526,Santiago Tepetlapa,Pueblo,Tepoztlán,Morelos,,62521,17,62521,,28,20,198,Rural,
+62526,Tehuixcorral (Colonia San Martín Caballero),Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1270,Rural,
+62527,Santa Catarina,Pueblo,Tepoztlán,Morelos,,62521,17,62521,,28,20,197,Urbano,
+62527,Huachinantitla,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1273,Rural,
+62528,Ángel Bocanegra (Adolfo López Mateos),Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,207,Rural,
+62528,Obrera,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1274,Rural,
+62528,Benito Juárez,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1275,Rural,
+62529,Tetenco,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,2,Rural,
+62529,Cerritos de García (Textilacatl),Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,3,Rural,
+62529,Ampliación Milpillas,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,4,Rural,
+62529,Camino Antiguo a Tepoztlán,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,5,Rural,
+62529,Rinconada Acolapa,Unidad habitacional,Tepoztlán,Morelos,,62521,17,62521,,31,20,1172,Urbano,
+62529,Acolapan,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1276,Rural,
+62529,Loma Bonita,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1277,Rural,
+62529,Lomas del Pedregal,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1921,Rural,
+62529,Loma Esmeralda,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1922,Rural,
+62529,Tetecolala,Colonia,Tepoztlán,Morelos,,62521,17,62521,,9,20,1923,Rural,
+62530,Centro Tlalnepantla,Colonia,Tlalnepantla,Morelos,,62541,17,62541,,9,23,209,Urbano,
+62530,San Felipe,Barrio,Tlalnepantla,Morelos,,62541,17,62541,,2,23,1722,Urbano,
+62530,San Pedro,Barrio,Tlalnepantla,Morelos,,62541,17,62541,,2,23,1723,Urbano,
+62530,Santiago,Barrio,Tlalnepantla,Morelos,,62541,17,62541,,2,23,1724,Urbano,
+62530,San Bartolo,Barrio,Tlalnepantla,Morelos,,62541,17,62541,,2,23,1725,Urbano,
+62530,San Nicolás,Barrio,Tlalnepantla,Morelos,,62541,17,62541,,2,23,1726,Urbano,
+62534,El Pedregal,Colonia,Tlalnepantla,Morelos,,62541,17,62541,,9,23,1668,Rural,
+62535,El Vigía (San Nicolás del Monte),Pueblo,Tlalnepantla,Morelos,,62541,17,62541,,28,23,210,Rural,
+62535,Colinas de San Nicolás,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,1669,Rural,
+62535,Los Robles,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,1670,Rural,
+62536,Hacienda Villa Campestre,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,1,Rural,
+62536,Hacienda Monte de los Olivos,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,2,Rural,
+62536,Bosques de Morelos,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,3,Rural,
+62536,Felipe Neri (Cuatepec),Pueblo,Tlalnepantla,Morelos,,62541,17,62541,,28,23,211,Rural,
+62536,El Calmil,Fraccionamiento,Tlalnepantla,Morelos,,62541,17,62541,,21,23,1671,Rural,
+62540,San Miguel,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1,Urbano,
+62540,San Diego,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,2,Urbano,
+62540,De Texcalapan,Barrio,Tlayacapan,Morelos,,62541,17,62541,,2,26,3,Urbano,
+62540,Del Señor Santiago,Barrio,Tlayacapan,Morelos,,62541,17,62541,,2,26,4,Urbano,
+62540,Exaltación,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,5,Urbano,
+62540,El Plan,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,6,Urbano,
+62540,San Lorenzo,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,7,Urbano,
+62540,Altica,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,8,Urbano,
+62540,Santana,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,9,Urbano,
+62540,Santiago,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,10,Urbano,
+62540,Del Rosario,Barrio,Tlayacapan,Morelos,,62541,17,62541,,2,26,11,Urbano,
+62540,Tlayacapan Centro,Pueblo,Tlayacapan,Morelos,,62541,17,62541,,28,26,214,Urbano,
+62543,Jericó,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,12,Rural,
+62543,Cuauhtempan (San Andrés Cuautempan),Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,212,Rural,
+62543,3 de Mayo,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1436,Rural,
+62543,La Mixtepec,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1437,Rural,
+62543,Emiliano Zapata,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1438,Rural,
+62544,Pedregal Tlalli,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1439,Rural,
+62544,Las Calandrias,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1440,Rural,
+62544,Camino Real los Reyes,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1441,Rural,
+62544,Joyas del Astillero,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1442,Rural,
+62544,Jardines de Tlayacapan,Fraccionamiento,Tlayacapan,Morelos,,62541,17,62541,,21,26,1443,Rural,
+62544,Valle de Oaxtepec,Fraccionamiento,Tlayacapan,Morelos,,62541,17,62541,,21,26,1444,Rural,
+62544,Nacatongo,Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,1445,Rural,
+62544,Texalo (La Cerámica),Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1446,Rural,
+62544,Lázaro Cárdenas,Unidad habitacional,Tlayacapan,Morelos,,62541,17,62541,,31,26,1447,Rural,
+62545,El Bebedero,Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,1448,Rural,
+62545,Puente Pantitlán,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1449,Rural,
+62545,Revolución XXI,Unidad habitacional,Tlayacapan,Morelos,,62541,17,62541,,31,26,1450,Rural,
+62545,Ex-Hacienda Pantitlán,Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,1451,Rural,
+62545,El Partidor,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1454,Rural,
+62546,Las Vivianas,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,867,Rural,
+62546,El Golán,Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,1452,Rural,
+62546,El Ahuehuete,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1453,Rural,
+62547,Los Laureles (San José de los Laureles),Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,213,Rural,
+62547,Amatlipac (San Agustín Amatlipac),Ranchería,Tlayacapan,Morelos,,62541,17,62541,,29,26,215,Rural,
+62547,Los Ciruelos,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1434,Rural,
+62547,Cruz Blanca,Colonia,Tlayacapan,Morelos,,62541,17,62541,,9,26,1435,Rural,
+62550,Centro Jiutepec,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,217,Urbano,10.0
+62550,Roberto Osorio Sosa,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,841,Urbano,10.0
+62550,Zaragoza,Condominio,Jiutepec,Morelos,Jiutepec,62571,17,62571,,10,11,1111,Urbano,10.0
+62550,Valle de las Fuentes,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1163,Urbano,10.0
+62550,Los Almendros,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1167,Urbano,10.0
+62550,El Zapote,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1168,Urbano,10.0
+62553,Constitución,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,226,Urbano,10.0
+62553,Residencial Campestre,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,229,Urbano,10.0
+62553,Tlahuapan,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,246,Urbano,10.0
+62553,Residencial La Palma,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,253,Urbano,10.0
+62553,Moctezuma,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,265,Urbano,10.0
+62553,Insurgentes,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,834,Urbano,10.0
+62553,La Rosa,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,835,Urbano,10.0
+62553,Lázaro Cárdenas,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,836,Urbano,10.0
+62553,Rinconada las Palmas,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,837,Urbano,10.0
+62553,El Arroyo,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1114,Urbano,10.0
+62553,Lirios,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1117,Urbano,10.0
+62553,Bambú,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1120,Urbano,10.0
+62553,Residencial Country,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1133,Urbano,10.0
+62553,Tlahua,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1157,Urbano,10.0
+62553,Arcos de Jiutepec,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1159,Urbano,10.0
+62553,Villa Real,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1165,Urbano,10.0
+62553,Campestre,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1166,Urbano,10.0
+62554,Villas del Descanso,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,244,Urbano,10.0
+62554,Lomas de Tlahuapan,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,245,Urbano,10.0
+62554,Pedregal de las Fuentes,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,263,Urbano,10.0
+62554,El Pochotal,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,838,Urbano,10.0
+62554,Los Bosques,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,839,Urbano,10.0
+62554,La Cerillera,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1081,Urbano,10.0
+62554,Valle Verde,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1108,Rural,10.0
+62554,Rancho Paraíso,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1109,Urbano,10.0
+62554,La Alameda,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1110,Urbano,10.0
+62554,Los Mangos,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1112,Urbano,10.0
+62554,Cactus,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1113,Urbano,10.0
+62554,Girasoles,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1115,Urbano,10.0
+62554,Hacienda Jiutepec,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1116,Urbano,10.0
+62554,Las Fuentes,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1161,Urbano,10.0
+62554,Fuentes de Oriente,Colonia,Jiutepec,Morelos,,62571,17,62571,,9,11,1946,Rural,
+62555,Cliserio Alanís (San Gaspar),Pueblo,Jiutepec,Morelos,Jiutepec,62571,17,62571,,28,11,236,Rural,10.0
+62555,Villas de San Gaspar,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,237,Rural,10.0
+62555,Club de Golf Hacienda San Gaspar,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,238,Rural,10.0
+62555,Agua Fría,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1106,Rural,10.0
+62555,San Lucas,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1107,Urbano,10.0
+62555,Maravillas,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1129,Urbano,10.0
+62555,Calera Oriente,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1130,Rural,10.0
+62555,Llanos de las Fuentes,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1145,Urbano,10.0
+62555,El Naranjo,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1146,Urbano,10.0
+62555,Francisco Villa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1147,Rural,10.0
+62555,Emiliano Zapata,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1148,Urbano,10.0
+62555,Esmeralda,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1149,Urbano,10.0
+62555,El Campanario,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1150,Urbano,10.0
+62556,Calera Chica,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,216,Urbano,10.0
+62556,Miguel Hidalgo,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,218,Urbano,10.0
+62556,Vista Hermosa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,220,Urbano,10.0
+62556,Agrícola 28 de Agosto,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1121,Rural,10.0
+62556,Calera Poniente,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1131,Rural,10.0
+62556,Ampliación Joyas de Agua,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1132,Rural,10.0
+62556,Joya del Agua,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1134,Urbano,10.0
+62556,Huertas del Llano,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1135,Urbano,10.0
+62556,Acalli,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1151,Urbano,10.0
+62556,Villa Santiago,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1152,Urbano,10.0
+62556,La Laja,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1153,Urbano,10.0
+62556,La Huizachera,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1154,Urbano,10.0
+62556,Las Moras I y II,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1162,Urbano,10.0
+62560,Atlacomulco,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,222,Urbano,10.0
+62560,Santa Anita,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1118,Urbano,10.0
+62560,Los Viveros,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1126,Urbano,10.0
+62560,Los Apantles,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1128,Urbano,10.0
+62563,Real Hacienda de San José,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,225,Urbano,10.0
+62563,Sumiya,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,227,Urbano,10.0
+62563,Los Pinos Jiutepec,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,231,Urbano,10.0
+62563,Kloster Sumiya,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1929,Urbano,10.0
+62563,Los Soles,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1945,Urbano,10.0
+62564,José G Parres,Pueblo,Jiutepec,Morelos,Jiutepec,62571,17,62571,,28,11,228,Urbano,10.0
+62564,Las Mercedes,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,832,Urbano,10.0
+62564,Los Electricistas,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,833,Urbano,10.0
+62564,Jardines de La Hacienda II,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1127,Urbano,10.0
+62564,Guadalupe,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1142,Urbano,10.0
+62564,Jardines de La Hacienda I,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1143,Urbano,10.0
+62564,El Paraíso,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1144,Urbano,10.0
+62564,El Castillo,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1156,Urbano,10.0
+62564,La Nopalera,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1164,Urbano,10.0
+62564,San Cristóbal los Lirios,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1943,Urbano,10.0
+62564,Villa Real los Colorines,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1944,Urbano,10.0
+62565,Las Canteras,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1,Urbano,10.0
+62565,Las Fincas,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,230,Urbano,10.0
+62565,La Joya,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,840,Urbano,10.0
+62565,Atuey,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1136,Urbano,10.0
+62565,El Guayabal,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1137,Urbano,10.0
+62565,Condominio Tepec,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1139,Urbano,10.0
+62565,Xel-ha,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1155,Urbano,10.0
+62566,Bosques de Bancouver,Condominio,Jiutepec,Morelos,Jiutepec,62571,17,62571,,10,11,3,Urbano,10.0
+62566,Lomas de Jiutepec,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,234,Urbano,10.0
+62566,Lomas de Palmira,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1084,Urbano,10.0
+62566,Rinconada Palmira,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1123,Urbano,10.0
+62566,Imuri,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1124,Urbano,10.0
+62566,Residencial Lomas de Jiutepec,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1125,Urbano,10.0
+62566,Residencial Rancho las Lomas,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,1138,Urbano,10.0
+62566,Hacienda de los Casillas,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1140,Rural,10.0
+62566,Tezontepec,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1141,Urbano,10.0
+62570,Pedregal de Tejalpa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,186,Urbano,10.0
+62570,Oriental,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,239,Urbano,10.0
+62570,Tejalpa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,240,Urbano,10.0
+62570,Ampliación Tejalpa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,241,Urbano,10.0
+62570,Vicente Guerrero,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,242,Urbano,10.0
+62570,Ampliación Vicente Guerrero,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,243,Rural,10.0
+62570,Atenatitlán,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,247,Urbano,10.0
+62570,Cuauhtémoc Cárdenas,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,248,Urbano,10.0
+62570,Los Pinos Tejalpa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,249,Urbano,10.0
+62570,San Isidro,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,250,Urbano,10.0
+62570,Las Torres,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,252,Urbano,10.0
+62570,Deportiva,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,257,Urbano,10.0
+62570,Real el Cazahuate,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1038,Urbano,10.0
+62570,El Capiri,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1087,Urbano,10.0
+62570,Josefa Ortiz de Domínguez,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1089,Rural,10.0
+62570,Villas de Cortes,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1100,Urbano,10.0
+62573,Apatlaco,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,256,Urbano,10.0
+62573,El Paraíso,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,258,Urbano,10.0
+62573,San Lucas,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,259,Urbano,10.0
+62573,El Paraje Texcal,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,260,Urbano,10.0
+62573,Hacienda de las Flores,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,261,Urbano,10.0
+62573,San Francisco Texcalpa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,264,Urbano,10.0
+62573,Ojo de Agua,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1071,Rural,10.0
+62573,Campo Morado,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1090,Rural,10.0
+62573,Cuauchiles,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1105,Urbano,10.0
+62573,Ampliación El Paraíso,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1903,Urbano,10.0
+62574,Ejido de Cazahuatal,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,4,Rural,10.0
+62574,Progreso,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,219,Urbano,10.0
+62574,Tamoanchan,Fraccionamiento,Jiutepec,Morelos,Jiutepec,62571,17,62571,,21,11,255,Urbano,10.0
+62574,José López Portillo,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,830,Urbano,10.0
+62574,San José,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1091,Urbano,10.0
+62574,La Mesa,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1092,Urbano,10.0
+62574,Lomas del Texcal,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1093,Rural,10.0
+62575,Independencia,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,396,Urbano,10.0
+62575,Alfredo V Bonfil,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1094,Urbano,10.0
+62575,Cerro de la Corona,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1095,Rural,10.0
+62575,Lomas de Chapultepec,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1097,Urbano,10.0
+62575,Luis Donaldo Colosio,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1099,Rural,10.0
+62576,Ampliación Chapultepec,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,2,Rural,10.0
+62576,Jardín Juárez,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1101,Urbano,10.0
+62576,San Francisco del Rincón,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1102,Rural,10.0
+62576,Loma Bonita,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1103,Rural,10.0
+62577,Otilio Montaño,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,136,Urbano,10.0
+62577,Ampliación Otilio Montaño,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,137,Urbano,10.0
+62577,El Porvenir,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,143,Urbano,10.0
+62577,Tarianes,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,168,Urbano,10.0
+62577,Ampliación Bugambilias,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,169,Urbano,10.0
+62577,Bugambilias,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,223,Urbano,10.0
+62577,Morelos,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,828,Urbano,10.0
+62577,Puente Blanco,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1082,Urbano,10.0
+62577,El Edén,Colonia,Jiutepec,Morelos,Jiutepec,62571,17,62571,,9,11,1083,Urbano,10.0
+62578,CIVAC,Zona industrial,Jiutepec,Morelos,Jiutepec,62571,17,62571,,37,11,181,Urbano,10.0
+62578,Sección Kovas,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,823,Urbano,10.0
+62578,Narciso Mendoza Terreno Uno,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,824,Urbano,10.0
+62578,Narciso Mendoza Terreno Dos,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,825,Urbano,10.0
+62578,CIVAC los Robles,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,827,Urbano,10.0
+62578,CIVAC 2a Sección,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1079,Urbano,10.0
+62578,CIVAC 1a Sección,Unidad habitacional,Jiutepec,Morelos,Jiutepec,62571,17,62571,,31,11,1080,Urbano,10.0
+62580,Temixco Centro,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,267,Urbano,9.0
+62583,Lomas de Guadalupe,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,272,Urbano,9.0
+62583,Alta Palmira,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,274,Urbano,9.0
+62583,Las Ánimas,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,275,Urbano,9.0
+62583,Lomas del Carril,Pueblo,Temixco,Morelos,Temixco,62581,17,62581,,28,18,277,Urbano,9.0
+62583,Los Presidentes,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,278,Urbano,9.0
+62583,Rinconada los Sauces,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1772,Urbano,9.0
+62583,Quetzal,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1773,Urbano,9.0
+62584,Burgos,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,270,Urbano,9.0
+62584,Lomas de Cuernavaca,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,276,Urbano,9.0
+62584,Brisas,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,281,Rural,9.0
+62584,Junto al Río,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,843,Urbano,9.0
+62584,Valle Verde,Unidad habitacional,Temixco,Morelos,Temixco,62581,17,62581,,31,18,845,Urbano,9.0
+62584,Burgos Bugambilias,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1185,Urbano,9.0
+62584,Burgos Sección Ontario,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1186,Urbano,9.0
+62584,Burgos Sección Casa Blanca,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1187,Urbano,9.0
+62584,Los Sabinos,Unidad habitacional,Temixco,Morelos,Temixco,62581,17,62581,,31,18,1770,Rural,9.0
+62584,Rinconada del Río,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1771,Rural,9.0
+62585,Vergel Santa Cruz,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1173,Urbano,9.0
+62585,Granjas Mérida,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1174,Urbano,9.0
+62585,Miguel Hidalgo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1781,Rural,9.0
+62585,Campo Sotelo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1782,Rural,9.0
+62585,Geo Villas la Hacienda,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1783,Rural,9.0
+62585,Valparaíso,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1784,Rural,9.0
+62586,Acatlipa Centro,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,279,Urbano,9.0
+62586,Río Apatlaco,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,280,Urbano,9.0
+62586,Los Arcos,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,283,Urbano,9.0
+62586,Las Rosas,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,289,Rural,9.0
+62586,Los Sabinos,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,842,Urbano,9.0
+62586,Río Escondido,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1175,Urbano,9.0
+62586,Lomas de Acatlipa,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1176,Urbano,9.0
+62586,La Rivera,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1177,Urbano,9.0
+62586,Emiliano Zapata,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1178,Urbano,9.0
+62586,La Hacienda de Temixco,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1779,Urbano,9.0
+62586,Río Apatlaco 2a Sección,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1780,Urbano,9.0
+62587,10 de Abril,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,285,Urbano,9.0
+62587,Rubén Jaramillo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,290,Urbano,9.0
+62587,Casa Blanca,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1179,Urbano,9.0
+62587,El Estribo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1180,Urbano,9.0
+62587,Arboledas,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1181,Urbano,9.0
+62587,Campamento Medrano,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1183,Urbano,9.0
+62588,Conjunto Habitacional Campo Verde,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,1,Urbano,9.0
+62588,Colinas de Altar,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,2,Urbano,9.0
+62588,1ro de Mayo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,3,Urbano,9.0
+62588,Lázaro Cárdenas del Río,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,4,Urbano,9.0
+62588,Ampliación Lázaro Cárdenas del Río,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,5,Rural,9.0
+62588,Punta Verde,Fraccionamiento,Temixco,Morelos,Temixco,62581,17,62581,,21,18,6,Rural,9.0
+62588,El Ajonjolinar,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,8,Rural,9.0
+62588,Asociación de Colonos de Tepeyac,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,9,Rural,9.0
+62588,Pueblo Viejo,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,266,Rural,9.0
+62588,Morelos,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,269,Rural,9.0
+62588,Pilcaya,Pueblo,Temixco,Morelos,Temixco,62581,17,62581,,28,18,271,Rural,9.0
+62588,Azteca,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,282,Urbano,9.0
+62588,Lauro Ortega,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1184,Urbano,9.0
+62588,Conjunto Urbano Ayuntamiento 2000,Unidad habitacional,Temixco,Morelos,Temixco,62581,17,62581,,31,18,1727,Urbano,9.0
+62588,La Loma,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1775,Rural,9.0
+62588,Loma Bonita,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1776,Urbano,9.0
+62588,Lomas del Ajonjolinar,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1778,Urbano,9.0
+62590,Aeropuerto,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1191,Urbano,9.0
+62590,Laureles,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1192,Urbano,9.0
+62590,Santa Mónica,Colonia,Temixco,Morelos,Temixco,62581,17,62581,,9,18,1786,Urbano,9.0
+62593,Benito Juárez (La Monera),Colonia,Temixco,Morelos,,62581,17,62581,,9,18,1193,Rural,
+62594,San Agustín Tetlama,Pueblo,Temixco,Morelos,,62581,17,62581,,28,18,284,Rural,
+62595,Las Águilas de los Tehuixtles,Colonia,Temixco,Morelos,,62581,17,62581,,9,18,7,Rural,
+62595,Santa Úrsula,Colonia,Temixco,Morelos,,62581,17,62581,,9,18,1188,Rural,
+62595,Solidaridad,Colonia,Temixco,Morelos,,62581,17,62581,,9,18,1189,Rural,
+62595,Eterna Primavera,Colonia,Temixco,Morelos,,62581,17,62581,,9,18,1190,Rural,
+62595,La Parota,Colonia,Temixco,Morelos,,62581,17,62581,,9,18,1785,Rural,
+62596,Cuentepec,Pueblo,Temixco,Morelos,,62581,17,62581,,28,18,288,Rural,
+62599,Cuernavaca (Mariano Matamoros),Aeropuerto,Temixco,Morelos,,62581,17,62581,,1,18,273,Rural,
+62600,Miacatlán,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,291,Urbano,
+62600,Álvaro Obregón,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1311,Rural,
+62600,Vista Hermosa,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1312,Rural,
+62600,La Campesina (Colonia los Tulipanes),Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1320,Rural,
+62605,Brisas de Miacatlán,Fraccionamiento,Miacatlán,Morelos,,62601,17,62601,,21,15,1,Urbano,
+62605,La Toma,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,299,Rural,
+62605,El Rodeo,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,300,Rural,
+62605,Xochicalco (Cirenio Longares),Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,302,Rural,
+62605,El Mirador,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1300,Rural,
+62605,Emiliano Zapata,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1309,Rural,
+62605,Los Linares,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1314,Rural,
+62605,El Amate Amarillo,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,1315,Rural,
+62605,Mejapa (El Puente Colorado),Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,1316,Rural,
+62606,Coatetelco Centro,Pueblo,Coatetelco,Morelos,,62601,17,62601,,28,34,1,Urbano,
+62606,Campo Acatzingo,Ranchería,Coatetelco,Morelos,,62601,17,62601,,29,34,2,Rural,
+62606,El Llano,Ranchería,Coatetelco,Morelos,,62601,17,62601,,29,34,3,Rural,
+62606,El Muelle,Colonia,Coatetelco,Morelos,,62601,17,62601,,9,34,4,Rural,
+62606,General Pedro Saavedra,Colonia,Coatetelco,Morelos,,62601,17,62601,,9,34,5,Rural,
+62606,3 de Mayo,Colonia,Coatetelco,Morelos,,62601,17,62601,,9,34,6,Rural,
+62606,Benito Juárez,Colonia,Coatetelco,Morelos,,62601,17,62601,,9,34,7,Urbano,
+62606,Narvarte,Colonia,Coatetelco,Morelos,,62601,17,62601,,9,34,8,Urbano,
+62607,El Terrero,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,1302,Rural,
+62607,El Tejón,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,1303,Rural,
+62607,Terrero Grande,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,1304,Rural,
+62607,La Lima (El Trapiche de Luna),Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1305,Rural,
+62607,Atzompa,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1306,Rural,
+62607,Huertos de Miacatlán,Fraccionamiento,Miacatlán,Morelos,,62601,17,62601,,21,15,1307,Rural,
+62607,Atzompa,Barrio,Miacatlán,Morelos,,62601,17,62601,,2,15,1308,Rural,
+62607,La Trilla,Colonia,Miacatlán,Morelos,,62601,17,62601,,9,15,1310,Rural,
+62608,Palo Grande,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,292,Rural,
+62608,Palpan de Baranda,Pueblo,Miacatlán,Morelos,,62601,17,62601,,28,15,293,Rural,
+62608,Tlajotla,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,294,Rural,
+62608,El Paredón,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,295,Rural,
+62608,El Rincón,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,296,Rural,
+62608,Rancho Viejo,Ranchería,Miacatlán,Morelos,,62601,17,62601,,29,15,297,Rural,
+62610,Coatlán del Río,Pueblo,Coatlán del Río,Morelos,,62611,17,62611,,28,5,305,Urbano,
+62613,Buenavista de Aldama,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,304,Rural,
+62613,San José,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1703,Rural,
+62613,Tezoquipa,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,1704,Rural,
+62614,CEFERESO Número 16 CPS Femenil Morelos,Equipamiento,Coatlán del Río,Morelos,,62611,17,62611,,17,5,1,Rural,
+62614,Apancingo,Pueblo,Coatlán del Río,Morelos,,62611,17,62611,,28,5,303,Rural,
+62614,Chavarría,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,311,Rural,
+62614,Michapa,Pueblo,Coatlán del Río,Morelos,,62611,17,62611,,28,5,312,Rural,
+62614,Benito Juárez,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,313,Rural,
+62614,Cuernavaquita,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,1712,Rural,
+62614,Puente el Arenal (La Joya),Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1713,Rural,
+62615,Tilancingo,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,308,Rural,
+62615,Santa Márgara,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,1705,Rural,
+62615,San Antonio,Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,1706,Rural,
+62615,El Vado,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1707,Rural,
+62615,El Axixintle (El Treinta y Cinco),Ranchería,Coatlán del Río,Morelos,,62611,17,62611,,29,5,1711,Rural,
+62616,Cuauhtémoc,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,306,Rural,
+62616,Cocoyotla,Pueblo,Coatlán del Río,Morelos,,62611,17,62611,,28,5,309,Rural,
+62616,Morelos,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,310,Rural,
+62616,El Amate,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1708,Rural,
+62616,El Cerrito,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1709,Rural,
+62616,El Canelillo,Colonia,Coatlán del Río,Morelos,,62611,17,62611,,9,5,1710,Rural,
+62620,El Charco,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,316,Rural,
+62620,Francisco Sarabia,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,317,Rural,
+62620,Tetecala,Pueblo,Tetecala,Morelos,,62621,17,62621,,28,21,318,Urbano,
+62620,Llano Viejo,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,1672,Rural,
+62620,El Cerrito (Cerrito de las Cruces),Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,1949,Rural,
+62624,Sonora,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,307,Rural,
+62624,Actopan,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,320,Rural,
+62625,Cuautlita,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,315,Rural,
+62625,El Aguacate,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,1673,Rural,
+62625,El Calicanto,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,1674,Rural,
+62625,Mariano Matamoros,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,1675,Rural,
+62625,Tonantzicalli,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,1676,Rural,
+62626,Contlalco,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,314,Rural,
+62626,El Móvil,Colonia,Tetecala,Morelos,,62621,17,62621,,9,21,1677,Rural,
+62626,Palos de Fierro,Ranchería,Tetecala,Morelos,,62621,17,62621,,29,21,1678,Rural,
+62630,Centro Mazatepec,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,322,Rural,
+62630,La Melena,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1693,Rural,
+62630,Colinas de Mazatepec,Fraccionamiento,Mazatepec,Morelos,,62621,17,62621,,21,14,1694,Rural,
+62633,Puentes de Fierro,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1686,Rural,
+62633,Las Huertas,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1695,Rural,
+62633,La Trilla,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1696,Rural,
+62633,El Florido,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1697,Rural,
+62633,Valle Verde,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1951,Rural,
+62634,Justo Sierra,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1688,Urbano,
+62634,Vista Hermosa,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1689,Rural,
+62635,Cuauchichinola,Ranchería,Mazatepec,Morelos,,62621,17,62621,,29,14,324,Rural,
+62635,Carmelo Rivera,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1699,Rural,
+62635,Ojos de Agua de Cuahuchichinola,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1700,Rural,
+62636,Santa Cruz Vista Alegre,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,323,Rural,
+62636,El Calvario,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1691,Rural,
+62636,Lomas del Calvario,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1692,Rural,
+62636,La Vuelta,Colonia,Mazatepec,Morelos,,62621,17,62621,,9,14,1698,Rural,
+62640,Amacuzac Centro,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,326,Urbano,
+62643,Progreso,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1660,Urbano,
+62643,El Paraíso,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1661,Urbano,
+62643,Benito Juárez,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1662,Urbano,
+62643,Miguel Hidalgo,Unidad habitacional,Amacuzac,Morelos,,62641,17,62641,,31,1,1663,Urbano,
+62643,Barreal,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1795,Urbano,
+62644,El Balceadero,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1664,Urbano,
+62644,Bungalows,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1665,Urbano,
+62644,Los Ángeles,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1666,Urbano,
+62644,La Glorieta,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1667,Urbano,
+62645,Xoapa,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1636,Rural,
+62646,San Gabriel las Palmas Centro,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,330,Urbano,
+62646,Ocampo,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1637,Rural,
+62646,Los Baños de Tula,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1638,Rural,
+62646,La Cruz,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1639,Rural,
+62646,Tula,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1640,Rural,
+62646,Cuauhtémoc,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1656,Rural,
+62646,Las Flores,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1930,Urbano,
+62646,El Mirador,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1931,Rural,
+62647,Miahuatlán (El Cuiji),Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,331,Rural,
+62647,El Paso de Miahuatlán,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1641,Rural,
+62653,Coahuixtla,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,328,Rural,
+62653,Cajones,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,332,Rural,
+62653,Rancho Nuevo,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,333,Rural,
+62653,El Rosal (El Alacrán),Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1642,Rural,
+62653,Oriental,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1645,Rural,
+62653,Campo Nuevo,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1646,Rural,
+62653,Los Arcos,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1647,Rural,
+62653,Zoquital,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1648,Rural,
+62654,Casahuatlán,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,327,Rural,
+62654,Ojo de Agua,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,336,Rural,
+62654,El Campamento,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,337,Rural,
+62654,Villa Verde,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1643,Rural,
+62654,Benito Juárez,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1644,Rural,
+62654,El Guamúchil,Rancho,Amacuzac,Morelos,,62641,17,62641,,48,1,1653,Rural,
+62655,La Calera,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1649,Rural,
+62655,Los Limones,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1650,Rural,
+62655,Ejidal,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1651,Rural,
+62655,La Playa,Colonia,Amacuzac,Morelos,,62641,17,62641,,9,1,1654,Rural,
+62655,Huascuautla,Ranchería,Amacuzac,Morelos,,62641,17,62641,,29,1,1659,Rural,
+62656,Huajintlán,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,334,Rural,
+62656,Teacalco,Pueblo,Amacuzac,Morelos,,62641,17,62641,,28,1,335,Rural,
+62660,Puente de Ixtla Centro,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,338,Urbano,5.0
+62662,Guadalupe Victoria,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,750,Urbano,5.0
+62662,Ampliación Guadalupe Victoria,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,753,Rural,5.0
+62662,Providencia,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,754,Rural,5.0
+62662,Morelos,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,755,Urbano,5.0
+62662,Buenos Aires,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,756,Rural,5.0
+62663,Tranca del Coco,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,2,Rural,5.0
+62663,Cuauhtémoc,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,748,Urbano,5.0
+62663,Loma Linda,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,758,Urbano,5.0
+62663,Benito Juárez,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,759,Urbano,5.0
+62663,Jardines de La Herradura,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,760,Urbano,5.0
+62663,10 de Mayo,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,761,Urbano,5.0
+62663,Gobernadores,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,765,Urbano,5.0
+62663,Ampliación Jardines de la Herradura,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,1356,Rural,5.0
+62663,Ampliación Benito Juárez,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,1357,Rural,5.0
+62663,Valle Dorado,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,1358,Urbano,5.0
+62664,Emiliano Zapata,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,747,Urbano,5.0
+62664,Miguel Hidalgo,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,749,Urbano,5.0
+62665,Los Arcos,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,1,Rural,5.0
+62665,San Mateo Ixtla,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,751,Urbano,5.0
+62665,Norte,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,752,Urbano,5.0
+62665,INFONAVIT Casa Blanca,Unidad habitacional,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,31,17,757,Urbano,5.0
+62665,24 de Febrero,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,762,Rural,5.0
+62665,Valle Bonito (Los Arcos Caídos),Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,763,Rural,5.0
+62665,El Naranjo,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,764,Rural,5.0
+62665,El Salado,Colonia,Puente de Ixtla,Morelos,Puente de Ixtla,62661,17,62661,,9,17,1355,Urbano,5.0
+62666,Ahuehuetzingo,Pueblo,Puente de Ixtla,Morelos,,62661,17,62661,,28,17,339,Rural,
+62666,Agua Salada,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1353,Urbano,
+62666,Kilómetro 107 (Loma Larga),Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1354,Rural,
+62668,El Coco,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,341,Rural,
+62670,San José Vista Hermosa,Pueblo,Puente de Ixtla,Morelos,,62661,17,62661,,28,17,344,Urbano,
+62670,Morelos,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1348,Urbano,
+62670,Las Alas,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1351,Urbano,
+62670,Miguel de la Madrid,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1597,Urbano,
+62670,Aeródromo,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1598,Urbano,
+62676,Lomas Altas,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1352,Rural,
+62680,Xoxocotla Centro,Pueblo,Xoxocotla,Morelos,,62661,17,62661,,28,35,1,Urbano,
+62680,Los Guajes,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,2,Rural,
+62680,Techichilco,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,4,Rural,
+62680,Prolongación Benito Juárez,Ranchería,Xoxocotla,Morelos,,62661,17,62661,,29,35,8,Rural,
+62680,El Arco,Ranchería,Xoxocotla,Morelos,,62661,17,62661,,29,35,9,Rural,
+62680,Campo Anenehuilco,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,10,Rural,
+62684,Hermosa,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,3,Rural,
+62685,Apozonalco,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,5,Rural,
+62686,Las Flores (La Xóchitl),Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,6,Rural,
+62687,Tecomulco,Colonia,Xoxocotla,Morelos,,62661,17,62661,,9,35,7,Rural,
+62690,Tilzapotla,Pueblo,Puente de Ixtla,Morelos,,62661,17,62661,,28,17,346,Urbano,
+62693,Los Ídolos,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1364,Urbano,
+62693,San Pedro,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1365,Urbano,
+62693,Los Pinos,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1366,Urbano,
+62693,Los Papayos,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1367,Urbano,
+62694,Piedra Blanca,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1368,Urbano,
+62695,El Zapote,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,349,Rural,
+62695,Los Amatitos,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1363,Urbano,
+62695,El Salto,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1369,Urbano,
+62696,La Tigra,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,348,Urbano,
+62696,Las Albóndigas,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1360,Urbano,
+62696,Los Tanques,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1361,Urbano,
+62696,El Mango,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,1362,Urbano,
+62697,El Estudiante,Ranchería,Puente de Ixtla,Morelos,,62661,17,62661,,29,17,342,Urbano,
+62697,Loma Florida,Colonia,Puente de Ixtla,Morelos,,62661,17,62661,,9,17,1359,Urbano,
+62700,Ciudad Ayala,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,350,Urbano,
+62700,Puente Blanco,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1208,Rural,
+62700,Buenavista,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1592,Urbano,
+62704,Ampliación Cruz Verde,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1206,Rural,
+62704,Cruz Verde,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1207,Urbano,
+62710,Anenecuilco Centro,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,357,Urbano,
+62710,El Jagüey,Ranchería,Ayala,Morelos,,62702,17,62702,,29,4,1200,Rural,
+62710,Campo San Miguel,Rancho,Ayala,Morelos,,62702,17,62702,,48,4,1584,Rural,
+62713,Olintepec,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,360,Rural,
+62713,La Joya Escondida,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1203,Rural,
+62713,Marcelino Ortega,Rancho,Ayala,Morelos,,62702,17,62702,,48,4,1204,Rural,
+62714,Residencial La Cantera,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,2,Rural,
+62714,Residencial Villa de los Arcos,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,3,Rural,
+62714,Campo Palomar Chico,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,10,Rural,
+62714,San Pedro Apatlaco,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,352,Urbano,
+62714,Benito Juárez,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,353,Rural,
+62714,Niños Héroes,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,354,Rural,
+62714,Nuevo México ( Los Apaches ),Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1195,Rural,
+62714,La Doncella,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1196,Rural,
+62714,Mirador,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1197,Urbano,
+62714,Cuahuixtla,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1198,Urbano,
+62714,La Joya,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1199,Rural,
+62714,Las Arboledas,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1201,Rural,
+62714,Rafael Merino (San Antonio),Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1205,Rural,
+62714,Reforma,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1595,Rural,
+62714,Campo la Escopeta,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1596,Rural,
+62715,El Decreto,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1,Rural,
+62715,Residencial Los Sauces,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,4,Rural,
+62715,Paseos de Ayala,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,5,Rural,
+62715,Paseos de Ayala II,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,6,Rural,
+62715,Las Villas Residencial,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,7,Rural,
+62715,El Mirador,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,8,Rural,
+62715,Tlayecac,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,370,Urbano,
+62715,10 de Abril,Unidad habitacional,Ayala,Morelos,,62702,17,62702,,31,4,1219,Rural,
+62715,Huertas de Cuautla,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1220,Rural,
+62715,Mariano Matamoros,Unidad habitacional,Ayala,Morelos,,62702,17,62702,,31,4,1221,Rural,
+62715,Prados del Sol,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1222,Rural,
+62715,El Venadito,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1223,Rural,
+62715,Isla de Cuautla,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1224,Rural,
+62715,Citlalin,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1225,Rural,
+62715,Paraíso Tlahuica,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1226,Rural,
+62715,Las Llaves,Fraccionamiento,Ayala,Morelos,,62702,17,62702,,21,4,1227,Rural,
+62715,Parque Industrial Cuautla,Zona industrial,Ayala,Morelos,,62702,17,62702,,37,4,1228,Rural,
+62717,Las Flores,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1202,Rural,
+62717,Campo el Chivatero,Rancho,Ayala,Morelos,,62702,17,62702,,48,4,1216,Rural,
+62717,General Emiliano Zapata (El Chivatero),Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1217,Rural,
+62718,Moyotepec,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,366,Urbano,
+62718,Segunda Ampliación Moyotepec,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1209,Rural,
+62720,Huacatlaco (Los Anonos),Ranchería,Ayala,Morelos,,62702,17,62702,,29,4,362,Rural,
+62720,Huitzililla,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,364,Rural,
+62720,Jaloxtoc,Pueblo,Ayala,Morelos,,62702,17,62702,,28,4,372,Urbano,
+62720,El Sifón de la Cuera,Colonia,Ayala,Morelos,,62702,17,62702,,9,4,1041,Rural,
+62720,Campo Ojo de Agua,Rancho,Ayala,Morelos,,62702,17,62702,,48,4,1593,Rural,
+62723,Chinameca,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,368,Urbano,
+62723,El Vergel,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,371,Rural,
+62723,Palo Blanco,Ranchería,Ayala,Morelos,,62726,17,62726,,29,4,373,Rural,
+62723,Tecomalco,Ranchería,Ayala,Morelos,,62726,17,62726,,29,4,374,Rural,
+62723,La Cucaracha,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1588,Urbano,
+62723,Las Joyas,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1591,Rural,
+62724,El Salitre,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,363,Rural,
+62724,San Juan Ahuehueyo,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,365,Urbano,
+62724,San Vicente de Juárez (Las Piedras),Ranchería,Ayala,Morelos,,62726,17,62726,,29,4,369,Rural,
+62724,Loma Bonita,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1214,Rural,
+62724,Buena Vista,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1215,Rural,
+62724,Valle de Morelos,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1594,Rural,
+62725,La Paz,Fraccionamiento,Ayala,Morelos,,62726,17,62726,,21,4,9,Rural,
+62725,Ejidal Rafael Merino,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,356,Rural,
+62725,Leopoldo Heredia,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,358,Rural,
+62725,Tenextepango,Pueblo,Ayala,Morelos,,62726,17,62726,,28,4,359,Urbano,
+62725,Abelardo L. Rodríguez,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,367,Rural,
+62725,La Libertad,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1210,Rural,
+62725,Las Lumbreras,Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1211,Rural,
+62725,Constancio Farfán (La Pascuala),Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1212,Rural,
+62725,Ampliación Tenextepango (La Parcela),Colonia,Ayala,Morelos,,62726,17,62726,,9,4,1213,Rural,
+62730,Centro,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,387,Urbano,11.0
+62732,Oasis Yautepec II,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,2,Urbano,11.0
+62732,El Manantial,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,5,Urbano,11.0
+62732,Oasis,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,7,Urbano,11.0
+62732,Ixtlahuacan,Barrio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,2,29,383,Urbano,11.0
+62732,Felipe Neri,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,851,Urbano,11.0
+62732,Benito Juárez,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,853,Urbano,11.0
+62732,Santiago,Barrio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,2,29,854,Urbano,11.0
+62732,Jacarandas,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,860,Urbano,11.0
+62732,Vicente Estrada Cajigal,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,862,Urbano,11.0
+62732,Ignacio Manuel Altamirano,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,864,Urbano,11.0
+62732,13 de Septiembre,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,865,Urbano,11.0
+62732,Ignacio Zaragoza,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1828,Urbano,11.0
+62732,Lomas del Potrero,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1829,Urbano,11.0
+62732,Apanquetzalco,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1830,Urbano,11.0
+62732,Tabachines,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1835,Rural,11.0
+62732,Villas Jazmín,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1843,Urbano,11.0
+62732,Rincón de los Ciruelos,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1850,Urbano,11.0
+62732,Jacarandas,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1851,Urbano,11.0
+62732,Las Quintas,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1852,Urbano,11.0
+62732,Jacarandas,Condominio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,10,29,1853,Urbano,11.0
+62732,Villareal,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1855,Urbano,11.0
+62732,Los Naranjos,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1856,Urbano,11.0
+62732,La Selva,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1857,Urbano,11.0
+62732,Los Mangos,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1858,Urbano,11.0
+62732,Viyautepec,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1861,Urbano,11.0
+62732,Conjunto Valle Verde,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1863,Urbano,11.0
+62732,Las Zamoras,Unidad habitacional,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,31,29,1864,Urbano,11.0
+62732,Tlacaelel,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1865,Urbano,11.0
+62732,Beit Mellat,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1866,Urbano,11.0
+62732,El Rocio,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1867,Urbano,11.0
+62732,La Gema,Unidad habitacional,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,31,29,1868,Urbano,11.0
+62732,La Morena,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1869,Rural,11.0
+62732,La Antigua,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1870,Urbano,11.0
+62732,Conjunto Tepetlixpa,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1872,Rural,11.0
+62732,Laureles,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1876,Urbano,11.0
+62732,Residencial Yautepec,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1877,Urbano,11.0
+62732,Amates,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1878,Urbano,11.0
+62732,Mi Pueblito,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1879,Urbano,11.0
+62733,Los Mangos,Condominio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,10,29,6,Urbano,11.0
+62733,Atlihuayan,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,377,Urbano,11.0
+62733,5 de Mayo,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,379,Urbano,11.0
+62733,El Rocío,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,381,Urbano,11.0
+62733,Rancho Nuevo,Barrio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,2,29,385,Urbano,11.0
+62733,24 de Febrero,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,386,Urbano,11.0
+62733,Luis Echeverría,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,849,Urbano,11.0
+62733,Buenavista,Barrio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,2,29,850,Urbano,11.0
+62733,Emiliano Zapata,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,852,Urbano,11.0
+62733,Alfredo Bonfil,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,856,Urbano,11.0
+62733,Otilio Montaño,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,857,Urbano,11.0
+62733,Paraíso,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,861,Urbano,11.0
+62733,San Juan,Barrio,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,2,29,868,Urbano,11.0
+62733,Cuauhtémoc,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1827,Urbano,11.0
+62733,Huizachera,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1831,Urbano,11.0
+62733,Paracas,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1832,Urbano,11.0
+62733,San Juanito,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1833,Urbano,11.0
+62733,Lomas del Real,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1834,Urbano,11.0
+62733,Jovito Serrano,Colonia,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,9,29,1836,Urbano,11.0
+62733,Villas del Paraíso,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1844,Urbano,11.0
+62733,El Limón,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1845,Urbano,11.0
+62733,Residencial Cañaveral,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1846,Urbano,11.0
+62733,Residencial Llano Grande,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1847,Urbano,11.0
+62733,Residencial del Bosque,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1848,Urbano,11.0
+62733,Residencial Maravillas,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1849,Urbano,11.0
+62733,Villas Jazmín II,Fraccionamiento,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,21,29,1854,Urbano,11.0
+62733,Yautli,Unidad habitacional,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,31,29,1859,Urbano,11.0
+62733,La Ceiba,Unidad habitacional,Yautepec,Morelos,Yautepec de Zaragoza,62731,17,62731,,31,29,1860,Urbano,11.0
+62733,El Rocío,Ranchería,Yautepec,Morelos,,62731,17,62731,,29,29,1873,Urbano,
+62735,La Joya,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,384,Urbano,
+62735,Amador Salazar,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,392,Urbano,
+62735,Ampliación Tetillas,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,397,Rural,
+62735,Álvaro Leonel,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,829,Urbano,
+62736,Cuachixolotera,Rancho,Yautepec,Morelos,,62731,17,62731,,48,29,1,Rural,
+62736,Hacienda Cocoyoc,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,3,Urbano,
+62736,Villas de Cocoyoc,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,4,Urbano,
+62736,Cuauhtémoc,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,380,Urbano,
+62736,Cocoyoc,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,398,Urbano,
+62736,Vicente Guerrero,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,870,Urbano,
+62736,Francisco Villa,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,871,Urbano,
+62736,Tehuixtlera,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,872,Urbano,
+62736,Alejandra,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,873,Urbano,
+62736,Viveros de Cocoyoc,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,967,Urbano,
+62736,Lucio Moreno,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,968,Rural,
+62736,Ampliación Vicente Guerrero,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1887,Rural,
+62736,Campo el Partidor,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1891,Rural,
+62736,La Coaxiolotera,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1892,Rural,
+62736,El Potrero,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1896,Rural,
+62737,Arco Antiguo,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,8,Urbano,
+62737,10 de Abril,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,9,Rural,
+62737,Itzamatitlán,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,382,Rural,
+62737,La Nopalera,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,389,Rural,
+62737,El Caracol (Campo Chiquito),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,399,Rural,
+62737,Los Arcos,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,400,Rural,
+62737,Ignacio Bastida (Santa Catarina Tlayca),Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,405,Rural,
+62737,Lázaro Cárdenas (El Empalme),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,406,Rural,
+62737,Oacalco,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,407,Urbano,
+62737,San Carlos,Unidad habitacional,Yautepec,Morelos,,62731,17,62731,,31,29,869,Urbano,
+62737,El Zarco,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1838,Rural,
+62737,Francisco I. Madero (La Nopalera),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1839,Rural,
+62737,Santa Lucía (Ampliación Itzamatitlán),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1840,Rural,
+62737,Campo el Michate,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1842,Rural,
+62738,Cascadas Cocoyoc,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,12,Urbano,
+62738,José Ortiz (San Martín),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,401,Rural,
+62738,Oaxtepec Centro,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,403,Urbano,
+62738,Santa Rosa,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,874,Urbano,
+62738,Huertos de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,940,Urbano,
+62738,Colinas de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,941,Urbano,
+62738,Amates de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,942,Urbano,
+62738,Pedregal de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,943,Urbano,
+62738,Real de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,944,Urbano,
+62738,Jacarandas,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,947,Rural,
+62738,El Capulín,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,949,Urbano,
+62738,Vergeles de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,950,Urbano,
+62738,Altos de Oaxtepec,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,951,Urbano,
+62738,Centro Vacacional Oaxtepec,Equipamiento,Yautepec,Morelos,,62731,17,62731,,17,29,953,Urbano,
+62738,Ampliación el Capulín,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,954,Rural,
+62738,Emiliano Zapata (Palo Mocho),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,955,Rural,
+62738,Corral Grande,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,956,Rural,
+62738,Los Ojos de Ahuilican,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1882,Rural,
+62738,Ejidal Tezoquipa,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1883,Rural,
+62738,Curva Melón Zacate,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1885,Rural,
+62738,Emiliano Zapata (Casahuates),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1886,Rural,
+62738,Campo los Limones,Ranchería,Yautepec,Morelos,,62731,17,62731,,29,29,1888,Rural,
+62739,El Copalar,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,10,Rural,
+62739,Campo la Tehuixtlera,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,11,Rural,
+62739,Miguel Hidalgo (Los Cuartos),Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,391,Rural,
+62739,Diego Ruiz,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,393,Rural,
+62739,San Isidro,Pueblo,Yautepec,Morelos,,62731,17,62731,,28,29,394,Rural,
+62739,El Caudillo del Sur,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1837,Rural,
+62739,Campo Joya de las Víboras,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1871,Rural,
+62739,Rincón del Río,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,1874,Rural,
+62739,San Pablo,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,1875,Rural,
+62739,Huertos el Mirador,Fraccionamiento,Yautepec,Morelos,,62731,17,62731,,21,29,1880,Rural,
+62739,Valle Encantado,Colonia,Yautepec,Morelos,,62731,17,62731,,9,29,1881,Rural,
+62740,Centro,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,409,Urbano,1.0
+62742,Campo Nuevo los Tepetates,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,5,Rural,
+62742,Casas del Río,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,413,Urbano,1.0
+62742,Gabriel Tepepa,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,414,Urbano,1.0
+62742,Pablo Torres Burgos,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,416,Urbano,1.0
+62742,Xochitengo,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,418,Urbano,1.0
+62742,Nueva San José,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,423,Urbano,1.0
+62742,Francisco I Madero,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,428,Urbano,1.0
+62742,Reforma,Unidad habitacional,Cuautla,Morelos,Cuautla,62741,17,62741,,31,6,1064,Urbano,1.0
+62742,Ampliación Gabriel Tepepa,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1072,Rural,
+62743,Hermenegildo Galeana,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,411,Urbano,1.0
+62743,Agua Hedionda,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,420,Urbano,1.0
+62743,5 de Febrero,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,421,Urbano,1.0
+62743,Niño Artillero,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,422,Urbano,1.0
+62743,Plan de Ayala,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,424,Urbano,1.0
+62743,Ampliación Plan de Ayala,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,425,Urbano,1.0
+62743,Benito Juárez,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,433,Urbano,1.0
+62743,Iztaccihuatl,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,434,Urbano,1.0
+62743,Los Amates,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,438,Urbano,1.0
+62743,La Pedregosa,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1059,Urbano,1.0
+62743,La Biznaga,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1061,Urbano,1.0
+62743,Ampliación Hermenegildo Galeana,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1063,Urbano,1.0
+62743,Paraíso,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1068,Urbano,1.0
+62743,Trincheras,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1069,Urbano,1.0
+62743,Reforma,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1070,Rural,1.0
+62743,Ampliación Biznaga Uno,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1803,Urbano,1.0
+62743,Villareal Lomas de Cuautla,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,1805,Urbano,1.0
+62743,Ampliación 5 de Febrero,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1826,Urbano,1.0
+62744,10 de Abril,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,426,Urbano,1.0
+62744,Emiliano Zapata,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,427,Urbano,1.0
+62744,Héroe de Nacozari,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,429,Rural,1.0
+62744,Morelos,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,431,Urbano,1.0
+62744,Progreso,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,432,Urbano,1.0
+62744,Ampliación Emiliano Zapata,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1040,Urbano,1.0
+62744,Martínez Peña (Los Dos Puentes),Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1912,Rural,1.0
+62746,5 de Diciembre,Unidad habitacional,Cuautla,Morelos,Cuautla,62741,17,62741,,31,6,436,Urbano,1.0
+62746,Guadalupe Victoria,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,437,Urbano,1.0
+62746,Flamingos,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,439,Urbano,1.0
+62746,Manantiales,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,440,Urbano,1.0
+62746,Otilio Montaño,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,442,Urbano,1.0
+62746,La Cerrillera,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1073,Urbano,1.0
+62746,Ampliación Tepeyac,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1074,Urbano,1.0
+62746,Tepeyac,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1075,Urbano,1.0
+62746,Agua Blanca,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1802,Urbano,1.0
+62747,Araucaria,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,443,Urbano,1.0
+62747,Los Sabinos,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,445,Urbano,1.0
+62747,Río Verde Infonavit,Unidad habitacional,Cuautla,Morelos,Cuautla,62741,17,62741,,31,6,446,Urbano,1.0
+62747,Santa Cruz,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,447,Urbano,1.0
+62747,Valle del Sol,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,448,Urbano,1.0
+62747,Cuautlixco,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,456,Urbano,1.0
+62747,Estrella,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,787,Urbano,1.0
+62747,Ignacio Zaragoza,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,788,Urbano,1.0
+62747,ISSFAM,Unidad habitacional,Cuautla,Morelos,Cuautla,62741,17,62741,,31,6,814,Urbano,1.0
+62747,Tierra y Libertad,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,876,Urbano,1.0
+62747,Santa Rosa,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,877,Urbano,1.0
+62747,7 de Noviembre,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1065,Urbano,1.0
+62747,Residencial del Bosque,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,1816,Urbano,1.0
+62747,Residencial los Arcos,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,1817,Urbano,1.0
+62747,Los Cerritos,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1820,Urbano,1.0
+62747,Ampliación Santa Cruz,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1821,Urbano,1.0
+62747,Los Amates,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1822,Urbano,1.0
+62747,La Esperanza,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1823,Rural,1.0
+62748,Año de Juárez,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,449,Urbano,1.0
+62748,Empleado Postal,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,451,Urbano,1.0
+62748,Miguel Hidalgo,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,452,Urbano,1.0
+62748,Revolución,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,453,Urbano,1.0
+62748,Casasano,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,455,Urbano,1.0
+62748,Eusebio Jauregui,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,457,Urbano,1.0
+62748,Benito Quezada,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,789,Urbano,1.0
+62748,Ampliación las Tazas,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,821,Urbano,1.0
+62748,La Ciénega,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,875,Urbano,1.0
+62748,Antigua del Bosque,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1058,Urbano,1.0
+62748,Centenario,Unidad habitacional,Cuautla,Morelos,Cuautla,62741,17,62741,,31,6,1067,Urbano,1.0
+62748,Vicente Guerrero,Colonia,Cuautla,Morelos,Cuautla,62741,17,62741,,9,6,1806,Urbano,1.0
+62748,Tabachines,Fraccionamiento,Cuautla,Morelos,Cuautla,62741,17,62741,,21,6,1809,Urbano,1.0
+62754,Empleado Municipal,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,410,Rural,
+62755,Campo Partidor Zumpango,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1,Rural,
+62755,Los Cortés (Segundo Campo de Puxtla),Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,2,Rural,
+62755,Campo la Calavera,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,3,Rural,
+62755,Puxtla,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,467,Rural,
+62755,Ampliación 10 de Abril,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1045,Urbano,
+62755,La Angostura,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1056,Urbano,
+62755,Santa Inés,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,1057,Urbano,
+62755,Jicamán (Colonia el Mirador),Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1797,Rural,
+62755,3 de Mayo,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1798,Rural,
+62755,Ex-Hacienda el Hospital,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1799,Rural,
+62755,Rancho Gómez,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1800,Urbano,
+62755,El Sifón,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1801,Urbano,
+62756,Ampliación Narciso Mendoza,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,415,Rural,
+62756,Calderón,Pueblo,Cuautla,Morelos,,62741,17,62741,,28,6,468,Rural,
+62756,Polvorín,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1047,Urbano,
+62756,Peña Flores (Palo Verde),Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1048,Urbano,
+62756,Narciso Mendoza,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1049,Rural,
+62756,19 de Febrero de 1812,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1050,Rural,
+62756,Sitio del Sol,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,1825,Urbano,
+62757,Tetecalli,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,4,Urbano,
+62757,2 de Mayo,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,444,Urbano,
+62757,Tetelcingo,Pueblo,Cuautla,Morelos,,62741,17,62741,,28,6,458,Urbano,
+62757,Lázaro Cárdenas,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,459,Urbano,
+62757,Brisas de Cuautla,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,461,Urbano,
+62757,Cuauhtémoc,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,462,Urbano,
+62757,Santa Bárbara,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,463,Urbano,
+62757,Volcanes de Cuautla,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,465,Urbano,
+62757,Los Faroles,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,815,Urbano,
+62757,Magisterial,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,820,Urbano,
+62757,Trigo Verde,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,878,Urbano,
+62757,Piedra Blanca,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,879,Urbano,
+62757,Central de Abastos,Zona comercial,Cuautla,Morelos,,62741,17,62741,,33,6,881,Urbano,
+62757,Plaza Solidaridad,Zona comercial,Cuautla,Morelos,,62741,17,62741,,33,6,1046,Urbano,
+62757,Tetelcingo,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,1053,Urbano,
+62757,Salvador Esquer,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,1054,Urbano,
+62757,Las Cruces,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1055,Urbano,
+62757,Condominios del Bosque,Unidad habitacional,Cuautla,Morelos,,62741,17,62741,,31,6,1813,Urbano,
+62757,Tezahuapan,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,1814,Urbano,
+62757,Puerta de Hierro,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,1815,Urbano,
+62757,12 de Diciembre,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1893,Rural,
+62757,Tierra Larga,Colonia,Cuautla,Morelos,,62741,17,62741,,9,6,1894,Rural,
+62757,La Escondida,Fraccionamiento,Cuautla,Morelos,,62741,17,62741,,21,6,1895,Urbano,
+62760,Emiliano Zapata Centro,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,470,Urbano,
+62760,El Zapote,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1748,Urbano,
+62763,Tres de Mayo,Pueblo,Emiliano Zapata,Morelos,,62761,17,62761,,28,8,471,Urbano,
+62763,Lomas de Trujillo,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1231,Urbano,
+62763,Lomas del Copal,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1232,Urbano,
+62763,San José de las Cumbres,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1233,Rural,
+62763,Loma Sur,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1234,Urbano,
+62763,28 de Agosto,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1730,Urbano,
+62764,Altavista,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1,Urbano,
+62764,14 de Febrero,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1235,Urbano,
+62764,El Capiri,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1236,Urbano,
+62764,Calera Chica,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1237,Urbano,
+62764,El Guante,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1238,Rural,
+62764,El Calvario,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1239,Urbano,
+62764,El Aguaje,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1240,Urbano,
+62764,San Francisco,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1242,Rural,
+62764,24 de Abril,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1732,Rural,
+62764,Arboleda,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1733,Urbano,
+62764,Gerardo Pérez,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1734,Urbano,
+62764,Condominios Capiri,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1736,Urbano,
+62764,Las Fuentes,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1737,Urbano,
+62764,Rinconada la Misión,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1738,Rural,
+62764,Las Rocas,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1739,Urbano,
+62764,Conjunto Urbano la Misión,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1740,Rural,
+62764,Rancho San Pedro,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1741,Urbano,
+62765,Ojo de Agua II,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,2,Urbano,
+62765,Valle Esmeralda,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,6,Urbano,
+62765,Prohogar,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,473,Urbano,
+62765,Benito Juárez,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,474,Urbano,
+62765,El Capulín,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1243,Urbano,
+62765,Guadalupe de las Arenas,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1244,Rural,
+62765,El Mirador,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1729,Urbano,
+62765,Ampliación Prohogar,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1735,Urbano,
+62765,Ojo de Agua,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,1742,Urbano,
+62765,Manantiales,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1744,Rural,
+62765,Los Agaves,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1745,Rural,
+62765,Palo Escrito (Colonia Benito Juárez),Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1746,Rural,
+62766,Residencial Amarantto Habittat,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,3,Rural,
+62766,Residencial Los Sauces,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,10,Urbano,
+62766,Los Almendros Residencial,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,11,Urbano,
+62766,Los Olivos,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,12,Urbano,
+62766,Los Prados Residencial,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,13,Urbano,
+62766,Los Ciruelos,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,14,Rural,
+62766,Arcos,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,15,Rural,
+62766,Estación,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1246,Urbano,
+62766,El Amate,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1247,Rural,
+62766,El Vigilante,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1248,Urbano,
+62766,Campo Nuevo,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1249,Urbano,
+62766,Modesto Rangel,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1250,Rural,
+62766,El Órgano,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1251,Rural,
+62766,1ra Sección Villa Morelos,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1252,Rural,
+62766,Villa Morelos,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1253,Urbano,
+62766,El Tomatal,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1749,Rural,
+62766,Las Gaviotas,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1750,Urbano,
+62766,Paseos del Río,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1751,Urbano,
+62766,Paraíso Country Club,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1752,Rural,
+62766,Ampliación el Órgano,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1753,Rural,
+62766,Condominio el Ámate,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1754,Rural,
+62766,Campo Nuevo,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1755,Urbano,
+62767,Residencial Rancho Tezoyuca,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,4,Urbano,
+62767,Residencial Tulipanes,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,7,Rural,
+62767,Garza Azul,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,8,Urbano,
+62767,Las Palmas,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,9,Urbano,
+62767,Tezoyuca,Pueblo,Emiliano Zapata,Morelos,,62761,17,62761,,28,8,475,Urbano,
+62767,Loma Bonita,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1254,Rural,
+62767,Villas de Tezoyuca,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1255,Urbano,
+62767,Cuauhtémoc,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1257,Rural,
+62767,Jardines de Tezoyuca,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1258,Urbano,
+62767,La Mina,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1259,Urbano,
+62767,Real de Tezoyuca,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1260,Rural,
+62767,Tezoyuca,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1261,Urbano,
+62767,Capulín,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1263,Urbano,
+62767,Amatitlán,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,1757,Urbano,
+62767,Villas del Seminario,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1758,Rural,
+62767,Villas del Portezuelo,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1759,Rural,
+62767,Geo Villas Colorines,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1760,Urbano,
+62767,Rincones de la Hacienda,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1761,Urbano,
+62767,Paseos de Tezoyuca,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1762,Urbano,
+62767,Los Sabinos,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1763,Urbano,
+62767,Las Flores,Condominio,Emiliano Zapata,Morelos,,62761,17,62761,,10,8,1765,Urbano,
+62767,Tesoros de Tezoyuca,Unidad habitacional,Emiliano Zapata,Morelos,,62761,17,62761,,31,8,1766,Urbano,
+62767,Las Garzas,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1767,Urbano,
+62767,Cañaveral,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1768,Urbano,
+62767,El Castillo,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,1769,Urbano,
+62768,La Campiña,Fraccionamiento,Emiliano Zapata,Morelos,,62761,17,62761,,21,8,5,Urbano,
+62768,Morelos,Colonia,Emiliano Zapata,Morelos,,62761,17,62761,,9,8,16,Urbano,
+62768,Tepetzingo,Pueblo,Emiliano Zapata,Morelos,,62761,17,62761,,28,8,476,Rural,
+62768,Tetecalita,Pueblo,Emiliano Zapata,Morelos,,62761,17,62761,,28,8,477,Urbano,
+62770,Tlaltizapán Centro,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,486,Urbano,
+62770,Carlos Pacheco,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,791,Urbano,
+62772,Santa Rosa Treinta,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,485,Rural,6.0
+62772,10 de Mayo (La Matanza),Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,766,Rural,6.0
+62772,Echeverría,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,767,Rural,6.0
+62772,Ignacio Zaragoza,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,768,Rural,6.0
+62772,El Cajoncito,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,769,Rural,6.0
+62772,Emiliano Zapata,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,1433,Rural,6.0
+62772,Independencia,Colonia,Tlaltizapán de Zapata,Morelos,Santa Rosa Treinta,62771,17,62771,,9,24,1603,Rural,6.0
+62773,Huepalo,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,2,Rural,
+62773,Barranca Honda,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,479,Rural,
+62773,Ticumán,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,491,Urbano,
+62773,Morelos,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1416,Rural,
+62773,El Jagüey,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1417,Rural,
+62773,Ampliación Benito Juárez,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1418,Rural,
+62773,Guadalupe Victoria,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1419,Urbano,
+62773,El Tecolote,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1420,Rural,
+62773,Ampliación El Tecolote,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1421,Rural,
+62773,Club Haciendas de Ticumán,Fraccionamiento,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,21,24,1422,Urbano,
+62773,Huertos de Ticumán,Fraccionamiento,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,21,24,1423,Urbano,
+62773,Benito Juárez,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1717,Rural,
+62773,Ticumán,Fraccionamiento,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,21,24,1718,Urbano,
+62773,La Curva,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1720,Urbano,
+62773,Pedregal,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1721,Urbano,
+62774,Bonifacio García (Colonia Alejandra),Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,480,Rural,
+62774,Las Estacas,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,482,Rural,
+62774,Temilpa Viejo,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,487,Rural,
+62774,Temilpa Nuevo,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,500,Rural,
+62774,Palo Prieto (Chipitongo),Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1430,Rural,
+62774,La Piedra Rodada,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1431,Rural,
+62775,San Rafael Zaragoza,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,484,Rural,
+62775,San Pablo Hidalgo,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,501,Rural,
+62775,Plan de Ayala,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,790,Urbano,
+62775,Las Juntas,Fraccionamiento,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,21,24,793,Urbano,
+62775,El Topil,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,812,Urbano,
+62775,Huertas el Mirador,Ranchería,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,29,24,1406,Rural,
+62775,El Mirador,Ranchería,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,29,24,1407,Rural,
+62775,Palmillas,Ranchería,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,29,24,1408,Rural,
+62775,Los Presidentes,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1409,Rural,
+62775,Las Galeras,Congregación,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,11,24,1410,Rural,
+62776,Ampliación El Mirador (Ampliación Bomba),Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1,Rural,
+62776,Otilio Montaño,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,493,Urbano,
+62776,Amador Salazar,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,497,Rural,
+62776,El Mirador,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,498,Urbano,
+62776,San Miguel 30,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,499,Rural,
+62777,Huatecalco,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,481,Urbano,
+62777,Casa Blanca,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1411,Rural,
+62777,El Pochote,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1714,Rural,
+62777,La Mina,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1715,Urbano,
+62778,Acamilpa,Ranchería,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,29,24,478,Rural,
+62778,Temimilcingo,Ranchería,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,29,24,492,Rural,
+62778,Pueblo Nuevo,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,494,Rural,
+62778,20 30,Pueblo,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,28,24,496,Urbano,
+62778,Cuauhtémoc,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,792,Urbano,
+62778,La Loma,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1412,Rural,
+62778,El Conquistador,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1413,Rural,
+62778,El Texcal,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1414,Rural,
+62778,Francisco Javier Mina,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1424,Rural,
+62778,Campo el Marimón (Las Minas),Rancho,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,48,24,1425,Rural,
+62778,Tecoloapan (Aguas Vivas),Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1426,Rural,
+62778,Los Cajetes,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1427,Rural,
+62778,La Cima,Colonia,Tlaltizapán de Zapata,Morelos,,62771,17,62771,,9,24,1429,Rural,
+62780,Tetelpa,Pueblo,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,28,31,503,Urbano,7.0
+62780,Zacatepec de Hidalgo Centro,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,504,Urbano,7.0
+62780,Benito Juárez,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,505,Urbano,7.0
+62780,Lázaro Cárdenas,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,771,Urbano,7.0
+62780,20 de Noviembre,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,772,Urbano,7.0
+62780,Miguel Alemán,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,774,Urbano,7.0
+62780,Emiliano Zapata,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,775,Urbano,7.0
+62780,Plutarco Elías Calles,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,776,Urbano,7.0
+62780,Plan de Ayala,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,777,Urbano,7.0
+62780,Independencia,Colonia,Zacatepec,Morelos,Zacatepec de Hidalgo,62781,17,62781,,9,31,1934,Urbano,7.0
+62785,Campo de la Presa,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,1,Rural,3.0
+62785,Galeana Centro,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,502,Urbano,3.0
+62785,Vicente Guerrero,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,723,Urbano,3.0
+62785,Josefa Ortiz de Domínguez,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,724,Urbano,3.0
+62785,Arboledas,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,725,Urbano,3.0
+62785,Valle Sol,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,726,Urbano,3.0
+62785,Alianza,Unidad habitacional,Zacatepec,Morelos,Galeana,62781,17,62781,,31,31,727,Urbano,3.0
+62785,Guadalupe Victoria,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,728,Rural,3.0
+62785,Lázaro Cárdenas,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,729,Urbano,3.0
+62785,Mártires del 10 de Abril,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,730,Rural,3.0
+62785,San Antonio Chiverías,Colonia,Zacatepec,Morelos,Galeana,62781,17,62781,,9,31,731,Rural,3.0
+62790,El Crucero de Atlacholoaya,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,8,Rural,
+62790,Campo San Rafael,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,9,Rural,
+62790,La Guamuchilera,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,10,Rural,
+62790,Rinconada de Xochitepec,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,17,Urbano,
+62790,Loma el Encanto,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,18,Rural,
+62790,Acoculco (La Cruz),Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,19,Rural,
+62790,Rancho La Flor,Condominio,Xochitepec,Morelos,,62791,17,62791,,10,28,21,Urbano,
+62790,Las Palmas,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,22,Urbano,
+62790,Oasis Residencial,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,23,Urbano,
+62790,Santa Cruz,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,24,Rural,
+62790,Cumbres Tulipanes,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,25,Rural,
+62790,Real del Puente,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,510,Urbano,
+62790,Xochitepec Centro,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,511,Urbano,
+62790,Benito Juárez,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,513,Urbano,
+62790,La Calera,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,514,Rural,
+62790,San Miguel La Unión,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,515,Urbano,
+62790,San Pedro de los Pinos,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,516,Urbano,
+62790,Morelos 1ra Sección,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,883,Rural,
+62790,Morelos 2da Sección,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,884,Rural,
+62790,Morelos 3ra Sección,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,885,Rural,
+62790,Las Flores,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,886,Rural,
+62790,Loma Bonita,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,887,Urbano,
+62790,Obrera Popular,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,888,Urbano,
+62790,Nueva Morelos,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,889,Urbano,
+62790,Miguel Hidalgo,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,890,Urbano,
+62790,Ampliación Miguel Hidalgo,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,891,Rural,
+62790,3 de Mayo,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,892,Rural,
+62790,San Francisco,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,898,Urbano,
+62790,Lázaro Cárdenas,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,899,Urbano,
+62790,El Pedregal,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,900,Urbano,
+62790,Jardines de Xochitepec,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,903,Rural,
+62790,Villas de Xochitepec,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,904,Urbano,
+62790,La Cruz,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,905,Urbano,
+62790,Tierra Verde,Ranchería,Xochitepec,Morelos,,62791,17,62791,,29,28,906,Rural,
+62790,Francisco Villa,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,907,Rural,
+62790,La Esperanza,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,908,Rural,
+62790,Campo Canela,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,909,Rural,
+62790,Real del Puente,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,911,Urbano,
+62790,Las Rosas,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,971,Urbano,
+62790,Lomas del Manantial,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,1928,Urbano,
+62793,Xalipa,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,1,Urbano,
+62793,Centro de Readaptación Social de Atlacholoaya,Equipamiento,Xochitepec,Morelos,,62791,17,62791,,17,28,7,Rural,
+62793,Solares,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,11,Rural,
+62793,Los Laureles,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,12,Rural,
+62793,Cumbres del Campestre,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,13,Rural,
+62793,Bello Horizonte,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,20,Rural,
+62793,Atlacholoaya,Pueblo,Xochitepec,Morelos,,62791,17,62791,,28,28,509,Urbano,
+62793,Cazahuatera,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,897,Urbano,
+62793,El Calvario,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,902,Urbano,
+62794,Real Santa Fe,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,2,Rural,
+62794,Vista Santa Fe,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,3,Rural,
+62794,La Pintora,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,893,Rural,
+62794,Club de Golf Santa Fe,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,895,Rural,
+62794,Colinas de Santa Fe,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,896,Rural,
+62795,Campestre La Leona,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,26,Rural,
+62795,Chiconcuac,Pueblo,Xochitepec,Morelos,,62791,17,62791,,28,28,517,Urbano,
+62796,Encanto,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,14,Urbano,
+62796,Dos Ríos,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,15,Urbano,
+62796,Villas del Sol,Fraccionamiento,Xochitepec,Morelos,,62791,17,62791,,21,28,16,Urbano,
+62796,Paseos de Xochitepec,Conjunto habitacional,Xochitepec,Morelos,,62791,17,62791,,12,28,1917,Urbano,
+62796,Arroyos Xochitepec,Conjunto habitacional,Xochitepec,Morelos,,62791,17,62791,,12,28,1933,Urbano,
+62797,Coaxcomac,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,4,Rural,
+62797,Humberto Gutiérrez Corona,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,5,Rural,
+62797,Buenavista,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,6,Rural,
+62797,Alpuyeca,Pueblo,Xochitepec,Morelos,,62791,17,62791,,28,28,519,Urbano,
+62797,Las Palmas,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,894,Rural,
+62797,Ampliación 3 de Mayo,Colonia,Xochitepec,Morelos,,62791,17,62791,,9,28,912,Rural,
+62800,San Bartolo,Barrio,Tetela del Volcán,Morelos,,62801,17,62801,,2,22,1,Urbano,
+62800,Santiago,Barrio,Tetela del Volcán,Morelos,,62801,17,62801,,2,22,2,Urbano,
+62800,Tetela del Volcán,Pueblo,Tetela del Volcán,Morelos,,62801,17,62801,,28,22,520,Rural,
+62800,Xochicalco,Colonia,Tetela del Volcán,Morelos,,62801,17,62801,,9,22,522,Urbano,
+62800,El Malinal,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1398,Rural,
+62802,Tlalmimilulpan (San Pedro),Pueblo,Tetela del Volcán,Morelos,,62801,17,62801,,28,22,521,Rural,
+62803,Paluca,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1393,Rural,
+62803,Cacapola,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1395,Rural,
+62803,Tlalamayocan,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1396,Rural,
+62803,Zacapechpa (Zacapezuca),Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1397,Rural,
+62804,San Agustín,Barrio,Tetela del Volcán,Morelos,,62801,17,62801,,2,22,3,Urbano,
+62804,San Jerónimo,Barrio,Tetela del Volcán,Morelos,,62801,17,62801,,2,22,4,Urbano,
+62804,San Miguel,Barrio,Tetela del Volcán,Morelos,,62801,17,62801,,2,22,1388,Urbano,
+62804,El Encinal,Colonia,Tetela del Volcán,Morelos,,62801,17,62801,,9,22,1391,Rural,
+62804,Tecla,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1392,Rural,
+62804,Lomas Lindas,Colonia,Tetela del Volcán,Morelos,,62801,17,62801,,9,22,1394,Rural,
+62805,Cuaucorra,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1390,Rural,
+62806,El Capulín,Ranchería,Tetela del Volcán,Morelos,,62801,17,62801,,29,22,1389,Rural,
+62810,San Miguel Hueyapan,Barrio,Hueyapan,Morelos,,62801,17,62801,,2,36,1,Urbano,
+62810,San Bartolo,Barrio,Hueyapan,Morelos,,62801,17,62801,,2,36,12,Urbano,
+62810,San Jacinto,Barrio,Hueyapan,Morelos,,62801,17,62801,,2,36,13,Urbano,
+62813,El Chilar Tepeyehualco,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,4,Rural,
+62813,Olivar,Colonia,Hueyapan,Morelos,,62801,17,62801,,9,36,6,Rural,
+62813,Tzitzicastla (Rancho las Flores),Rancho,Hueyapan,Morelos,,62801,17,62801,,48,36,10,Rural,
+62813,Yiganechxco,Rancho,Hueyapan,Morelos,,62801,17,62801,,48,36,11,Rural,
+62813,San Felipe,Barrio,Hueyapan,Morelos,,62801,17,62801,,2,36,14,Urbano,
+62813,San Andrés,Barrio,Hueyapan,Morelos,,62801,17,62801,,2,36,15,Urbano,
+62814,Ahuazutlán,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,2,Rural,
+62814,Amialtenco,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,3,Rural,
+62814,El Chupamirto,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,5,Rural,
+62814,Matlacotla,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,8,Rural,
+62814,Tlalcomulco,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,9,Rural,
+62815,Las Mesas,Ranchería,Hueyapan,Morelos,,62801,17,62801,,29,36,7,Rural,
+62820,Yecapixtla,Pueblo,Yecapixtla,Morelos,,62821,17,62821,,28,30,529,Urbano,
+62823,Los Reyes,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,525,Urbano,
+62823,Texcala,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,528,Rural,
+62823,Zahuatlán,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,530,Urbano,
+62823,Achichipico,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,531,Rural,
+62823,Tezontetelco,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,535,Rural,
+62823,Aquiles Serdán,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,536,Urbano,
+62823,Xochitlán,Pueblo,Yecapixtla,Morelos,,62821,17,62821,,28,30,540,Urbano,
+62823,El Matadero,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,1321,Rural,
+62823,La Hacienda,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,1322,Rural,
+62823,Los Capulines,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,1323,Rural,
+62823,Zacahuacatla,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,1324,Rural,
+62824,El Rosedal (Rancho el Talín),Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,541,Rural,
+62824,Paraíso las Flores,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1325,Rural,
+62824,Agua Zarca,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1326,Rural,
+62824,Los Amates,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1327,Rural,
+62824,El Izote,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1329,Rural,
+62825,Tecajec,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,527,Rural,
+62825,Huexca,Pueblo,Yecapixtla,Morelos,,62821,17,62821,,28,30,544,Rural,
+62825,Los Limones,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,545,Rural,
+62826,Loma Bonita,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,2,Rural,
+62826,Juan Morales,Pueblo,Yecapixtla,Morelos,,62821,17,62821,,28,30,533,Urbano,
+62826,Mixtlalcingo,Pueblo,Yecapixtla,Morelos,,62821,17,62821,,28,30,534,Rural,
+62826,Noche Buena,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1330,Rural,
+62827,Girasoles (Campo el Guaje),Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1,Rural,
+62827,Residencial Los Tulipanes,Fraccionamiento,Yecapixtla,Morelos,,62821,17,62821,,21,30,3,Rural,
+62827,San Francisco Residencial,Fraccionamiento,Yecapixtla,Morelos,,62821,17,62821,,21,30,4,Urbano,
+62827,San Marcos,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,5,Urbano,
+62827,Nueva Yecapixtla,Unidad habitacional,Yecapixtla,Morelos,,62821,17,62821,,31,30,6,Urbano,
+62827,Mexquemeca,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,526,Urbano,
+62827,Francisco I Madero,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1328,Urbano,
+62827,Paraíso Escondido,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1331,Rural,
+62828,Valle Xalpa (El Crucero del Libramiento),Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,7,Rural,
+62828,Campo Piedra Colorada,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,8,Rural,
+62828,Pazulco,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,537,Rural,
+62828,Tlamomulco,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,538,Rural,
+62828,Yecapixteca,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,539,Rural,
+62828,Adolfo López Mateos,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1332,Rural,
+62828,Los Chichicastles,Ranchería,Yecapixtla,Morelos,,62821,17,62821,,29,30,1333,Rural,
+62828,Xalpa,Fraccionamiento,Yecapixtla,Morelos,,62821,17,62821,,21,30,1334,Rural,
+62828,Marino Galicia,Colonia,Yecapixtla,Morelos,,62821,17,62821,,9,30,1335,Rural,
+62830,San Sebastián,Barrio,Totolapan,Morelos,,62831,17,62831,,2,27,1,Urbano,
+62830,Santa Bárbara,Colonia,Totolapan,Morelos,,62831,17,62831,,9,27,2,Urbano,
+62830,San Agustín,Barrio,Totolapan,Morelos,,62831,17,62831,,2,27,3,Urbano,
+62830,Los Ciruelos,Colonia,Totolapan,Morelos,,62831,17,62831,,9,27,4,Urbano,
+62830,Purísima Concepción,Barrio,Totolapan,Morelos,,62831,17,62831,,2,27,5,Urbano,
+62830,Totolapan,Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,547,Urbano,
+62832,Villa Nicolás Zapata,Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,548,Rural,
+62832,San Marcos,Barrio,Totolapan,Morelos,,62831,17,62831,,2,27,1402,Rural,
+62833,Colinas del Paraíso,Fraccionamiento,Totolapan,Morelos,,62831,17,62831,,21,27,1403,Rural,
+62833,El Jagüey de las Marzanas,Ranchería,Totolapan,Morelos,,62831,17,62831,,29,27,1405,Rural,
+62834,Ahuatlán (Asunción Ahuatlán),Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,549,Rural,
+62834,Tepetlixpita,Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,552,Rural,
+62834,Palestina,Fraccionamiento,Totolapan,Morelos,,62831,17,62831,,21,27,1401,Rural,
+62835,Nepopualco,Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,546,Rural,
+62835,La Cañada (San Sebastián),Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,550,Rural,
+62835,El Fuerte (San Miguel),Pueblo,Totolapan,Morelos,,62831,17,62831,,28,27,551,Rural,
+62835,La Joya,Colonia,Totolapan,Morelos,,62831,17,62831,,9,27,1399,Rural,
+62835,Zacatepec,Ranchería,Totolapan,Morelos,,62831,17,62831,,29,27,1400,Rural,
+62840,Atlatlahucan,Pueblo,Atlatlahucan,Morelos,,62831,17,62831,,28,2,553,Urbano,
+62840,Los Reyes,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1535,Urbano,
+62840,El Mirador,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1536,Urbano,
+62840,Santa Bárbara,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1537,Urbano,
+62840,San Mateo,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1538,Urbano,
+62840,La Asunción,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1540,Urbano,
+62840,San Sebastián,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1541,Urbano,
+62840,San Lucas,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1542,Urbano,
+62843,Ampliación San Antonio,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1530,Rural,
+62843,San Antonio,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1532,Urbano,
+62843,Santo Tomás,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1533,Urbano,
+62844,Hacienda del Rey,Fraccionamiento,Atlatlahucan,Morelos,,62831,17,62831,,21,2,1539,Urbano,
+62844,San Marcos,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1543,Urbano,
+62844,La Guadalupana,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1544,Rural,
+62844,San Andrés,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1545,Urbano,
+62844,Santa Ana,Barrio,Atlatlahucan,Morelos,,62831,17,62831,,2,2,1546,Urbano,
+62845,Jagüeycillos (Colonia 10 de Mayo),Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,2,Rural,
+62845,Tlaltetelco (San Miguel Tlaltetelco),Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,554,Rural,
+62845,Santa Inés,Ranchería,Atlatlahucan,Morelos,,62831,17,62831,,29,2,555,Rural,
+62845,San Diego Tepantongo,Pueblo,Atlatlahucan,Morelos,,62831,17,62831,,28,2,561,Rural,
+62845,El Astillero,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1507,Rural,
+62845,Centro Asturiano de México,Equipamiento,Atlatlahucan,Morelos,,62831,17,62831,,17,2,1509,Rural,
+62845,Hacienda la Alborada,Fraccionamiento,Atlatlahucan,Morelos,,62831,17,62831,,21,2,1510,Rural,
+62845,Pozo Mancera,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1511,Rural,
+62845,Telchicayac (El Cabellito),Ranchería,Atlatlahucan,Morelos,,62831,17,62831,,29,2,1512,Rural,
+62845,Rancho Santa Cruz,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1514,Rural,
+62845,Malpaís,Rancho,Atlatlahucan,Morelos,,62831,17,62831,,48,2,1515,Rural,
+62846,Las Minas,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1,Rural,
+62846,Terrazas Residencial,Fraccionamiento,Atlatlahucan,Morelos,,62831,17,62831,,21,2,4,Rural,
+62846,San Francisco,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,557,Rural,
+62846,Kilómetro 88,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,558,Rural,
+62846,Puntas de Malpaís (Malpaís),Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1516,Rural,
+62846,La Tortuga,Ranchería,Atlatlahucan,Morelos,,62831,17,62831,,29,2,1517,Rural,
+62846,El Salto,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1518,Rural,
+62846,Telminca,Ranchería,Atlatlahucan,Morelos,,62831,17,62831,,29,2,1519,Rural,
+62846,Framboyanes,Fraccionamiento,Atlatlahucan,Morelos,,62831,17,62831,,21,2,1521,Rural,
+62846,Los Cerritos,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1522,Rural,
+62846,El Jaral,Colonia,Atlatlahucan,Morelos,,62831,17,62831,,9,2,1528,Rural,
+62847,Pedregal de San Juan,Fraccionamiento,Atlatlahucan,Morelos,,62848,17,62848,,21,2,3,Rural,
+62847,San Juan Texcalpan,Colonia,Atlatlahucan,Morelos,,62848,17,62848,,9,2,559,Rural,
+62847,Lomas de Cocoyoc,Fraccionamiento,Atlatlahucan,Morelos,,62848,17,62848,,21,2,946,Urbano,
+62847,Vicente Guerrero,Unidad habitacional,Atlatlahucan,Morelos,,62848,17,62848,,31,2,1504,Rural,
+62847,Lomas de Texcalpan,Fraccionamiento,Atlatlahucan,Morelos,,62848,17,62848,,21,2,1529,Rural,
+62847,El Puente,Fraccionamiento,Atlatlahucan,Morelos,,62848,17,62848,,21,2,1534,Rural,
+62850,Ocuituco,Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,566,Urbano,
+62850,Tecamachalco,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1573,Urbano,
+62850,Tepexi,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1574,Urbano,
+62853,San Nicolás,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1571,Urbano,
+62853,La Asunción,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1572,Urbano,
+62854,5 de Mayo,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1575,Urbano,
+62855,Metepec,Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,569,Rural,
+62855,La Cebada,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1550,Rural,
+62855,Huauscuautla,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1551,Rural,
+62855,Zacamilpa,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1552,Rural,
+62855,Los Espino,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1554,Rural,
+62855,La Higuera,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1555,Rural,
+62855,La Finca,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1556,Rural,
+62855,Chignahuapan,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1557,Rural,
+62855,La Rosita (Rancho el Paraíso),Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1558,Rural,
+62855,La Ixtla,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1568,Rural,
+62856,Mahoma,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1569,Rural,
+62857,Cruz de Lima,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1560,Rural,
+62857,Santa Mónica,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1561,Rural,
+62857,La Ponderosa,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1562,Rural,
+62857,Casahuatitla,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1563,Rural,
+62857,Colinas del Sol,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1564,Rural,
+62857,Santa Elena de la Cruz,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1565,Rural,
+62857,Tlacuatzingo,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1566,Rural,
+62857,Cerrito Colorado,Colonia,Ocuituco,Morelos,,62851,17,62851,,9,16,1567,Rural,
+62857,Piedra Rajada,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1570,Rural,
+62860,Jumiltepec,Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,567,Urbano,
+62863,Atenco,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1581,Urbano,
+62863,El Cedral,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1582,Urbano,
+62864,Atataco,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1578,Urbano,
+62864,El Naranjo,Barrio,Ocuituco,Morelos,,62851,17,62851,,2,16,1583,Urbano,
+62865,Huepalcalco (San Miguel),Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,564,Rural,
+62865,Ocoxaltepec,Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,565,Rural,
+62865,Huejotengo (San Marcos),Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,568,Rural,
+62865,Ocotitla,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1553,Rural,
+62865,Cuestepec,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1559,Rural,
+62866,Tomayo,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1548,Rural,
+62866,Temaxquiticla,Ranchería,Ocuituco,Morelos,,62851,17,62851,,29,16,1549,Rural,
+62867,Huecahuasco,Pueblo,Ocuituco,Morelos,,62851,17,62851,,28,16,563,Rural,
+62870,Temoac,Pueblo,Temoac,Morelos,,62891,17,62891,,28,33,571,Rural,
+62873,Popotlán ( Barrio de Santo Tomás ),Pueblo,Temoac,Morelos,,62891,17,62891,,28,33,572,Rural,
+62873,Los Cuatecomates,Ranchería,Temoac,Morelos,,62891,17,62891,,29,33,1701,Rural,
+62880,Campo el Limón,Ranchería,Temoac,Morelos,,62891,17,62891,,29,33,1,Rural,
+62880,Huazulco,Pueblo,Temoac,Morelos,,62891,17,62891,,28,33,570,Urbano,
+62885,Amilcingo,Pueblo,Temoac,Morelos,,62891,17,62891,,28,33,573,Urbano,
+62887,Normal Rural Gral Emiliano Zapata,Equipamiento,Temoac,Morelos,,62891,17,62891,,17,33,574,Rural,
+62887,El Puente Nuevo,Colonia,Temoac,Morelos,,62891,17,62891,,9,33,1702,Rural,
+62890,Zacualpan de Amilpas,Pueblo,Zacualpan de Amilpas,Morelos,,62891,17,62891,,28,32,575,Urbano,
+62890,Guadalupe Victoria,Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1681,Rural,
+62890,Las Presas,Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1682,Rural,
+62893,Barranca Amatzinac,Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1679,Rural,
+62893,Curiel,Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1680,Rural,
+62895,Tlacotepec,Pueblo,Zacualpan de Amilpas,Morelos,,62891,17,62891,,28,32,576,Urbano,
+62895,La Compuerta,Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1684,Rural,
+62896,Toribio Rivera,Ranchería,Zacualpan de Amilpas,Morelos,,62891,17,62891,,29,32,1683,Rural,
+62897,La Presa (El Cerro de la Era),Colonia,Zacualpan de Amilpas,Morelos,,62891,17,62891,,9,32,1685,Rural,
+62900,Jojutla Centro,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,578,Urbano,4.0
+62900,Emiliano Zapata,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,732,Urbano,4.0
+62900,Reforma,Fraccionamiento,Jojutla,Morelos,Jojutla,62901,17,62901,,21,12,733,Urbano,4.0
+62900,Cuauhtémoc,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,734,Urbano,4.0
+62900,Benito Juárez,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,735,Urbano,4.0
+62900,Las Calaveras,Barrio,Jojutla,Morelos,Jojutla,62901,17,62901,,2,12,736,Urbano,4.0
+62900,Del Bosque,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,737,Urbano,4.0
+62900,El Higuerón,Unidad habitacional,Jojutla,Morelos,Jojutla,62901,17,62901,,31,12,738,Urbano,4.0
+62900,El Pochote,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,739,Urbano,4.0
+62900,El Zapatito,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,740,Urbano,4.0
+62900,La Pastrana,Unidad habitacional,Jojutla,Morelos,Jojutla,62901,17,62901,,31,12,742,Urbano,4.0
+62900,Los Arrozales,Unidad habitacional,Jojutla,Morelos,Jojutla,62901,17,62901,,31,12,743,Urbano,4.0
+62900,San Jerónimo,Unidad habitacional,Jojutla,Morelos,Jojutla,62901,17,62901,,31,12,744,Urbano,4.0
+62900,Las Cañas,Unidad habitacional,Jojutla,Morelos,Jojutla,62901,17,62901,,31,12,745,Urbano,4.0
+62900,Panchimalco,Colonia,Jojutla,Morelos,Jojutla,62901,17,62901,,9,12,746,Urbano,4.0
+62905,Álamos (La Frontera),Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1288,Rural,
+62905,Nexpa,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1289,Rural,
+62906,Higuerón,Pueblo,Jojutla,Morelos,,62901,17,62901,,28,12,577,Urbano,
+62906,Pedro Amaro,Pueblo,Jojutla,Morelos,,62901,17,62901,,28,12,579,Urbano,
+62906,Independencia,Unidad habitacional,Jojutla,Morelos,,62901,17,62901,,31,12,1297,Urbano,
+62906,Ampliación Lázaro Cárdenas (El Molino),Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1298,Rural,
+62906,Ricardo Soto,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1299,Urbano,
+62907,Santa María,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,2,Urbano,
+62907,Los Venados,Unidad habitacional,Jojutla,Morelos,,62901,17,62901,,31,12,5,Rural,
+62907,Tlatenchi,Pueblo,Jojutla,Morelos,,62901,17,62901,,28,12,580,Urbano,
+62907,Vicente Guerrero,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1290,Urbano,
+62907,Buenos Aires,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1293,Rural,
+62907,Ampliación Santa María,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1295,Rural,
+62908,Bonanza,Fraccionamiento,Jojutla,Morelos,,62901,17,62901,,21,12,1291,Rural,
+62908,Las Fincas de Tequesquitengo,Fraccionamiento,Jojutla,Morelos,,62901,17,62901,,21,12,1294,Rural,
+62909,Constitución del 57,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1,Rural,
+62909,José María Morelos y Pavón,Unidad habitacional,Jojutla,Morelos,,62901,17,62901,,31,12,583,Urbano,
+62909,Jicarero,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,584,Rural,
+62909,Nicolás Bravo,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,585,Rural,
+62909,Ampliación Nicolás Bravo,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1286,Rural,
+62909,Los Pilares,Colonia,Jojutla,Morelos,,62901,17,62901,,9,12,1287,Rural,
+62910,Balcones de Tehuixtla,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,3,Urbano,
+62910,Los Naranjos,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,4,Urbano,
+62910,Tehuixtla,Pueblo,Jojutla,Morelos,,62911,17,62911,,28,12,586,Urbano,
+62910,Guadalupe,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1278,Urbano,
+62910,Loma Bonita (arenales),Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1281,Urbano,
+62910,Emiliano Zapata,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1941,Urbano,
+62912,Campo San Pablo,Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,1950,Rural,
+62914,Azuchilera,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1279,Rural,
+62914,La Mesa de los Indios,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1280,Rural,
+62915,Tequesquitengo,Pueblo,Jojutla,Morelos,,62911,17,62911,,28,12,591,Urbano,
+62916,Las Brasileras,Colonia,Jojutla,Morelos,,62911,17,62911,,9,12,1284,Rural,
+62917,Chisco,Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,588,Rural,
+62917,Vicente Aranda (San Rafael),Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,589,Rural,
+62917,Río Seco,Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,590,Rural,
+62917,Tenerías,Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,1282,Rural,
+62917,Los Lagartos,Ranchería,Jojutla,Morelos,,62911,17,62911,,29,12,1283,Rural,
+62920,Tepalcingo,Pueblo,Tepalcingo,Morelos,,62921,17,62921,,28,19,597,Urbano,
+62920,San Francisco,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,794,Urbano,
+62920,La Concepción,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,795,Urbano,
+62920,Buenos Aires,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,796,Urbano,
+62920,Palo Revuelto,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,797,Urbano,
+62920,Guadalupe,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,798,Urbano,
+62920,Los Reyes,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,799,Urbano,
+62920,San Martín,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,800,Urbano,
+62920,Santuario,Barrio,Tepalcingo,Morelos,,62921,17,62921,,2,19,802,Urbano,
+62920,Emiliano Zapata,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1616,Urbano,
+62923,Adolfo López Mateos,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,599,Rural,
+62923,Huitchila,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,600,Rural,
+62923,Cruz de Jaramalla ( Lauro Ortega ),Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1613,Rural,
+62924,Ixtlilco El Chico,Pueblo,Tepalcingo,Morelos,,62921,17,62921,,28,19,593,Rural,
+62924,El Bambú (La Presa),Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,1605,Rural,
+62924,Mano Pintada,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,1606,Rural,
+62925,Los Vergeles,Fraccionamiento,Tepalcingo,Morelos,,62921,17,62921,,21,19,1,Urbano,
+62925,Atotonilco,Pueblo,Tepalcingo,Morelos,,62921,17,62921,,28,19,602,Urbano,
+62925,Los Tulipanes,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1604,Rural,
+62925,20 de Noviembre,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1614,Urbano,
+62925,La Vía,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1615,Rural,
+62926,Ixtlilco El Grande,Pueblo,Tepalcingo,Morelos,,62921,17,62921,,28,19,594,Urbano,
+62926,La Junta,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1607,Urbano,
+62926,Las Joyas,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1608,Rural,
+62926,El Pozo,Colonia,Tepalcingo,Morelos,,62921,17,62921,,9,19,1609,Urbano,
+62926,La Joyita de Piedra Grande,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,1610,Rural,
+62927,Pitzotlán,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,595,Rural,
+62927,Zacapalco,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,598,Rural,
+62927,El Tepehuaje,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,601,Rural,
+62927,Los Sauces,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,603,Rural,
+62927,El Limón de Cuauchichinola,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,604,Rural,
+62927,Emiliano Zapata,Ranchería,Tepalcingo,Morelos,,62921,17,62921,,29,19,1612,Rural,
+62930,Jonacatepec de Leandro Valle Centro,Pueblo,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,28,13,607,Urbano,
+62933,López de Nava,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1633,Urbano,
+62933,Zull Ayot,Fraccionamiento,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,21,13,1634,Urbano,
+62933,La Capilla,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1635,Urbano,
+62934,Leandro Valle,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1631,Urbano,
+62935,Ex-Hacienda Montefalco,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1618,Rural,
+62935,El Carrizal,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1619,Rural,
+62936,La Divina Providencia,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1620,Rural,
+62936,La Yesera,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1621,Rural,
+62936,Santa Cruz,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1622,Rural,
+62936,El Puente Angosto (Rancho el Pitayo),Rancho,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,48,13,1623,Rural,
+62936,Las Bugambilias,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1624,Rural,
+62936,La Casa de Piedra,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1625,Rural,
+62936,El Abrevadero (Campo Mata Redonda),Ranchería,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,29,13,1628,Rural,
+62937,Amacuitlapilco,Pueblo,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,28,13,606,Rural,
+62937,Tlayca,Pueblo,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,28,13,609,Rural,
+62937,Emiliano Zapata,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1626,Rural,
+62937,Juárez,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1627,Rural,
+62940,Tetelilla,Pueblo,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,28,13,610,Urbano,
+62943,El Puente Colorado,Colonia,Jonacatepec de Leandro Valle,Morelos,,62931,17,62931,,9,13,1629,Rural,
+62950,Axochiapan,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,612,Urbano,
+62950,La Luz,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,923,Urbano,
+62950,Otilio Montaño,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1470,Urbano,
+62952,Industrial,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,803,Urbano,
+62952,Vista Hermosa,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,806,Urbano,
+62952,Bugambilias,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,929,Urbano,
+62953,Del Carmen,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,804,Urbano,
+62953,Las Ardillas,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,805,Urbano,
+62953,Progreso,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,924,Urbano,
+62953,Las Palmas,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1495,Rural,
+62954,Florida,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,807,Urbano,
+62954,Centenario,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1475,Urbano,
+62954,Emiliano Zapata,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1476,Urbano,
+62955,La Guadalupana,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,4,Rural,
+62955,Tlalayo,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,619,Rural,
+62955,Cuauhtémoc,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,922,Rural,
+62955,Los Tres Reyes,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,930,Rural,
+62955,El C.B.T.A.,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,936,Rural,
+62955,Carrillo Olea (La Primavera),Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1471,Rural,
+62955,El Mirador,Rancho,Axochiapan,Morelos,,62951,17,62951,,48,3,1473,Rural,
+62955,Los Linderos (Fábrica de Yeso),Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1490,Rural,
+62955,Rubén Carrillo,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1491,Rural,
+62955,Los Gavilanes,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1492,Rural,
+62955,La Estación,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1493,Rural,
+62955,5 de Mayo,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1494,Rural,
+62956,Rancho María de Jesús Barrera,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,5,Rural,
+62956,Ahuaxtla,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,621,Rural,
+62956,Benito Juárez,Unidad habitacional,Axochiapan,Morelos,,62951,17,62951,,31,3,932,Rural,
+62956,El Papagayo,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,934,Rural,
+62956,Biznaga,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1474,Rural,
+62956,Los Laureles,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1496,Rural,
+62956,Cabrera,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1497,Rural,
+62956,Palo Blanco,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,1498,Rural,
+62956,El Guamúchil,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1499,Rural,
+62956,Los Límites,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1500,Rural,
+62956,Juan Ortega Sánchez,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1501,Rural,
+62956,La Piedra Colorada,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1502,Rural,
+62957,Quebrantadero,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,617,Rural,
+62957,Joaquín Camaño,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,620,Rural,
+62957,Campo la Laguna,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,931,Rural,
+62957,El Edén,Rancho,Axochiapan,Morelos,,62951,17,62951,,48,3,1478,Rural,
+62957,Las Palmas (La Poza del Pajarito),Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1479,Rural,
+62957,El Mezquital,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1480,Rural,
+62957,Las Tinajas,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1481,Rural,
+62962,Marcelino Rodríguez (San Ignacio),Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,614,Rural,
+62962,Cayehuacán,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,615,Rural,
+62962,La Nopalera,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1482,Rural,
+62962,Nueva Esperanza,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1483,Rural,
+62962,La Toma,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1484,Rural,
+62962,Los Carros,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1503,Rural,
+62963,Campo la Zacatera,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,3,Rural,
+62963,Atlacahualoya,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,611,Urbano,
+62963,Coayuca de Morelos,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1485,Rural,
+62963,La Huerta (La Bomba Dos),Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,1486,Rural,
+62963,Ampliación Juan González y Año 2000,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1487,Rural,
+62963,La Joya del Zompa,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,1488,Rural,
+62965,Campo Jicamal,Ranchería,Axochiapan,Morelos,,62951,17,62951,,29,3,2,Rural,
+62965,Telixtac,Pueblo,Axochiapan,Morelos,,62951,17,62951,,28,3,613,Urbano,
+62966,2000,Colonia,Axochiapan,Morelos,,62951,17,62951,,9,3,935,Rural,
+62970,Jantetelco Centro,Pueblo,Jantetelco,Morelos,,62971,17,62971,,28,10,622,Urbano,
+62970,Manuel Alarcón,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,811,Rural,
+62970,Mariana Díaz,Unidad habitacional,Jantetelco,Morelos,,62971,17,62971,,31,10,1467,Urbano,
+62972,Campo de las Rentas,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1,Rural,
+62972,Amayuca,Pueblo,Jantetelco,Morelos,,62971,17,62971,,28,10,624,Rural,
+62972,Serafín Marcial Bonilla,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1460,Rural,
+62972,Gabriel Tepepa,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1468,Urbano,
+62974,Campo Chalpa,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,2,Rural,
+62974,Los Amates,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,3,Rural,
+62974,Mariano Matamoros,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,808,Urbano,
+62974,Alondra,Fraccionamiento,Jantetelco,Morelos,,62971,17,62971,,21,10,809,Rural,
+62974,Cuatro Caminos,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,810,Rural,
+62974,Nuevo Xochimilco,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1455,Rural,
+62974,Santa Lucía,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1456,Rural,
+62975,Los Bordos,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1457,Rural,
+62975,La Y,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1458,Rural,
+62975,La Renta,Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1459,Rural,
+62976,La Laja,Ranchería,Jantetelco,Morelos,,62971,17,62971,,29,10,1462,Rural,
+62977,Chalcatzingo,Pueblo,Jantetelco,Morelos,,62971,17,62971,,28,10,625,Rural,
+62977,La Joya,Ranchería,Jantetelco,Morelos,,62971,17,62971,,29,10,1461,Rural,
+62978,San Antonio La Esperanza,Pueblo,Jantetelco,Morelos,,62971,17,62971,,28,10,361,Rural,
+62978,Tenango (Santa Ana),Pueblo,Jantetelco,Morelos,,62971,17,62971,,28,10,626,Rural,
+62978,Emiliano Zapata (La Granja),Colonia,Jantetelco,Morelos,,62971,17,62971,,9,10,1463,Rural,
+62978,La Huerta,Ranchería,Jantetelco,Morelos,,62971,17,62971,,29,10,1464,Rural,
+62978,Peñón de los Baños,Ranchería,Jantetelco,Morelos,,62971,17,62971,,29,10,1465,Rural,
+62980,Tlaquiltenango,Pueblo,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,28,25,636,Urbano,8.0
+62980,Vista Alegre,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,640,Urbano,8.0
+62980,Gabriel Tepepa,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,641,Urbano,8.0
+62980,El Texcal,Unidad habitacional,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,31,25,778,Urbano,8.0
+62980,Los Presidentes,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,779,Urbano,8.0
+62980,Alfredo V. Bonfil (Chacampalco),Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,781,Rural,8.0
+62980,Cantora,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,782,Urbano,8.0
+62980,Plan de Ayala,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,783,Urbano,8.0
+62982,Villas de Jojutla,Fraccionamiento,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,21,25,1,Rural,8.0
+62983,Miguel Hidalgo,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,780,Urbano,8.0
+62983,3 de Mayo (El Tepiolol),Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,786,Rural,8.0
+62984,Celerino Manzanares,Colonia,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,9,25,642,Urbano,8.0
+62984,Emiliano Zapata,Unidad habitacional,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,31,25,785,Rural,8.0
+62984,Palo Grande,Ranchería,Tlaquiltenango,Morelos,Tlaquiltenango,62981,17,62981,,29,25,1338,Rural,8.0
+62985,La Mezquitera (El Astillero),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,630,Rural,
+62985,La Era (Calalpa),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,643,Rural,
+62985,Las Carpas,Colonia,Tlaquiltenango,Morelos,,62981,17,62981,,9,25,1340,Urbano,
+62985,Las Bóvedas,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,1341,Urbano,
+62986,Chimalacatlán,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,629,Rural,
+62986,Lorenzo Vázquez (Santa Cruz),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,631,Rural,
+62986,Quilamula,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,634,Rural,
+62986,San José de Pala,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,635,Rural,
+62986,Valle de Vázquez (Los Hornos),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,637,Rural,
+62986,Los Dormidos,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,1339,Urbano,
+62987,Los Elotes (San Miguel de los Elotes),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,632,Rural,
+62987,Pueblo Viejo,Pueblo,Tlaquiltenango,Morelos,,62981,17,62981,,28,25,633,Rural,
+62987,Xicatlacotla,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,638,Rural,
+62987,Nexpa,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,644,Rural,
+62987,Paso de Palapa,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,1342,Urbano,
+62988,Huixastla,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,645,Rural,
+62988,Coaxitlán,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,646,Rural,
+62988,El Calabazal (Rancho la Ceiba),Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,1343,Urbano,
+62990,Huautla,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,647,Rural,
+62993,Ajuchitlán,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,627,Rural,
+62994,Rancho Viejo,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,650,Rural,
+62995,Huaxtla,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,649,Rural,
+62995,La Bomba,Colonia,Tlaquiltenango,Morelos,,62981,17,62981,,9,25,1337,Urbano,
+62996,Xochipala,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,648,Rural,
+62996,Santiopa,Ranchería,Tlaquiltenango,Morelos,,62981,17,62981,,29,25,651,Rural,
