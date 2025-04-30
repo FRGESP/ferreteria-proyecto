@@ -381,6 +381,11 @@ CREATE PROCEDURE SP_GETUSERINFO(IN ID INT)
         SELECT U.IdUsuario, E.IdRol, E.IdEstatus, P.Nombre, P.ApellidoPaterno AS Apellido FROM USUARIO AS U INNER JOIN EMPLEADO AS E ON U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE IdUsuario = ID;
     end;
 
+DROP PROCEDURE IF EXISTS SP_GETEMPLEADOS;
+CREATE PROCEDURE SP_GETEMPLEADOS()
+    BEGIN
+        SELECT U.IdUsuario AS ID, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado;
+    end;
 
 --
 
@@ -442,4 +447,6 @@ UPDATE EMPLEADO SET IdRol = 3 WHERE IdEmpleado = 2;
 
 SELECT * FROM USUARIO;
 
-UPDATE USUARIO SET Contraseña = '$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq' WHERE IdUsuario = 1001
+UPDATE USUARIO SET Contraseña = '$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq' WHERE IdUsuario = 1001;
+
+SELECT * FROM PERSONA;
