@@ -418,7 +418,7 @@ INSERT INTO ESTATUS (ESTATUS) VALUES ('Eliminado');
 
 INSERT INTO PERSONA (Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Edad) VALUES ('Pedro', 'Villa', 'Almanza', '4457963475', '45');
 INSERT INTO EMPLEADO (IdPersona, IdRol, IdEstatus, IdSucursal) VALUES ((SELECT LAST_INSERT_ID()), 3, 1, 1);
-INSERT INTO USUARIO (Contraseña, IdEmpleado) VALUES ('123456', 1);
+INSERT INTO USUARIO (Contraseña, IdEmpleado) VALUES ('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq', 1);
 
 CALL SP_REGISTRAREMPLEADO('123456','Francisco', 'Leal', 'Medina', '4459721648', '32', 3, 1, 2,1001);
 
@@ -440,3 +440,6 @@ UPDATE EMPLEADO SET IdEstatus = 1 WHERE IdEmpleado = 3;
 
 UPDATE EMPLEADO SET IdRol = 3 WHERE IdEmpleado = 2;
 
+SELECT * FROM USUARIO;
+
+UPDATE USUARIO SET Contraseña = '$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq' WHERE IdUsuario = 1001

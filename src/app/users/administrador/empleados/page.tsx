@@ -1,8 +1,9 @@
-import React from 'react'
-
+import EmpleadosPage from "@/components/administrador/empleadosPage"
 function Empleadospage() {
   return (
-    <div>Empleadospage</div>
+    <div>
+      <EmpleadosPage />
+    </div>
   )
 }
 
