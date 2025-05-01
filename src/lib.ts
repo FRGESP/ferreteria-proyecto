@@ -9,7 +9,7 @@ export interface SessionData {
 }
 
 export const defaultSession: SessionData = {
-    isLoggedIn: false
+    isLoggedIn: false,
 }
 
 export const sessionOptions: SessionOptions = {

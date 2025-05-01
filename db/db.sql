@@ -384,11 +384,26 @@ CREATE PROCEDURE SP_GETUSERINFO(IN ID INT)
 DROP PROCEDURE IF EXISTS SP_GETEMPLEADOS;
 CREATE PROCEDURE SP_GETEMPLEADOS()
     BEGIN
-        SELECT U.IdUsuario AS ID, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado;
+        SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 ORDER BY U.IdUsuario;
     end;
 
+DROP PROCEDURE IF EXISTS SP_DELETEEMPLEADO;
+CREATE PROCEDURE SP_DELETEEMPLEADO(IN ID INT, IN USERID INT)
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+        SET NOMBREVAR = (SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno) FROM USUARIO AS U INNER JOIN  EMPLEADO E2 on U.IdEmpleado = E2.IdEmpleado INNER JOIN PERSONA P on E2.IdPersona = P.IdPersona WHERE E2.IdEmpleado = ID);
+        UPDATE EMPLEADO SET IdEstatus = 4 WHERE IdEmpleado = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'EMPLEADO', ID, 'Todos', NOMBREVAR, '');
+    end;
+
+DROP PROCEDURE IF EXISTS SP_GETNOMBRESUCURSALES;
+CREATE  PROCEDURE SP_GETSUCURSALESNOMBRES()
+    BEGIN
+        SELECT Nombre AS Nombre, IdSucursal AS Id FROM SUCURSAL;
+    end;
 --
 
+select * from BITACORA;
 
 CALL LOGIN(1001, '123456');
 

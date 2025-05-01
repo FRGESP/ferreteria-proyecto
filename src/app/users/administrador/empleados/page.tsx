@@ -1,4 +1,4 @@
-import EmpleadosPage from "@/components/administrador/empleadosPage"
+import EmpleadosPage from "@/components/administrador/empleados/empleadosPage"
 function Empleadospage() {
   return (
     <div>

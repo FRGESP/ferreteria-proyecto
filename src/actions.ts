@@ -10,6 +10,17 @@ interface Credentials {
     password: string;
 }
 
+interface empleado {
+    nombre: string;
+    apellidoPat: string;
+    apellidoMat: string;
+    edad: string;
+    telefono: string;
+    sucursal: string;
+    rol: string;
+    estatus: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -77,4 +88,22 @@ export const logout = async () => {
     if(!session.isLoggedIn){
       redirect("/");
     }
+  }
+
+  //Funciones que requieren el el usuario logueado
+
+  //Empleados
+
+  export const deleteEmpleado = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/empleados/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
+  }
+
+  export const addEmpleado = async (empleado: empleado) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/empleados/${session.userId}`, empleado)
+    const status = response.status;
+    return status;
   }
