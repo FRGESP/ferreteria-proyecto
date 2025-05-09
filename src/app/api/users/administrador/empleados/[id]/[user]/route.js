@@ -35,7 +35,7 @@ export async function PUT(request, { params }) {
 
 export async function GET(request, { params}){
     try {
-        const [response] = await conn.query("CALL SP_GETEMPLEADOS(?)", [params.id]);
+        const [response] = await conn.query("CALL SP_GETEMPLEADOS(?,?)", [params.user,params.id]);
         return NextResponse.json(response[0], { status: 200 });
     } catch (error) {
         console.error(error);

@@ -4,7 +4,7 @@ import { getIronSession } from "iron-session"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation";
 import axios from "axios"
-import { Empleado, Bitacora } from "@/components/administrador/empleados/updateModal";
+import { Bitacora } from "@/components/administrador/empleados/updateModal";
 
 interface Credentials {
     user: string;
@@ -46,6 +46,11 @@ export const login = async (credentials: Credentials) => {
         session.isLoggedIn = true;
         session.name = datos.Nombre;
         session.lastname = datos.Apellido;
+        session.sucursal = datos.Sucursal;
+
+        if(datos.IdRol === 3) {
+            session.isAdmin = true;
+        }
 
         await session.save();
         await roles();
@@ -93,11 +98,20 @@ export const islogged = async () => {
 
 //Funciones que requieren el el usuario logueado
 
-//Empleados
+//Administrador/Session
+
+export const changeSucursal = async (sucursal: number) => {
+    const session = await getSession();
+    session.sucursal = sucursal;
+    await session.save();
+
+}
+
+//Administradoe/Empleados
 
 export const getEmpleadosAction = async () => {
     const session = await getSession();
-    const response = await axios.get(`${process.env.URL}/api/users/administrador/empleados/${session.userId}/0`);
+    const response = await axios.get(`${process.env.URL}/api/users/administrador/empleados/${session.sucursal}/${session.userId}`);
     const data = response.data;
     return data;
 }

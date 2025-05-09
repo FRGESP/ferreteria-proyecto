@@ -6,10 +6,14 @@ export interface SessionData {
     name?: string;
     lastname?: string;
     isLoggedIn: boolean;
+    isAdmin: boolean;
+    sucursal: number;
 }
 
 export const defaultSession: SessionData = {
     isLoggedIn: false,
+    isAdmin: false,
+    sucursal: 0,
 }
 
 export const sessionOptions: SessionOptions = {

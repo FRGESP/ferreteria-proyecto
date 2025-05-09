@@ -347,7 +347,7 @@ BEGIN
             IF USERSTATUS != 1 THEN
                 SELECT 2 AS RES; -- EL ESTATUS NO ESTA ACTIVO
             ELSE
-                SELECT U.IdUsuario, E.IdRol, E.IdEstatus, P.Nombre, P.ApellidoPaterno AS Apellido FROM USUARIO AS U INNER JOIN EMPLEADO AS E ON U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE IdUsuario = ID AND Contraseña = PASSWORD;
+                SELECT U.IdUsuario, E.IdRol, E.IdEstatus, P.Nombre, P.ApellidoPaterno AS Apellido, E.IdSucursal AS Sucursal FROM USUARIO AS U INNER JOIN EMPLEADO AS E ON U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE IdUsuario = ID AND Contraseña = PASSWORD;
             end if;
         end if;
     end if;
@@ -379,15 +379,15 @@ END;
 DROP PROCEDURE IF EXISTS SP_GETUSERINFO;
 CREATE PROCEDURE SP_GETUSERINFO(IN ID INT)
     BEGIN
-        SELECT U.IdUsuario, E.IdRol, E.IdEstatus, P.Nombre, P.ApellidoPaterno AS Apellido FROM USUARIO AS U INNER JOIN EMPLEADO AS E ON U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE IdUsuario = ID;
+        SELECT U.IdUsuario, E.IdRol, E.IdEstatus, P.Nombre, P.ApellidoPaterno AS Apellido, E.IdSucursal AS Sucursal FROM USUARIO AS U INNER JOIN EMPLEADO AS E ON U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE IdUsuario = ID;
     end;
 
 -- Administrador/Empleados
 
 DROP PROCEDURE IF EXISTS SP_GETEMPLEADOS;
-CREATE PROCEDURE SP_GETEMPLEADOS(IN IDEMP INT)
+CREATE PROCEDURE SP_GETEMPLEADOS(IN IDEMP INT, IN SUCURSALIN INT)
     BEGIN
-        SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 AND U.IdUsuario != IDEMP ORDER BY U.IdUsuario;
+        SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 AND U.IdUsuario != IDEMP AND E.IdSucursal = SUCURSALIN ORDER BY U.IdUsuario;
     end;
 
 DROP PROCEDURE IF EXISTS SP_DELETEEMPLEADO;
@@ -504,3 +504,4 @@ SELECT * FROM USUARIO;
 UPDATE USUARIO SET Contraseña = '$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq' WHERE IdUsuario = 1001;
 
 SELECT * FROM PERSONA;
+UPDATE EMPLEADO SET IdSucursal = 2 WHERE IdEmpleado = 1;
