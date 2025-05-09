@@ -95,6 +95,13 @@ export const islogged = async () => {
 
 //Empleados
 
+export const getEmpleadosAction = async () => {
+    const session = await getSession();
+    const response = await axios.get(`${process.env.URL}/api/users/administrador/empleados/${session.userId}/0`);
+    const data = response.data;
+    return data;
+}
+
 export const deleteEmpleado = async (id: number) => {
     const session = await getSession();
     const response = await axios.delete(`${process.env.URL}/api/users/administrador/empleados/${id}/${session.userId}`);
@@ -111,8 +118,6 @@ export const addEmpleado = async (empleado: empleado) => {
 
 export const updateBitacoraEmpleado = async (id: number, bitacora: Bitacora[]) => {
     const session = await getSession();
-    console.log("Estos son los campos a actualizar111")
-    console.log(bitacora)
     bitacora.map(async (item) => {
         console.log(item)
         const response = await axios.put(`${process.env.URL}/api/users/administrador/empleados/${id}/${session.userId}`, item)

@@ -6,11 +6,13 @@ import { Plus } from "lucide-react";
 import axios from "axios";
 import { addEmpleado } from "@/actions";
 import { useRouter } from "next/navigation";
+import { on } from "events";
 
+interface AddModalProps {
+  onGuardado: () => void;
+}
 
-
-
-function AddModal() {
+function AddModal({onGuardado}: AddModalProps) {
   const { toast } = useToast();
   const router = useRouter();
 
@@ -120,7 +122,7 @@ function AddModal() {
           description: "El empleado ha sido agregado correctamente",
           variant: "success",
         });
-        window.location.reload();
+        onGuardado();
       } else {
         toast({
           title: "Error",

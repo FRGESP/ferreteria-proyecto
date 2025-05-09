@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 
 interface UpdateModalProps {
     IdEmpleado: number;
+    onGuardado: () => void;
 }
 
 //Guarda la informacion del empleado
@@ -32,7 +33,7 @@ export interface Bitacora {
 }
 
 
-function UpdateModal({ IdEmpleado }: UpdateModalProps) {
+function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
     const { toast } = useToast();
     const router = useRouter();
 
@@ -70,7 +71,6 @@ function UpdateModal({ IdEmpleado }: UpdateModalProps) {
             ...inputValue,
             [name]: value,
         });
-        console.log(inputValue);
 
         if (value.trim() === "") {
             setErrors((prev) => ({
@@ -98,14 +98,10 @@ function UpdateModal({ IdEmpleado }: UpdateModalProps) {
             });
         }
 
-        console.log(errors);
-        console.log(bitacora);
     };
 
     //Funcion para abrir el modal
     const openModal = async () => {
-
-        console.log("Abriste el Modal ", IdEmpleado);
         // Reiniciar los valores de los inputs y errores al abrir el modal
         setErrors({});
         setInputValue({
@@ -118,6 +114,8 @@ function UpdateModal({ IdEmpleado }: UpdateModalProps) {
             Rol: "",
             Estatus: "",
         });
+        setBitacora({});
+        setIsBitacoraEmpty(false);
         await getSucursales();
         await getEmpleado();
         setIsOpen(true);
@@ -151,7 +149,6 @@ function UpdateModal({ IdEmpleado }: UpdateModalProps) {
     const getEmpleado = async () => {
         const response = await axios.get(`/api/users/administrador/empleados/${IdEmpleado}`);
         const data = response.data;
-        console.log("Empleado: ", data);
         setEmpleado(data);
         setInputValue({
             Nombre: data.Nombre,
@@ -185,16 +182,11 @@ function UpdateModal({ IdEmpleado }: UpdateModalProps) {
                 ValorNuevo: value,
             }));
 
-            console.log("Esta es la bitácora:");
-            console.log(registrosBitacoras);
-
             const response = await updateBitacoraEmpleado(IdEmpleado, registrosBitacoras);
             const responseUpdate = await axios.put(`/api/users/administrador/empleados/${IdEmpleado}`, inputValue)
 
-            console.log(response);
-            console.log("Response2",responseUpdate);
             if (responseUpdate.status === 200) {
-                window.location.reload();
+                onGuardado();
                 setIsOpen(false);
                 toast({
                     title: "Empleado agregado",

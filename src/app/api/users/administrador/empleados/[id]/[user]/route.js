@@ -32,3 +32,13 @@ export async function PUT(request, { params }) {
         return NextResponse.json({ error: "Error al actualizar empleado" }, { status: 500 });
     }
 }
+
+export async function GET(request, { params}){
+    try {
+        const [response] = await conn.query("CALL SP_GETEMPLEADOS(?)", [params.id]);
+        return NextResponse.json(response[0], { status: 200 });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ error: "Error al obtener empleado" }, { status: 500 });
+    }
+}

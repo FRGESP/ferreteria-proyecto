@@ -385,9 +385,9 @@ CREATE PROCEDURE SP_GETUSERINFO(IN ID INT)
 -- Administrador/Empleados
 
 DROP PROCEDURE IF EXISTS SP_GETEMPLEADOS;
-CREATE PROCEDURE SP_GETEMPLEADOS()
+CREATE PROCEDURE SP_GETEMPLEADOS(IN IDEMP INT)
     BEGIN
-        SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 ORDER BY U.IdUsuario;
+        SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 AND U.IdUsuario != IDEMP ORDER BY U.IdUsuario;
     end;
 
 DROP PROCEDURE IF EXISTS SP_DELETEEMPLEADO;
@@ -495,7 +495,7 @@ SELECT * FROM EMPLEADO;
 
 SELECT * FROM ROL;
 
-UPDATE EMPLEADO SET IdEstatus = 1 WHERE IdEmpleado = 3;
+UPDATE EMPLEADO SET IdEstatus = 1 WHERE IdEmpleado = 1;
 
 UPDATE EMPLEADO SET IdRol = 3 WHERE IdEmpleado = 2;
 
