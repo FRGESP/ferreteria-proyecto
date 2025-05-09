@@ -1,9 +1,9 @@
 import React from 'react'
-import SucursalesPage from '@/components/administrador/sucursales/sucursalesPage'
+import SucursalesDashboard from '@/components/administrador/sucursales/sucursalesDashboard'
 
 function Sucursalpage() {
   return (
-    <SucursalesPage />
+    <SucursalesDashboard />
   )
 }
 

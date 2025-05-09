@@ -262,15 +262,27 @@ CREATE TABLE BITACORA(
 );
 
 ALTER TABLE USUARIO AUTO_INCREMENT = 1001;
+SET time_zone = 'America/Mexico_City';
 
-
-DROP FUNCTION  IF EXISTS ObtenerDireccion;
-CREATE FUNCTION ObtenerDireccion(ID INT)
+DROP FUNCTION  IF EXISTS ObtenerDireccionBYCP;
+CREATE FUNCTION ObtenerDireccionBYCP(ID INT)
 RETURNS VARCHAR(100)
     DETERMINISTIC
     BEGIN
         DECLARE DIRECCION VARCHAR(100);
         SET DIRECCION = (SELECT CONCAT(E.Estado, ' ', M.Municipio, ' ', C2.Colonia, ' ', C.CodigoPostal) AS DIRECCION FROM ESTADO AS E INNER JOIN MUNICIPIO AS M ON E.IdEstado = M.IdEstado INNER JOIN CODIGOPOSTAL AS C ON M.IdMunicipio = C.IdMunicipio INNER JOIN COLONIA C2 on C.IdCodigoPostal = C2.IdCodigoPostal WHERE C.CodigoPostal = ID LIMIT 1);
+        RETURN DIRECCION;
+    end;
+
+DROP FUNCTION IF EXISTS FN_OBTENERDIRECCION;
+CREATE FUNCTION FN_OBTENERDIRECCION(IDDIR INT)
+    RETURNS VARCHAR(100)
+    DETERMINISTIC
+    BEGIN
+        DECLARE DIRECCION VARCHAR(100);
+        DECLARE IDCOL INT;
+        SET IDCOL = (SELECT IdColonia FROM DIRECCION WHERE IdDireccion = IDDIR LIMIT 1);
+        SET DIRECCION = (SELECT CONCAT(D.Calle, ', ', C2.Colonia, ', ', C.CodigoPostal, ', ', M.Municipio, ', ', E.Estado, ', ', 'México') FROM DIRECCION AS D INNER JOIN CODIGOPOSTAL C on D.IdCodigoPostal = C.IdCodigoPostal INNER JOIN MUNICIPIO M on C.IdMunicipio = M.IdMunicipio INNER JOIN ESTADO E on M.IdEstado = E.IdEstado INNER JOIN COLONIA C2 on C.IdCodigoPostal = C2.IdCodigoPostal WHERE D.IdDireccion = IDDIR AND C2.IdColonia = IDCOL LIMIT 1);
         RETURN DIRECCION;
     end;
 
@@ -439,7 +451,13 @@ CREATE PROCEDURE SP_FINDEMPLEADO(IN NOMBREIN VARCHAR(100))
         SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%') ORDER BY U.IdUsuario;
     end;
 
-CALL SP_UPDATEEMPLEADO(2,'TEST','TEST2','TEST3','12','12121',1,1,1);
+DROP PROCEDURE IF EXISTS SP_GETSUCURSALES;
+CREATE PROCEDURE SP_GETSUCURSALES()
+    BEGIN
+        SELECT S.IdSucursal, S.Nombre, (SELECT FN_OBTENERDIRECCION(S.IdDireccion)) AS Direccion, S.FechaRegistro  FROM SUCURSAL AS S;
+    end;
+
+CALL SP_GETSUCURSALES();
 --
 
 select * from BITACORA;
@@ -449,7 +467,7 @@ CALL LOGIN(1001, '123456');
 SELECT * FROM USUARIO;
 
 
-SELECT ObtenerDireccion(38940);
+SELECT ObtenerDireccionBYCP(38940);
 
 SELECT CONCAT(E.Estado, ' ', M.Municipio, ' ', C2.Colonia, ' ', C.CodigoPostal) AS DIRECCION FROM ESTADO AS E INNER JOIN MUNICIPIO AS M ON E.IdEstado = M.IdEstado INNER JOIN CODIGOPOSTAL AS C ON M.IdMunicipio = C.IdMunicipio INNER JOIN COLONIA C2 on C.IdCodigoPostal = C2.IdCodigoPostal WHERE C.CodigoPostal = 29000;
 
