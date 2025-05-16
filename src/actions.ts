@@ -6,11 +6,13 @@ import { redirect } from "next/navigation";
 import axios from "axios"
 import { Bitacora } from "@/components/administrador/empleados/updateModal";
 
+//Interface para la sesion
 interface Credentials {
     user: string;
     password: string;
 }
 
+//Interface para el empleado
 interface empleado {
     nombre: string;
     apellidoPat: string;
@@ -20,6 +22,15 @@ interface empleado {
     sucursal: string;
     rol: string;
     estatus: string;
+}
+
+//Interface para la sucursal
+interface Sucursal {
+    nombre: string;
+    telefono: string;
+    codigo: string;
+    calle: string;
+    colonia: string;
 }
 
 export const getSession = async () => {
@@ -141,4 +152,13 @@ export const updateBitacoraEmpleado = async (id: number, bitacora: Bitacora[]) =
         }
     })
 
+}
+
+//Administradoe/Sucursales
+
+export const addSucursal = async (sucursal: Sucursal) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/sucursales/${session.userId}`, sucursal)
+    const status = response.status;
+    return status;
 }

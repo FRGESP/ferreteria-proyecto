@@ -217,7 +217,7 @@ function AddModal({onGuardado}: AddModalProps) {
                     htmlFor="telefono"
                     className="font-bold text-lg flex-grow text-left"
                   >
-                    Telefono
+                    Teléfono
                   </label>
                   <input
                     type="number"

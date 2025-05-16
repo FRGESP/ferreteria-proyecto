@@ -293,7 +293,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         htmlFor="Telefono"
                                         className="font-bold text-lg flex-grow text-left"
                                     >
-                                        Telefono
+                                        Teléfono
                                     </label>
                                     <input
                                         type="number"
