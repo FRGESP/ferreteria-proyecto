@@ -36,14 +36,14 @@ function SucursalesDashboard() {
         <div className='flex-1 flex flex-col gap-2'>
             <div className='flex-[1] rounded-lg border border-black border-solid]'>
                 <div className='flex justify-center items-center h-full'>
-                    <AddSucursal onGuardado={() => console.log("SIUU")}/>
+                    <AddSucursal onGuardado={getSucursales}/>
                 </div>
             </div>
             <div className='flex-[2] rounded-lg border border-black border-solid] '>
                 Gráfica de ventas
             </div>
         </div>
-        <div className='flex-[1] rounded-lg'>
+        <div className='flex-[1] rounded-lg overflow-y-auto'>
             <div className='grid grid-cols-2 gap-4'>
                 {sucursales.map((sucursal) => (
                     <div key={sucursal.IdSucursal} className='flex flex-col gap-2 border border-black border-solid rounded-lg p-3'>

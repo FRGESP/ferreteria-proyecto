@@ -148,28 +148,25 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
 
         if (Object.keys(newErrors).length == 0) {
 
-            console.log("No hay errores");
-            console.log(inputValue);
+            const response = await addSucursal(inputValue); // Función que envía los datos al servidor
 
-            //const response = await addSucursal(inputValue); // Función que envía los datos al servidor
+            console.log(response);
+            if (response === 200) {
+                setIsOpen(false);
 
-            // console.log(response);
-            // if (response === 200) {
-            //     setIsOpen(false);
-
-            //     toast({
-            //         title: "Empleado agregado",
-            //         description: "El empleado ha sido agregado correctamente",
-            //         variant: "success",
-            //     });
-            //     onGuardado();
-            // } else {
-            //     toast({
-            //         title: "Error",
-            //         description: "No se pudo agregar el empleado",
-            //         variant: "destructive",
-            //     });
-            // }
+                toast({
+                    title: "Sucursal agregada",
+                    description: "La sucursal ha sido agregado correctamente",
+                    variant: "success",
+                });
+                onGuardado();
+            } else {
+                toast({
+                    title: "Error",
+                    description: "No se pudo agregar la sucursal",
+                    variant: "destructive",
+                });
+            }
         }
     };
 
