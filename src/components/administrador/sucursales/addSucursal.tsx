@@ -68,7 +68,7 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
             colonia: colonia,
             calle: calle,
         });
-        
+
         if (isRequiredPar) {
             setIsRequired(true);
         }
@@ -76,8 +76,8 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
         console.log(isRequired)
 
     }
-        //Funcion para verificar los campos de la direccion
-       const verfificarCampos = () => {
+    //Funcion para verificar los campos de la direccion
+    const verfificarCampos = () => {
         const newErrors: Record<string, string> = {};
         Object.entries(inputValue).forEach(([Key, value]) => {
             if (Key === "codigo" || Key === "calle" || Key === "colonia") {
@@ -102,7 +102,7 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
             verfificarCampos();
         }
         console.log(inputValue);
-    },[inputValue])
+    }, [inputValue])
 
     //Terminan las funciones del componente direccion
 
@@ -136,13 +136,19 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
         const newErrors: Record<string, string> = {};
 
         Object.entries(inputValue).forEach(([Key, value]) => {
+            console.log(Key);
             if (value.trim() === "") {
                 if (Key === "codigo" || Key === "calle" || Key === "colonia") {
                     newErrors["codigo"] = "Ingrese una dirección válida y completa";
                 } else {
                     newErrors[Key] = "Este campo es obligatorio"
-                }
+                } 
             }
+            if (Key === "telefono" ) {
+                    if (isNaN(Number(value))) {
+                        newErrors[Key] = "Este campo debe ser numérico";
+                    } 
+                }
         })
         setErrors(newErrors);
 
@@ -212,14 +218,14 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
                                         Telefono
                                     </label>
                                     <input
-                                        type="number"
+                                        type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["telefono"] ? "border-red-500" : "border-black"}`}
                                         name="telefono"
                                         onChange={handleChange}
                                     />
                                     {errors["telefono"] && (<span className="text-sm text-red-500">{errors["telefono"]}</span>)}
                                 </div>
-                                <div className={`${errors["codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full`}>
+                                <div className={`${errors["codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full mt-3`}>
                                     <DireccionForm action={saveDireccion} />
                                 </div>
                                 {errors["codigo"] && (<span className="text-sm text-red-500">{errors["codigo"]}</span>)}

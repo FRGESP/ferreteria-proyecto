@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Pencil } from "lucide-react";
 import axios from "axios";
-import {updateBitacoraEmpleado } from "@/actions";
+import { updateBitacoraEmpleado } from "@/actions";
 import { useRouter } from "next/navigation";
 
 
@@ -44,7 +44,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     //Guarda la informacion de la bitacora
-    const [bitacora, setBitacora] = useState<{[key: string]:string}>();
+    const [bitacora, setBitacora] = useState<{ [key: string]: string }>();
 
     //Controla si hay informacion en la bitacora
     const [isBitacoraEmpty, setIsBitacoraEmpty] = useState(false);
@@ -85,7 +85,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
             });
         }
 
-        if(String(empleado![name as keyof Empleado]) !== value){
+        if (String(empleado![name as keyof Empleado]) !== value) {
             setBitacora((prev) => ({
                 ...prev,
                 [name]: value,
@@ -170,6 +170,14 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
             if (String(value).trim() === "") {
                 newErrors[Key] = "Este campo es obligatorio"
             }
+            if (Key === "Telefono" || Key === "Edad") {
+                if (isNaN(Number(value))) {
+                    newErrors[Key] = "Este campo debe ser numérico";
+                } else if (Number(value) <= 0 && Key === "Edad" && value.trim() !== "") {
+                    newErrors[Key] = "Este campo debe ser mayor a 0";
+                }
+
+            }
         })
         setErrors(newErrors);
 
@@ -208,7 +216,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
 
     return (
         <div>
-            <button className=" ml-1 rounded-md p-2 hover:bg-gray-200 "onClick={openModal}
+            <button className=" ml-1 rounded-md p-2 hover:bg-gray-200 " onClick={openModal}
             >
                 <Pencil
                     className="text-yellow-500"
@@ -280,7 +288,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         Edad
                                     </label>
                                     <input
-                                        type="number"
+                                        type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Edad"] ? "border-red-500" : "border-black"}`}
                                         name="Edad"
                                         onChange={handleChange}
@@ -296,7 +304,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         Teléfono
                                     </label>
                                     <input
-                                        type="number"
+                                        type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Telefono"] ? "border-red-500" : "border-black"}`}
                                         name="Telefono"
                                         onChange={handleChange}

@@ -12,7 +12,7 @@ interface AddModalProps {
   onGuardado: () => void;
 }
 
-function AddModal({onGuardado}: AddModalProps) {
+function AddModal({ onGuardado }: AddModalProps) {
   const { toast } = useToast();
   const router = useRouter();
 
@@ -108,6 +108,14 @@ function AddModal({onGuardado}: AddModalProps) {
       if (value.trim() === "") {
         newErrors[Key] = "Este campo es obligatorio"
       }
+      if (Key === "telefono" ||Key === "edad") {
+        if (isNaN(Number(value))) {
+          newErrors[Key] = "Este campo debe ser numérico";
+        } else if (Number(value) <= 0 && Key === "edad" && value.trim() !== "") {
+          newErrors[Key] = "Este campo debe ser mayor a 0";
+        }
+
+      }
     })
     setErrors(newErrors);
 
@@ -116,7 +124,7 @@ function AddModal({onGuardado}: AddModalProps) {
       console.log(response);
       if (response === 200) {
         setIsOpen(false);
-        
+
         toast({
           title: "Empleado agregado",
           description: "El empleado ha sido agregado correctamente",
@@ -139,7 +147,7 @@ function AddModal({onGuardado}: AddModalProps) {
         <Plus
           className="text-acento stroke-[5]"
           size={45}
-          
+
         />
       </button>
 
@@ -205,7 +213,7 @@ function AddModal({onGuardado}: AddModalProps) {
                     Edad
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     className={`border rounded-md w-full py-2 px-2 ${errors["edad"] ? "border-red-500" : "border-black"}`}
                     name="edad"
                     onChange={handleChange}
@@ -220,7 +228,7 @@ function AddModal({onGuardado}: AddModalProps) {
                     Teléfono
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     className={`border rounded-md w-full py-2 px-2 ${errors["telefono"] ? "border-red-500" : "border-black"}`}
                     name="telefono"
                     onChange={handleChange}
