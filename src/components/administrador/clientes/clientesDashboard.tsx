@@ -72,7 +72,7 @@ function ClientesDashboard() {
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
-            const response = await axios.post(`/api/users/administrador/Clientes`, searchValue);
+            const response = await axios.post(`/api/users/administrador/clientes`, searchValue);
             const data = response.data;
             setClientes(data);
         } 
@@ -93,7 +93,7 @@ function ClientesDashboard() {
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
             <div className="w-[70%] flex items-center justify-center mb-[2%]">
                 <form className="w-full" onSubmit={handleSearch}>
-                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del Cliente" />
+                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del cliente" />
                 </form>
                 <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch}/></button>
                 <AddModal onGuardado={() => setUpdate(true)}/>

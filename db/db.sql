@@ -483,6 +483,12 @@ CREATE PROCEDURE SP_GETCLIENTES()
         SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente;
     end;
 
+DROP PROCEDURE IF EXISTS SP_FINDCLIENTE;
+CREATE PROCEDURE SP_FINDCLIENTE(IN NOMBREIN VARCHAR(70))
+    BEGIN
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%');
+    end;
+
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
 
