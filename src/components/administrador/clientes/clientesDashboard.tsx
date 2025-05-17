@@ -4,28 +4,30 @@ import axios from "axios";
 import { Pencil, Trash, Search, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
-import AddModal from "./addModal";
-import UpdateModal from "./updateModal";
-import { deleteEmpleado, getEmpleadosAction } from "@/actions";
+import AddModal from "@/components/administrador/clientes/addModal";
+import UpdateModal from "@/components/administrador/empleados/updateModal";
+import { deleteEmpleado } from "@/actions";
+import dayjs from "dayjs";
 
-function EmpleadosPage() {
+function ClientesDashboard() {
 
     const router = useRouter();
     const { toast } = useToast();
 
-    interface Empleado {
-        ID: number;
-        IdEmp: number;
+    interface Cliente {
+        Id: number;
         Nombre: string;
         Telefono: string;
+        Direccion: string;
         Edad: string;
-        Rol: string;
-        Sucursal: string;
-        Estatus: string;
+        Rango: string;
+        Credito: string;
+        CreditoMaximo: string;
+        Fecha: string;
     }
 
-    //Guarda la informacion de los empleados
-    const [empleados, setEmpleados] = useState<Empleado[]>([]);
+    //Guarda la informacion de los Clientes
+    const [Clientes, setClientes] = useState<Cliente[]>([]);
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
         nombre:""
@@ -33,9 +35,9 @@ function EmpleadosPage() {
     //Bandera para actualizar la tabla
     const [update, setUpdate] = useState(false);
 
-    const getEmpleados = async () => {
-        const data = await getEmpleadosAction();
-        setEmpleados(data);
+    const getClientes = async () => {
+        const respose = await axios.get('/api/users/administrador/clientes')
+        setClientes(respose.data);
     }
 
     const handleChange = (e: any) => {
@@ -46,13 +48,13 @@ function EmpleadosPage() {
     }
 
     const handleDelete = async (id: number) => {
-        if (confirm("¿Estás seguro de que deseas eliminar este empleado?")) {
+        if (confirm("¿Estás seguro de que deseas eliminar este Cliente?")) {
             try {const response = await deleteEmpleado(id);
             if (response.status === 200) {
-                getEmpleados();
+                getClientes();
                 toast({
-                    title: "Empleado eliminado",
-                    description: "El empleado ha sido eliminado correctamente",
+                    title: "Cliente eliminado",
+                    description: "El Cliente ha sido eliminado correctamente",
                     variant: "success",
                 });
             }
@@ -60,7 +62,7 @@ function EmpleadosPage() {
             console.error("Error deleting employee:", error);
             toast({
                 title: "Error",
-                description: "No se pudo eliminar el empleado",
+                description: "No se pudo eliminar el Cliente",
                 variant: "destructive",
             });
         }
@@ -70,19 +72,19 @@ function EmpleadosPage() {
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
-            const response = await axios.post(`/api/users/administrador/empleados`, searchValue);
+            const response = await axios.post(`/api/users/administrador/Clientes`, searchValue);
             const data = response.data;
-            setEmpleados(data);
+            setClientes(data);
         } 
     }
 
     useEffect(() => {
-        getEmpleados();
+        getClientes();
     }, []);
 
     useEffect(() => {
         if (update) {
-            getEmpleados();
+            getClientes();
             setUpdate(false);
         }
     }, [update]);
@@ -91,7 +93,7 @@ function EmpleadosPage() {
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
             <div className="w-[70%] flex items-center justify-center mb-[2%]">
                 <form className="w-full" onSubmit={handleSearch}>
-                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del empleado" />
+                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del Cliente" />
                 </form>
                 <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch}/></button>
                 <AddModal onGuardado={() => setUpdate(true)}/>
@@ -102,29 +104,31 @@ function EmpleadosPage() {
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Teléfono</th>
+                        <th>Dirección</th>
                         <th>Edad</th>
-                        <th>Rol</th>
-                        <th>Sucursal</th>
-                        <th>Estatus</th>
+                        <th>Rango del Cliente</th>
+                        <th>Saldo</th>
+                        <th>Crédito Maximo</th>
+                        <th>Fecha de Registro</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {empleados.map((empleado) => (
-                        <tr key={empleado.ID}>
-                            <td>{empleado.ID}</td>
-                            <td>{empleado.Nombre}</td>
-                            <td>{empleado.Telefono}</td>
-                            <td>{empleado.Edad}</td>
-                            <td>{empleado.Rol}</td>
-                            <td>{empleado.Sucursal}</td>
-                            <td><div className=" justify-center flex">
-                                <p className={`${empleado.Estatus == "Activo" ? "bg-green-600 text-white" : empleado.Estatus == "Suspendido" ? "bg-yellow-500 text-white" : "bg-red-500 text-white"} rounded-lg w-fit py-2 px-1`}>{empleado.Estatus}</p>
-                            </div></td>
+                    {Clientes.map((Cliente) => (
+                        <tr key={Cliente.Id}>
+                            <td>{Cliente.Id}</td>
+                            <td>{Cliente.Nombre}</td>
+                            <td>{Cliente.Telefono}</td>
+                            <td>{Cliente.Direccion}</td>
+                            <td>{Cliente.Edad}</td>
+                            <td>{Cliente.Rango}</td>
+                            <td>{Cliente.Credito}</td>
+                            <td>{Cliente.CreditoMaximo}</td>
+                            <td>{dayjs(Cliente.Fecha).format("DD/MM/YYYY")}</td>
                             <td>
                                 <div className="flex gap-3 w-full justify-center">
-                                    <UpdateModal IdEmpleado={empleado.IdEmp} onGuardado={() => setUpdate(true)}/>
-                                    <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(empleado.IdEmp)} /></button>
+                                    <UpdateModal IdEmpleado={Cliente.Id} onGuardado={() => setUpdate(true)}/>
+                                    <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(Cliente.Id)} /></button>
                                 </div>
                             </td>
                         </tr>
@@ -135,4 +139,4 @@ function EmpleadosPage() {
     )
 }
 
-export default EmpleadosPage
+export default ClientesDashboard

@@ -134,9 +134,16 @@ function DireccionForm({ action }: DireccionFormProps) {
 
     const handleSubmit = async (e: any) => {
 
-        e.preventDefault();
-        console.log("Submit");
+         e.preventDefault();
 
+        if ((isNaN(Number(inputValue.codigo)) || Number(inputValue.codigo) <= 0) && inputValue.codigo.trim() !== "") {
+            setErrors((prev) => ({
+                ...prev,
+                codigo: "El código postal debe ser un número",
+            }));
+            return;
+        }
+        
         if (inputValue.codigo.length === 5) {
 
             console.log("No hay errores");
@@ -176,7 +183,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                         Código Postal
                     </label>
                     <input
-                        type="number"
+                        type="text"
                         className={`border rounded-md w-full py-2 px-2 ${errors["codigo"] ? "border-red-500" : "border-black"}`}
                         name="codigo"
                         onChange={handleChange}
@@ -210,7 +217,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                             disabled
                         />
                     </div>
-                     <div className="w-full mt-3">
+                    <div className="w-full mt-3">
                         <label
                             htmlFor="estado"
                             className="font-bold text-lg flex-grow text-left"

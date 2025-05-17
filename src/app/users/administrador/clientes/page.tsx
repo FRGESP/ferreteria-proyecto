@@ -1,8 +1,9 @@
 import React from 'react'
+import ClientesDashboard from '@/components/administrador/clientes/clientesDashboard'
 
 function clientespage() {
   return (
-    <div>clientespage</div>
+    <ClientesDashboard />
   )
 }
 

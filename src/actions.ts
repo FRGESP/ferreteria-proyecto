@@ -33,6 +33,19 @@ interface Sucursal {
     colonia: string;
 }
 
+//Interface para el cliente
+interface Cliente {
+        apellidoPat: string;
+        apellidoMat: string;
+        edad: string;
+        telefono: string;
+        codigo: string;
+        calle: string;
+        colonia: string;
+        rango: string;
+        creditoMaximo: string;
+    }
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -159,6 +172,14 @@ export const updateBitacoraEmpleado = async (id: number, bitacora: Bitacora[]) =
 export const addSucursal = async (sucursal: Sucursal) => {
     const session = await getSession();
     const response = await axios.post(`${process.env.URL}/api/users/administrador/sucursales/${session.userId}`, sucursal)
+    const status = response.status;
+    return status;
+}
+
+//Administradoe/Clientes
+export const addCliente = async (cliente: Cliente) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/clientes/${session.userId}`, cliente)
     const status = response.status;
     return status;
 }

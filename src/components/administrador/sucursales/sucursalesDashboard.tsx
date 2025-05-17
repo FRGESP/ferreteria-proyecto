@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import dayjs from "dayjs";
 import AddSucursal from '@/components/administrador/sucursales/addSucursal';
+import { useRouter } from 'next/navigation';
 
 function SucursalesDashboard() {
+    const router = useRouter();
 
     //Interface para las sucursales
     interface Sucursal {
@@ -46,7 +48,7 @@ function SucursalesDashboard() {
         <div className='flex-[1] rounded-lg overflow-y-auto'>
             <div className='grid grid-cols-2 gap-4'>
                 {sucursales.map((sucursal) => (
-                    <div key={sucursal.IdSucursal} className='flex flex-col gap-2 border border-black border-solid rounded-lg p-3'>
+                    <div onClick={() => router.push(`/users/administrador/sucursales/${sucursal.IdSucursal}`)} key={sucursal.IdSucursal} className='flex flex-col gap-2 border border-black border-solid rounded-lg p-3 cursor-pointer hover:bg-gray-100'>
                         <h1 className='text-xl font-bold'>{sucursal.Nombre}</h1>
                         <p className='text-lg'><span className='font-bold'>Direccion: </span>{sucursal.Direccion}</p>
                         <p className='text-lg'><span className='font-bold'>Teléfono: </span>{sucursal.Telefono}</p>
