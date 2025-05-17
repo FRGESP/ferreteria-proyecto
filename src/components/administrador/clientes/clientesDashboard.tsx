@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/clientes/addModal";
 import UpdateModal from "@/components/administrador/empleados/updateModal";
-import { deleteEmpleado } from "@/actions";
+import { deleteCliente } from "@/actions";
 import dayjs from "dayjs";
 
 function ClientesDashboard() {
@@ -48,8 +48,8 @@ function ClientesDashboard() {
     }
 
     const handleDelete = async (id: number) => {
-        if (confirm("¿Estás seguro de que deseas eliminar este Cliente?")) {
-            try {const response = await deleteEmpleado(id);
+        if (confirm("¿Estás seguro de que deseas eliminar a este cliente?")) {
+            try {const response = await deleteCliente(id);
             if (response.status === 200) {
                 getClientes();
                 toast({
@@ -59,7 +59,7 @@ function ClientesDashboard() {
                 });
             }
         } catch (error) {
-            console.error("Error deleting employee:", error);
+            console.error("Error deleting customer:", error);
             toast({
                 title: "Error",
                 description: "No se pudo eliminar el Cliente",

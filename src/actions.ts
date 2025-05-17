@@ -176,10 +176,17 @@ export const addSucursal = async (sucursal: Sucursal) => {
     return status;
 }
 
-//Administradoe/Clientes
+//Administrador/Clientes
 export const addCliente = async (cliente: Cliente) => {
     const session = await getSession();
     const response = await axios.post(`${process.env.URL}/api/users/administrador/clientes/${session.userId}`, cliente)
     const status = response.status;
     return status;
+}
+
+export const deleteCliente = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/clientes/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
 }

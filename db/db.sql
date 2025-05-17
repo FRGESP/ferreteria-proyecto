@@ -120,7 +120,9 @@ CREATE TABLE CLIENTE(
     Credito DECIMAL(10,2) DEFAULT 0,
     CreditoMaximo DECIMAL(10,2) DEFAULT 0,
     Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Estatus INT DEFAULT 1,
     CONSTRAINT PK_CLIENTE PRIMARY KEY(IdCliente),
+    CONSTRAINT FK_CLIENTETOESTADO FOREIGN KEY(Estatus) REFERENCES ESTATUS(IdEstatus),
     CONSTRAINT FK_CLIENTETOPERSONA FOREIGN KEY(IdPersona) REFERENCES PERSONA(IdPersona),
     CONSTRAINT FK_CLIENTETODIRECCION FOREIGN KEY(IdDireccion) REFERENCES DIRECCION(IdDireccion),
     CONSTRAINT FK_CLIENTETORANGOCLIENTE FOREIGN KEY(IdRangoCliente) REFERENCES RANGOCLIENTE(IdRangoCliente)
@@ -480,21 +482,32 @@ CREATE PROCEDURE SP_ADDCLIENTE(IN COD VARCHAR(10), IN COL INT, IN CALLEIN VARCHA
 DROP PROCEDURE IF EXISTS SP_GETCLIENTES;
 CREATE PROCEDURE SP_GETCLIENTES()
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente;
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1;
     end;
 
 DROP PROCEDURE IF EXISTS SP_FINDCLIENTE;
 CREATE PROCEDURE SP_FINDCLIENTE(IN NOMBREIN VARCHAR(70))
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%');
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%') AND C.Estatus = 1;
     end;
 
-CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
-CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
+DROP PROCEDURE IF EXISTS SP_DELETECLIENTE;
+CREATE PROCEDURE SP_DELETECLIENTE(IN ID INT, IN USERID INT)
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+        SET NOMBREVAR = (SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno) FROM CLIENTE AS C INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE C.IdCliente = ID);
+        UPDATE CLIENTE SET Estatus = 4 WHERE IdCliente = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'CLIENTE', ID, 'Todos', NOMBREVAR, '');
+    end;
 
 SELECT * FROM CLIENTE;
 
 --
+
+
+CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
+CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
+
 
 select * from BITACORA;
 
