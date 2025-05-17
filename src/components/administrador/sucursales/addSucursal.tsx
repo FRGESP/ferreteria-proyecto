@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Plus } from "lucide-react";
 import axios from "axios";
@@ -54,22 +54,64 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
         }
     };
 
+
+    //Empieza las funciones del componente direccion
+
+    //Bandera para revisar si es necesario verificar los campos de la direccion
+    const [isRequired, setIsRequired] = useState(false);
+
     //Funcion para guardar la direccion 
-    const saveDireccion = (codigo:string, colonia:string, calle:string ) => {
+    const saveDireccion = (codigo: string, colonia: string, calle: string, isRequiredPar: boolean) => {
         setInputValue({
             ...inputValue,
             codigo: codigo,
             colonia: colonia,
             calle: calle,
         });
-        console.log(inputValue);
+        
+        if (isRequiredPar) {
+            setIsRequired(true);
+        }
+        // setIsRequired(true);
+        console.log(isRequired)
+
     }
+        //Funcion para verificar los campos de la direccion
+       const verfificarCampos = () => {
+        const newErrors: Record<string, string> = {};
+        Object.entries(inputValue).forEach(([Key, value]) => {
+            if (Key === "codigo" || Key === "calle" || Key === "colonia") {
+                if (value.trim() === "") {
+                    newErrors[Key] = "Ingrese una dirección válida y completa";
+                } else {
+                    setErrors((prev) => {
+                        const newErrors = { ...prev };
+                        delete newErrors[Key];
+                        return newErrors;
+                    });
+                }
+            } else {
+                newErrors[Key] = errors[Key];
+            }
+        })
+        setErrors(newErrors);
+    }
+
+    useEffect(() => {
+        if (isRequired) {
+            verfificarCampos();
+        }
+        console.log(inputValue);
+    },[inputValue])
+
+    //Terminan las funciones del componente direccion
 
     //Funcion para abrir el modal
     const openModal = () => {
         setIsOpen(true);
         // Reiniciar los valores de los inputs y errores al abrir el modal
         setErrors({});
+        setIsRequired(false); // Necesario para el formulario de direccion
         setInputValue({
             nombre: "",
             telefono: "",
@@ -78,6 +120,8 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
             colonia: "",
 
         });
+        console.log(inputValue);
+        console.log(errors);
     };
 
     //Funcion para cerrar el modal
@@ -85,57 +129,47 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
         setIsOpen(false);
     };
 
-    //Interface Sucursal 
-    interface Sucursal {
-        Id: number;
-        Nombre: string;
-    }
-
-    //Guarda la informacion de las sucursales
-    const [sucursales, setSucursales] = useState([]);
-
-    const getSucursales = async () => {
-        const response = await axios.get(`/api/users/administrador/empleados/sucursal`);
-        const data = response.data;
-        setSucursales(data);
-    }
-
-    useEffect(() => {
-        getSucursales();
-    }, []);
-
     const handleSubmit = async () => {
+
+        console.log(inputValue)
 
         const newErrors: Record<string, string> = {};
 
         Object.entries(inputValue).forEach(([Key, value]) => {
             if (value.trim() === "") {
-                newErrors[Key] = "Este campo es obligatorio"
+                if (Key === "codigo" || Key === "calle" || Key === "colonia") {
+                    newErrors["codigo"] = "Ingrese una dirección válida y completa";
+                } else {
+                    newErrors[Key] = "Este campo es obligatorio"
+                }
             }
         })
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length == 0) {
 
-            const response = await addSucursal(inputValue); // Función que envía los datos al servidor
+            console.log("No hay errores");
+            console.log(inputValue);
 
-            console.log(response);
-            if (response === 200) {
-                setIsOpen(false);
+            //const response = await addSucursal(inputValue); // Función que envía los datos al servidor
 
-                toast({
-                    title: "Empleado agregado",
-                    description: "El empleado ha sido agregado correctamente",
-                    variant: "success",
-                });
-                onGuardado();
-            } else {
-                toast({
-                    title: "Error",
-                    description: "No se pudo agregar el empleado",
-                    variant: "destructive",
-                });
-            }
+            // console.log(response);
+            // if (response === 200) {
+            //     setIsOpen(false);
+
+            //     toast({
+            //         title: "Empleado agregado",
+            //         description: "El empleado ha sido agregado correctamente",
+            //         variant: "success",
+            //     });
+            //     onGuardado();
+            // } else {
+            //     toast({
+            //         title: "Error",
+            //         description: "No se pudo agregar el empleado",
+            //         variant: "destructive",
+            //     });
+            // }
         }
     };
 
@@ -188,7 +222,10 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
                                     />
                                     {errors["telefono"] && (<span className="text-sm text-red-500">{errors["telefono"]}</span>)}
                                 </div>
-                                <DireccionForm action={saveDireccion}/>  
+                                <div className={`${errors["codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full`}>
+                                    <DireccionForm action={saveDireccion} />
+                                </div>
+                                {errors["codigo"] && (<span className="text-sm text-red-500">{errors["codigo"]}</span>)}
                                 <div className="flex gap-5 justify-center">
                                     <button
                                         onClick={closeModal}
@@ -197,7 +234,7 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
                                         Cancelar
                                     </button>
                                     <button
-                                        onClick={()=> console.log(inputValue)}
+                                        onClick={handleSubmit}
                                         className="px-[20%] py-2 font-semibold text-white bg-acento rounded hover:bg-acentohover mt-5"
                                     >
                                         Agregar

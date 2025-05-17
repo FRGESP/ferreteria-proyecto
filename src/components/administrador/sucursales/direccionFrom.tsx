@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import axios from "axios";
-import React, {useImperativeHandle, forwardRef} from "react";
+import React from "react";
 
 interface DireccionFormProps {
-    action: (codigo: string, colonia: string, calle: string) => void;
+    action: (codigo: string, colonia: string, calle: string, revision: boolean) => void;
 }
 
 function DireccionForm({ action }: DireccionFormProps) {
@@ -17,6 +17,12 @@ function DireccionForm({ action }: DireccionFormProps) {
         VALUE: string;
     }
 
+    //Bandera que indica si es el primer render
+    const isFirstRender = useRef(true);
+
+    //Bandera que indica si es el segundo render
+    const isSecondRender = useRef(true);
+
     //Bandera para verificar si el codigo postal es valido
     const [isValid, setIsValid] = useState(false);
 
@@ -26,9 +32,21 @@ function DireccionForm({ action }: DireccionFormProps) {
     //Guarda la información del municipio
     const [municipio, setMunicipio] = useState("");
 
+    //Guarda la información del estado
+    const [estado, setEstado] = useState("");
+
     //Controla el estado de los errores
     const [errors, setErrors] = useState<Record<string, string>>({});
 
+    //Guarda la informacion si los inputs han sido modificados
+    const [inputModified, setInputModified] = useState({
+        codigo: false,
+        calle: false,
+        colonia: false,
+    });
+
+    //Bandera que indica si es necesaria la revision de los inputs
+    const [isRequired, setIsRequired] = useState(false);
 
     //Guarda la informacion del input
     const [inputValue, setInputValue] = useState({
@@ -39,22 +57,60 @@ function DireccionForm({ action }: DireccionFormProps) {
 
     //Controla cada vez que el codigo postal es invalido 
     useEffect(() => {
-        if(isValid == false) {
+        //Controla para evitar una temprana detección de errores
+        if (isFirstRender.current) {
+            isFirstRender.current = false
+            console.log("Es el primer render");
+            return;
+        } else if (isSecondRender.current) {
+            isSecondRender.current = false
+            console.log("Es el segundo render");
+            return;
+        }
+        if (isValid == false) {
             setInputValue({
-            ...inputValue,
-            calle: "",
-            colonia: "",
-        });
+                ...inputValue,
+                calle: "",
+                colonia: "",
+            });
+            console.log(inputValue);
+            action(inputValue.codigo, "", "", false);
         }
     }, [isValid]);
 
+    //Controla cada vez que el input es modificado
+    useEffect(() => {
+        if (isValid) {
+            let contModified = 0;
+            Object.entries(inputModified).forEach(([Key, value]) => { // Recorre el objeto inputModified para contar cuantos objetos han sido modificados
+                if (value === true) {
+                    contModified++;
+                }
+            })
+            //Si todos los inputs han sido modificados es necesario la revision
+            console.log("Contador de inputs modificados: " + contModified);
+            if (contModified === 2) {
+                setIsRequired(true);
+            } else {
+                setIsRequired(false);
+            }
+            console.log(inputValue)
+            action(inputValue.codigo, inputValue.colonia, inputValue.calle, isRequired);
+        }
+    }, [inputValue]);
+
     //Controla el cambio del input
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
 
         if (name === "codigo") {
             setIsValid(false);
         }
+
+        setInputModified((prev) => ({
+            ...prev,
+            [name]: true,
+        }));
 
         setInputValue({
             ...inputValue,
@@ -73,10 +129,6 @@ function DireccionForm({ action }: DireccionFormProps) {
                 delete newErrors[name];
                 return newErrors;
             });
-        }
-
-        if (isValid) {
-            action(inputValue.codigo, inputValue.colonia, inputValue.calle);
         }
     };
 
@@ -101,6 +153,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                 console.log(data);
                 setMunicipio(data[0][0].Municipio);
                 setColonias(data[1]);
+                setEstado(data[2][0].Estado);
                 setIsValid(true);
             }
 
@@ -133,7 +186,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                 <button
                     //disabled={inputValue['codigo'].length !== 5 || isValid == true || errors['codigo'] !== undefined}
                     hidden={isValid}
-                    className={`${inputValue['codigo'].length !== 5 || isValid == true || errors['codigo'] !== undefined ? 'bg-gray-400 text-black':'bg-acento hover:bg-acentohover text-white'} rounded-md h-10 px-3 `}
+                    className={`${inputValue['codigo'].length !== 5 || isValid == true || errors['codigo'] !== undefined ? 'bg-gray-400 text-black' : 'bg-acento hover:bg-acentohover text-white'} rounded-md h-10 px-3 `}
                     onClick={handleSubmit}
                 >
                     <Check strokeWidth={2} size={27} />
@@ -154,6 +207,21 @@ function DireccionForm({ action }: DireccionFormProps) {
                             className={`border rounded-md w-full py-2 px-2 ${errors["municipio"] ? "border-red-500" : "border-black"}`}
                             name="municipio"
                             defaultValue={municipio}
+                            disabled
+                        />
+                    </div>
+                     <div className="w-full mt-3">
+                        <label
+                            htmlFor="estado"
+                            className="font-bold text-lg flex-grow text-left"
+                        >
+                            Estado
+                        </label>
+                        <input
+                            type="text"
+                            className={`border rounded-md w-full py-2 px-2 ${errors["estado"] ? "border-red-500" : "border-black"}`}
+                            name="estado"
+                            defaultValue={estado}
                             disabled
                         />
                     </div>
