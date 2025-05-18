@@ -433,7 +433,7 @@ CREATE  PROCEDURE SP_GETSUCURSALESNOMBRES()
 DROP PROCEDURE IF EXISTS SP_GETEMPLEADO;
 CREATE PROCEDURE SP_GETEMPLEADO(IN IDIN INT)
     BEGIN
-        SELECT P.Nombre, P.ApellidoPaterno, P.ApellidoMaterno, P.Edad, P.Telefono, E.IdSucursal AS 'Sucursal', E.IdRol AS 'Rol', E.IdEstatus AS 'Estatus' FROM PERSONA AS P INNER JOIN EMPLEADO AS E ON P.IdPersona = E.IdPersona WHERE E.IdEmpleado = IDIN;
+        SELECT P.Nombre, P.ApellidoPaterno, P.ApellidoMaterno, P.Edad, P.Telefono, E.IdSucursal AS Sucursal, S.Nombre AS NombreSucursal, E.IdRol AS 'Rol', R.Rol AS NombreRol, E.IdEstatus AS 'Estatus' FROM PERSONA AS P INNER JOIN EMPLEADO AS E ON P.IdPersona = E.IdPersona INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ROL R on E.IdRol = R.IdRol WHERE E.IdEmpleado = IDIN;
     end;
 
 DROP PROCEDURE IF EXISTS SP_REGISTRARACTUZALICACION;
@@ -503,7 +503,7 @@ CREATE PROCEDURE SP_DELETECLIENTE(IN ID INT, IN USERID INT)
 DROP PROCEDURE IF EXISTS SP_GETCLIENTEBYID;
 CREATE PROCEDURE SP_GETCLIENTEBYID(IN IDCLIENTE INT)
     BEGIN
-        SELECT P.Nombre, P.ApellidoPaterno, P.ApellidoMaterno, P.Telefono, C2.CodigoPostal AS Codigo, D.IdColonia AS Colonia, D.Calle, P.Edad, R.IdRangoCliente AS Rango, C.CreditoMaximo FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente INNER JOIN DIRECCION D on C.IdDireccion = D.IdDireccion INNER JOIN CODIGOPOSTAL C2 on D.IdCodigoPostal = C2.IdCodigoPostal WHERE C.Estatus = 1 AND C.IdCliente = IDCLIENTE;
+        SELECT P.Nombre, P.ApellidoPaterno, P.ApellidoMaterno, P.Telefono, C2.CodigoPostal AS Codigo, D.IdColonia AS Colonia, C3.Colonia AS NombreColonia, D.Calle, P.Edad, R.IdRangoCliente AS Rango, R.Rango AS NombreRango, C.CreditoMaximo FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente INNER JOIN DIRECCION D on C.IdDireccion = D.IdDireccion INNER JOIN CODIGOPOSTAL C2 on D.IdCodigoPostal = C2.IdCodigoPostal INNER JOIN COLONIA C3 on C2.IdCodigoPostal = C3.IdCodigoPostal WHERE C.Estatus = 1 AND C.IdCliente = IDCLIENTE;
     end;
 
 DROP PROCEDURE IF EXISTS SP_UPDATECLIENTE;
@@ -529,8 +529,26 @@ CREATE PROCEDURE SP_UPDATECLIENTE(IN CLIENTEIN INT, IN NOMBREIN VARCHAR(50), IN 
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
 
+-- REGISTROS
 
-select * from BITACORA;
+DROP FUNCTION IF EXISTS FN_GETNAMEBYUSERID; -- FUNCION PARA OBTENER EL NOMBRE MEDIANTE EL USERID
+CREATE FUNCTION FN_GETNAMEBYUSERID(USERID INT)
+    RETURNS VARCHAR(100)
+    DETERMINISTIC
+    BEGIN
+       DECLARE NOMBREUSER VARCHAR(100);
+       SET NOMBREUSER = (SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) FROM USUARIO AS U INNER JOIN EMPLEADO E on U.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE U.IdUsuario = USERID);
+       RETURN NOMBREUSER;
+    end;
+
+DROP PROCEDURE IF EXISTS SP_GETREGISTROS;
+CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50))
+    BEGIN
+        IF TABLAIN = 'CLIENTE' THEN
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE';
+        end if;
+    end;
+select * from BITACORA WHERE TablaAfectada = 'SUCURSAL';
 
 CALL LOGIN(1001, '123456');
 

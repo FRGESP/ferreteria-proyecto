@@ -24,7 +24,9 @@ export interface Cliente {
     Codigo: string;
     Calle: string;
     Colonia: string;
+    NombreColonia: string;
     Rango: string;
+    NombreRango: string;
     CreditoMaximo: string;
 }
 
@@ -75,7 +77,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
     const [isRequired, setIsRequired] = useState(false);
 
     //Funcion para guardar la direccion 
-    const saveDireccion = (Codigo: string, Colonia: string, Calle: string, isRequiredPar: boolean) => {
+    const saveDireccion = (Codigo: string, Colonia: string, Calle: string, isRequiredPar: boolean, nombreCol?: string) => {
         setInputValue({
             ...inputValue,
             Codigo: Codigo,
@@ -91,20 +93,20 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
 
         Object.entries(diccionarioElementos).forEach(([name, value]) => {
             if (String(Cliente![name as keyof Cliente]) != value) {
-            setBitacora((prev) => ({
-                ...prev,
-                [name]: value,
-            }));
-        } else {
-            setBitacora((prev) => {
-                const newBitacora = { ...prev };
-                delete newBitacora[name];
-                return newBitacora;
-            });
-        }
+                setBitacora((prev) => ({
+                    ...prev,
+                    [name]: name === "Colonia" ? nombreCol ? nombreCol : value : value,
+                }));
+            } else {
+                setBitacora((prev) => {
+                    const newBitacora = { ...prev };
+                    delete newBitacora[name];
+                    return newBitacora;
+                });
+            }
         })
 
-        
+
 
         if (isRequiredPar) {
             setIsRequired(true);
@@ -143,6 +145,14 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
 
     //ContRola el cambio del input
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+
+        let selectedText: string | null = null;
+
+        if (e.target instanceof HTMLSelectElement) {
+            selectedText = e.target.options[e.target.selectedIndex].text;
+            console.log(selectedText);
+        }
+
         const { name, value } = e.target;
         setInputValue({
             ...inputValue,
@@ -165,7 +175,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
         if (String(Cliente![name as keyof Cliente]) !== value) {
             setBitacora((prev) => ({
                 ...prev,
-                [name]: value,
+                [name]: selectedText ? selectedText : value,
             }));
         } else {
             setBitacora((prev) => {
@@ -255,10 +265,11 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
 
             const registrosBitacoras: Bitacora[] = Object.entries(bitacora!).map(([key, value]) => ({
                 Campo: key,
-                ValorAnterior: Cliente ? Cliente[key as keyof Cliente] : "",
+                ValorAnterior: Cliente ? key === 'Colonia' ? Cliente["NombreColonia"] : key == 'Rango' ? Cliente['NombreRango'] : Cliente[key as keyof Cliente] : "",
                 ValorNuevo: value,
             }));
-
+            console.log(registrosBitacoras);
+            console.log(inputValue);
             const response = await updateBitacoraCliente(IdCliente, registrosBitacoras);
             const responseUpdate = await axios.put(`/api/users/administrador/clientes/${IdCliente}`, inputValue)
 
@@ -381,7 +392,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
                                     {errors["Telefono"] && (<span className="text-sm text-red-500">{errors["Telefono"]}</span>)}
                                 </div>
                                 <div className={`${errors["Codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full mt-3`}>
-                                    <DireccionForm action={saveDireccion} codigo={Cliente?.Codigo} colonia={Cliente?.Colonia} calle={Cliente?.Calle}/>
+                                    <DireccionForm action={saveDireccion} codigo={Cliente?.Codigo} colonia={Cliente?.Colonia} calle={Cliente?.Calle} />
                                 </div>
                                 {errors["Codigo"] && (<span className="text-sm text-red-500">{errors["Codigo"]}</span>)}
                                 <div className=" w-full mt-3">

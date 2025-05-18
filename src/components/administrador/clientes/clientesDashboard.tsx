@@ -59,7 +59,6 @@ function ClientesDashboard() {
                 });
             }
         } catch (error) {
-            console.error("Error deleting customer:", error);
             toast({
                 title: "Error",
                 description: "No se pudo eliminar el Cliente",
@@ -108,7 +107,7 @@ function ClientesDashboard() {
                         <th>Edad</th>
                         <th>Rango del Cliente</th>
                         <th>Saldo</th>
-                        <th>Crédito Maximo</th>
+                        <th>Crédito Máximo</th>
                         <th>Fecha de Registro</th>
                         <th>Acciones</th>
                     </tr>

@@ -21,7 +21,9 @@ export interface Empleado {
     Edad: string;
     Telefono: string;
     Sucursal: string;
+    NombreSucursal: string;
     Rol: string;
+    NombreRol: string;
     Estatus: string;
 }
 
@@ -66,6 +68,14 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
 
     //ContRola el cambio del input
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+
+        let selectedText: string | null = null;
+
+        if (e.target instanceof HTMLSelectElement) {
+            selectedText = e.target.options[e.target.selectedIndex].text;
+            console.log(selectedText);
+        }
+
         const { name, value } = e.target;
         setInputValue({
             ...inputValue,
@@ -88,7 +98,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
         if (String(empleado![name as keyof Empleado]) !== value) {
             setBitacora((prev) => ({
                 ...prev,
-                [name]: value,
+                [name]: selectedText ? selectedText : value,
             }));
         } else {
             setBitacora((prev) => {
@@ -186,7 +196,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
 
             const registrosBitacoras: Bitacora[] = Object.entries(bitacora!).map(([key, value]) => ({
                 Campo: key,
-                ValorAnterior: empleado ? empleado[key as keyof Empleado] : "",
+                ValorAnterior: empleado ? key == 'Rol' ? empleado['NombreRol'] : key == 'Sucursal' ? empleado['NombreSucursal'] : empleado[key as keyof Empleado] : "",
                 ValorNuevo: value,
             }));
 

@@ -6,7 +6,7 @@ import axios from "axios";
 import React from "react";
 
 interface DireccionFormProps {
-    action: (codigo: string, colonia: string, calle: string, revision: boolean) => void;
+    action: (codigo: string, colonia: string, calle: string, revision: boolean, nombreColonia?:string) => void;
     codigo?: string;  // Parametros opcionales para la actualizacion de la direccion
     colonia?: string;
     calle?: string;
@@ -50,6 +50,9 @@ function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
     //Guarda la información del municipio
     const [municipio, setMunicipio] = useState("");
 
+    //Guarda el valor del nombre de la colonia en caso de ser actualizacion
+    const [nombreColonia, setNombreColonia] = useState("");
+
     //Guarda la información del estado
     const [estado, setEstado] = useState("");
 
@@ -91,7 +94,7 @@ function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
                 calle: "",
                 colonia: "",
             });
-            action(inputValue.codigo, "", "", false);
+            action(inputValue.codigo, "", "", false), "";
             setUpdateProps({
                 codigo: "",
                 colonia: "",
@@ -116,7 +119,7 @@ function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
                 setIsRequired(false);
             }
             console.log(inputValue)
-            action(inputValue.codigo, inputValue.colonia, inputValue.calle, isRequired);
+            action(inputValue.codigo, inputValue.colonia, inputValue.calle, isRequired, nombreColonia);
         }
         if (isUpdate && !isLoaded) {
             formRef.current?.requestSubmit();
@@ -148,6 +151,17 @@ function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
 
     //Controla el cambio del input
     const handleChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+
+        let selectedText: string | null = null;
+
+        if (isUpdate) {
+            if (e.target instanceof HTMLSelectElement) {
+                selectedText = e.target.options[e.target.selectedIndex].text;
+                console.log(selectedText);
+                setNombreColonia(selectedText);
+            }
+        }
+
         const { name, value } = e.target;
 
         if (name === "codigo") {
@@ -283,7 +297,7 @@ function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
                         </label>
                         <select onChange={handleChange} name="colonia" defaultValue={isUpdate && updateProps.colonia.length != 0 ? updateProps.colonia : "Default"} className={`border rounded-md w-full py-2 px-2 ${errors["rol"] ? "border-red-500" : "border-black"}`}
                         >
-                            {(!isUpdate || updateProps.colonia.length == 0)  && (<option value="Default" disabled>Seleccione una colonia</option>)}
+                            {(!isUpdate || updateProps.colonia.length == 0) && (<option value="Default" disabled>Seleccione una colonia</option>)}
                             {colonias.map((colonia) => (
                                 <option key={colonia.VALUE} value={colonia.VALUE}>
                                     {colonia.Colonia}
