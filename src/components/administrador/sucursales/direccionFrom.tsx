@@ -7,15 +7,33 @@ import React from "react";
 
 interface DireccionFormProps {
     action: (codigo: string, colonia: string, calle: string, revision: boolean) => void;
+    codigo?: string;  // Parametros opcionales para la actualizacion de la direccion
+    colonia?: string;
+    calle?: string;
 }
 
-function DireccionForm({ action }: DireccionFormProps) {
+function DireccionForm({ action, codigo, colonia, calle }: DireccionFormProps) {
 
     //Interface para las colonias
     interface Colonia {
         Colonia: string;
         VALUE: string;
     }
+
+    const formRef = useRef<HTMLFormElement>(null);
+
+    //Bandera para saber si se va a actualizar la direccion
+    const [isUpdate, setIsUpdate] = useState(false);
+
+    //Bandera para verificar si ya se cargaron los datos iniciales en caso de actualizacion
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    //Guarda la informacion de los propos en caso de actualizacion
+    const [updateProps, setUpdateProps] = useState({
+        codigo: "",
+        colonia: "",
+        calle: "",
+    });
 
     //Bandera que indica si es el primer render
     const isFirstRender = useRef(true);
@@ -73,8 +91,12 @@ function DireccionForm({ action }: DireccionFormProps) {
                 calle: "",
                 colonia: "",
             });
-            console.log(inputValue);
             action(inputValue.codigo, "", "", false);
+            setUpdateProps({
+                codigo: "",
+                colonia: "",
+                calle: "",
+            });
         }
     }, [isValid]);
 
@@ -88,7 +110,6 @@ function DireccionForm({ action }: DireccionFormProps) {
                 }
             })
             //Si todos los inputs han sido modificados es necesario la revision
-            console.log("Contador de inputs modificados: " + contModified);
             if (contModified === 2) {
                 setIsRequired(true);
             } else {
@@ -97,7 +118,33 @@ function DireccionForm({ action }: DireccionFormProps) {
             console.log(inputValue)
             action(inputValue.codigo, inputValue.colonia, inputValue.calle, isRequired);
         }
+        if (isUpdate && !isLoaded) {
+            formRef.current?.requestSubmit();
+            setIsLoaded(true);
+        }
     }, [inputValue]);
+
+    //Funcion para verificar si se trata de una actualizacion
+    useEffect(() => {
+        if (codigo && colonia && calle) {
+            setIsUpdate(true);
+            setInputValue({
+                codigo: codigo,
+                colonia: colonia,
+                calle: calle,
+            });
+            setInputModified({
+                codigo: true,
+                colonia: true,
+                calle: true,
+            })
+            setUpdateProps({
+                codigo: codigo,
+                colonia: colonia,
+                calle: calle,
+            });
+        }
+    }, [codigo, colonia, calle]);
 
     //Controla el cambio del input
     const handleChange = async (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -116,7 +163,6 @@ function DireccionForm({ action }: DireccionFormProps) {
             ...inputValue,
             [name]: value,
         });
-        console.log(inputValue);
 
         if (value.trim() === "") {
             setErrors((prev) => ({
@@ -134,7 +180,7 @@ function DireccionForm({ action }: DireccionFormProps) {
 
     const handleSubmit = async (e: any) => {
 
-         e.preventDefault();
+        e.preventDefault();
 
         if ((isNaN(Number(inputValue.codigo)) || Number(inputValue.codigo) <= 0) && inputValue.codigo.trim() !== "") {
             setErrors((prev) => ({
@@ -143,7 +189,7 @@ function DireccionForm({ action }: DireccionFormProps) {
             }));
             return;
         }
-        
+
         if (inputValue.codigo.length === 5) {
 
             console.log("No hay errores");
@@ -157,7 +203,6 @@ function DireccionForm({ action }: DireccionFormProps) {
                     codigo: "El código postal no es válido",
                 }));
             } else {
-                console.log(data);
                 setMunicipio(data[0][0].Municipio);
                 setColonias(data[1]);
                 setEstado(data[2][0].Estado);
@@ -174,7 +219,7 @@ function DireccionForm({ action }: DireccionFormProps) {
 
     return (
         <div className="w-full mt-3">
-            <form onSubmit={handleSubmit} className="flex items-end gap-2">
+            <form onSubmit={handleSubmit} className="flex items-end gap-2" ref={formRef}>
                 <div className="flex-grow">
                     <label
                         htmlFor="codigo"
@@ -187,11 +232,11 @@ function DireccionForm({ action }: DireccionFormProps) {
                         className={`border rounded-md w-full py-2 px-2 ${errors["codigo"] ? "border-red-500" : "border-black"}`}
                         name="codigo"
                         onChange={handleChange}
+                        defaultValue={codigo}
                     />
 
                 </div>
                 <button
-                    //disabled={inputValue['codigo'].length !== 5 || isValid == true || errors['codigo'] !== undefined}
                     hidden={isValid}
                     className={`${inputValue['codigo'].length !== 5 || isValid == true || errors['codigo'] !== undefined ? 'bg-gray-400 text-black' : 'bg-acento hover:bg-acentohover text-white'} rounded-md h-10 px-3 `}
                     onClick={handleSubmit}
@@ -236,9 +281,9 @@ function DireccionForm({ action }: DireccionFormProps) {
                         <label className="font-bold text-lg flex-grow text-left" htmlFor="colonia">
                             Colonia
                         </label>
-                        <select onChange={handleChange} name="colonia" defaultValue={'Default'} className={`border rounded-md w-full py-2 px-2 ${errors["rol"] ? "border-red-500" : "border-black"}`}
+                        <select onChange={handleChange} name="colonia" defaultValue={isUpdate && updateProps.colonia.length != 0 ? updateProps.colonia : "Default"} className={`border rounded-md w-full py-2 px-2 ${errors["rol"] ? "border-red-500" : "border-black"}`}
                         >
-                            <option value="Default" disabled>Seleccione una colonia</option>
+                            {(!isUpdate || updateProps.colonia.length == 0)  && (<option value="Default" disabled>Seleccione una colonia</option>)}
                             {colonias.map((colonia) => (
                                 <option key={colonia.VALUE} value={colonia.VALUE}>
                                     {colonia.Colonia}
@@ -249,7 +294,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                     </div>
                     <div className="w-full mt-3">
                         <label
-                            htmlFor="nombre"
+                            htmlFor="calle"
                             className="font-bold text-lg flex-grow text-left"
                         >
                             Calle
@@ -258,6 +303,7 @@ function DireccionForm({ action }: DireccionFormProps) {
                             type="text"
                             className={`border rounded-md w-full py-2 px-2 ${errors["calle"] ? "border-red-500" : "border-black"}`}
                             name="calle"
+                            defaultValue={isUpdate ? updateProps.calle : ""}
                             onChange={handleChange}
                         />
                         {errors["calle"] && (<span className="text-sm text-red-500">{errors["calle"]}</span>)}

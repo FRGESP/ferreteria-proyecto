@@ -4,25 +4,28 @@ import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Pencil } from "lucide-react";
 import axios from "axios";
-import { updateBitacoraEmpleado } from "@/actions";
+import DireccionForm from "@/components/administrador/sucursales/direccionFrom";
+import { updateBitacoraCliente } from "@/actions";
 import { useRouter } from "next/navigation";
 
 
 interface UpdateModalProps {
-    IdEmpleado: number;
+    IdCliente: number;
     onGuardado: () => void;
 }
 
-//Guarda la informacion del empleado
-export interface Empleado {
+//Guarda la informacion del Cliente
+export interface Cliente {
     Nombre: string;
     ApellidoPaterno: string;
     ApellidoMaterno: string;
     Edad: string;
     Telefono: string;
-    Sucursal: string;
-    Rol: string;
-    Estatus: string;
+    Codigo: string;
+    Calle: string;
+    Colonia: string;
+    Rango: string;
+    CreditoMaximo: string;
 }
 
 //Va a guardar la bitacora de los cambios
@@ -33,7 +36,7 @@ export interface Bitacora {
 }
 
 
-function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
+function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
     const { toast } = useToast();
     const router = useRouter();
 
@@ -49,8 +52,8 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
     //Controla si hay informacion en la bitacora
     const [isBitacoraEmpty, setIsBitacoraEmpty] = useState(false);
 
-    //Guarda la informacion del empleado
-    const [empleado, setEmpleado] = useState<Empleado>()
+    //Guarda la informacion del Cliente
+    const [Cliente, setCliente] = useState<Cliente>()
 
     //Guarda la informacion del input
     const [inputValue, setInputValue] = useState({
@@ -59,10 +62,84 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
         ApellidoMaterno: "",
         Edad: "",
         Telefono: "",
-        Sucursal: "",
-        Rol: "",
-        Estatus: "",
+        Codigo: "",
+        Calle: "",
+        Colonia: "",
+        Rango: "",
+        CreditoMaximo: "",
     });
+
+    //Empieza las funciones del componente direccion
+
+    //Bandera para revisar si es necesario verificar los campos de la direccion
+    const [isRequired, setIsRequired] = useState(false);
+
+    //Funcion para guardar la direccion 
+    const saveDireccion = (Codigo: string, Colonia: string, Calle: string, isRequiredPar: boolean) => {
+        setInputValue({
+            ...inputValue,
+            Codigo: Codigo,
+            Colonia: Colonia,
+            Calle: Calle,
+        });
+
+        let diccionarioElementos = {
+            Codigo: Codigo,
+            Colonia: Colonia,
+            Calle: Calle,
+        }
+
+        Object.entries(diccionarioElementos).forEach(([name, value]) => {
+            if (String(Cliente![name as keyof Cliente]) != value) {
+            setBitacora((prev) => ({
+                ...prev,
+                [name]: value,
+            }));
+        } else {
+            setBitacora((prev) => {
+                const newBitacora = { ...prev };
+                delete newBitacora[name];
+                return newBitacora;
+            });
+        }
+        })
+
+        
+
+        if (isRequiredPar) {
+            setIsRequired(true);
+        }
+
+    }
+    //Funcion para verificar los campos de la direccion
+    const verfificarCampos = () => {
+        const newErrors: Record<string, string> = {};
+        Object.entries(inputValue).forEach(([Key, value]) => {
+            if (Key === "Codigo" || Key === "Calle" || Key === "Colonia") {
+                if (value.trim() === "") {
+                    newErrors[Key] = "Ingrese una dirección válida y completa";
+                } else {
+                    setErrors((prev) => {
+                        const newErrors = { ...prev };
+                        delete newErrors[Key];
+                        return newErrors;
+                    });
+                }
+            } else {
+                newErrors[Key] = errors[Key];
+            }
+        })
+        setErrors(newErrors);
+    }
+
+    useEffect(() => {
+        if (isRequired) {
+            verfificarCampos();
+        }
+    }, [inputValue])
+
+    //Terminan las funciones del componente direccion
+
 
     //ContRola el cambio del input
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -85,7 +162,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
             });
         }
 
-        if (String(empleado![name as keyof Empleado]) !== value) {
+        if (String(Cliente![name as keyof Cliente]) !== value) {
             setBitacora((prev) => ({
                 ...prev,
                 [name]: value,
@@ -104,20 +181,22 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
     const openModal = async () => {
         // Reiniciar los valores de los inputs y errores al abrir el modal
         setErrors({});
+        setIsRequired(false); // Necesario para el formulario de direccion
         setInputValue({
             Nombre: "",
             ApellidoPaterno: "",
             ApellidoMaterno: "",
             Edad: "",
             Telefono: "",
-            Sucursal: "",
-            Rol: "",
-            Estatus: "",
+            Codigo: "",
+            Calle: "",
+            Colonia: "",
+            Rango: "",
+            CreditoMaximo: "",
         });
         setBitacora({});
         setIsBitacoraEmpty(false);
-        await getSucursales();
-        await getEmpleado();
+        await getCliente();
         setIsOpen(true);
     };
     //Funcion para cerrar el modal
@@ -125,40 +204,27 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
         setIsOpen(false);
     };
 
-    //Interface Sucursal 
-    interface Sucursal {
-        Id: number;
-        Nombre: string;
-    }
-
-    //Guarda la informacion de las Sucursales
-    const [Sucursales, setSucursales] = useState([]);
-
-    //Funcion para obtener el Nombre y el id de las Sucursales
-    const getSucursales = async () => {
-        const response = await axios.get(`/api/users/administrador/empleados/sucursal`);
-        const data = response.data;
-        setSucursales(data);
-    }
 
     useEffect(() => {
         setIsBitacoraEmpty(!bitacora || Object.keys(bitacora).length === 0);
     }, [bitacora]);
 
-    //Funcion para obtener el id del empleado
-    const getEmpleado = async () => {
-        const response = await axios.get(`/api/users/administrador/empleados/${IdEmpleado}`);
+    //Funcion para obtener el id del Cliente
+    const getCliente = async () => {
+        const response = await axios.get(`/api/users/administrador/clientes/${IdCliente}`);
         const data = response.data;
-        setEmpleado(data);
+        setCliente(data);
         setInputValue({
             Nombre: data.Nombre,
             ApellidoPaterno: data.ApellidoPaterno,
             ApellidoMaterno: data.ApellidoMaterno,
             Edad: data.Edad,
             Telefono: data.Telefono,
-            Sucursal: data.Sucursal,
-            Rol: data.Rol,
-            Estatus: data.Estatus,
+            Codigo: data.Codigo,
+            Calle: data.Calle,
+            Colonia: data.Colonia,
+            Rango: data.Rango,
+            CreditoMaximo: data.CreditoMaximo,
         });
     }
 
@@ -168,11 +234,15 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
 
         Object.entries(inputValue).forEach(([Key, value]) => {
             if (String(value).trim() === "") {
-                newErrors[Key] = "Este campo es obligatorio"
+                if (Key === "Codigo" || Key === "Calle" || Key === "Colonia") {
+                    newErrors["Codigo"] = "Ingrese una dirección válida y completa";
+                } else {
+                    newErrors[Key] = "Este campo es obligatorio"
+                }
             }
-            if (Key === "Telefono" || Key === "Edad") {
+            if (Key === "Telefono" || Key === "CreditoMaximo" || Key === "Edad") {
                 if (isNaN(Number(value))) {
-                    newErrors[Key] = "Este campo debe ser numérico";
+                    newErrors[Key] = "Este campo debe ser un número";
                 } else if (Number(value) <= 0 && Key === "Edad" && value.trim() !== "") {
                     newErrors[Key] = "Este campo debe ser mayor a 0";
                 }
@@ -181,37 +251,34 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
         })
         setErrors(newErrors);
 
-
         if (Object.keys(newErrors).length == 0) {
 
             const registrosBitacoras: Bitacora[] = Object.entries(bitacora!).map(([key, value]) => ({
                 Campo: key,
-                ValorAnterior: empleado ? empleado[key as keyof Empleado] : "",
+                ValorAnterior: Cliente ? Cliente[key as keyof Cliente] : "",
                 ValorNuevo: value,
             }));
 
-            const response = await updateBitacoraEmpleado(IdEmpleado, registrosBitacoras);
-            const responseUpdate = await axios.put(`/api/users/administrador/empleados/${IdEmpleado}`, inputValue)
+            const response = await updateBitacoraCliente(IdCliente, registrosBitacoras);
+            const responseUpdate = await axios.put(`/api/users/administrador/clientes/${IdCliente}`, inputValue)
 
             if (responseUpdate.status === 200) {
                 onGuardado();
                 setIsOpen(false);
                 toast({
-                    title: "Empleado actualizado",
-                    description: "El empleado ha sido actualizado correctamente",
+                    title: "Cliente actualizado",
+                    description: "El Cliente ha sido actualizado correctamente",
                     variant: "success",
                 });
             } else {
                 toast({
                     title: "Error",
-                    description: "El empleado no ha sido actualizado correctamente",
+                    description: "El Cliente no ha sido actualizado correctamente",
                     variant: "destructive",
                 });
             }
         }
     };
-
-    //Guarda los campos modificados
 
 
     return (
@@ -229,7 +296,7 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
                         <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full max-h-[90vh] h-auto overflow-y-auto">
                             <p className="font-bold text-2xl text-center mb-5">
-                                Editar Empleado
+                                Actualizar Cliente
                             </p>
                             <div className="flex justify-center flex-col items-center py-3">
                                 <div className="w-full">
@@ -242,9 +309,10 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                     <input
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Nombre"] ? "border-red-500" : "border-black"}`}
+                                        autoFocus
                                         name="Nombre"
+                                        defaultValue={Cliente?.Nombre}
                                         onChange={handleChange}
-                                        defaultValue={empleado?.Nombre}
                                     />
                                     {errors["Nombre"] && (<span className="text-sm text-red-500">{errors["Nombre"]}</span>)}
                                 </div>
@@ -259,8 +327,8 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["ApellidoPaterno"] ? "border-red-500" : "border-black"}`}
                                         name="ApellidoPaterno"
+                                        defaultValue={Cliente?.ApellidoPaterno}
                                         onChange={handleChange}
-                                        defaultValue={empleado?.ApellidoPaterno}
                                     />
                                     {errors["ApellidoPaterno"] && (<span className="text-sm text-red-500">{errors["ApellidoPaterno"]}</span>)}
                                 </div>
@@ -275,8 +343,8 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["ApellidoMaterno"] ? "border-red-500" : "border-black"}`}
                                         name="ApellidoMaterno"
+                                        defaultValue={Cliente?.ApellidoMaterno}
                                         onChange={handleChange}
-                                        defaultValue={empleado?.ApellidoMaterno}
                                     />
                                     {errors["ApellidoMaterno"] && (<span className="text-sm text-red-500">{errors["ApellidoMaterno"]}</span>)}
                                 </div>
@@ -291,8 +359,8 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Edad"] ? "border-red-500" : "border-black"}`}
                                         name="Edad"
+                                        defaultValue={Cliente?.Edad}
                                         onChange={handleChange}
-                                        defaultValue={empleado?.Edad}
                                     />
                                     {errors["Edad"] && (<span className="text-sm text-red-500">{errors["Edad"]}</span>)}
                                 </div>
@@ -307,52 +375,48 @@ function UpdateModal({ IdEmpleado, onGuardado }: UpdateModalProps) {
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Telefono"] ? "border-red-500" : "border-black"}`}
                                         name="Telefono"
+                                        defaultValue={Cliente?.Telefono}
                                         onChange={handleChange}
-                                        defaultValue={empleado?.Telefono}
                                     />
                                     {errors["Telefono"] && (<span className="text-sm text-red-500">{errors["Telefono"]}</span>)}
                                 </div>
+                                <div className={`${errors["Codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full mt-3`}>
+                                    <DireccionForm action={saveDireccion} codigo={Cliente?.Codigo} colonia={Cliente?.Colonia} calle={Cliente?.Calle}/>
+                                </div>
+                                {errors["Codigo"] && (<span className="text-sm text-red-500">{errors["Codigo"]}</span>)}
                                 <div className=" w-full mt-3">
                                     <label
-                                        htmlFor="Sucursal"
+                                        htmlFor="Rango"
                                         className="font-bold text-lg flex-grow text-left"
                                     >
-                                        Sucursal
+                                        Rango
                                     </label>
-                                    <select onChange={handleChange} name="Sucursal" defaultValue={String(empleado?.Sucursal)} className={`border rounded-md w-full py-2 px-2 ${errors["Sucursal"] ? "border-red-500" : "border-black"}`}>
-                                        {Sucursales.map((Sucursal: Sucursal) => (
-                                            <option key={Sucursal.Id} value={Sucursal.Id}>
-                                                {Sucursal.Nombre}
-                                            </option>
-                                        ))}
+                                    <select onChange={handleChange} name="Rango" defaultValue={String(Cliente?.Rango)} className={`border rounded-md w-full py-2 px-2 ${errors["Rango"] ? "border-red-500" : "border-black"}`}
+                                    >
+                                        <option value="1">Público 1</option>
+                                        <option value="2">Herrero 2</option>
+                                        <option value="3">Herrero 3</option>
+                                        <option value="4">Herrero 4</option>
+                                        <option value="5">Mayoreo 1</option>
+                                        <option value="6">Mayoreo 2</option>
                                     </select>
-                                    {errors["Sucursal"] && (<span className="text-sm text-red-500">{errors["Sucursal"]}</span>)}
+                                    {errors["Rango"] && (<span className="text-sm text-red-500">{errors["Rango"]}</span>)}
                                 </div>
-                                <div className="flex grid-cols-2 gap-5 justify-center mt-3">
-                                    <div>
-                                        <label className="font-bold text-lg flex-grow text-left" htmlFor="Rol">
-                                            Rol
-                                        </label>
-                                        <select onChange={handleChange} name="Rol" defaultValue={String(empleado?.Rol)} className={`border rounded-md w-full py-2 px-2 ${errors["Rol"] ? "border-red-500" : "border-black"}`}
-                                        >
-                                            <option value="3">Administrador</option>
-                                            <option value="1">Vendedor</option>
-                                            <option value="2">Cajero</option>
-                                        </select>
-                                        {errors["Rol"] && (<span className="text-sm text-red-500">{errors["Rol"]}</span>)}
-                                    </div>
-                                    <div>
-                                        <label className="font-bold text-lg flex-grow text-left" htmlFor="Estatus">
-                                            Estatus
-                                        </label>
-                                        <select onChange={handleChange} name="Estatus" defaultValue={String(empleado?.Estatus)} className={`border rounded-md w-full py-2 px-2 ${errors["Estatus"] ? "border-red-500" : "border-black"}`}
-                                        >
-                                            <option value="1">Activo</option>
-                                            <option value="3">Suspendido</option>
-                                            <option value="2">Despedido</option>
-                                        </select>
-                                        {errors["Estatus"] && (<span className="text-sm text-red-500">{errors["Estatus"]}</span>)}
-                                    </div>
+                                <div className="w-full mt-3">
+                                    <label
+                                        htmlFor="CreditoMaximo"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Crédito Máximo
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["CreditoMaximo"] ? "border-red-500" : "border-black"}`}
+                                        name="CreditoMaximo"
+                                        defaultValue={Cliente?.CreditoMaximo}
+                                        onChange={handleChange}
+                                    />
+                                    {errors["CreditoMaximo"] && (<span className="text-sm text-red-500">{errors["CreditoMaximo"]}</span>)}
                                 </div>
                                 <div className="flex gap-5 justify-center">
                                     <button

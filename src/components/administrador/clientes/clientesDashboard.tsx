@@ -5,7 +5,7 @@ import { Pencil, Trash, Search, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/clientes/addModal";
-import UpdateModal from "@/components/administrador/empleados/updateModal";
+import UpdateModal from "@/components/administrador/clientes/updateModal";
 import { deleteCliente } from "@/actions";
 import dayjs from "dayjs";
 
@@ -122,12 +122,12 @@ function ClientesDashboard() {
                             <td>{Cliente.Direccion}</td>
                             <td>{Cliente.Edad}</td>
                             <td>{Cliente.Rango}</td>
-                            <td>{Cliente.Credito}</td>
-                            <td>{Cliente.CreditoMaximo}</td>
+                            <td>${Cliente.Credito}</td>
+                            <td>${Cliente.CreditoMaximo}</td>
                             <td>{dayjs(Cliente.Fecha).format("DD/MM/YYYY")}</td>
                             <td>
                                 <div className="flex gap-3 w-full justify-center">
-                                    <UpdateModal IdEmpleado={Cliente.Id} onGuardado={() => setUpdate(true)}/>
+                                    <UpdateModal IdCliente={Cliente.Id} onGuardado={() => setUpdate(true)}/>
                                     <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(Cliente.Id)} /></button>
                                 </div>
                             </td>

@@ -16,7 +16,6 @@ export async function DELETE(request, { params }) {
 }
 
 export async function PUT(request, { params }) {
-    // console.trace("ENTRANDO A RUTA PUT2", params)
     const req = await request.json();
     const { id, user } = params;
 

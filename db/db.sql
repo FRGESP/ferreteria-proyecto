@@ -482,13 +482,13 @@ CREATE PROCEDURE SP_ADDCLIENTE(IN COD VARCHAR(10), IN COL INT, IN CALLEIN VARCHA
 DROP PROCEDURE IF EXISTS SP_GETCLIENTES;
 CREATE PROCEDURE SP_GETCLIENTES()
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1;
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1;
     end;
 
 DROP PROCEDURE IF EXISTS SP_FINDCLIENTE;
 CREATE PROCEDURE SP_FINDCLIENTE(IN NOMBREIN VARCHAR(70))
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, C.Credito, C.CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%') AND C.Estatus = 1;
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%') AND C.Estatus = 1;
     end;
 
 DROP PROCEDURE IF EXISTS SP_DELETECLIENTE;
@@ -500,10 +500,31 @@ CREATE PROCEDURE SP_DELETECLIENTE(IN ID INT, IN USERID INT)
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'CLIENTE', ID, 'Todos', NOMBREVAR, '');
     end;
 
-SELECT * FROM CLIENTE;
+DROP PROCEDURE IF EXISTS SP_GETCLIENTEBYID;
+CREATE PROCEDURE SP_GETCLIENTEBYID(IN IDCLIENTE INT)
+    BEGIN
+        SELECT P.Nombre, P.ApellidoPaterno, P.ApellidoMaterno, P.Telefono, C2.CodigoPostal AS Codigo, D.IdColonia AS Colonia, D.Calle, P.Edad, R.IdRangoCliente AS Rango, C.CreditoMaximo FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente INNER JOIN DIRECCION D on C.IdDireccion = D.IdDireccion INNER JOIN CODIGOPOSTAL C2 on D.IdCodigoPostal = C2.IdCodigoPostal WHERE C.Estatus = 1 AND C.IdCliente = IDCLIENTE;
+    end;
 
+DROP PROCEDURE IF EXISTS SP_UPDATECLIENTE;
+CREATE PROCEDURE SP_UPDATECLIENTE(IN CLIENTEIN INT, IN NOMBREIN VARCHAR(50), IN APELLIDOPAT VARCHAR(50), IN APELLIDOMAT VARCHAR(50), IN EDADIN VARCHAR(3), IN TELEFONOIN VARCHAR(10), IN CODIGOIN INT, IN CALLEIN VARCHAR(100), IN COLONIAIN INT, IN RANGOIN INT, CREDITOMAXIMOIN DECIMAL(10,2))
+    BEGIN
+        DECLARE IDPERSONAVAR INT;
+        DECLARE IDDIRECCIONVAR INT;
+        SET IDDIRECCIONVAR = (SELECT D.IdDireccion FROM DIRECCION AS D INNER JOIN CLIENTE C2 on D.IdDireccion = C2.IdDireccion WHERE C2.IdCliente = CLIENTEIN LIMIT 1);
+        SET IDPERSONAVAR = (SELECT P.IdPersona FROM PERSONA AS P INNER JOIN CLIENTE C on P.IdPersona = C.IdPersona WHERE C.IdCliente = CLIENTEIN LIMIT 1);
+
+        IF IDPERSONAVAR IS NULL THEN
+            SELECT 2 AS RES;
+        ELSE
+            SELECT 1 AS RES;
+        end if;
+
+        UPDATE PERSONA SET Nombre = NOMBREIN, ApellidoPaterno = APELLIDOPAT, ApellidoMaterno = APELLIDOMAT, Edad = EDADIN, Telefono = TELEFONOIN WHERE IdPersona = IDPERSONAVAR;
+        UPDATE DIRECCION SET IdCodigoPostal = (SELECT C.IdCodigoPostal FROM CODIGOPOSTAL AS C WHERE C.CodigoPostal = CODIGOIN LIMIT 1), IdColonia = COLONIAIN, Calle = CALLEIN WHERE IdDireccion = IDDIRECCIONVAR;
+        UPDATE CLIENTE SET IdRangoCliente = RANGOIN, CreditoMaximo = CREDITOMAXIMOIN WHERE IdCliente = CLIENTEIN;
+    end;
 --
-
 
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
 CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
@@ -546,7 +567,7 @@ INSERT INTO PERSONA (Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Edad) V
 INSERT INTO EMPLEADO (IdPersona, IdRol, IdEstatus, IdSucursal) VALUES ((SELECT LAST_INSERT_ID()), 3, 1, 1);
 INSERT INTO USUARIO (Contraseña, IdEmpleado) VALUES ('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq', 1);
 
-INSERT INTO RANGOCLIENTE (Rango) VALUES ('Publico 1');
+INSERT INTO RANGOCLIENTE (Rango) VALUES ('Público 1');
 INSERT INTO RANGOCLIENTE (Rango) VALUES ('Herrero 2');
 INSERT INTO RANGOCLIENTE (Rango) VALUES ('Herrero 3');
 INSERT INTO RANGOCLIENTE (Rango) VALUES ('Herrero 4');

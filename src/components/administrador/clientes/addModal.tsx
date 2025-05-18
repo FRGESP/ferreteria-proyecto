@@ -287,7 +287,7 @@ function AddModal({ onGuardado }: AddModalProps) {
                                     {errors["telefono"] && (<span className="text-sm text-red-500">{errors["telefono"]}</span>)}
                                 </div>
                                 <div className={`${errors["codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full mt-3`}>
-                                    <DireccionForm action={saveDireccion} />
+                                    <DireccionForm action={saveDireccion}/>
                                 </div>
                                 {errors["codigo"] && (<span className="text-sm text-red-500">{errors["codigo"]}</span>)}
                                 <div className=" w-full mt-3">
