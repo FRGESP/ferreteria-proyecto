@@ -545,7 +545,10 @@ DROP PROCEDURE IF EXISTS SP_GETREGISTROS;
 CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50))
     BEGIN
         IF TABLAIN = 'CLIENTE' THEN
-            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE';
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE';
+        end if;
+        IF TABLAIN = 'EMPLEADO' THEN
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN EMPLEADO E on B.IdRegistro = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'EMPLEADO';
         end if;
     end;
 select * from BITACORA WHERE TablaAfectada = 'SUCURSAL';

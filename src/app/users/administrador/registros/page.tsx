@@ -1,8 +1,9 @@
 import React from 'react'
+import RegistrosDashboard from '@/components/administrador/registros/registrosDashboard'
 
 function registrospage() {
   return (
-    <div>registrospage</div>
+    <RegistrosDashboard />
   )
 }
 

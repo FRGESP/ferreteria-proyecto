@@ -7,9 +7,11 @@ import { useToast } from "@/hooks/use-toast";
 import AddModal from "./addModal";
 import UpdateModal from "./updateModal";
 import { deleteEmpleado, getEmpleadosAction } from "@/actions";
+import SelectSucursal from "@/components/ui/selectSucursal";
+
+
 
 function EmpleadosPage() {
-
     const router = useRouter();
     const { toast } = useToast();
 
@@ -28,7 +30,7 @@ function EmpleadosPage() {
     const [empleados, setEmpleados] = useState<Empleado[]>([]);
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
-        nombre:""
+        nombre: ""
     })
     //Bandera para actualizar la tabla
     const [update, setUpdate] = useState(false);
@@ -47,23 +49,24 @@ function EmpleadosPage() {
 
     const handleDelete = async (id: number) => {
         if (confirm("¿Estás seguro de que deseas eliminar este empleado?")) {
-            try {const response = await deleteEmpleado(id);
-            if (response.status === 200) {
-                getEmpleados();
+            try {
+                const response = await deleteEmpleado(id);
+                if (response.status === 200) {
+                    getEmpleados();
+                    toast({
+                        title: "Empleado eliminado",
+                        description: "El empleado ha sido eliminado correctamente",
+                        variant: "success",
+                    });
+                }
+            } catch (error) {
+                console.error("Error deleting employee:", error);
                 toast({
-                    title: "Empleado eliminado",
-                    description: "El empleado ha sido eliminado correctamente",
-                    variant: "success",
+                    title: "Error",
+                    description: "No se pudo eliminar el empleado",
+                    variant: "destructive",
                 });
             }
-        } catch (error) {
-            console.error("Error deleting employee:", error);
-            toast({
-                title: "Error",
-                description: "No se pudo eliminar el empleado",
-                variant: "destructive",
-            });
-        }
         }
     }
 
@@ -73,7 +76,7 @@ function EmpleadosPage() {
             const response = await axios.post(`/api/users/administrador/empleados`, searchValue);
             const data = response.data;
             setEmpleados(data);
-        } 
+        }
     }
 
     useEffect(() => {
@@ -89,12 +92,13 @@ function EmpleadosPage() {
 
     return (
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
-            <div className="w-[70%] flex items-center justify-center mb-[2%]">
+            <div className="w-[70%] flex items-center justify-center mb-[2%] gap-5">
+                <SelectSucursal onGuardado={() => { setUpdate(true); searchValue.nombre = ''}} />
                 <form className="w-full" onSubmit={handleSearch}>
-                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del empleado" />
+                    <input value={searchValue.nombre} onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del empleado" />
                 </form>
-                <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch}/></button>
-                <AddModal onGuardado={() => setUpdate(true)}/>
+                <button className="hover:bg-gray-100rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
+                <AddModal onGuardado={() => setUpdate(true)} />
             </div>
             <table>
                 <thead>
@@ -123,7 +127,7 @@ function EmpleadosPage() {
                             </div></td>
                             <td>
                                 <div className="flex gap-3 w-full justify-center">
-                                    <UpdateModal IdEmpleado={empleado.IdEmp} onGuardado={() => setUpdate(true)}/>
+                                    <UpdateModal IdEmpleado={empleado.IdEmp} onGuardado={() => setUpdate(true)} />
                                     <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(empleado.IdEmp)} /></button>
                                 </div>
                             </td>

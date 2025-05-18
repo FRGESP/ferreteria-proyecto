@@ -122,12 +122,18 @@ export const islogged = async () => {
 
 //Funciones que requieren el el usuario logueado
 
+export const getSucursalSession = async () => {
+    const session = await getSession();
+    return session.sucursal;
+}
+
 //Administrador/Session
 
 export const changeSucursal = async (sucursal: number) => {
     const session = await getSession();
     session.sucursal = sucursal;
     await session.save();
+    console.log("Sucursal cambiada a: " + session.sucursal);
 
 }
 
