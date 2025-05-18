@@ -476,13 +476,13 @@ CREATE PROCEDURE SP_ADDCLIENTE(IN COD VARCHAR(10), IN COL INT, IN CALLEIN VARCHA
         CALL SP_REGISTRARPERSONA(NOMBREIN, APELLIDOPAT, APELLIDOMAT, TELEFONOIN, EDADIN, USERIN, IDPERVAR);
         INSERT INTO CLIENTE (IdPersona, IdDireccion, IdRangoCliente, CreditoMaximo) VALUES (IDPERVAR, IDDIR, RANGOIN, CREDITOMAX);
         SET CLIENTEVAR = (SELECT LAST_INSERT_ID());
-        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERIN, 'INSERT', 'CLIENTE', CLIENTEVAR, 'Todos', '', (SELECT Nombre FROM PERSONA WHERE IdPersona = IDPERVAR));
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERIN, 'INSERT', 'CLIENTE', CLIENTEVAR, 'Todos', '', (SELECT CONCAT(Nombre, ' ', ApellidoPaterno) FROM PERSONA WHERE IdPersona = IDPERVAR));
     end;
 
 DROP PROCEDURE IF EXISTS SP_GETCLIENTES;
 CREATE PROCEDURE SP_GETCLIENTES()
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1;
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1 ORDER BY C.IdCliente;
     end;
 
 DROP PROCEDURE IF EXISTS SP_FINDCLIENTE;
@@ -542,16 +542,18 @@ CREATE FUNCTION FN_GETNAMEBYUSERID(USERID INT)
     end;
 
 DROP PROCEDURE IF EXISTS SP_GETREGISTROS;
-CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50))
+CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50), IN NOMBREIN VARCHAR(150))
     BEGIN
         IF TABLAIN = 'CLIENTE' THEN
-            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE';
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE' AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
         end if;
         IF TABLAIN = 'EMPLEADO' THEN
-            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN EMPLEADO E on B.IdRegistro = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'EMPLEADO';
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN EMPLEADO E on B.IdRegistro = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'EMPLEADO' AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
         end if;
     end;
 select * from BITACORA WHERE TablaAfectada = 'SUCURSAL';
+
+CALL SP_GETREGISTROS('CLIENTE','');
 
 CALL LOGIN(1001, '123456');
 

@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 // import UpdateModal from "@/components/administrador/Registros/updateModal";
 // import { deleteRegistro } from "@/actions";
 import dayjs from "dayjs";
+import { get } from "http";
 
 function RegistrosDashboard() {
 
@@ -27,34 +28,50 @@ function RegistrosDashboard() {
 
     //Guarda la informacion de los Registros
     const [Registros, setRegistros] = useState<Registro[]>([]);
+
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
-        nombre:"",
-        tabla:"CLIENTE"
+        nombre: "",
+        tabla: "CLIENTE"
     })
+
     //Bandera para actualizar la tabla
     const [update, setUpdate] = useState(false);
 
+    //Cada vez que se actualiza la tabla, se obtiene la informacion de los registros
+    useEffect(() => {
+        getRegistros();
+    }, [searchValue.tabla])
+
     const getRegistros = async () => {
-        const respose = await axios.get('/api/users/administrador/clientes')
+        const respose = await axios.post(`/api/users/administrador/registros/${searchValue.tabla}`, { nombre: searchValue.nombre });
         setRegistros(respose.data);
     }
 
     const handleChange = (e: any) => {
-        setSearchValue({
-            ...searchValue,
-            [e.target.name]: e.target.value,
-        });
+        const { name, value } = e.target;
+
+        if (name === "tabla") {
+            setSearchValue({
+                ...searchValue,
+                tabla: value,
+                nombre: "", // Reinicia el input cuando cambia el select
+            });
+        } else {
+            setSearchValue({
+                ...searchValue,
+                [name]: value,
+            });
+        }
     }
 
 
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
-            const response = await axios.post(`/api/users/administrador/Registros`, searchValue);
-            const data = response.data;
-            setRegistros(data);
-        } 
+            const respose = await axios.post(`/api/users/administrador/registros/${searchValue.tabla}`, { nombre: searchValue.nombre });
+            setRegistros(respose.data);
+        }
     }
 
     useEffect(() => {
@@ -72,7 +89,7 @@ function RegistrosDashboard() {
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
             <div className="w-[70%] flex items-center justify-center mb-[2%] gap-5">
                 <p>Registro:</p>
-                <select defaultValue={'CLIENTE'} name="tabla" className=" bg-[#ffffff] rounded-xl py-2 px-3 text-lg border border-solid border-black">
+                <select defaultValue={'CLIENTE'} onChange={handleChange} name="tabla" className=" bg-[#ffffff] rounded-xl py-2 px-3 text-lg border border-solid border-black">
                     <option value="CLIENTE">Clientes</option>
                     <option value="EMPLEADO">Empleados</option>
                     {/* <option value="sucursales">Sucursales</option>
@@ -80,9 +97,9 @@ function RegistrosDashboard() {
                     <option value="ventas">Ventas</option> */}
                 </select>
                 <form className="w-full" onSubmit={handleSearch}>
-                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del Registro" />
+                    <input value={searchValue.nombre ?? ""} onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del registro" />
                 </form>
-                <button className="hover:bg-gray-100 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch}/></button>
+                <button className="hover:bg-gray-100 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
             </div>
             <table>
                 <thead>
