@@ -1,5 +1,5 @@
 import React from 'react'
-import { checkRole } from '@/actions'
+import RepartidorDashboard from '@/components/administrador/empleados/repartidorDashboard';
 
 interface ClienteIdpageProps {
     params: {
@@ -7,10 +7,9 @@ interface ClienteIdpageProps {
     }
 }
 
-async function ClienteIdpage({ params }: ClienteIdpageProps) {
-    await checkRole(0);
+function ClienteIdpage({ params }: ClienteIdpageProps) {
   return (
-    <div>ClienteIdpage {params.id}</div>
+    <RepartidorDashboard IdEmpleadoProp={params.id}/>
   )
 }
 

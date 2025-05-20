@@ -482,6 +482,12 @@ CREATE PROCEDURE SP_GETCLIENTESREPARTIDOR(IN IDDEMP INT, IN NOMBREIN VARCHAR(100
         SELECT C.IdCliente, E.IdEmpleado, P.Telefono AS TelefonoCliente, R.Rango AS RangoCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS NombreCliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS DireccionCliente,(SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreEmpleado FROM REPARTIDOR_CLIENTE AS RC RIGHT JOIN CLIENTE AS C ON RC.IdCliente = C.IdCliente LEFT JOIN EMPLEADO AS E ON RC.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE R on C.IdRangoCliente = R.IdRangoCliente LEFT JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') AND C.Estatus = 1 AND (RC.IdEmpleado != IDDEMP OR RC.IdEmpleado IS NULL);
     end;
 
+DROP PROCEDURE IF EXISTS SP_GETINFOVENDEDOR;
+CREATE PROCEDURE SP_GETINFOVENDEDOR(IN IDEMP INT)
+    BEGIN
+        SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno) AS NombreEmpleado, S.Nombre AS Sucursal FROM EMPLEADO AS E INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona INNER JOIN SUCURSAL AS S ON E.IdSucursal = S.IdSucursal WHERE E.IdEmpleado = IDEMP AND E.IdRol = 1;
+    end;
+
 -- ADMINISTRADOR/CLIENTES
 
 DROP PROCEDURE IF EXISTS SP_ADDCLIENTE;

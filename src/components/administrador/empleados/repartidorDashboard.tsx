@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Search } from 'lucide-react'
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import { get } from 'http';
 
 interface RepartidorDashboardProps {
@@ -18,13 +19,23 @@ interface Cliente {
   NombreEmpleado: string;
 }
 
+interface Empleado {
+  NombreEmpleado: string;
+  Sucursal: string;
+}
+
 
 function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
+
+  const router = useRouter();
 
   //Guarda la informacion de la busqueda
   const [searchValue, setSearchValue] = useState({
     nombre: ""
   })
+
+  //Guarda la informacion del vendedor
+  const [vendedor, setVendedor] = useState<Empleado>();
 
   //Guarda la informacion de los clientes que tiene a este vendedor asignado
   const [myClientes, setMyClientes] = useState<Cliente[]>([]);
@@ -82,6 +93,16 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
 
   }
 
+  const getVendedor = async () => {
+    const response = await axios.get(`/api/users/administrador/empleados/clientes/${IdEmpleadoProp}`);
+    if(response.data.length === 0) {
+      router.push("/users/administrador/empleados");
+    } else {
+      setVendedor(response.data[0]);
+      getClientes();
+    }
+  }
+
   const getClientes = async () => {
     const response = await axios.post(`/api/users/administrador/empleados/clientes`, {
       nombre: searchValue.nombre,
@@ -93,7 +114,7 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
   }
 
   useEffect(() => {
-    getClientes();
+    getVendedor();
   }, [])
 
   useEffect(() => {
@@ -131,6 +152,10 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
+      <div className="w-[70%] flex items-center justify-center mb-[2%] gap-5">
+        <h1 className='text-2xl text-center'><span className='font-bold '>Vendedor: </span>{vendedor?.NombreEmpleado}</h1>
+        <h1 className='text-2xl text-center'><span className='font-bold '>Sucursal: </span>{vendedor?.Sucursal}</h1>
+      </div>
       <div className="w-[70%] flex items-center justify-center mb-[2%] gap-5">
         <form className="w-full" onSubmit={handleSearch}>
           <input value={searchValue.nombre} onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del cliente" />
