@@ -4,7 +4,7 @@ import { conn } from "@/libs/mysql";
 export async function POST(request, { params }) {
     const req = await request.json();
     try {
-        const [response] = await conn.query("CALL SP_ADDCLIENTE(?,?,?,?,?,?,?,?,?,?,?)", [req.codigo, req.colonia, req.calle, req.nombre, req.apellidoPat, req.apellidoMat, req.telefono, req.edad, req.rango, req.creditoMaximo, params.id]);
+        const [response] = await conn.query("CALL SP_ADDCLIENTE(?,?,?,?,?,?,?,?,?,?,?,?)", [req.codigo, req.colonia, req.calle, req.nombre, req.apellidoPat, req.apellidoMat, req.telefono, req.edad, req.rango, req.creditoMaximo, req.vendedor, params.id]);
 
         return NextResponse.json(response, { status: 200 });
     } catch (error) {
@@ -28,7 +28,7 @@ export async function PUT(request, { params }) {
     const req = await request.json();
     const { id } = params;
     try {
-        const [response] = await conn.query("CALL SP_UPDATECLIENTE(?,?,?,?,?,?,?,?,?,?,?)", [id, req.Nombre, req.ApellidoPaterno, req.ApellidoMaterno, req.Edad, req.Telefono, req.Codigo, req.Calle, req.Colonia, req.Rango, req.CreditoMaximo]);
+        const [response] = await conn.query("CALL SP_UPDATECLIENTE(?,?,?,?,?,?,?,?,?,?,?,?)", [id, req.Nombre, req.ApellidoPaterno, req.ApellidoMaterno, req.Edad, req.Telefono, req.Codigo, req.Calle, req.Colonia, req.Rango, req.CreditoMaximo, req.Vendedor]);
         // if (response.affectedRows === 0) {
         //     return NextResponse.json({ error: "Hubo un error al actualizar un empleado" }, { status: 500 });
         // }

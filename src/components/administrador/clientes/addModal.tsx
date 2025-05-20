@@ -7,6 +7,7 @@ import axios from "axios";
 import { addCliente } from "@/actions";
 import { useRouter } from "next/navigation";
 import DireccionForm from "@/components/administrador/sucursales/direccionFrom";
+import { get } from "http";
 
 interface AddModalProps {
     onGuardado: () => void;
@@ -14,9 +15,17 @@ interface AddModalProps {
 
 function AddModal({ onGuardado }: AddModalProps) {
 
+    interface Vendedor {
+        IdEmpleado: number;
+        Nombre: string;
+    }
 
     const { toast } = useToast();
     const router = useRouter();
+
+
+    //Guarda la informacion de los vendedores
+    const [vendedores, setVendedores] = useState<Vendedor[]>([]);
 
     //Controla el estado del modal
     const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +45,7 @@ function AddModal({ onGuardado }: AddModalProps) {
         colonia: "",
         rango: "",
         creditoMaximo: "",
+        vendedor: "",
     });
 
     //Empieza las funciones del componente direccion
@@ -84,7 +94,6 @@ function AddModal({ onGuardado }: AddModalProps) {
         if (isRequired) {
             verfificarCampos();
         }
-        console.log(inputValue);
     }, [inputValue])
 
     //Terminan las funciones del componente direccion
@@ -130,18 +139,21 @@ function AddModal({ onGuardado }: AddModalProps) {
             colonia: "",
             rango: "",
             creditoMaximo: "",
+            vendedor: "",
         });
+        getVendedores();
     };
+
+    //Funcion para obtener a los vendedores
+    const getVendedores = async () => {
+        const response = await axios.get("/api/users/administrador/clientes/vendedores");
+        setVendedores(response.data);
+    };
+
     //Funcion para cerrar el modal
     const closeModal = () => {
         setIsOpen(false);
     };
-
-    //Interface Sucursal 
-    interface Sucursal {
-        Id: number;
-        Nombre: string;
-    }
 
     const handleSubmit = async () => {
 
@@ -171,24 +183,24 @@ function AddModal({ onGuardado }: AddModalProps) {
 
         if (Object.keys(newErrors).length == 0) {
             console.log(inputValue)
-                const response = await addCliente(inputValue);
-                console.log(response);
-                if (response === 200) {
-                    setIsOpen(false);
+            const response = await addCliente(inputValue);
+            console.log(response);
+            if (response === 200) {
+                setIsOpen(false);
 
-                    toast({
-                        title: "Cliente agregado",
-                        description: "El cliente ha sido agregado correctamente",
-                        variant: "success",
-                    });
-                    onGuardado();
-                } else {
-                    toast({
-                        title: "Error",
-                        description: "No se pudo agregar al cliente",
-                        variant: "destructive",
-                    });
-                }
+                toast({
+                    title: "Cliente agregado",
+                    description: "El cliente ha sido agregado correctamente",
+                    variant: "success",
+                });
+                onGuardado();
+            } else {
+                toast({
+                    title: "Error",
+                    description: "No se pudo agregar al cliente",
+                    variant: "destructive",
+                });
+            }
         }
     };
 
@@ -287,12 +299,12 @@ function AddModal({ onGuardado }: AddModalProps) {
                                     {errors["telefono"] && (<span className="text-sm text-red-500">{errors["telefono"]}</span>)}
                                 </div>
                                 <div className={`${errors["codigo"] ? "border-red-500 border rounded-md w-full py-2 px-2 " : ""} w-full mt-3`}>
-                                    <DireccionForm action={saveDireccion}/>
+                                    <DireccionForm action={saveDireccion} />
                                 </div>
                                 {errors["codigo"] && (<span className="text-sm text-red-500">{errors["codigo"]}</span>)}
                                 <div className=" w-full mt-3">
                                     <label
-                                        htmlFor="sucursal"
+                                        htmlFor="rango"
                                         className="font-bold text-lg flex-grow text-left"
                                     >
                                         Rango
@@ -323,6 +335,24 @@ function AddModal({ onGuardado }: AddModalProps) {
                                         onChange={handleChange}
                                     />
                                     {errors["creditoMaximo"] && (<span className="text-sm text-red-500">{errors["creditoMaximo"]}</span>)}
+                                </div>
+                                <div className=" w-full mt-3">
+                                    <label
+                                        htmlFor="vendedor"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Vendedor
+                                    </label>
+                                    <select onChange={handleChange} name="vendedor" defaultValue={'Default'} className={`border rounded-md w-full py-2 px-2 ${errors["vendedor"] ? "border-red-500" : "border-black"}`}>
+                                        <option value="Default" disabled hidden>Seleccione un vendedor</option>
+                                        <option value="0">Sin Vendedor Asignado</option>
+                                        {vendedores.map((vendedor: Vendedor) => (
+                                            <option key={vendedor.IdEmpleado} value={vendedor.IdEmpleado}>
+                                                {vendedor.Nombre}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    {errors["vendedor"] && (<span className="text-sm text-red-500">{errors["vendedor"]}</span>)}
                                 </div>
                                 <div className="flex gap-5 justify-center">
                                     <button

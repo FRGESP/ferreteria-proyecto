@@ -24,10 +24,12 @@ function ClientesDashboard() {
         Credito: string;
         CreditoMaximo: string;
         Fecha: string;
+        Vendedor: string;
     }
 
     //Guarda la informacion de los Clientes
     const [Clientes, setClientes] = useState<Cliente[]>([]);
+
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
         nombre:""
@@ -109,6 +111,7 @@ function ClientesDashboard() {
                         <th>Saldo</th>
                         <th>Crédito Máximo</th>
                         <th>Fecha de Registro</th>
+                        <th>Vendedor</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -124,6 +127,7 @@ function ClientesDashboard() {
                             <td>${Cliente.Credito}</td>
                             <td>${Cliente.CreditoMaximo}</td>
                             <td>{dayjs(Cliente.Fecha).format("DD/MM/YYYY")}</td>
+                            <td><p className={`${Cliente.Vendedor ? '' : "bg-red-500 text-white"} rounded-lg w-fit py-2 px-1`}>{Cliente.Vendedor ? Cliente.Vendedor : 'Sin Vendedor Asignado'}</p></td>
                             <td>
                                 <div className="flex gap-3 w-full justify-center">
                                     <UpdateModal IdCliente={Cliente.Id} onGuardado={() => setUpdate(true)}/>

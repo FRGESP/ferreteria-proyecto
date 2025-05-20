@@ -55,6 +55,7 @@ interface Cliente {
         colonia: string;
         rango: string;
         creditoMaximo: string;
+        vendedor: string;
     }
 
 export const getSession = async () => {

@@ -28,6 +28,8 @@ export interface Cliente {
     Rango: string;
     NombreRango: string;
     CreditoMaximo: string;
+    Vendedor: string;
+    NombreVendedor: string;
 }
 
 //Va a guardar la bitacora de los cambios
@@ -37,10 +39,17 @@ export interface Bitacora {
     ValorNuevo: string;
 }
 
+interface Vendedor {
+    IdEmpleado: number;
+    Nombre: string;
+}
 
 function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
     const { toast } = useToast();
     const router = useRouter();
+
+    //Guarda la informacion de los vendedores
+    const [vendedores, setVendedores] = useState<Vendedor[]>([]);
 
     //ContRola el estado del modal
     const [isOpen, setIsOpen] = useState(false);
@@ -205,6 +214,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
         setBitacora({});
         setIsBitacoraEmpty(false);
         await getCliente();
+        await getVendedores();
         setIsOpen(true);
     };
     //Funcion para cerrar el modal
@@ -236,6 +246,12 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
         });
     }
 
+    //Funcion para obtener a los vendedores
+    const getVendedores = async () => {
+        const response = await axios.get("/api/users/administrador/clientes/vendedores");
+        setVendedores(response.data);
+    };
+
     const handleSubmit = async () => {
 
         const newErrors: Record<string, string> = {};
@@ -263,7 +279,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
 
             const registrosBitacoras: Bitacora[] = Object.entries(bitacora!).map(([key, value]) => ({
                 Campo: key,
-                ValorAnterior: Cliente ? key === 'Colonia' ? Cliente["NombreColonia"] : key == 'Rango' ? Cliente['NombreRango'] : Cliente[key as keyof Cliente] : "",
+                ValorAnterior: Cliente ? key === 'Colonia' ? Cliente["NombreColonia"] : key == 'Rango' ? Cliente['NombreRango'] : key == 'Vendedor' ? Cliente['NombreVendedor'] ? Cliente["NombreVendedor"] : 'Sin Vendedor Asignado' : Cliente[key as keyof Cliente] : "",
                 ValorNuevo: value,
             }));
             console.log(registrosBitacoras);
@@ -426,6 +442,23 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
                                         onChange={handleChange}
                                     />
                                     {errors["CreditoMaximo"] && (<span className="text-sm text-red-500">{errors["CreditoMaximo"]}</span>)}
+                                </div>
+                                <div className=" w-full mt-3">
+                                    <label
+                                        htmlFor="Vendedor"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Vendedor
+                                    </label>
+                                    <select onChange={handleChange} name="Vendedor" defaultValue={String(Cliente?.Vendedor)} className={`border rounded-md w-full py-2 px-2 ${errors["Vendedor"] ? "border-red-500" : "border-black"}`}>
+                                        <option value="0">Sin Vendedor Asignado</option>
+                                        {vendedores.map((vendedor: Vendedor) => (
+                                            <option key={vendedor.IdEmpleado} value={vendedor.IdEmpleado}>
+                                                {vendedor.Nombre}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    {errors["Vendedor"] && (<span className="text-sm text-red-500">{errors["Vendedor"]}</span>)}
                                 </div>
                                 <div className="flex gap-5 justify-center">
                                     <button
