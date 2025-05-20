@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Search } from 'lucide-react'
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import { get } from 'http';
+import { addClienteToEmpleado } from '@/actions';
 
 interface RepartidorDashboardProps {
   IdEmpleadoProp: string;
@@ -37,7 +37,13 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
   //Guarda la informacion del vendedor
   const [vendedor, setVendedor] = useState<Empleado>();
 
-  //Guarda la informacion de los clientes que tiene a este vendedor asignado
+  //Guarda la informacion de los clientes que tiene a este vendedor asignado originalmente
+  const [originalMyClientes, setOriginalMyClientes] = useState<Cliente[]>([]);
+
+  //Guarda la informacion de los clientes que no tienen a este vendedor asignado originalmente
+  const [originalNotMyClientes, setOriginalNotMyClientes] = useState<Cliente[]>([]);
+
+  //Guarda la informacion de los clientes que tienen a este vendedor asignado
   const [myClientes, setMyClientes] = useState<Cliente[]>([]);
 
   //Guarda la informacion de los clientes que no tienen a este vendedor asignado
@@ -95,7 +101,7 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
 
   const getVendedor = async () => {
     const response = await axios.get(`/api/users/administrador/empleados/clientes/${IdEmpleadoProp}`);
-    if(response.data.length === 0) {
+    if (response.data.length === 0) {
       router.push("/users/administrador/empleados");
     } else {
       setVendedor(response.data[0]);
@@ -111,15 +117,14 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
     console.log(response.data);
     setMyClientes(response.data[0]);
     setNotMyClientes(response.data[1]);
+    setOriginalMyClientes(response.data[0]);
+    setOriginalNotMyClientes(response.data[1]);
   }
 
   useEffect(() => {
     getVendedor();
   }, [])
 
-  useEffect(() => {
-    console.log("Clientes asignados", myClientes);
-  }, [myClientes])
 
   const moveToMyClientes = (clienteId: number) => {
     const cliente = notMyClientes.find(c => c.IdCliente === clienteId);
@@ -149,6 +154,24 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
     setSearch(false);
   };
 
+  const handleSave = async () => {
+    console.log("Clientes Originales:", originalMyClientes);
+    console.log("Clientes seleccionados:", myClientes);
+
+    const clientesAAgregar = myClientes.filter(cliente => !originalMyClientes.some(originalCliente => originalCliente.IdCliente === cliente.IdCliente));
+    const clientesAEliminar = originalMyClientes.filter(cliente => !myClientes.some(originalCliente => originalCliente.IdCliente === cliente.IdCliente));
+    console.log("Clientes a agregar:", clientesAAgregar);
+    console.log("Clientes a eliminar:", clientesAEliminar);
+
+    const response = await addClienteToEmpleado(clientesAAgregar, clientesAEliminar, IdEmpleadoProp);
+
+    if(response == 200) {
+      router.push("/users/administrador/empleados");
+    }
+      
+
+  }
+
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
@@ -161,7 +184,7 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
           <input value={searchValue.nombre} onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del cliente" />
         </form>
         <button className="rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
-        <button className="rounded-md bg-acento hover:bg-acentohover py-2 px-3 text-lg text-white">Guardar</button>
+        <button className="rounded-md bg-acento hover:bg-acentohover py-2 px-3 text-lg text-white" onClick={handleSave}>Guardar</button>
       </div>
       <div className='w-full h-full grid grid-cols-2 gap-5'>
         <div>
@@ -175,7 +198,7 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
                   <p className='text-lg'><span className='font-bold'>Teléfono: </span>{cliente.TelefonoCliente}</p>
                   <p className='text-lg'><span className='font-bold'>Rango: </span>{cliente.RangoCliente}</p>
                   <p className='text-lg'><span className='font-bold'>{cliente.NombreEmpleado ? "Vendedor Asignado: " : "Sin vendedor Asignado"}</span>{cliente.NombreEmpleado ? cliente.NombreEmpleado : ""}</p>
-                  <button onClick={() => moveToMyClientes(cliente.IdCliente)} className={`${cliente.IdEmpleado ? "bg-red-500 hover:bg-red-600" : 'bg-blue-500 hover:bg-blue-600'} text-white rounded-lg p-2`}>{cliente.IdEmpleado ? 'Cambiar' : 'Asignar'}</button>
+                  <button onClick={() => moveToMyClientes(cliente.IdCliente)} className={`${cliente.IdEmpleado ? cliente.IdEmpleado == IdEmpleadoProp ? "bg-yellow-500 hover:bg-yellow-600" : "bg-red-500 hover:bg-red-600" : 'bg-blue-500 hover:bg-blue-600'} text-white rounded-lg p-2`}>{cliente.IdEmpleado ? cliente.IdEmpleado == IdEmpleadoProp ? "Volver a Asignar" : 'Cambiar' : 'Asignar'}</button>
                 </div>
               )))) :
               (notMyClientesBusqueda.length === 0 ? <p className='text-center'>No hay elementos que coincidan con la búsqueda</p> : (notMyClientesBusqueda.map((cliente) => (
@@ -185,7 +208,7 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
                   <p className='text-lg'><span className='font-bold'>Teléfono: </span>{cliente.TelefonoCliente}</p>
                   <p className='text-lg'><span className='font-bold'>Rango: </span>{cliente.RangoCliente}</p>
                   <p className='text-lg'><span className='font-bold'>{cliente.NombreEmpleado ? "Vendedor Asignado: " : "Sin vendedor Asignado"}</span>{cliente.NombreEmpleado ? cliente.NombreEmpleado : ""}</p>
-                  <button onClick={() => moveToMyClientes(cliente.IdCliente)} className={`${cliente.IdEmpleado ? "bg-red-500 hover:bg-red-600" : 'bg-blue-500 hover:bg-blue-600'} text-white rounded-lg p-2`}>{cliente.IdEmpleado ? 'Cambiar' : 'Asignar'}</button>
+                  <button onClick={() => moveToMyClientes(cliente.IdCliente)} className={`${cliente.IdEmpleado ? cliente.IdEmpleado == IdEmpleadoProp ? "bg-yellow-500 hover:bg-yellow-600" : "bg-red-500 hover:bg-red-600" : 'bg-blue-500 hover:bg-blue-600'} text-white rounded-lg p-2`}>{cliente.IdEmpleado ? cliente.IdEmpleado == IdEmpleadoProp ? "Volver a Asignar" : 'Cambiar' : 'Asignar'}</button>
                 </div>
               ))))}
           </div>

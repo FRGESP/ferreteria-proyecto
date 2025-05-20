@@ -129,7 +129,7 @@ function EmpleadosPage() {
                                 <div className="flex gap-3 w-full justify-center">
                                     <UpdateModal IdEmpleado={empleado.IdEmp} onGuardado={() => setUpdate(true)} />
                                     <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(empleado.IdEmp)} /></button>
-                                    {empleado.Rol == "Vendedor" && (<button className="hover:bg-gray-200 text-green-500 px-2 py-1 rounded" ><UserPen strokeWidth={2} size={25} onClick={() => router.push(`/users/administrador/empleados/${empleado.IdEmp}`)} /></button>
+                                    {empleado.Rol == "Vendedor" && (<button className="hover:bg-gray-200 text-green-500 px-2 py-1 rounded" onClick={() => router.push(`/users/administrador/empleados/${empleado.IdEmp}`)} ><UserPen strokeWidth={2} size={25} /></button>
                                     )}
                                 </div>
                             </td>

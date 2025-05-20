@@ -33,6 +33,17 @@ interface Sucursal {
     colonia: string;
 }
 
+//Interface para la relacion cliente-empleado
+interface ClienteEmpleado {
+  IdCliente: number;
+  IdEmpleado: string;
+  NombreCliente: string;
+  TelefonoCliente: string;
+  DireccionCliente: string;
+  RangoCliente: string;
+  NombreEmpleado: string;
+}
+
 //Interface para el cliente
 interface Cliente {
         apellidoPat: string;
@@ -137,7 +148,7 @@ export const changeSucursal = async (sucursal: number) => {
 
 }
 
-//Administradoe/Empleados
+//Administrador/Empleados
 
 export const getEmpleadosAction = async () => {
     const session = await getSession();
@@ -170,7 +181,13 @@ export const updateBitacoraEmpleado = async (id: number, bitacora: Bitacora[]) =
             return { status: status, message: response }
         }
     })
+}
 
+export const addClienteToEmpleado = async (clientesAsignar: ClienteEmpleado[], clientesEliminar: ClienteEmpleado[], IdVendedor: string) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/empleados/clientes/${session.userId}`, { "agregar": clientesAsignar,"eliminar": clientesEliminar, "IdVendedor": IdVendedor })
+    const status = response.status;
+    return status;
 }
 
 //Administradoe/Sucursales
