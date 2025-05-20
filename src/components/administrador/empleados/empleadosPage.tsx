@@ -1,7 +1,7 @@
 "use client"
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { Pencil, Trash, Search, Plus } from "lucide-react";
+import { UserPen, Trash, Search, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "./addModal";
@@ -93,7 +93,7 @@ function EmpleadosPage() {
     return (
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
             <div className="w-[70%] flex items-center justify-center mb-[2%] gap-5">
-                <SelectSucursal onGuardado={() => { setUpdate(true); searchValue.nombre = ''}} />
+                <SelectSucursal onGuardado={() => { setUpdate(true); searchValue.nombre = '' }} />
                 <form className="w-full" onSubmit={handleSearch}>
                     <input value={searchValue.nombre} onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del empleado" />
                 </form>
@@ -129,6 +129,8 @@ function EmpleadosPage() {
                                 <div className="flex gap-3 w-full justify-center">
                                     <UpdateModal IdEmpleado={empleado.IdEmp} onGuardado={() => setUpdate(true)} />
                                     <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(empleado.IdEmp)} /></button>
+                                    {empleado.Rol == "Vendedor" && (<button className="hover:bg-gray-200 text-green-500 px-2 py-1 rounded" ><UserPen strokeWidth={2} size={25} onClick={() => router.push(`/users/administrador/empleados/${empleado.IdEmp}/${empleado.Rol}`)} /></button>
+                                    )}
                                 </div>
                             </td>
                         </tr>
