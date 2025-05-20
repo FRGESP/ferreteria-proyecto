@@ -106,8 +106,6 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
             }
         })
 
-
-
         if (isRequiredPar) {
             setIsRequired(true);
         }

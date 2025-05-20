@@ -1,5 +1,5 @@
 import React from 'react'
-import RepartidorDashboard from '@/components/administrador/empleados/repartidorDashboard';
+import VendedorDashboard from '@/components/administrador/empleados/vendedorDashboard';
 
 interface ClienteIdpageProps {
     params: {
@@ -9,7 +9,7 @@ interface ClienteIdpageProps {
 
 function ClienteIdpage({ params }: ClienteIdpageProps) {
   return (
-    <RepartidorDashboard IdEmpleadoProp={params.id}/>
+   <VendedorDashboard IdEmpleadoProp={params.id}/>
   )
 }
 

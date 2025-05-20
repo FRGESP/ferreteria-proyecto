@@ -20,13 +20,13 @@ export async function POST(request, { params}){
 
     if(Array.isArray(agregar) && agregar.length > 0){
         for(const cliente of agregar){
-            const response = await conn.query("CALL SP_UPDATECLIENTEREPARTIDOR(?, ?, ?, ?)", [cliente.IdCliente, IdVendedor, params.id, 1]);
+            const response = await conn.query("CALL SP_UPDATECLIENTEVENDEDOR(?, ?, ?, ?)", [cliente.IdCliente, IdVendedor, params.id, 1]);
         }
     }
 
     if(Array.isArray(eliminar) && eliminar.length > 0){
         for(const cliente of eliminar){
-            const response = await conn.query("CALL SP_UPDATECLIENTEREPARTIDOR(?, ?, ?, ?)", [cliente.IdCliente, IdVendedor, params.id, 0]);
+            const response = await conn.query("CALL SP_UPDATECLIENTEVENDEDOR(?, ?, ?, ?)", [cliente.IdCliente, IdVendedor, params.id, 0]);
         }
     }
     return NextResponse.json({ status: 200 });

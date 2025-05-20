@@ -128,14 +128,15 @@ CREATE TABLE CLIENTE(
     CONSTRAINT FK_CLIENTETORANGOCLIENTE FOREIGN KEY(IdRangoCliente) REFERENCES RANGOCLIENTE(IdRangoCliente)
 );
 
-CREATE TABLE REPARTIDOR_CLIENTE(
+CREATE TABLE VENDEDOR_CLIENTE
+(
     IdCliente INT NOT NULL,
     IdEmpleado INT NOT NULL,
     Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Activo BOOLEAN DEFAULT TRUE,
-    CONSTRAINT PK_REPARTIDOR_CLIENTE PRIMARY KEY(IdCliente,IdEmpleado),
-    CONSTRAINT FK_REPARTIDOR_CLIENTETOCLIENTE FOREIGN KEY(IdCliente) REFERENCES CLIENTE(IdCliente),
-    CONSTRAINT FK_REPARTIDOR_CLIENTETOEMPLEADO FOREIGN KEY(IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
+    CONSTRAINT PK_VENDEDOR_CLIENTE PRIMARY KEY(IdCliente,IdEmpleado),
+    CONSTRAINT FK_VENDEDOR_CLIENTETOCLIENTE FOREIGN KEY(IdCliente) REFERENCES CLIENTE(IdCliente),
+    CONSTRAINT FK_VENDEDOR_CLIENTETOEMPLEADO FOREIGN KEY(IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 );
 
 CREATE TABLE USUARIO(
@@ -475,11 +476,11 @@ CREATE PROCEDURE SP_FINDEMPLEADO(IN NOMBREIN VARCHAR(100))
         SELECT U.IdUsuario AS ID, E.IdEmpleado AS IdEmp, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, P.Edad, R.Rol, S.Nombre AS Sucursal, E2.Estatus FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona INNER JOIN ROL R on E.IdRol = R.IdRol INNER JOIN SUCURSAL S on E.IdSucursal = S.IdSucursal INNER JOIN ESTATUS E2 on E.IdEstatus = E2.IdEstatus INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE E2.IdEstatus != 4 AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN, '%') ORDER BY U.IdUsuario;
     end;
 
-DROP PROCEDURE IF EXISTS SP_GETCLIENTESREPARTIDOR;
-CREATE PROCEDURE SP_GETCLIENTESREPARTIDOR(IN IDDEMP INT, IN NOMBREIN VARCHAR(100))
+DROP PROCEDURE IF EXISTS SP_GETCLIENTESVENDEDOR;
+CREATE PROCEDURE SP_GETCLIENTESVENDEDOR(IN IDDEMP INT, IN NOMBREIN VARCHAR(100))
     BEGIN
-        SELECT C.IdCliente, E.IdEmpleado, P.Telefono AS TelefonoCliente, R.Rango AS RangoCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS NombreCliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS DireccionCliente,(SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreEmpleado FROM REPARTIDOR_CLIENTE AS RC RIGHT JOIN CLIENTE AS C ON RC.IdCliente = C.IdCliente LEFT JOIN EMPLEADO AS E ON RC.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE R on C.IdRangoCliente = R.IdRangoCliente LEFT JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE C.Estatus = 1 AND RC.IdEmpleado = IDDEMP AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
-        SELECT C.IdCliente, E.IdEmpleado, P.Telefono AS TelefonoCliente, R.Rango AS RangoCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS NombreCliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS DireccionCliente,(SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreEmpleado FROM REPARTIDOR_CLIENTE AS RC RIGHT JOIN CLIENTE AS C ON RC.IdCliente = C.IdCliente LEFT JOIN EMPLEADO AS E ON RC.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE R on C.IdRangoCliente = R.IdRangoCliente LEFT JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') AND C.Estatus = 1 AND (RC.IdEmpleado != IDDEMP OR RC.IdEmpleado IS NULL);
+        SELECT C.IdCliente, E.IdEmpleado, P.Telefono AS TelefonoCliente, R.Rango AS RangoCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS NombreCliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS DireccionCliente,(SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreEmpleado FROM VENDEDOR_CLIENTE AS RC RIGHT JOIN CLIENTE AS C ON RC.IdCliente = C.IdCliente LEFT JOIN EMPLEADO AS E ON RC.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE R on C.IdRangoCliente = R.IdRangoCliente LEFT JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE C.Estatus = 1 AND RC.IdEmpleado = IDDEMP AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
+        SELECT C.IdCliente, E.IdEmpleado, P.Telefono AS TelefonoCliente, R.Rango AS RangoCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS NombreCliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS DireccionCliente,(SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreEmpleado FROM VENDEDOR_CLIENTE AS RC RIGHT JOIN CLIENTE AS C ON RC.IdCliente = C.IdCliente LEFT JOIN EMPLEADO AS E ON RC.IdEmpleado = E.IdEmpleado INNER JOIN PERSONA P on C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE R on C.IdRangoCliente = R.IdRangoCliente LEFT JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') AND C.Estatus = 1 AND (RC.IdEmpleado != IDDEMP OR RC.IdEmpleado IS NULL);
     end;
 
 DROP PROCEDURE IF EXISTS SP_GETINFOVENDEDOR;
@@ -488,29 +489,28 @@ CREATE PROCEDURE SP_GETINFOVENDEDOR(IN IDEMP INT)
         SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno) AS NombreEmpleado, S.Nombre AS Sucursal FROM EMPLEADO AS E INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona INNER JOIN SUCURSAL AS S ON E.IdSucursal = S.IdSucursal WHERE E.IdEmpleado = IDEMP AND E.IdRol = 1;
     end;
 
-DROP PROCEDURE IF EXISTS SP_UPDATECLIENTEREPARTIDOR;
-CREATE PROCEDURE SP_UPDATECLIENTEREPARTIDOR(IN IDCLIENTEIN INT, IN IDEMP INT, IN USERID INT, IN METODO INT)
+DROP PROCEDURE IF EXISTS SP_UPDATECLIENTEVENDEDOR;
+CREATE PROCEDURE SP_UPDATECLIENTEVENDEDOR(IN IDCLIENTEIN INT, IN IDEMP INT, IN USERID INT, IN METODO INT)
     BEGIN
         DECLARE VALORANTERIORVAR VARCHAR(100);
         DECLARE VALORACTUALVAR VARCHAR(100);
-        SET VALORANTERIORVAR = (SELECT CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno) FROM REPARTIDOR_CLIENTE AS RC INNER JOIN EMPLEADO E2 on RC.IdEmpleado = E2.IdEmpleado INNER JOIN PERSONA P2 on E2.IdPersona = P2.IdPersona WHERE RC.IdCliente = IDCLIENTEIN);
+        SET VALORANTERIORVAR = (SELECT CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno) FROM VENDEDOR_CLIENTE AS RC INNER JOIN EMPLEADO E2 on RC.IdEmpleado = E2.IdEmpleado INNER JOIN PERSONA P2 on E2.IdPersona = P2.IdPersona WHERE RC.IdCliente = IDCLIENTEIN);
         IF METODO = 1 THEN
             IF VALORANTERIORVAR IS NULL THEN
                 SET VALORANTERIORVAR = 'Sin Vendedor Asignado';
             end if;
             SET VALORACTUALVAR = (SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno) FROM EMPLEADO AS E INNER JOIN PERSONA AS P on E.IdPersona = P.IdPersona WHERE E.IdEmpleado = IDEMP);
 
-            DELETE FROM REPARTIDOR_CLIENTE WHERE IdCliente = IDCLIENTEIN;
+            DELETE FROM VENDEDOR_CLIENTE WHERE IdCliente = IDCLIENTEIN;
 
-            INSERT INTO REPARTIDOR_CLIENTE (IdCliente, IdEmpleado) VALUES (IDCLIENTEIN, IDEMP);
+            INSERT INTO VENDEDOR_CLIENTE (IdCliente, IdEmpleado) VALUES (IDCLIENTEIN, IDEMP);
         ELSE
             SET VALORACTUALVAR = 'Sin Vendedor Asignado';
-            DELETE FROM REPARTIDOR_CLIENTE WHERE IdCliente = IDCLIENTEIN;
+            DELETE FROM VENDEDOR_CLIENTE WHERE IdCliente = IDCLIENTEIN;
         end if;
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE','CLIENTE', IDCLIENTEIN, 'Vendedor', VALORANTERIORVAR, VALORACTUALVAR);
     end;
 
-SELECT * FROM BITACORA;
 
 -- ADMINISTRADOR/CLIENTES
 
@@ -530,7 +530,7 @@ CREATE PROCEDURE SP_ADDCLIENTE(IN COD VARCHAR(10), IN COL INT, IN CALLEIN VARCHA
 DROP PROCEDURE IF EXISTS SP_GETCLIENTES;
 CREATE PROCEDURE SP_GETCLIENTES()
     BEGIN
-        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente WHERE C.Estatus = 1 ORDER BY C.IdCliente;
+        SELECT C.IdCliente AS Id, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Edad, R.Rango, FORMAT(C.Credito,2) AS Credito, FORMAT(C.CreditoMaximo,2) AS CreditoMaximo, (SELECT FN_GETNAMEBYUSERID(U.IdUsuario)) AS NombreVendedor, C.Fecha FROM CLIENTE AS C INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona INNER JOIN RANGOCLIENTE AS R ON C.IdRangoCliente = R.IdRangoCliente LEFT JOIN VENDEDOR_CLIENTE VC on C.IdCliente = VC.IdCliente LEFT JOIN USUARIO U on VC.IdEmpleado = U.IdEmpleado WHERE C.Estatus = 1 ORDER BY C.IdCliente;
     end;
 
 DROP PROCEDURE IF EXISTS SP_FINDCLIENTE;
@@ -572,10 +572,6 @@ CREATE PROCEDURE SP_UPDATECLIENTE(IN CLIENTEIN INT, IN NOMBREIN VARCHAR(50), IN 
         UPDATE DIRECCION SET IdCodigoPostal = (SELECT C.IdCodigoPostal FROM CODIGOPOSTAL AS C WHERE C.CodigoPostal = CODIGOIN LIMIT 1), IdColonia = COLONIAIN, Calle = CALLEIN WHERE IdDireccion = IDDIRECCIONVAR;
         UPDATE CLIENTE SET IdRangoCliente = RANGOIN, CreditoMaximo = CREDITOMAXIMOIN WHERE IdCliente = CLIENTEIN;
     end;
---
-
-CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Julian', 'Mendoza', 'Guzman', '4454554675', '23', 1, 0, 1001);
-CALL SP_ADDCLIENTE('38800',72856, 'Prueba 123', 'Pedro', 'Alvarez', 'Guzman', '4454554675', '23', 1, 0, 1001);
 
 -- REGISTROS
 
@@ -589,6 +585,9 @@ CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50), IN NOMBREIN VARCHAR(150
             SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN EMPLEADO E on B.IdRegistro = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'EMPLEADO' AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
         end if;
     end;
+
+--
+
 select * from BITACORA WHERE TablaAfectada = 'SUCURSAL';
 
 CALL SP_GETREGISTROS('CLIENTE','');

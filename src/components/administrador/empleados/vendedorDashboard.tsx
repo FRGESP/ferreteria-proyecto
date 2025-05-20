@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { addClienteToEmpleado } from '@/actions';
 
-interface RepartidorDashboardProps {
+interface VendedorDashboardProps {
   IdEmpleadoProp: string;
 }
 
@@ -25,7 +25,7 @@ interface Empleado {
 }
 
 
-function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
+function VendedorDashboard({ IdEmpleadoProp }: VendedorDashboardProps) {
 
   const router = useRouter();
 
@@ -39,9 +39,6 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
 
   //Guarda la informacion de los clientes que tiene a este vendedor asignado originalmente
   const [originalMyClientes, setOriginalMyClientes] = useState<Cliente[]>([]);
-
-  //Guarda la informacion de los clientes que no tienen a este vendedor asignado originalmente
-  const [originalNotMyClientes, setOriginalNotMyClientes] = useState<Cliente[]>([]);
 
   //Guarda la informacion de los clientes que tienen a este vendedor asignado
   const [myClientes, setMyClientes] = useState<Cliente[]>([]);
@@ -118,7 +115,6 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
     setMyClientes(response.data[0]);
     setNotMyClientes(response.data[1]);
     setOriginalMyClientes(response.data[0]);
-    setOriginalNotMyClientes(response.data[1]);
   }
 
   useEffect(() => {
@@ -246,4 +242,4 @@ function RepartidorDashboard({ IdEmpleadoProp }: RepartidorDashboardProps) {
   )
 }
 
-export default RepartidorDashboard
+export default VendedorDashboard

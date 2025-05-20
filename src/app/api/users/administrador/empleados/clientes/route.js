@@ -5,7 +5,7 @@ import { conn } from "@/libs/mysql";
 export async function POST(request) {
     try {
         const req = await request.json();
-        const [response] = await conn.query("CALL SP_GETCLIENTESREPARTIDOR(?,?)", [req.IdEmpleado, req.nombre]);
+        const [response] = await conn.query("CALL SP_GETCLIENTESVENDEDOR(?,?)", [req.IdEmpleado, req.nombre]);
         return NextResponse.json([response[0], response[1]], { status: 200 });
     } catch (error) {
         console.error(error);
