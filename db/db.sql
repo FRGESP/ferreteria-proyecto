@@ -167,7 +167,9 @@ CREATE TABLE SUBCATEGORIA(
     IdSubcategoria INT AUTO_INCREMENT,
     Subcategoria VARCHAR(100) NOT NULL,
     CostoBase DECIMAL(65,30),
-    CONSTRAINT PK_SUBCATEGORIA PRIMARY KEY(IdSubcategoria)
+    IdTipo INT NOT NULL,
+    CONSTRAINT PK_SUBCATEGORIA PRIMARY KEY(IdSubcategoria),
+    CONSTRAINT FK_SUBCATEGORIATOTIPO FOREIGN KEY(IdTipo) REFERENCES TIPOPRODUCTO(IdTipoProdcuto)
 );
 
 CREATE TABLE CARGO(
@@ -691,9 +693,55 @@ CREATE PROCEDURE SP_GETPRECIO(IDPROD INT, RANGOCL INT)
         SELECT ((PRECIOCARGOS*GANANCIARANGO)+COSTOSEXTRAVAR)*PESOVAR AS SINRED;
     end;
 
-DROP PROCEDURE IF EXISTS SP_GETPRODUCTOS;
+DROP PROCEDURE IF EXISTS SP_GET_PRODUCTOS_SELECT;
+CREATE PROCEDURE SP_GET_PRODUCTOS_SELECT(IN IDTIPOIN INT)
+    BEGIN
+        SELECT IdTipoProdcuto AS value, Tipo AS label FROM TIPOPRODUCTO ORDER BY Tipo;
+        IF IDTIPOIN = 0 THEN -- CATEGORIAS
+            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C ORDER BY C.Categoria;
+            ELSE
+            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C WHERE IdTipo = IDTIPOIN ORDER BY C.Categoria;
+        end if;
+        IF IDTIPOIN = 0 THEN -- SUBCATEGORIAS
+                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S ORDER BY S.Subcategoria;
+            ELSE
+                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S WHERE S.IdTipo = IDTIPOIN ORDER BY S.Subcategoria;
+        end if;
+        SELECT IdRangoCliente AS value, Rango AS label FROM RANGOCLIENTE;
+        SELECT Descripcion FROM PRODUCTO;
+    end;
 
-SELECT FN_GETPRECIO(202,6);
+DROP PROCEDURE IF EXISTS SP_GETPRODUCTOS;
+CREATE PROCEDURE SP_GETPRODUCTOS(IN IDTIPOIN INT, IN IDCATEGORIAIN INT, IN IDSUBCATEGORIAIN INT, IN RANGOIN INT, IN PAGINACIONIN INT)
+    BEGIN
+        DECLARE INICIOVAR INT;
+        DECLARE NOMBRECATEGORIA VARCHAR(200);
+        DECLARE NOMBRESUBCATEGORIA VARCHAR(200);
+        DECLARE NOMBRETIPO VARCHAR(200);
+
+        SET NOMBRETIPO = (SELECT T.Tipo FROM TIPOPRODUCTO AS T WHERE T.IdTipoProdcuto = IDTIPOIN LIMIT 1);
+        IF NOMBRETIPO IS NULL THEN
+            SET NOMBRETIPO = '';
+        end if;
+        SET NOMBRECATEGORIA = (SELECT C.Categoria FROM CATEGORIAPRODUCTO AS C WHERE C.IdCategoria = IDCATEGORIAIN LIMIT 1);
+        IF NOMBRECATEGORIA IS NULL THEN
+            SET NOMBRECATEGORIA = '';
+        end if;
+        SET NOMBRESUBCATEGORIA = (SELECT S.Subcategoria FROM SUBCATEGORIA AS S WHERE S.IdSubcategoria = IDSUBCATEGORIAIN LIMIT 1);
+        IF NOMBRESUBCATEGORIA IS NULL THEN
+            SET NOMBRESUBCATEGORIA = '';
+        end if;
+        SET INICIOVAR = (PAGINACIONIN-1)*50;
+
+        SELECT P.IdProducto, P.Descripcion, T.Tipo, C.Categoria, S.Subcategoria, FORMAT(P2.PesoPromedio,2) AS PesoPromedio, FORMAT(S.CostoBase,2) AS CostoBase, FORMAT(P.CostoExtra,2) AS CostoExtra, FORMAT((SELECT FN_GETPRECIO(P.IdProducto,RANGOIN)),2) AS Precio FROM PRODUCTO AS P INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso INNER JOIN CATEGORIAPRODUCTO C on P.IdCategoria = C.IdCategoria INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN TIPOPRODUCTO T on C.IdTipo = T.IdTipoProdcuto WHERE T.Tipo LIKE CONCAT('%',NOMBRETIPO,'%') AND C.Categoria LIKE CONCAT('%',NOMBRECATEGORIA,'%') AND S.Subcategoria LIKE CONCAT('%',NOMBRESUBCATEGORIA,'%') LIMIT INICIOVAR, 50;
+
+        SELECT (CEIL(COUNT(P.IdProducto)/50)) AS NumeroPaginas FROM PRODUCTO AS P INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso INNER JOIN CATEGORIAPRODUCTO C on P.IdCategoria = C.IdCategoria INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN TIPOPRODUCTO T on C.IdTipo = T.IdTipoProdcuto WHERE T.Tipo LIKE CONCAT('%',NOMBRETIPO,'%') AND C.Categoria LIKE CONCAT('%',NOMBRECATEGORIA,'%') AND S.Subcategoria LIKE CONCAT('%',NOMBRESUBCATEGORIA,'%');
+
+    end;
+
+CALL SP_GETPRODUCTOS(2,0,0,1,2);
+
+SELECT FN_GETPRECIO(1,1);
 CALL SP_GETPRECIO(202,1);
 
 SELECT P.IdProducto, P.Descripcion, P.IdSubcategoria, P.CostoExtra, S.CostoBase, FN_GETPRECIO(P.IdProducto,1), P2.PesoInicial, P2.PesoFinal, P2.PesoPromedio FROM PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso WHERE P.IdCategoria = 17;
@@ -776,44 +824,44 @@ INSERT INTO CATEGORIAPRODUCTO (IdTipo, Categoria) VALUES (2, 'Torcido');
 INSERT INTO CATEGORIAPRODUCTO (IdTipo, Categoria) VALUES (2, 'Solera');
 INSERT INTO CATEGORIAPRODUCTO (IdTipo, Categoria) VALUES (2, 'TEE');
 
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubular C18 y C20', 33);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Montén C14', 30);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('PTR y Tubo Negro C30', 30);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubular C 050', 37.5);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubular Galvanizado  C18', 38);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('PTR Galvanizado C14', 37.5);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubular 3 mt', 42);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubo 1/2 Negro Ced 30', 42);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubo Industrial 1/2 y 5/8', 37.5);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tubo Galvanizado', 38);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('PTR C16', 30.5);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubular C18 y C20', 33, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Montén C14', 30, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('PTR y Tubo Negro C30', 30, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubular C 050', 37.5, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubular Galvanizado  C18', 38, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('PTR Galvanizado C14', 37.5, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubular 3 mt', 42, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubo 1/2 Negro Ced 30', 42, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubo Industrial 1/2 y 5/8', 37.5, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tubo Galvanizado', 38, 1);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('PTR C16', 30.5, 1);
 
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Angulo 3/4', 23.70);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Angulo 109', 22.70);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Angulo 1-2 1/2', 22.70);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Angulo 3, 3 1/2, 4', 24);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Redondo 5/16 y 3/16', 23.30);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Redondo 1/4', 23.30);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Cuadrados 1/2 y 12mm Tipo 1', 21.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Redondo 1" y 1-1/4', 22.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Redondo 1/2, 5/8, 3/4', 21.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Redondo 3/8', 22.40);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1/2 X 1/8, 3/16 Placa', 26.40);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1/2 X 1/4 Placa', 27.90);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 3/4 todos los calibres Placa', 25.90);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1" a 1-1/2x1/8 Placa', 25.90);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1-1/2, 2 Comercial', 23.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1-1/4 y 1 x 3/16', 23.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera 1-1/4 y 1 x 3/8 Comercial', 24.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Tee', 27);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Torcido', 23);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Damas Cuadrados', 22.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Viga IPS 4+', 24);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Canal C 4 +', 24.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Solera Placa 2-1/2 en adelante', 25.90);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Viga IPR', 23.50);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Viga IPS 3"', 27.30);
-INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase) VALUES ('Canal C 3"', 26.30);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Angulo 3/4', 23.70, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Angulo 109', 22.70, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Angulo 1-2 1/2', 22.70, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Angulo 3, 3 1/2, 4', 24, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Redondo 5/16 y 3/16', 23.30, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Redondo 1/4', 23.30, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Cuadrados 1/2 y 12mm Tipo 1', 21.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Redondo 1" y 1-1/4', 22.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Redondo 1/2, 5/8, 3/4', 21.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Redondo 3/8', 22.40, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1/2 X 1/8, 3/16 Placa', 26.40, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1/2 X 1/4 Placa', 27.90, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 3/4 todos los calibres Placa', 25.90, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1" a 1-1/2x1/8 Placa', 25.90, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1-1/2, 2 Comercial', 23.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1-1/4 y 1 x 3/16', 23.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera 1-1/4 y 1 x 3/8 Comercial', 24.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Tee', 27, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Torcido', 23, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Damas Cuadrados', 22.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Viga IPS 4+', 24, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Canal C 4 +', 24.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Solera Placa 2-1/2 en adelante', 25.90, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Viga IPR', 23.50, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Viga IPS 3"', 27.30, 2);
+INSERT INTO SUBCATEGORIA (Subcategoria, CostoBase, IdTipo) VALUES ('Canal C 3"', 26.30, 2);
 
 CALL SP_INSERTARPRODUCTO('3x6 C-16', 1, 12.6, 11.9, 11, 0,1001);
 CALL SP_INSERTARPRODUCTO('4x6 C-16', 1, 16.7, 16.0, 11, 0,1001);
@@ -860,7 +908,7 @@ CALL SP_INSERTARPRODUCTO('4 x 2 C-11', 2, 40.0666, 41.6, 2, 0,1001);
 CALL SP_INSERTARPRODUCTO('4 X 2 C14', 2, 25.56, 25.3, 2, 0,1001);
 CALL SP_INSERTARPRODUCTO('6 x 2 C-14', 2, 36.35, 36.35, 2, 0,1001);
 CALL SP_INSERTARPRODUCTO('PTR galv 1 1/2', 2, 12.85, 12.85, 6, 0,1001);
-CALL SP_INSERTARPRODUCTO('PTR galv  1 3/4', 2, 14.5333, 15.6, 6, 0,1001);
+CALL SP_INSERTARPRODUCTO('PTR galv 1 3/4', 2, 14.5333, 15.6, 6, 0,1001);
 CALL SP_INSERTARPRODUCTO('PTR galv 2', 2, 17.6, 17.6, 6, 0,1001);
 CALL SP_INSERTARPRODUCTO('1/2', 3, 5.48, 5.5325, 8, 0,1001);
 CALL SP_INSERTARPRODUCTO('3/4', 3, 7.0, 6.85, 3, 0,1001);
@@ -885,8 +933,8 @@ CALL SP_INSERTARPRODUCTO('123', 6, 7.95, 7.95, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('124', 6, 3.99, 3.99, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('126', 6, 10.0, 10.0, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('127', 6, 10.94, 10.96, 1, 0,1001);
-CALL SP_INSERTARPRODUCTO('154  C-18', 6, 1.46, 1.46, 1, 0,1001);
-CALL SP_INSERTARPRODUCTO('154  C-20', 6, 1.12, 1.15, 1, 0,1001);
+CALL SP_INSERTARPRODUCTO('154 C-18', 6, 1.46, 1.46, 1, 0,1001);
+CALL SP_INSERTARPRODUCTO('154 C-20', 6, 1.12, 1.15, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('159', 6, 10.27, 10.26, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('160', 6, 8.575, 8.6, 1, 0,1001);
 CALL SP_INSERTARPRODUCTO('170', 6, 9.31, 9.3166, 1, 0,1001);

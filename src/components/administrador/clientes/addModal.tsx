@@ -206,7 +206,7 @@ function AddModal({ onGuardado }: AddModalProps) {
 
     return (
         <div>
-            <button className=" ml-1 rounded-md p-2 hover:bg-gray-200" onClick={openModal}>
+            <button className=" rounded-md p-2 hover:bg-gray-200" onClick={openModal}>
                 <Plus
                     className="text-acento stroke-[5]"
                     size={45}

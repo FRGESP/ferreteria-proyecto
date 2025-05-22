@@ -6,33 +6,63 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/clientes/addModal";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
-import { deleteCliente } from "@/actions";
-import dayjs from "dayjs";
+// import { deleteProducto } from "@/actions";
 
-function ClientesDashboard() {
+function ProductosDashboard() {
 
     const router = useRouter();
     const { toast } = useToast();
 
-    interface Cliente {
-        Id: number;
-        Nombre: string;
-        Telefono: string;
-        Direccion: string;
-        Edad: string;
-        Rango: string;
-        Credito: string;
-        CreditoMaximo: string;
-        Fecha: string;
-        Vendedor: string;
+    interface Producto {
+        IdProducto: number;
+        Descripcion: string;
+        Tipo: string;
+        Categoria: string;
+        Subcategoria: string;
+        PesoPromedio: string;
+        CostoBase: string;
+        CostoExtra: string;
+        Precio: string;
     }
 
-    //Guarda la informacion de los Clientes
-    const [Clientes, setClientes] = useState<Cliente[]>([]);
+    //Interface para los selects
+    interface SelectOption {
+        value: string;
+        label: string;
+    }
+
+    interface paginacion {
+        NumeroPaginas: number;
+    }
+
+    //Guarda la informacion de los selects de tipos
+    const [selectOptionsTipos, setSelectOptionsTipos] = useState<SelectOption[]>([]);
+
+    //Guarda la informacion de los selects de categorias
+    const [selectOptionsCategorias, setSelectOptionsCategorias] = useState<SelectOption[]>([]);
+
+    //Guarda la informacion de los selects de subcategorias
+    const [selectOptionsSubcategorias, setSelectOptionsSubcategorias] = useState<SelectOption[]>([]);
+
+    //Guarda la informacion de los selects de rangos
+    const [selectOptionsRangos, setSelectOptionsRangos] = useState<SelectOption[]>([]);
+
+    //Pagina actual
+    const [currentPage, setCurrentPage] = useState(1);
+
+    //Numero de paginas 
+    const [totalPages, setTotalPages] = useState<paginacion>();
+
+    //Guarda la informacion de los Productos
+    const [Productos, setProductos] = useState<Producto[]>([]);
 
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
-        nombre: ""
+        nombre: "",
+        tipo: "0",
+        categoria: "0",
+        subcategoria: "0",
+        rango: "1",
     })
 
     //Bandera para actualizar la tabla
@@ -46,9 +76,27 @@ function ClientesDashboard() {
         setSelectedButton(button);
     };
 
-    const getClientes = async () => {
-        const respose = await axios.get('/api/users/administrador/clientes')
-        setClientes(respose.data);
+    const getProductos = async () => {
+        const respose = await axios.post('/api/users/administrador/productos', {
+            tipo: Number(searchValue.tipo),
+            categoria: Number(searchValue.categoria),
+            subcategoria: Number(searchValue.subcategoria),
+            rango: Number(searchValue.rango),
+            pagina: currentPage,
+        })
+        console.log(respose.data);
+        setProductos(respose.data[0]);
+        setTotalPages({ NumeroPaginas: respose.data[1].NumeroPaginas });
+    }
+
+    const getSelects = async () => {
+        const respose = await axios.get(`/api/users/administrador/productos/selects/${searchValue.tipo}`);
+        const data = respose.data;
+
+        setSelectOptionsTipos(data[0]);
+        setSelectOptionsCategorias(data[1]);
+        setSelectOptionsSubcategorias(data[2]);
+        setSelectOptionsRangos(data[3]);
     }
 
     const handleChange = (e: any) => {
@@ -56,60 +104,74 @@ function ClientesDashboard() {
             ...searchValue,
             [e.target.name]: e.target.value,
         });
+        if (e.target.name === "tipo") {
+            setSearchValue({
+                nombre: "",
+                tipo: e.target.value,
+                categoria: "",
+                subcategoria: "",
+                rango: "1",
+            })
+        }
+        setCurrentPage(1);
     }
 
-    const handleDelete = async (id: number) => {
-        if (confirm("¿Estás seguro de que deseas eliminar a este cliente?")) {
-            try {
-                const response = await deleteCliente(id);
-                if (response.status === 200) {
-                    getClientes();
-                    toast({
-                        title: "Cliente eliminado",
-                        description: "El Cliente ha sido eliminado correctamente",
-                        variant: "success",
-                    });
-                }
-            } catch (error) {
-                toast({
-                    title: "Error",
-                    description: "No se pudo eliminar el Cliente",
-                    variant: "destructive",
-                });
-            }
-        }
-    }
+    // const handleDelete = async (id: number) => {
+    //     if (confirm("¿Estás seguro de que deseas eliminar a este cliente?")) {
+    //         try {
+    //             const response = await deleteProducto(id);
+    //             if (response.status === 200) {
+    //                 getProductos();
+    //                 toast({
+    //                     title: "Producto eliminado",
+    //                     description: "El Producto ha sido eliminado correctamente",
+    //                     variant: "success",
+    //                 });
+    //             }
+    //         } catch (error) {
+    //             toast({
+    //                 title: "Error",
+    //                 description: "No se pudo eliminar el Producto",
+    //                 variant: "destructive",
+    //             });
+    //         }
+    //     }
+    // }
 
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
             const response = await axios.post(`/api/users/administrador/clientes`, searchValue);
             const data = response.data;
-            setClientes(data);
+            setProductos(data);
         }
     }
 
     useEffect(() => {
-        getClientes();
-    }, []);
+        getSelects();
+        getProductos();
+
+    }, [searchValue.tipo]);
+
+    useEffect(() => {
+        getProductos();
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, [currentPage]);
+
+    useEffect(() => {
+        getProductos();
+    }, [searchValue.rango, searchValue.categoria, searchValue.subcategoria]);
 
     useEffect(() => {
         if (update) {
-            getClientes();
+            getProductos();
             setUpdate(false);
         }
     }, [update]);
 
     return (
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
-            <div className="w-[70%] flex items-center justify-center mb-[1%]">
-                <form className="w-full" onSubmit={handleSearch}>
-                    <input onChange={handleChange} type="text" name="nombre" className="w-full border border-solid border-black rounded-xl py-2 px-3 text-lg" placeholder="Ingrese el nombre del cliente" />
-                </form>
-                <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
-                <AddModal onGuardado={() => setUpdate(true)} />
-            </div>
-            <div className="w-full flex justify-center items-center mb-[1%]">
+            <div className="w-full flex justify-center items-center mb-[2.5%]">
                 <div className='w-full flex justify-center items-center gap-3'>
                     <button onClick={() => handleButtonClick("Productos")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Productos" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
                         Productos
@@ -125,49 +187,138 @@ function ClientesDashboard() {
                     </button>
                 </div>
             </div>
+
+            <div className="w-[100%] flex justify-between items-center mb-[1%]">
+                <div className="flex items-center flex-1 gap-2 mr-[2%]">
+                    <form className="relative w-full" onSubmit={handleSearch}>
+                        <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <Search className="text-gray-500" size={20} />
+                        </span>
+                        <input
+                            type="text"
+                            name="nombre"
+                            onChange={handleChange}
+                            className="w-full border border-black rounded-xl py-2 pl-10 pr-3 text-lg"
+                            placeholder="Buscar producto"
+                        />
+                    </form>
+                    {/* <button
+                        type="submit"
+                        className="hover:bg-gray-100 rounded-md"
+                        onClick={handleSearch}
+                    >
+                        <Search strokeWidth={2} size={45} />
+                    </button> */}
+                </div>
+
+                <div className="flex items-center justify-end gap-3 w-fit flex-wrap">
+                    {["Productos", "Tipos"].find(item => item === selectedButton) ? (
+                        <select name="tipo" id="tipo" onChange={handleChange} defaultValue={0} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todos los tipos</option>
+                            {selectOptionsTipos.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                    ) : ''}
+
+                    {["Productos", "Categorias", "Tipos"].find(item => item === selectedButton) ? (
+                        <select value={searchValue.categoria} name="categoria" id="categoria" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todas las categorías</option>
+                            {selectOptionsCategorias.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                    ) : ''}
+                    {["Productos", "Categorias", "Tipos", "Subcategorias"].find(item => item === selectedButton) ? (
+                        <select value={searchValue.subcategoria} name="subcategoria" id="subcategoria" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todas las subcategorias</option>
+                            {selectOptionsSubcategorias.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                    ) : ''}
+                    {selectedButton == "Productos" ? (
+                        <select value={searchValue.rango} name="rango" id="rango" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            {selectOptionsRangos.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                    ) : ''}
+                    <AddModal onGuardado={() => setUpdate(true)} />
+                </div>
+            </div>
+
             {selectedButton === "Productos" ? (
-                <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Teléfono</th>
-                        <th>Dirección</th>
-                        <th>Edad</th>
-                        <th>Rango del Cliente</th>
-                        <th>Saldo</th>
-                        <th>Crédito Máximo</th>
-                        <th>Fecha de Registro</th>
-                        <th>Vendedor</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {Clientes.map((Cliente) => (
-                        <tr key={Cliente.Id}>
-                            <td>{Cliente.Id}</td>
-                            <td>{Cliente.Nombre}</td>
-                            <td>{Cliente.Telefono}</td>
-                            <td>{Cliente.Direccion}</td>
-                            <td>{Cliente.Edad}</td>
-                            <td>{Cliente.Rango}</td>
-                            <td>${Cliente.Credito}</td>
-                            <td>${Cliente.CreditoMaximo}</td>
-                            <td>{dayjs(Cliente.Fecha).format("DD/MM/YYYY")}</td>
-                            <td><p className={`${Cliente.Vendedor ? '' : "bg-red-500 text-white"} rounded-lg w-fit py-2 px-1`}>{Cliente.Vendedor ? Cliente.Vendedor : 'Sin Vendedor Asignado'}</p></td>
-                            <td>
-                                <div className="flex gap-3 w-full justify-center">
-                                    <UpdateModal IdCliente={Cliente.Id} onGuardado={() => setUpdate(true)} />
-                                    <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} onClick={() => handleDelete(Cliente.Id)} /></button>
-                                </div>
-                            </td>
+                Productos.length > 0 ? (
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descripción</th>
+                            <th>Tipo</th>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Peso Promedio</th>
+                            <th>Costo Base</th>
+                            <th>Costo Extra</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
                         </tr>
+                    </thead>
+                    <tbody>
+                        {Productos.map((Producto) => (
+                            <tr key={Producto.IdProducto}>
+                                <td>{Producto.IdProducto}</td>
+                                <td>{Producto.Descripcion}</td>
+                                <td>{Producto.Tipo}</td>
+                                <td>{Producto.Categoria}</td>
+                                <td>{Producto.Subcategoria}</td>
+                                <td>{Producto.PesoPromedio} Kg</td>
+                                <td>${Producto.CostoBase}</td>
+                                <td>${Producto.CostoExtra}</td>
+                                <td>${Producto.Precio}</td>
+                                <td>
+                                    <div className="flex gap-3 w-full justify-center">
+                                        <UpdateModal IdCliente={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
+                                        <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} /></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                ) : (
+                    <div className="flex justify-center items-center w-full h-full">
+                        <p className="text-lg font-bold">No se encontraron productos</p>
+                    </div>
+                )
+
+            ) : ''}
+            {totalPages && (
+                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-4">
+                    {Array.from({ length: totalPages.NumeroPaginas }, (_, i) => (
+                        <button
+                            key={i + 1}
+                            className={`px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-acento text-white' : 'bg-gray-200'}`}
+                            onClick={() => setCurrentPage(i + 1)}
+                        >
+                            {i + 1}
+                        </button>
                     ))}
-                </tbody>
-            </table>
-            ):''}
+                </div>
+            </div>
+            )}
         </div>
     )
 }
 
-export default ClientesDashboard
+export default ProductosDashboard
