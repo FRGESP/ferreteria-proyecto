@@ -6,7 +6,6 @@ import { Plus } from "lucide-react";
 import axios from "axios";
 import { addEmpleado } from "@/actions";
 import { useRouter } from "next/navigation";
-import { on } from "events";
 
 interface AddModalProps {
   onGuardado: () => void;
