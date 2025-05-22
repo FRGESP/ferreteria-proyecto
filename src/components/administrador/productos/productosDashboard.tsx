@@ -1,12 +1,13 @@
 "use client"
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { Pencil, Trash, Search, Plus } from "lucide-react";
+import { Trash, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/clientes/addModal";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
 // import { deleteProducto } from "@/actions";
+
 
 function ProductosDashboard() {
 
@@ -35,6 +36,11 @@ function ProductosDashboard() {
         NumeroPaginas: number;
     }
 
+    //interface para los nombres de los productos
+    interface Nombres {
+        Descripcion: string;
+    }
+
     //Guarda la informacion de los selects de tipos
     const [selectOptionsTipos, setSelectOptionsTipos] = useState<SelectOption[]>([]);
 
@@ -56,6 +62,15 @@ function ProductosDashboard() {
     //Guarda la informacion de los Productos
     const [Productos, setProductos] = useState<Producto[]>([]);
 
+    //Guarda los nombres de los productos
+    const [nombres, setNombres] = useState<Nombres[]>([]);
+
+    //Bandera para saber si se esta buscando un producto
+    const [isSearching, setIsSearching] = useState(false);
+
+    //Bandera para cuando se escoge una opcion del input del nombre
+    const [isNameSelected, setIsNameSelected] = useState(false);
+
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
         nombre: "",
@@ -76,15 +91,17 @@ function ProductosDashboard() {
         setSelectedButton(button);
     };
 
-    const getProductos = async () => {
+    const getProductos = async (rangoProp?: string) => {
+        // console.log("searchValue", searchValue);
         const respose = await axios.post('/api/users/administrador/productos', {
             tipo: Number(searchValue.tipo),
             categoria: Number(searchValue.categoria),
             subcategoria: Number(searchValue.subcategoria),
-            rango: Number(searchValue.rango),
+            rango: Number(rangoProp ? rangoProp : searchValue.rango),
+            nombre: searchValue.nombre,
             pagina: currentPage,
         })
-        console.log(respose.data);
+        // console.log(respose.data);
         setProductos(respose.data[0]);
         setTotalPages({ NumeroPaginas: respose.data[1].NumeroPaginas });
     }
@@ -97,23 +114,38 @@ function ProductosDashboard() {
         setSelectOptionsCategorias(data[1]);
         setSelectOptionsSubcategorias(data[2]);
         setSelectOptionsRangos(data[3]);
+        setNombres(data[4]);
     }
 
     const handleChange = (e: any) => {
-        setSearchValue({
-            ...searchValue,
-            [e.target.name]: e.target.value,
-        });
+
         if (e.target.name === "tipo") {
             setSearchValue({
+                ...searchValue,
                 nombre: "",
                 tipo: e.target.value,
                 categoria: "",
                 subcategoria: "",
-                rango: "1",
             })
+        } else if (e.target.name !== "nombre" && e.target.name !== "rango") {
+            setSearchValue({
+                ...searchValue,
+                [e.target.name]: e.target.value,
+                nombre: "",
+            });
+        } else {
+            setSearchValue({
+                ...searchValue,
+                [e.target.name]: e.target.value,
+            });
+            if (e.target.name === "rango") {
+                getProductos(e.target.value);
+            }
         }
-        setCurrentPage(1);
+
+        if (e.target.name !== "rango") {
+            setCurrentPage(1);
+        }
     }
 
     // const handleDelete = async (id: number) => {
@@ -141,11 +173,33 @@ function ProductosDashboard() {
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
-            const response = await axios.post(`/api/users/administrador/clientes`, searchValue);
-            const data = response.data;
-            setProductos(data);
+            setSearchValue({
+                ...searchValue,
+                tipo: "0",
+                categoria: "0",
+                subcategoria: "0",
+            })
+            getProductos();
         }
+        // Quitar el focus del input activo
+        (document.activeElement as HTMLElement)?.blur();
     }
+
+    //Funcion para cuando se escoge una opcion del input del nombre
+    const handleNombreSelected = (nombre: string) => {
+        setIsNameSelected(true);
+        setSearchValue({
+            ...searchValue,
+            nombre: nombre,
+            tipo: "0",
+            categoria: "0",
+            subcategoria: "0",
+        });
+    }
+
+    const nombresFiltrados = nombres.filter((nombre) =>
+        nombre.Descripcion.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(searchValue.nombre.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase())
+    );
 
     useEffect(() => {
         getSelects();
@@ -159,8 +213,17 @@ function ProductosDashboard() {
     }, [currentPage]);
 
     useEffect(() => {
-        getProductos();
+        if (searchValue.nombre === "") {
+            getProductos();
+        }
     }, [searchValue.rango, searchValue.categoria, searchValue.subcategoria]);
+
+    useEffect(() => {
+        if (isNameSelected) {
+            getProductos();
+            setIsNameSelected(false);
+        }
+    }, [searchValue.nombre]);
 
     useEffect(() => {
         if (update) {
@@ -198,9 +261,30 @@ function ProductosDashboard() {
                             type="text"
                             name="nombre"
                             onChange={handleChange}
+                            value={searchValue.nombre}
+                            onFocus={() => setIsSearching(true)}
+                            onBlur={() => setTimeout(() => setIsSearching(false), 300)}
+                            autoComplete="off"
                             className="w-full border border-black rounded-xl py-2 pl-10 pr-3 text-lg"
                             placeholder="Buscar producto"
                         />
+                        {isSearching && (
+                            <ul className="absolute inset-y-10 left-0 border mt-2 rounded shadow bg-white h-60 overflow-y-auto">
+                                {nombresFiltrados.length > 0 ? (
+                                    nombresFiltrados.map((producto) => (
+                                        <li
+                                            key={producto.Descripcion}
+                                            className="p-2 hover:bg-gray-100 cursor-pointer"
+                                            onClick={() => handleNombreSelected(producto.Descripcion)}
+                                        >
+                                            {producto.Descripcion}
+                                        </li>
+                                    ))
+                                ) : (
+                                    <li className="p-2 text-gray-500">No hay resultados</li>
+                                )}
+                            </ul>
+                        )}
                     </form>
                     {/* <button
                         type="submit"
@@ -211,9 +295,9 @@ function ProductosDashboard() {
                     </button> */}
                 </div>
 
-                <div className="flex items-center justify-end gap-3 w-fit flex-wrap">
+                <div className="flex items-center justify-end gap-3 w-fit max-w-[60%] flex-wrap">
                     {["Productos", "Tipos"].find(item => item === selectedButton) ? (
-                        <select name="tipo" id="tipo" onChange={handleChange} defaultValue={0} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                        <select value={searchValue.tipo} name="tipo" id="tipo" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
                             <option value="0">Todos los tipos</option>
                             {selectOptionsTipos.map((tipo) => (
                                 <option key={tipo.value} value={tipo.value}>
@@ -259,42 +343,42 @@ function ProductosDashboard() {
             {selectedButton === "Productos" ? (
                 Productos.length > 0 ? (
                     <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Descripción</th>
-                            <th>Tipo</th>
-                            <th>Categoría</th>
-                            <th>Subcategoría</th>
-                            <th>Peso Promedio</th>
-                            <th>Costo Base</th>
-                            <th>Costo Extra</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Productos.map((Producto) => (
-                            <tr key={Producto.IdProducto}>
-                                <td>{Producto.IdProducto}</td>
-                                <td>{Producto.Descripcion}</td>
-                                <td>{Producto.Tipo}</td>
-                                <td>{Producto.Categoria}</td>
-                                <td>{Producto.Subcategoria}</td>
-                                <td>{Producto.PesoPromedio} Kg</td>
-                                <td>${Producto.CostoBase}</td>
-                                <td>${Producto.CostoExtra}</td>
-                                <td>${Producto.Precio}</td>
-                                <td>
-                                    <div className="flex gap-3 w-full justify-center">
-                                        <UpdateModal IdCliente={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
-                                        <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} /></button>
-                                    </div>
-                                </td>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descripción</th>
+                                <th>Tipo</th>
+                                <th>Categoría</th>
+                                <th>Subcategoría</th>
+                                <th>Peso Promedio</th>
+                                <th>Costo Base</th>
+                                <th>Costo Extra</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {Productos.map((Producto) => (
+                                <tr key={Producto.IdProducto}>
+                                    <td>{Producto.IdProducto}</td>
+                                    <td>{Producto.Descripcion}</td>
+                                    <td>{Producto.Tipo}</td>
+                                    <td>{Producto.Categoria}</td>
+                                    <td>{Producto.Subcategoria}</td>
+                                    <td>{Producto.PesoPromedio} Kg</td>
+                                    <td>${Producto.CostoBase}</td>
+                                    <td>${Producto.CostoExtra}</td>
+                                    <td>${Producto.Precio}</td>
+                                    <td>
+                                        <div className="flex gap-3 w-full justify-center">
+                                            <UpdateModal IdCliente={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
+                                            <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} /></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 ) : (
                     <div className="flex justify-center items-center w-full h-full">
                         <p className="text-lg font-bold">No se encontraron productos</p>
@@ -304,18 +388,18 @@ function ProductosDashboard() {
             ) : ''}
             {totalPages && (
                 <div className="flex gap-2 mt-4">
-                <div className="flex gap-2 mt-4">
-                    {Array.from({ length: totalPages.NumeroPaginas }, (_, i) => (
-                        <button
-                            key={i + 1}
-                            className={`px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-acento text-white' : 'bg-gray-200'}`}
-                            onClick={() => setCurrentPage(i + 1)}
-                        >
-                            {i + 1}
-                        </button>
-                    ))}
+                    <div className="flex gap-2 mt-4">
+                        {Array.from({ length: totalPages.NumeroPaginas }, (_, i) => (
+                            <button
+                                key={i + 1}
+                                className={`px-3 py-1 rounded ${currentPage === i + 1 ? 'bg-acento text-white' : 'bg-gray-200'}`}
+                                onClick={() => setCurrentPage(i + 1)}
+                            >
+                                {i + 1}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-            </div>
             )}
         </div>
     )
