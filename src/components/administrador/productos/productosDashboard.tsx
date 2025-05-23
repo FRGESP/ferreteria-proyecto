@@ -26,6 +26,12 @@ function ProductosDashboard() {
         Precio: string;
     }
 
+    interface Tipo {
+        IdTipo: number;
+        Tipo: string;
+        Cantidad: string;
+    }
+
     //Interface para los selects
     interface SelectOption {
         value: string;
@@ -38,6 +44,7 @@ function ProductosDashboard() {
 
     //interface para los nombres de los productos
     interface Nombres {
+        Id: string;
         Descripcion: string;
     }
 
@@ -62,7 +69,10 @@ function ProductosDashboard() {
     //Guarda la informacion de los Productos
     const [Productos, setProductos] = useState<Producto[]>([]);
 
-    //Guarda los nombres de los productos
+    //Guarda la informacion de los tipos
+    const [Tipos, setTipos] = useState<Tipo[]>([]);
+
+    //Guarda los nombres de los productos o de cualquier otra información
     const [nombres, setNombres] = useState<Nombres[]>([]);
 
     //Bandera para saber si se esta buscando un producto
@@ -115,6 +125,18 @@ function ProductosDashboard() {
         setSelectOptionsSubcategorias(data[2]);
         setSelectOptionsRangos(data[3]);
         setNombres(data[4]);
+    }
+
+    //Funcion para obtener el nombre de los tipos
+    const getTipos = async () => {
+        const respose = await axios.post('/api/users/administrador/productos/tipos', { nombre: searchValue.nombre, pagina: currentPage });
+        const data = respose.data;
+        setTipos(data[0]);
+        setNombres(data[1]);
+        setTotalPages({ NumeroPaginas: data[2].NumeroPaginas });
+        console.log("tipos", data[0]);
+        console.log("nombres", data[1]);
+        console.log("paginas", data[2].NumeroPaginas);
     }
 
     const handleChange = (e: any) => {
@@ -173,13 +195,17 @@ function ProductosDashboard() {
     const handleSearch = async (e: any) => {
         e.preventDefault();
         if (searchValue) {
-            setSearchValue({
-                ...searchValue,
-                tipo: "0",
-                categoria: "0",
-                subcategoria: "0",
-            })
-            getProductos();
+            if (selectedButton === "Productos") {
+                setSearchValue({
+                    ...searchValue,
+                    tipo: "0",
+                    categoria: "0",
+                    subcategoria: "0",
+                })
+                getProductos();
+            } else if (selectedButton === "Tipos") {
+                getTipos();
+            }
         }
         // Quitar el focus del input activo
         (document.activeElement as HTMLElement)?.blur();
@@ -202,36 +228,63 @@ function ProductosDashboard() {
     );
 
     useEffect(() => {
-        getSelects();
-        getProductos();
+        if (selectedButton === "Productos") {
+            getSelects();
+            getProductos();
+        }
 
     }, [searchValue.tipo]);
 
     useEffect(() => {
-        getProductos();
+        if (selectedButton === "Productos") {
+            getProductos();
+        } else if (selectedButton === "Tipos") {
+            getTipos();
+            getSelects();
+        }
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, [currentPage]);
 
     useEffect(() => {
-        if (searchValue.nombre === "") {
+        if (searchValue.nombre === "" && selectedButton === "Productos") {
             getProductos();
         }
     }, [searchValue.rango, searchValue.categoria, searchValue.subcategoria]);
 
     useEffect(() => {
         if (isNameSelected) {
-            getProductos();
+            if (selectedButton === "Productos") getProductos();
+            else if (selectedButton === "Tipos") getTipos();
             setIsNameSelected(false);
         }
     }, [searchValue.nombre]);
 
     useEffect(() => {
         if (update) {
-            getProductos();
-            getSelects();
+            if (selectedButton === "Productos") {
+                getProductos();
+                getSelects();
+            }
             setUpdate(false);
         }
     }, [update]);
+
+    useEffect(() => {
+        if (selectedButton === "Tipos") {
+            setSearchValue({
+                nombre: "",
+                tipo: "0",
+                categoria: "0",
+                subcategoria: "0",
+                rango: "1",
+            })
+            getTipos();
+        }
+        if (selectedButton === "Productos") {
+            setTotalPages({ NumeroPaginas: 0 });
+            setCurrentPage(1);
+        }
+    }, [selectedButton]);
 
     return (
         <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
@@ -253,7 +306,7 @@ function ProductosDashboard() {
             </div>
 
             <div className="w-[100%] flex justify-between items-center mb-[1%]">
-                <div className="flex items-center flex-1 gap-2 mr-[2%]">
+                <div className={`flex items-center flex-1 gap-2 ${selectedButton === "Productos" ? "mr-[2%]" : "mr-1"}`}>
                     <form className="relative w-full" onSubmit={handleSearch}>
                         <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <Search className="text-gray-500" size={20} />
@@ -267,18 +320,18 @@ function ProductosDashboard() {
                             onBlur={() => setTimeout(() => setIsSearching(false), 300)}
                             autoComplete="off"
                             className="w-full border border-black rounded-xl py-2 pl-10 pr-3 text-lg"
-                            placeholder="Buscar producto"
+                            placeholder={`Buscar ${selectedButton === "Productos" ? "producto" : selectedButton === "Tipos" ? "tipo" : selectedButton === "Categorias" ? "categoría" : "subcategoría"}`}
                         />
                         {isSearching && (
-                            <ul className="absolute inset-y-10 left-0 border mt-2 rounded shadow bg-white h-60 overflow-y-auto">
+                            <ul className="absolute inset-y-10 left-0 border mt-2 rounded shadow bg-white max-h-60 h-fit overflow-y-auto">
                                 {nombresFiltrados.length > 0 ? (
-                                    nombresFiltrados.map((producto) => (
+                                    nombresFiltrados.map((nombre) => (
                                         <li
-                                            key={producto.Descripcion}
+                                            key={nombre.Id}
                                             className="p-2 hover:bg-gray-100 cursor-pointer"
-                                            onClick={() => handleNombreSelected(producto.Descripcion)}
+                                            onClick={() => handleNombreSelected(nombre.Descripcion)}
                                         >
-                                            {producto.Descripcion}
+                                            {nombre.Descripcion}
                                         </li>
                                     ))
                                 ) : (
@@ -296,7 +349,7 @@ function ProductosDashboard() {
                     </button> */}
                 </div>
 
-                <div className="flex items-center justify-end gap-3 w-fit max-w-[80%] flex-wrap">
+                {/* <div className="flex items-center justify-end gap-3 w-fit max-w-[80%] flex-wrap">
                     {["Productos", "Tipos"].find(item => item === selectedButton) ? (
                         <select value={searchValue.tipo} name="tipo" id="tipo" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
                             <option value="0">Todos los tipos</option>
@@ -338,7 +391,44 @@ function ProductosDashboard() {
                         </select>
                     ) : ''}
                     <AddModal onGuardado={() => setUpdate(true)} />
-                </div>
+                </div> */}
+                {selectedButton === "Productos" && (
+                    <div className="flex items-center justify-end gap-3 w-fit max-w-[80%] flex-wrap">
+                        <select value={searchValue.tipo} name="tipo" id="tipo" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todos los tipos</option>
+                            {selectOptionsTipos.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+
+                        <select value={searchValue.categoria} name="categoria" id="categoria" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todas las categorías</option>
+                            {selectOptionsCategorias.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                        <select value={searchValue.subcategoria} name="subcategoria" id="subcategoria" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            <option value="0">Todas las subcategorias</option>
+                            {selectOptionsSubcategorias.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                        <select value={searchValue.rango} name="rango" id="rango" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
+                            {selectOptionsRangos.map((tipo) => (
+                                <option key={tipo.value} value={tipo.value}>
+                                    {tipo.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                )}
+                <AddModal onGuardado={() => setUpdate(true)} />
             </div>
 
             {selectedButton === "Productos" ? (
@@ -387,6 +477,40 @@ function ProductosDashboard() {
                 )
 
             ) : ''}
+
+            {selectedButton === "Tipos" && (
+                <table className="table-auto border-collapse w-full">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th className="text-left px-4 py-2">Cantidad de Productos</th>
+                            <th className="text-center px-4 py-2">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Tipos.map((Tipo) => (
+                            <tr key={Tipo.IdTipo} className="border-t">
+                                <td>{Tipo.IdTipo}</td>
+                                <td>{Tipo.Tipo}</td>
+                                <td>{Tipo.Cantidad}</td>
+                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                    <div className="flex gap-2 justify-center">
+                                        <UpdateModal IdCliente={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
+                                        <button
+                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
+                                            onClick={() => handleDelete(Tipo.IdTipo)}
+                                        >
+                                            <Trash strokeWidth={2} size={20} />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
+
             {totalPages && (
                 <div className="flex gap-2 mt-4">
                     <div className="flex gap-2 mt-4">
