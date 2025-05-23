@@ -92,8 +92,8 @@ function RegistrosDashboard() {
                 <select defaultValue={'CLIENTE'} onChange={handleChange} name="tabla" className=" bg-[#ffffff] rounded-xl py-2 px-3 text-lg border border-solid border-black">
                     <option value="CLIENTE">Clientes</option>
                     <option value="EMPLEADO">Empleados</option>
+                    <option value="PRODUCTO">Productos</option>
                     {/* <option value="sucursales">Sucursales</option>
-                    <option value="productos">Productos</option>
                     <option value="ventas">Ventas</option> */}
                 </select>
                 <form className="w-full" onSubmit={handleSearch}>
@@ -101,7 +101,8 @@ function RegistrosDashboard() {
                 </form>
                 <button className="hover:bg-gray-100 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
             </div>
-            <table>
+            {Registros.length > 0 ? (
+                <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -129,6 +130,11 @@ function RegistrosDashboard() {
                     ))}
                 </tbody>
             </table>
+            ) : (
+                <div className="flex items-center justify-center h-full">
+                    <p className="text-lg font-bold">No hay registros disponibles</p>
+                </div>
+            )}
         </div>
     )
 }

@@ -4,9 +4,9 @@ import axios from "axios";
 import { Trash, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
-import AddModal from "@/components/administrador/clientes/addModal";
+import AddModal from "@/components/administrador/productos/addModal";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
-// import { deleteProducto } from "@/actions";
+import { deleteProducto } from "@/actions";
 
 
 function ProductosDashboard() {
@@ -148,27 +148,27 @@ function ProductosDashboard() {
         }
     }
 
-    // const handleDelete = async (id: number) => {
-    //     if (confirm("¿Estás seguro de que deseas eliminar a este cliente?")) {
-    //         try {
-    //             const response = await deleteProducto(id);
-    //             if (response.status === 200) {
-    //                 getProductos();
-    //                 toast({
-    //                     title: "Producto eliminado",
-    //                     description: "El Producto ha sido eliminado correctamente",
-    //                     variant: "success",
-    //                 });
-    //             }
-    //         } catch (error) {
-    //             toast({
-    //                 title: "Error",
-    //                 description: "No se pudo eliminar el Producto",
-    //                 variant: "destructive",
-    //             });
-    //         }
-    //     }
-    // }
+    const handleDelete = async (id: number) => {
+        if (confirm("¿Estás seguro de que deseas eliminar a este producto?")) {
+            try {
+                const response = await deleteProducto(id);
+                if (response.status === 200) {
+                    getProductos();
+                    toast({
+                        title: "Producto eliminado",
+                        description: "El Producto ha sido eliminado correctamente",
+                        variant: "success",
+                    });
+                }
+            } catch (error) {
+                toast({
+                    title: "Error",
+                    description: "No se pudo eliminar el Producto",
+                    variant: "destructive",
+                });
+            }
+        }
+    }
 
     const handleSearch = async (e: any) => {
         e.preventDefault();
@@ -228,6 +228,7 @@ function ProductosDashboard() {
     useEffect(() => {
         if (update) {
             getProductos();
+            getSelects();
             setUpdate(false);
         }
     }, [update]);
@@ -243,10 +244,10 @@ function ProductosDashboard() {
                         Tipos
                     </button>
                     <button onClick={() => handleButtonClick("Categorias")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Categorias" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
-                        Categorias
+                        Categorías
                     </button>
                     <button onClick={() => handleButtonClick("Subcategorias")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Subcategorias" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
-                        Subcategorias
+                        Subcategorías
                     </button>
                 </div>
             </div>
@@ -295,7 +296,7 @@ function ProductosDashboard() {
                     </button> */}
                 </div>
 
-                <div className="flex items-center justify-end gap-3 w-fit max-w-[60%] flex-wrap">
+                <div className="flex items-center justify-end gap-3 w-fit max-w-[80%] flex-wrap">
                     {["Productos", "Tipos"].find(item => item === selectedButton) ? (
                         <select value={searchValue.tipo} name="tipo" id="tipo" onChange={handleChange} className="rounded-xl py-[0.6rem] px-3 text-lg border border-solid border-black w-fit">
                             <option value="0">Todos los tipos</option>
@@ -372,7 +373,7 @@ function ProductosDashboard() {
                                     <td>
                                         <div className="flex gap-3 w-full justify-center">
                                             <UpdateModal IdCliente={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
-                                            <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" ><Trash strokeWidth={2} size={25} /></button>
+                                            <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" onClick={() => handleDelete(Producto.IdProducto)}><Trash strokeWidth={2} size={25} /></button>
                                         </div>
                                     </td>
                                 </tr>

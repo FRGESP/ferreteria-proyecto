@@ -35,28 +35,40 @@ interface Sucursal {
 
 //Interface para la relacion cliente-empleado
 interface ClienteEmpleado {
-  IdCliente: number;
-  IdEmpleado: string;
-  NombreCliente: string;
-  TelefonoCliente: string;
-  DireccionCliente: string;
-  RangoCliente: string;
-  NombreEmpleado: string;
+    IdCliente: number;
+    IdEmpleado: string;
+    NombreCliente: string;
+    TelefonoCliente: string;
+    DireccionCliente: string;
+    RangoCliente: string;
+    NombreEmpleado: string;
 }
 
 //Interface para el cliente
 interface Cliente {
-        apellidoPat: string;
-        apellidoMat: string;
-        edad: string;
-        telefono: string;
-        codigo: string;
-        calle: string;
-        colonia: string;
-        rango: string;
-        creditoMaximo: string;
-        vendedor: string;
-    }
+    apellidoPat: string;
+    apellidoMat: string;
+    edad: string;
+    telefono: string;
+    codigo: string;
+    calle: string;
+    colonia: string;
+    rango: string;
+    creditoMaximo: string;
+    vendedor: string;
+}
+
+//Interface para los productos
+interface Producto {
+    nombre: string;
+    tipo: string;
+    categoria: string;
+    subcategoria: string;
+    pesoInicial: string;
+    pesoFinal: string;
+    costoExtra: string;
+    costoBase: string;
+}
 
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
@@ -84,7 +96,7 @@ export const login = async (credentials: Credentials) => {
         session.lastname = datos.Apellido;
         session.sucursal = datos.Sucursal;
 
-        if(datos.IdRol === 3) {
+        if (datos.IdRol === 3) {
             session.isAdmin = true;
         }
 
@@ -186,7 +198,7 @@ export const updateBitacoraEmpleado = async (id: number, bitacora: Bitacora[]) =
 
 export const addClienteToEmpleado = async (clientesAsignar: ClienteEmpleado[], clientesEliminar: ClienteEmpleado[], IdVendedor: string) => {
     const session = await getSession();
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/empleados/clientes/${session.userId}`, { "agregar": clientesAsignar,"eliminar": clientesEliminar, "IdVendedor": IdVendedor })
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/empleados/clientes/${session.userId}`, { "agregar": clientesAsignar, "eliminar": clientesEliminar, "IdVendedor": IdVendedor })
     const status = response.status;
     return status;
 }
@@ -226,4 +238,21 @@ export const updateBitacoraCliente = async (id: number, bitacora: Bitacora[]) =>
         }
     })
 
+}
+
+//Administrador/Productos/Productos
+
+export const addProducto = async (producto: Producto, metodo: number) => {
+    const session = await getSession();
+    console.log(producto)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/${metodo}/${session.userId}`,producto)
+    const status = response.status;
+    return status;
+}
+
+export const deleteProducto = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
 }
