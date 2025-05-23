@@ -5,8 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Plus, X } from "lucide-react";
 import axios from "axios";
 import { addProducto } from "@/actions";
-import { useRouter } from "next/navigation";
-import DireccionForm from "@/components/administrador/sucursales/direccionFrom";
+
 
 interface AddModalProps {
     onGuardado: () => void;
@@ -21,7 +20,6 @@ function AddModal({ onGuardado }: AddModalProps) {
     }
 
     const { toast } = useToast();
-    const router = useRouter();
 
 
     //Controla el estado del modal

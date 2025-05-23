@@ -70,6 +70,11 @@ interface Producto {
     costoBase: string;
 }
 
+//Interface para los tipos de productos
+interface Tipo {
+    nombre: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -255,4 +260,14 @@ export const deleteProducto = async (id: number) => {
     const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/${id}/${session.userId}`);
     const data = response.data;
     return data;
+}
+
+//Administrador/Productos/Productos
+
+export const addTipo = async (tipo: Tipo) => {
+    const session = await getSession();
+    console.log(tipo)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/tipos/${session.userId}`,tipo)
+    const status = response.status;
+    return status;
 }

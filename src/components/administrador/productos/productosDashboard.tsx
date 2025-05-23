@@ -5,6 +5,7 @@ import { Trash, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/productos/addModal";
+import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
 import { deleteProducto } from "@/actions";
 
@@ -320,6 +321,8 @@ function ProductosDashboard() {
             if (selectedButton === "Productos") {
                 getProductos();
                 getSelects();
+            } else if (selectedButton === "Tipos") {
+                getTipos();
             }
             setUpdate(false);
         }
@@ -521,7 +524,12 @@ function ProductosDashboard() {
                         </select>
                     </div>
                 )}
-                <AddModal onGuardado={() => setUpdate(true)} />
+                {selectedButton === "Productos" && (
+                    <AddModal onGuardado={() => setUpdate(true)} />
+                )}
+                {selectedButton === "Tipos" && (
+                    <AddModalTipo onGuardado={() => setUpdate(true)} />
+                )}
             </div>
 
             {selectedButton === "Productos" ? (
