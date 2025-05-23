@@ -81,6 +81,12 @@ interface Tipo {
     gMayoreo2: string;
 }
 
+//Interface para la categoria de productos
+interface Categoria {
+    nombre: string;
+    tipo: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -268,7 +274,7 @@ export const deleteProducto = async (id: number) => {
     return data;
 }
 
-//Administrador/Productos/Productos
+//Administrador/Productos/Tipos
 
 export const addTipo = async (tipo: Tipo) => {
     const session = await getSession();
@@ -283,4 +289,13 @@ export const deleteTipo = async (id: number) => {
     const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/tipos/${id}/${session.userId}`);
     const data = response.data;
     return data;
+}
+
+//Administrador/Productos/Categorias
+
+export const addCategoria = async (categoria: Categoria) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/categorias/${session.userId}`,categoria)
+    const status = response.status;
+    return status;
 }

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
+import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
 import { deleteProducto, deleteTipo } from "@/actions";
 
@@ -551,6 +552,9 @@ function ProductosDashboard() {
                 )}
                 {selectedButton === "Tipos" && (
                     <AddModalTipo onGuardado={() => setUpdate(true)} />
+                )}
+                {selectedButton === "Categorias" && (
+                    <AddModalCategorias onGuardado={() => setUpdate(true)} />
                 )}
             </div>
 

@@ -9,6 +9,6 @@ export async function POST(request, { params }) {
         return NextResponse.json(response, { status: 200 });
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ error: "Error al obtener registros" }, { status: 500 });
+        return NextResponse.json({ error: "Error al registrar el tipo de producto" }, { status: 500 });
     }
 }
