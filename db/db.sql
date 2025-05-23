@@ -936,7 +936,7 @@ CREATE PROCEDURE SP_DELETETIPOS(IN ID INT, IN USERID INT)
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'TIPO', ID, 'Todos', NOMBREVAR, '');
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'CATEGORIA', C.IdCategoria, 'Todos',C.Categoria, '' FROM CATEGORIAPRODUCTO AS C WHERE C.IdTipo = ID AND C.Estatus = 1;
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'SUBCATEGORIA', S.IdSubcategoria, 'Todos', S.Subcategoria, '' FROM SUBCATEGORIA S WHERE S.IdTipo = ID AND S.ESTATUS = 1;
-        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM TIPOPRODUCTO AS T INNER JOIN CATEGORIAPRODUCTO AS C INNER JOIN PRODUCTO AS P ON C.IdCategoria = P.IdCategoria WHERE P.Estatus = 1 AND C.IdTipo = ID = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM TIPOPRODUCTO AS T INNER JOIN CATEGORIAPRODUCTO AS C ON T.IdTipoProdcuto = C.IdTipo INNER JOIN PRODUCTO AS P ON C.IdCategoria = P.IdCategoria WHERE P.Estatus = 1 AND C.IdTipo = ID;
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'TIPOGANANCIA', R.IdRangoCliente, 'Todos', TG.Ganancia, '' FROM TIPOGANANCIA AS TG INNER JOIN RANGOCLIENTE R on TG.IdRangoCliente = R.IdRangoCliente WHERE TG.IdTipo = ID;
         UPDATE  CATEGORIAPRODUCTO AS C SET C.Estatus = 4 WHERE C.IdTipo = ID AND C.Estatus = 1;
         UPDATE PRODUCTO AS P INNER JOIN CATEGORIAPRODUCTO C2 on P.IdCategoria = C2.IdCategoria INNER JOIN TIPOPRODUCTO T2 on C2.IdTipo = T2.IdTipoProdcuto SET P.Estatus = 4 WHERE P.Estatus = 1 AND C2.IdTipo = ID;
@@ -979,12 +979,23 @@ CREATE PROCEDURE SP_GETSUBCATEGORIAS(IN NOMBREIN VARCHAR(100), IN PAGINACIONIN I
         SELECT (CEIL(COUNT(S.IdSubcategoria)/50)) AS NumeroPaginas FROM SUBCATEGORIA AS S WHERE S.Subcategoria LIKE CONCAT('%',NOMBREIN,'%') AND S.Estatus = 1;
     end;
 
+DROP PROCEDURE IF EXISTS SP_DELETECATEGORIA;
+CREATE PROCEDURE SP_DELETECATEGORIA(IN ID INT, IN USERID INT)
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+        SET NOMBREVAR = (SELECT Categoria FROM CATEGORIAPRODUCTO WHERE IdCategoria = ID);
+        UPDATE CATEGORIAPRODUCTO SET Estatus = 4 WHERE IdCategoria = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'CATEGORIA', ID, 'Todos', NOMBREVAR, '');
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM CATEGORIAPRODUCTO AS C INNER JOIN PRODUCTO AS P ON C.IdCategoria = P.IdCategoria WHERE P.Estatus = 1 AND C.IdCategoria = ID;
+
+        UPDATE PRODUCTO AS P INNER JOIN CATEGORIAPRODUCTO C2 on P.IdCategoria = C2.IdCategoria SET P.Estatus = 4 WHERE P.Estatus = 1 AND C2.IdCategoria = ID;
+    end;
 
 
 CALL SP_GETSUBCATEGORIAS('',1);
 CALL SP_GETSUBCATEGORIAS('',1);
 
-
+SELECT * FROM CATEGORIAPRODUCTO;
 
 CALL SP_GETPRODUCTOS(0,12,0,1,'',1);
 

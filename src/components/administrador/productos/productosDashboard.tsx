@@ -8,7 +8,7 @@ import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
-import { deleteProducto, deleteTipo } from "@/actions";
+import { deleteProducto, deleteTipo, deleteCategoria } from "@/actions";
 
 
 function ProductosDashboard() {
@@ -231,24 +231,44 @@ function ProductosDashboard() {
             }
         } else if (selectedButton === "Tipos") {
             if (confirm("¿Estás seguro de que deseas eliminar a este tipo de productos?\n Esta acción eliminará todos los productos relacionados junto con sus categorías y subcategorías.")) {
-            try {
-                const response = await deleteTipo(id);
-                if (response.status === 200) {
-                    getTipos();
+                try {
+                    const response = await deleteTipo(id);
+                    if (response.status === 200) {
+                        getTipos();
+                        toast({
+                            title: "Tipo de producto eliminado",
+                            description: "El Tipo de producto ha sido eliminado correctamente",
+                            variant: "success",
+                        });
+                    }
+                } catch (error) {
                     toast({
-                        title: "Tipo de producto eliminado",
-                        description: "El Tipo de producto ha sido eliminado correctamente",
-                        variant: "success",
+                        title: "Error",
+                        description: "No se pudo eliminar el Tipo de producto",
+                        variant: "destructive",
                     });
                 }
-            } catch (error) {
-                toast({
-                    title: "Error",
-                    description: "No se pudo eliminar el Tipo de producto",
-                    variant: "destructive",
-                });
             }
-        }
+        } else if (selectedButton === "Categorias") {
+            if (confirm("¿Estás seguro de que deseas eliminar a esta categoría de productos?\n Esta acción eliminará todos los productos dentro de esta categoría.")) {
+                try {
+                    const response = await deleteCategoria(id);
+                    if (response.status === 200) {
+                        getCategorias();
+                        toast({
+                            title: "Categoría eliminada",
+                            description: "La categoría ha sido eliminado correctamente",
+                            variant: "success",
+                        });
+                    }
+                } catch (error) {
+                    toast({
+                        title: "Error",
+                        description: "No se pudo eliminar la categoría",
+                        variant: "destructive",
+                    });
+                }
+            }
         }
     }
 

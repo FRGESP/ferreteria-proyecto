@@ -299,3 +299,10 @@ export const addCategoria = async (categoria: Categoria) => {
     const status = response.status;
     return status;
 }
+
+export const deleteCategoria = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/categorias/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
+}
