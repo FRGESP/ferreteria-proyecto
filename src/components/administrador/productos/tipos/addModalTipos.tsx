@@ -24,6 +24,12 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
     //Guarda la informacion del input
     const [inputValue, setInputValue] = useState({
         nombre: "",
+        gPublico1: "",
+        gHerrero2: "",
+        gHerrero3: "",
+        gHerrero4: "",
+        gMayoreo1: "",
+        gMayoreo2: "",
     });
 
 
@@ -56,6 +62,12 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
         setErrors({});
         setInputValue({
             nombre: "",
+            gPublico1: "",
+            gHerrero2: "",
+            gHerrero3: "",
+            gHerrero4: "",
+            gMayoreo1: "",
+            gMayoreo2: "",
         });
     };
 
@@ -71,6 +83,14 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
         Object.entries(inputValue).forEach(([Key, value]) => {
             if (value.trim() === "") {
                 newErrors[Key] = "Este campo es obligatorio";
+            }
+            if (Key !== "nombre") {
+                if (isNaN(Number(value))) {
+                    newErrors[Key] = "Este campo debe ser numérico";
+                } else if (Number(value) <= 0 && Key !== "nombre"  && value.trim() !== "") {
+                    newErrors[Key] = "Este campo debe ser mayor a 0";
+                }
+
             }
         })
         setErrors(newErrors);
@@ -132,6 +152,96 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                         onChange={handleChange}
                                     />
                                     {errors["nombre"] && (<span className="text-sm text-red-500">{errors["nombre"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gPublico1"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Público 1
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gPublico1"] ? "border-red-500" : "border-black"}`}
+                                        name="gPublico1"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gPublico1"] && (<span className="text-sm text-red-500">{errors["gPublico1"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gHerrero2"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Herrero 2
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gHerrero2"] ? "border-red-500" : "border-black"}`}
+                                        name="gHerrero2"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gHerrero2"] && (<span className="text-sm text-red-500">{errors["gHerrero2"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gHerrero3"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Herrero 3
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gHerrero3"] ? "border-red-500" : "border-black"}`}
+                                        name="gHerrero3"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gHerrero3"] && (<span className="text-sm text-red-500">{errors["gHerrero3"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gHerrero4"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Herrero 4
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gHerrero4"] ? "border-red-500" : "border-black"}`}
+                                        name="gHerrero4"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gHerrero4"] && (<span className="text-sm text-red-500">{errors["gHerrero4"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gMayoreo1"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Mayoreo 1
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gMayoreo1"] ? "border-red-500" : "border-black"}`}
+                                        name="gMayoreo1"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gMayoreo1"] && (<span className="text-sm text-red-500">{errors["gMayoreo1"]}</span>)}
+                                </div>
+                                <div className="w-full">
+                                    <label
+                                        htmlFor="gMayoreo2"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Ganancia Mayoreo 2
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["gMayoreo2"] ? "border-red-500" : "border-black"}`}
+                                        name="gMayoreo2"
+                                        onChange={handleChange}
+                                    />
+                                    {errors["gMayoreo2"] && (<span className="text-sm text-red-500">{errors["gMayoreo2"]}</span>)}
                                 </div>
 
                                 <div className="flex gap-5 justify-center">

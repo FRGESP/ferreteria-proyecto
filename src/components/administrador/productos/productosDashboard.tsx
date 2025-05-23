@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
-import { deleteProducto } from "@/actions";
+import { deleteProducto, deleteTipo } from "@/actions";
 
 
 function ProductosDashboard() {
@@ -208,24 +208,46 @@ function ProductosDashboard() {
     }
 
     const handleDelete = async (id: number) => {
-        if (confirm("¿Estás seguro de que deseas eliminar a este producto?")) {
-            try {
-                const response = await deleteProducto(id);
-                if (response.status === 200) {
-                    getProductos();
+        if (selectedButton === "Productos") {
+            if (confirm("¿Estás seguro de que deseas eliminar a este producto?")) {
+                try {
+                    const response = await deleteProducto(id);
+                    if (response.status === 200) {
+                        getProductos();
+                        toast({
+                            title: "Producto eliminado",
+                            description: "El Producto ha sido eliminado correctamente",
+                            variant: "success",
+                        });
+                    }
+                } catch (error) {
                     toast({
-                        title: "Producto eliminado",
-                        description: "El Producto ha sido eliminado correctamente",
+                        title: "Error",
+                        description: "No se pudo eliminar el Producto",
+                        variant: "destructive",
+                    });
+                }
+            }
+        } else if (selectedButton === "Tipos") {
+            if (confirm("¿Estás seguro de que deseas eliminar a este tipo de productos?\n Esta acción eliminará todos los productos relacionados junto con sus categorías y subcategorías.")) {
+            try {
+                const response = await deleteTipo(id);
+                if (response.status === 200) {
+                    getTipos();
+                    toast({
+                        title: "Tipo de producto eliminado",
+                        description: "El Tipo de producto ha sido eliminado correctamente",
                         variant: "success",
                     });
                 }
             } catch (error) {
                 toast({
                     title: "Error",
-                    description: "No se pudo eliminar el Producto",
+                    description: "No se pudo eliminar el Tipo de producto",
                     variant: "destructive",
                 });
             }
+        }
         }
     }
 

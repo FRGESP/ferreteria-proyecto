@@ -892,12 +892,57 @@ CREATE PROCEDURE SP_GETTIPOS(IN NOMBREIN VARCHAR(100), IN PAGINACIONIN INT)
     end;
 
 DROP PROCEDURE IF EXISTS SP_ADDTIPOS;
-CREATE  PROCEDURE SP_ADDTIPOS(IN NOMBREIN VARCHAR(100), IN USERID INT)
+CREATE  PROCEDURE SP_ADDTIPOS(IN NOMBREIN VARCHAR(100), IN GPUB1 DECIMAL(65,30), IN GHR2 DECIMAL(65,30), IN GHR3 DECIMAL(65,30), IN GHR4 DECIMAL(65,30), IN GMY1 DECIMAL(65,30), IN GMY2 DECIMAL(65,30), IN USERID INT)
     BEGIN
         DECLARE TIPOVAR INT;
+        DECLARE GANANCIAVAR INT;
+
         INSERT INTO TIPOPRODUCTO (Tipo) VALUES (NOMBREIN);
         SET TIPOVAR = (SELECT LAST_INSERT_ID());
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPO', TIPOVAR, 'Todos', '', NOMBREIN);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 1, GPUB1);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 1, 'Todos', '', GPUB1);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 2, GHR2);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 2, 'Todos', '', GHR2);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 3, GHR3);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 3, 'Todos', '', GHR3);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 4, GHR4);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 4, 'Todos', '', GHR4);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 5, GMY1);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 5, 'Todos', '', GMY1);
+
+        INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 6, GMY2);
+        SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 6, 'Todos', '', GMY2);
+
+    end;
+
+DROP PROCEDURE IF EXISTS SP_DELETETIPOS;
+CREATE PROCEDURE SP_DELETETIPOS(IN ID INT, IN USERID INT)
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+        SET NOMBREVAR = (SELECT Tipo FROM TIPOPRODUCTO WHERE IdTipoProdcuto = ID);
+        UPDATE TIPOPRODUCTO SET Estatus = 4 WHERE IdTipoProdcuto = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'TIPO', ID, 'Todos', NOMBREVAR, '');
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'CATEGORIA', C.IdCategoria, 'Todos',C.Categoria, '' FROM CATEGORIAPRODUCTO AS C WHERE C.IdTipo = ID AND C.Estatus = 1;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'SUBCATEGORIA', S.IdSubcategoria, 'Todos', S.Subcategoria, '' FROM SUBCATEGORIA S WHERE S.IdTipo = ID AND S.ESTATUS = 1;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM TIPOPRODUCTO AS T INNER JOIN CATEGORIAPRODUCTO AS C INNER JOIN PRODUCTO AS P ON C.IdCategoria = P.IdCategoria WHERE P.Estatus = 1 AND C.IdTipo = ID = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'TIPOGANANCIA', R.IdRangoCliente, 'Todos', TG.Ganancia, '' FROM TIPOGANANCIA AS TG INNER JOIN RANGOCLIENTE R on TG.IdRangoCliente = R.IdRangoCliente WHERE TG.IdTipo = ID;
+        UPDATE  CATEGORIAPRODUCTO AS C SET C.Estatus = 4 WHERE C.IdTipo = ID AND C.Estatus = 1;
+        UPDATE PRODUCTO AS P INNER JOIN CATEGORIAPRODUCTO C2 on P.IdCategoria = C2.IdCategoria INNER JOIN TIPOPRODUCTO T2 on C2.IdTipo = T2.IdTipoProdcuto SET P.Estatus = 4 WHERE P.Estatus = 1 AND C2.IdTipo = ID;
+        UPDATE SUBCATEGORIA AS S SET S.ESTATUS = 4 WHERE S.IdTipo = ID AND S.ESTATUS = 1;
+        UPDATE TIPOPRODUCTO SET Estatus = 4 WHERE IdTipoProdcuto = ID;
+        DELETE FROM TIPOGANANCIA WHERE IdTipo = ID;
     end;
 
 -- PRODUCTOS/CATEGORIAS
@@ -919,14 +964,14 @@ CREATE PROCEDURE SP_GETSUBCATEGORIAS(IN NOMBREIN VARCHAR(100), IN PAGINACIONIN I
     BEGIN
         DECLARE INICIOVAR INT;
         SET INICIOVAR = (PAGINACIONIN-1)*50;
-        SELECT S.IdSubcategoria, S.Subcategoria, T.Tipo, FORMAT(S.CostoBase,2) AS CostoBase, COUNT(P2.IdProducto) AS Cantidad FROM SUBCATEGORIA AS S INNER JOIN TIPOPRODUCTO T on S.IdTipo = T.IdTipoProdcuto INNER JOIN PRODUCTO P2 on S.IdSubcategoria = P2.IdSubcategoria WHERE S.ESTATUS = 1 AND P2.Estatus = 1 AND S.Subcategoria LIKE CONCAT('%',NOMBREIN,'%') GROUP BY S.IdSubcategoria LIMIT INICIOVAR, 50;
+        SELECT S.IdSubcategoria, S.Subcategoria, T.Tipo, FORMAT(S.CostoBase,2) AS CostoBase, COUNT(P2.IdProducto) AS Cantidad FROM SUBCATEGORIA AS S INNER JOIN TIPOPRODUCTO T on S.IdTipo = T.IdTipoProdcuto LEFT JOIN PRODUCTO P2 on S.IdSubcategoria = P2.IdSubcategoria WHERE S.ESTATUS = 1 AND (P2.Estatus = 1 OR P2.IdProducto IS NULL) AND S.Subcategoria LIKE CONCAT('%',NOMBREIN,'%') GROUP BY S.IdSubcategoria LIMIT INICIOVAR, 50;
         SELECT S.Subcategoria AS Descripcion, S.IdSubcategoria AS Id FROM SUBCATEGORIA AS S WHERE S.Estatus = 1;
         SELECT (CEIL(COUNT(S.IdSubcategoria)/50)) AS NumeroPaginas FROM SUBCATEGORIA AS S WHERE S.Subcategoria LIKE CONCAT('%',NOMBREIN,'%') AND S.Estatus = 1;
     end;
 
 
 
-CALL SP_GETCATEGORIAS('',1);
+CALL SP_GETSUBCATEGORIAS('',1);
 CALL SP_GETSUBCATEGORIAS('',1);
 
 
@@ -950,7 +995,7 @@ SELECT * FROM TIPOPRODUCTO;
 SELECT * FROM TIPOGANANCIA;
 --
 
-select * from BITACORA WHERE TablaAfectada = 'SUCURSAL';
+select * from BITACORA WHERE TablaAfectada = 'TIPOGANANCIA';
 
 
 CALL LOGIN(1001, '123456');

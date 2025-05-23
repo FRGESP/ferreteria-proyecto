@@ -73,6 +73,12 @@ interface Producto {
 //Interface para los tipos de productos
 interface Tipo {
     nombre: string;
+    gPublico1: string;
+    gHerrero2: string;
+    gHerrero3: string;
+    gHerrero4: string;
+    gMayoreo1: string;
+    gMayoreo2: string;
 }
 
 export const getSession = async () => {
@@ -270,4 +276,11 @@ export const addTipo = async (tipo: Tipo) => {
     const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/tipos/${session.userId}`,tipo)
     const status = response.status;
     return status;
+}
+
+export const deleteTipo = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/tipos/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
 }
