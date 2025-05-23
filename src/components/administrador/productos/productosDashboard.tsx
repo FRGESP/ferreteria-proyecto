@@ -32,6 +32,21 @@ function ProductosDashboard() {
         Cantidad: string;
     }
 
+    interface Categoria {
+        IdCategoria: number;
+        Categoria: string;
+        Tipo: string;
+        Cantidad: string;
+    }
+
+    interface Subcategoria {
+        IdSubcategoria: number;
+        Subcategoria: string;
+        Tipo: string;
+        CostoBase: string;
+        Cantidad: string;
+    }
+
     //Interface para los selects
     interface SelectOption {
         value: string;
@@ -72,6 +87,12 @@ function ProductosDashboard() {
     //Guarda la informacion de los tipos
     const [Tipos, setTipos] = useState<Tipo[]>([]);
 
+    //Guarda la informacion de las categorias
+    const [Categorias, setCategorias] = useState<Categoria[]>([]);
+
+    //Guarda la informacion de las subcategorias
+    const [Subcategorias, setSubcategorias] = useState<Subcategoria[]>([]);
+
     //Guarda los nombres de los productos o de cualquier otra información
     const [nombres, setNombres] = useState<Nombres[]>([]);
 
@@ -80,6 +101,9 @@ function ProductosDashboard() {
 
     //Bandera para cuando se escoge una opcion del input del nombre
     const [isNameSelected, setIsNameSelected] = useState(false);
+
+    //Bandera para saber si se está cambiando de botón
+    const [isButtonSelected, setIsButtonSelected] = useState(false);
 
     //Guarda la informacion de la busqueda
     const [searchValue, setSearchValue] = useState({
@@ -127,16 +151,28 @@ function ProductosDashboard() {
         setNombres(data[4]);
     }
 
-    //Funcion para obtener el nombre de los tipos
     const getTipos = async () => {
         const respose = await axios.post('/api/users/administrador/productos/tipos', { nombre: searchValue.nombre, pagina: currentPage });
         const data = respose.data;
         setTipos(data[0]);
         setNombres(data[1]);
         setTotalPages({ NumeroPaginas: data[2].NumeroPaginas });
-        console.log("tipos", data[0]);
-        console.log("nombres", data[1]);
-        console.log("paginas", data[2].NumeroPaginas);
+    }
+
+    const getCategorias = async () => {
+        const respose = await axios.post('/api/users/administrador/productos/categorias', { nombre: searchValue.nombre, pagina: currentPage });
+        const data = respose.data;
+        setCategorias(data[0]);
+        setNombres(data[1]);
+        setTotalPages({ NumeroPaginas: data[2].NumeroPaginas });
+    }
+
+    const getSubategorias = async () => {
+        const respose = await axios.post('/api/users/administrador/productos/subcategorias', { nombre: searchValue.nombre, pagina: currentPage });
+        const data = respose.data;
+        setSubcategorias(data[0]);
+        setNombres(data[1]);
+        setTotalPages({ NumeroPaginas: data[2].NumeroPaginas });
     }
 
     const handleChange = (e: any) => {
@@ -205,6 +241,11 @@ function ProductosDashboard() {
                 getProductos();
             } else if (selectedButton === "Tipos") {
                 getTipos();
+            } else if (selectedButton === "Categorias") {
+                getCategorias();
+            }
+            else if (selectedButton === "Subcategorias") {
+                getSubategorias();
             }
         }
         // Quitar el focus del input activo
@@ -240,7 +281,10 @@ function ProductosDashboard() {
             getProductos();
         } else if (selectedButton === "Tipos") {
             getTipos();
-            getSelects();
+        } else if (selectedButton === "Categorias") {
+            getCategorias();
+        } else if (selectedButton === "Subcategorias") {
+            getSubategorias();
         }
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, [currentPage]);
@@ -255,7 +299,19 @@ function ProductosDashboard() {
         if (isNameSelected) {
             if (selectedButton === "Productos") getProductos();
             else if (selectedButton === "Tipos") getTipos();
+            else if (selectedButton === "Categorias") getCategorias();
+            else if (selectedButton === "Subcategorias") getSubategorias();
             setIsNameSelected(false);
+        }
+        if (isButtonSelected) {
+            if (selectedButton === "Productos") {
+                getProductos();
+            }
+            else if (selectedButton === "Tipos") getTipos();
+            else if (selectedButton === "Categorias") getCategorias();
+            else if (selectedButton === "Subcategorias") getSubategorias();
+
+            setIsButtonSelected(false);
         }
     }, [searchValue.nombre]);
 
@@ -270,7 +326,11 @@ function ProductosDashboard() {
     }, [update]);
 
     useEffect(() => {
+        setIsButtonSelected(true);
         if (selectedButton === "Tipos") {
+            if (searchValue.nombre === "") {
+                getTipos();
+            }
             setSearchValue({
                 nombre: "",
                 tipo: "0",
@@ -278,10 +338,43 @@ function ProductosDashboard() {
                 subcategoria: "0",
                 rango: "1",
             })
-            getTipos();
         }
         if (selectedButton === "Productos") {
-            setTotalPages({ NumeroPaginas: 0 });
+            if (searchValue.nombre === "") {
+                getProductos();
+            }
+            setSearchValue({
+                ...searchValue,
+                nombre: ""
+            })
+            getSelects();
+        }
+        if (selectedButton === "Categorias") {
+            if (searchValue.nombre === "") {
+                getCategorias();
+            }
+            setSearchValue({
+                nombre: "",
+                tipo: "0",
+                categoria: "0",
+                subcategoria: "0",
+                rango: "1",
+            })
+        }
+        if (selectedButton === "Subcategorias") {
+            if (searchValue.nombre === "") {
+                getSubategorias();
+            }
+            setSearchValue({
+                nombre: "",
+                tipo: "0",
+                categoria: "0",
+                subcategoria: "0",
+                rango: "1",
+            })
+        }
+        setTotalPages({ NumeroPaginas: 0 });
+        if (currentPage !== 1) {
             setCurrentPage(1);
         }
     }, [selectedButton]);
@@ -484,8 +577,8 @@ function ProductosDashboard() {
                         <tr>
                             <th>ID</th>
                             <th>Tipo</th>
-                            <th className="text-left px-4 py-2">Cantidad de Productos</th>
-                            <th className="text-center px-4 py-2">Acciones</th>
+                            <th>Cantidad de Productos</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -500,6 +593,78 @@ function ProductosDashboard() {
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Tipo.IdTipo)}
+                                        >
+                                            <Trash strokeWidth={2} size={20} />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
+
+            {selectedButton === "Categorias" && (
+                <table className="table-auto border-collapse w-full">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Categoría</th>
+                            <th>Tipo</th>
+                            <th>Cantidad de Productos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Categorias.map((Categoria) => (
+                            <tr key={Categoria.IdCategoria} className="border-t">
+                                <td>{Categoria.IdCategoria}</td>
+                                <td>{Categoria.Categoria}</td>
+                                <td>{Categoria.Tipo}</td>
+                                <td>{Categoria.Cantidad}</td>
+                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                    <div className="flex gap-2 justify-center">
+                                        <UpdateModal IdCliente={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
+                                        <button
+                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
+                                            onClick={() => handleDelete(Categoria.IdCategoria)}
+                                        >
+                                            <Trash strokeWidth={2} size={20} />
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            )}
+
+            {selectedButton === "Subcategorias" && (
+                <table className="table-auto border-collapse w-full">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Subcategoría</th>
+                            <th>Tipo</th>
+                            <th>Costo Base</th>
+                            <th>Cantidad de Productos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Subcategorias.map((Subcategoria) => (
+                            <tr key={Subcategoria.IdSubcategoria} className="border-t">
+                                <td>{Subcategoria.IdSubcategoria}</td>
+                                <td>{Subcategoria.Subcategoria}</td>
+                                <td>{Subcategoria.Tipo}</td>
+                                <td>${Subcategoria.CostoBase}</td>
+                                <td>{Subcategoria.Cantidad}</td>
+                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                    <div className="flex gap-2 justify-center">
+                                        <UpdateModal IdCliente={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
+                                        <button
+                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
+                                            onClick={() => handleDelete(Subcategoria.IdSubcategoria)}
                                         >
                                             <Trash strokeWidth={2} size={20} />
                                         </button>
