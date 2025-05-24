@@ -153,7 +153,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["nombre"] && (<span className="text-sm text-red-500">{errors["nombre"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gPublico1"
                                         className="font-bold text-lg flex-grow text-left"
@@ -168,7 +168,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["gPublico1"] && (<span className="text-sm text-red-500">{errors["gPublico1"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gHerrero2"
                                         className="font-bold text-lg flex-grow text-left"
@@ -183,7 +183,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["gHerrero2"] && (<span className="text-sm text-red-500">{errors["gHerrero2"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gHerrero3"
                                         className="font-bold text-lg flex-grow text-left"
@@ -198,7 +198,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["gHerrero3"] && (<span className="text-sm text-red-500">{errors["gHerrero3"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gHerrero4"
                                         className="font-bold text-lg flex-grow text-left"
@@ -213,7 +213,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["gHerrero4"] && (<span className="text-sm text-red-500">{errors["gHerrero4"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gMayoreo1"
                                         className="font-bold text-lg flex-grow text-left"
@@ -228,7 +228,7 @@ function AddModalTipo({ onGuardado }: AddModalTipoProps) {
                                     />
                                     {errors["gMayoreo1"] && (<span className="text-sm text-red-500">{errors["gMayoreo1"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="gMayoreo2"
                                         className="font-bold text-lg flex-grow text-left"

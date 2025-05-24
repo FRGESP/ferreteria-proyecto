@@ -191,7 +191,7 @@ function AddModalSubcategorias({ onGuardado }: AddModalSubcategoriasProps) {
                                     </select>
                                     {errors["tipo"] && (<span className="text-sm text-red-500">{errors["tipo"]}</span>)}
                                 </div>
-                                <div className="w-full">
+                                <div className="w-full mt-3">
                                     <label
                                         htmlFor="costoBase"
                                         className="font-bold text-lg flex-grow text-left"

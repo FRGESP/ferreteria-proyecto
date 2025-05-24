@@ -10,6 +10,7 @@ import AddModalCategorias from "@/components/administrador/productos/categorias/
 import UpdateModal from "@/components/administrador/productos/updateModal"
 import UpdateModalTipos from "@/components/administrador/productos/tipos/updateModdalTipos";
 import UpdateModalCategorias from "@/components/administrador/productos/categorias/updateModalCategoria";
+import UpdateModalSubcategorias from "@/components/administrador/productos/subcategorias/updateModalSubcategoria";
 import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
 import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
@@ -743,9 +744,9 @@ function ProductosDashboard() {
                                 <td>{Subcategoria.Tipo}</td>
                                 <td>${Subcategoria.CostoBase}</td>
                                 <td>{Subcategoria.Cantidad}</td>
-                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                <td>
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdProducto={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModalSubcategorias IdSubcategoria={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Subcategoria.IdSubcategoria)}
