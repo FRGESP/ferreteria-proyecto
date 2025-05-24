@@ -281,6 +281,19 @@ export const deleteProducto = async (id: number) => {
     return data;
 }
 
+export const updateBitacoraTipo = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/tipos/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+
+}
+
 //Administrador/Productos/Tipos
 
 export const addTipo = async (tipo: Tipo) => {

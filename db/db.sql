@@ -940,7 +940,30 @@ CREATE  PROCEDURE SP_ADDTIPOS(IN NOMBREIN VARCHAR(100), IN GPUB1 DECIMAL(65,30),
         INSERT INTO TIPOGANANCIA (IdTipo, IdRangoCliente, Ganancia) VALUES (TIPOVAR, 6, GMY2);
         SET GANANCIAVAR = (SELECT LAST_INSERT_ID());
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'INSERT', 'TIPOGANANCIA', 6, 'Todos', '', GMY2);
+    end;
 
+DROP PROCEDURE IF EXISTS SP_GETTIPOBYID;
+CREATE PROCEDURE SP_GETTIPOBYID(IN IDIN INT)
+    BEGIN
+        SELECT T.Tipo AS Nombre FROM TIPOPRODUCTO AS T WHERE T.IdTipoProdcuto = IDIN;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaPublico1 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 1;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaHerrero2 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 2;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaHerrero3 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 3;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaHerrero4 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 4;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaMayoreo1 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 5;
+        SELECT FORMAT(T.Ganancia,2) AS GananciaMayoreo2 FROM TIPOGANANCIA AS T WHERE T.IdTipo = IDIN AND IdRangoCliente = 6;
+    end;
+
+DROP PROCEDURE IF EXISTS SP_UPDATETIPO;
+CREATE PROCEDURE SP_UPDATETIPO(IN IDIN INT,IN NOMBREIN VARCHAR(200), IN GP1 DECIMAL(65,30), IN GH2 DECIMAL(65,30), IN GH3 DECIMAL(65,30), IN GH4 DECIMAL(65,30), IN GMY1 DECIMAL(65,30), IN GMY2 DECIMAL(65,30))
+    BEGIN
+        UPDATE TIPOPRODUCTO SET Tipo = NOMBREIN WHERE IdTipoProdcuto = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GP1 WHERE IdRangoCliente = 1 AND IdTipo = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GH2 WHERE IdRangoCliente = 2 AND IdTipo = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GH3 WHERE IdRangoCliente = 3 AND IdTipo = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GH4 WHERE IdRangoCliente = 4 AND IdTipo = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GMY1 WHERE IdRangoCliente = 5 AND IdTipo = IDIN;
+        UPDATE TIPOGANANCIA SET Ganancia = GMY2 WHERE IdRangoCliente = 6 AND IdTipo = IDIN;
     end;
 
 DROP PROCEDURE IF EXISTS SP_DELETETIPOS;
@@ -953,7 +976,7 @@ CREATE PROCEDURE SP_DELETETIPOS(IN ID INT, IN USERID INT)
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'CATEGORIA', C.IdCategoria, 'Todos',C.Categoria, '' FROM CATEGORIAPRODUCTO AS C WHERE C.IdTipo = ID AND C.Estatus = 1;
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'SUBCATEGORIA', S.IdSubcategoria, 'Todos', S.Subcategoria, '' FROM SUBCATEGORIA S WHERE S.IdTipo = ID AND S.ESTATUS = 1;
         INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM TIPOPRODUCTO AS T INNER JOIN CATEGORIAPRODUCTO AS C ON T.IdTipoProdcuto = C.IdTipo INNER JOIN PRODUCTO AS P ON C.IdCategoria = P.IdCategoria WHERE P.Estatus = 1 AND C.IdTipo = ID;
-        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'TIPOGANANCIA', R.IdRangoCliente, 'Todos', TG.Ganancia, '' FROM TIPOGANANCIA AS TG INNER JOIN RANGOCLIENTE R on TG.IdRangoCliente = R.IdRangoCliente WHERE TG.IdTipo = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'TIPO', TG.IdTipo, 'Todos', TG.Ganancia, '' FROM TIPOGANANCIA AS TG INNER JOIN RANGOCLIENTE R on TG.IdRangoCliente = R.IdRangoCliente WHERE TG.IdTipo = ID;
         UPDATE  CATEGORIAPRODUCTO AS C SET C.Estatus = 4 WHERE C.IdTipo = ID AND C.Estatus = 1;
         UPDATE PRODUCTO AS P INNER JOIN CATEGORIAPRODUCTO C2 on P.IdCategoria = C2.IdCategoria INNER JOIN TIPOPRODUCTO T2 on C2.IdTipo = T2.IdTipoProdcuto SET P.Estatus = 4 WHERE P.Estatus = 1 AND C2.IdTipo = ID;
         UPDATE SUBCATEGORIA AS S SET S.ESTATUS = 4 WHERE S.IdTipo = ID AND S.ESTATUS = 1;
@@ -1054,7 +1077,7 @@ SELECT * FROM TIPOPRODUCTO;
 SELECT * FROM TIPOGANANCIA;
 --
 
-select * from BITACORA WHERE TablaAfectada = 'TIPOGANANCIA';
+select * from BITACORA WHERE TablaAfectada = 'TIPO';
 
 
 CALL LOGIN(1001, '123456');

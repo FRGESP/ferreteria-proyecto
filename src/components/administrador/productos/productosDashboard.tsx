@@ -8,6 +8,7 @@ import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/productos/updateModal"
+import UpdateModalTipos from "@/components/administrador/productos/tipos/updateModdalTipos";
 import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
 import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
@@ -665,9 +666,9 @@ function ProductosDashboard() {
                                 <td>{Tipo.IdTipo}</td>
                                 <td>{Tipo.Tipo}</td>
                                 <td>{Tipo.Cantidad}</td>
-                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                <td>
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdProducto={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModalTipos IdTipo={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Tipo.IdTipo)}
