@@ -195,13 +195,13 @@ function UpdateModalSubcategorias({ IdSubcategoria, onGuardado }: UpdateModalSub
                 setIsOpen(false);
                 toast({
                     title: "Subcategoria actualizado",
-                    description: "El Subcategoria ha sido actualizado correctamente",
+                    description: "La Subcategoria ha sido actualizada correctamente",
                     variant: "success",
                 });
             } else {
                 toast({
                     title: "Error",
-                    description: "El Subcategoria no ha sido actualizado",
+                    description: "La Subcategoria no ha sido actualizada",
                     variant: "destructive",
                 });
             }

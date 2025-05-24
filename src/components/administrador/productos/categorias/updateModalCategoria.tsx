@@ -183,13 +183,13 @@ function UpdateModalCategorias({ IdCategoria, onGuardado }: UpdateModalCategoria
                 setIsOpen(false);
                 toast({
                     title: "Categoria actualizado",
-                    description: "El Categoria ha sido actualizado correctamente",
+                    description: "La Categoria ha sido actualizado correctamente",
                     variant: "success",
                 });
             } else {
                 toast({
                     title: "Error",
-                    description: "El Categoria no ha sido actualizado",
+                    description: "La Categoria no ha sido actualizado",
                     variant: "destructive",
                 });
             }

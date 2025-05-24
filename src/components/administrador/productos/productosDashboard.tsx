@@ -35,6 +35,12 @@ function ProductosDashboard() {
     interface Tipo {
         IdTipo: number;
         Tipo: string;
+        GP1: string;
+        GH2: string;
+        GH3: string;
+        GH4: string;
+        GMY1: string;
+        GMY2: string;
         Cantidad: string;
     }
 
@@ -662,6 +668,12 @@ function ProductosDashboard() {
                         <tr>
                             <th>ID</th>
                             <th>Tipo</th>
+                            <th>Ganancia Público1</th>
+                            <th>Ganancia Herrero2</th>
+                            <th>Ganancia Herrero3</th>
+                            <th>Ganancia Herrero4</th>
+                            <th>Ganancia Mayoreo1</th>
+                            <th>Ganancia Mayoreo2</th>
                             <th>Cantidad de Productos</th>
                             <th>Acciones</th>
                         </tr>
@@ -671,6 +683,12 @@ function ProductosDashboard() {
                             <tr key={Tipo.IdTipo} className="border-t">
                                 <td>{Tipo.IdTipo}</td>
                                 <td>{Tipo.Tipo}</td>
+                                <td>{Tipo.GP1}%</td>
+                                <td>{Tipo.GH2}%</td>
+                                <td>{Tipo.GH3}%</td>
+                                <td>{Tipo.GH4}%</td>
+                                <td>{Tipo.GMY1}%</td>
+                                <td>{Tipo.GMY2}%</td>
                                 <td>{Tipo.Cantidad}</td>
                                 <td>
                                     <div className="flex gap-2 justify-center">
