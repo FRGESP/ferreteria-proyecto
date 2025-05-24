@@ -8,6 +8,7 @@ import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
+import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
 import { deleteProducto, deleteTipo, deleteCategoria } from "@/actions";
 
 
@@ -575,6 +576,9 @@ function ProductosDashboard() {
                 )}
                 {selectedButton === "Categorias" && (
                     <AddModalCategorias onGuardado={() => setUpdate(true)} />
+                )}
+                {selectedButton === "Subcategorias" && (
+                    <AddModalSubcategorias onGuardado={() => setUpdate(true)} />
                 )}
             </div>
 

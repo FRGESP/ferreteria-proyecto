@@ -87,6 +87,13 @@ interface Categoria {
     tipo: string;
 }
 
+//Interface para la subcategoria de productos
+interface Subcategoria {
+    nombre: string;
+    tipo: string;
+    costoBase: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -305,4 +312,13 @@ export const deleteCategoria = async (id: number) => {
     const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/categorias/${id}/${session.userId}`);
     const data = response.data;
     return data;
+}
+
+//Administrador/Productos/Categorias
+
+export const addSubcategoria = async (subcategoria: Subcategoria) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/subcategorias/${session.userId}`,subcategoria)
+    const status = response.status;
+    return status;
 }
