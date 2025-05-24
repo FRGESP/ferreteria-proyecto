@@ -9,7 +9,7 @@ import AddModalTipo from "@/components/administrador/productos/tipos/addModalTip
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/clientes/updateModal";
 import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
-import { deleteProducto, deleteTipo, deleteCategoria } from "@/actions";
+import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
 
 function ProductosDashboard() {
@@ -231,7 +231,7 @@ function ProductosDashboard() {
                 }
             }
         } else if (selectedButton === "Tipos") {
-            if (confirm("¿Estás seguro de que deseas eliminar a este tipo de productos?\n Esta acción eliminará todos los productos relacionados junto con sus categorías y subcategorías.")) {
+            if (confirm("¿Estás seguro de que deseas eliminar a este tipo de productos?\nEsta acción eliminará todos los productos relacionados junto con sus categorías y subcategorías.")) {
                 try {
                     const response = await deleteTipo(id);
                     if (response.status === 200) {
@@ -251,7 +251,7 @@ function ProductosDashboard() {
                 }
             }
         } else if (selectedButton === "Categorias") {
-            if (confirm("¿Estás seguro de que deseas eliminar a esta categoría de productos?\n Esta acción eliminará todos los productos dentro de esta categoría.")) {
+            if (confirm("¿Estás seguro de que deseas eliminar a esta categoría de productos?\nEsta acción eliminará todos los productos dentro de esta categoría.")) {
                 try {
                     const response = await deleteCategoria(id);
                     if (response.status === 200) {
@@ -266,6 +266,26 @@ function ProductosDashboard() {
                     toast({
                         title: "Error",
                         description: "No se pudo eliminar la categoría",
+                        variant: "destructive",
+                    });
+                }
+            }
+        } else if (selectedButton === "Subcategorias") {
+            if (confirm("¿Estás seguro de que deseas eliminar a esta subcategoría de productos?\nEsta acción eliminará todos los productos dentro de esta subcategoría.")) {
+                try {
+                    const response = await deleteSubcategoria(id);
+                    if (response.status === 200) {
+                        getSubategorias();
+                        toast({
+                            title: "Subategoría eliminada",
+                            description: "La subcategoría ha sido eliminado correctamente",
+                            variant: "success",
+                        });
+                    }
+                } catch (error) {
+                    toast({
+                        title: "Error",
+                        description: "No se pudo eliminar la subcategoría",
                         variant: "destructive",
                     });
                 }

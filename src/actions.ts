@@ -322,3 +322,10 @@ export const addSubcategoria = async (subcategoria: Subcategoria) => {
     const status = response.status;
     return status;
 }
+
+export const deleteSubcategoria = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/subcategorias/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
+}

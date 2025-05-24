@@ -1001,6 +1001,17 @@ CREATE PROCEDURE SP_GETSUBCATEGORIAS(IN NOMBREIN VARCHAR(100), IN PAGINACIONIN I
         SELECT (CEIL(COUNT(S.IdSubcategoria)/50)) AS NumeroPaginas FROM SUBCATEGORIA AS S WHERE S.Subcategoria LIKE CONCAT('%',NOMBREIN,'%') AND S.Estatus = 1;
     end;
 
+DROP PROCEDURE IF EXISTS SP_DELETESUBCATEGORIA;
+CREATE PROCEDURE SP_DELETESUBCATEGORIA(IN ID INT, IN USERID INT)
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+        SET NOMBREVAR = (SELECT Subcategoria FROM SUBCATEGORIA WHERE IdSubcategoria = ID);
+        UPDATE SUBCATEGORIA SET Estatus = 4 WHERE IdSubcategoria = ID;
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'DELETE', 'SUBCATEGORIA', ID, 'Todos', NOMBREVAR, '');
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) SELECT USERID, 'DELETE', 'Producto', P.IdProducto, 'Todos', P.Descripcion, '' FROM SUBCATEGORIA AS S INNER JOIN PRODUCTO AS P ON S.Subcategoria = P.IdSubcategoria WHERE P.Estatus = 1 AND S.IdSubcategoria = ID;
+
+        UPDATE PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria SET P.Estatus = 4 WHERE P.Estatus = 1 AND S.IdSubcategoria = ID;
+    end;
 
 
 CALL SP_GETSUBCATEGORIAS('',1);
