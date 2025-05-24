@@ -281,11 +281,11 @@ export const deleteProducto = async (id: number) => {
     return data;
 }
 
-export const updateBitacoraTipo = async (id: number, bitacora: Bitacora[]) => {
+export const updateBitacoraProducto = async (id: number, bitacora: Bitacora[]) => {
     const session = await getSession();
     bitacora.map(async (item) => {
         console.log(item)
-        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/tipos/${id}/${session.userId}`, item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/${id}/${session.userId}`, item)
         const status = response.status;
         if (status !== 200) {
             return { status: status, message: response }
@@ -293,6 +293,7 @@ export const updateBitacoraTipo = async (id: number, bitacora: Bitacora[]) => {
     })
 
 }
+
 
 //Administrador/Productos/Tipos
 
@@ -311,6 +312,19 @@ export const deleteTipo = async (id: number) => {
     return data;
 }
 
+export const updateBitacoraTipo = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/tipos/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+
+}
+
 //Administrador/Productos/Categorias
 
 export const addCategoria = async (categoria: Categoria) => {
@@ -327,6 +341,19 @@ export const deleteCategoria = async (id: number) => {
     return data;
 }
 
+export const updateBitacoraCategoria = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/categorias/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+
+}
+
 //Administrador/Productos/Categorias
 
 export const addSubcategoria = async (subcategoria: Subcategoria) => {
@@ -341,17 +368,4 @@ export const deleteSubcategoria = async (id: number) => {
     const response = await axios.delete(`${process.env.URL}/api/users/administrador/productos/subcategorias/${id}/${session.userId}`);
     const data = response.data;
     return data;
-}
-
-export const updateBitacoraProducto = async (id: number, bitacora: Bitacora[]) => {
-    const session = await getSession();
-    bitacora.map(async (item) => {
-        console.log(item)
-        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/${id}/${session.userId}`, item)
-        const status = response.status;
-        if (status !== 200) {
-            return { status: status, message: response }
-        }
-    })
-
 }

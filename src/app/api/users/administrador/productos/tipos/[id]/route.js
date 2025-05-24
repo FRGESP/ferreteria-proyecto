@@ -19,7 +19,7 @@ export async function GET(request, { params }) {
         return NextResponse.json([response[0][0],response[1][0],response[2][0],response[3][0],response[4][0],response[5][0], response[6][0]], { status: 200 });
     } catch (error) {
         console.error(error);
-        return NextResponse.json({ error: "Error al obtener el producto" }, { status: 500 });
+        return NextResponse.json({ error: "Error al obtener el tipo" }, { status: 500 });
     }
 }
 

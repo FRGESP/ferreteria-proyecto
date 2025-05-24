@@ -9,6 +9,7 @@ import AddModalTipo from "@/components/administrador/productos/tipos/addModalTip
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateModal from "@/components/administrador/productos/updateModal"
 import UpdateModalTipos from "@/components/administrador/productos/tipos/updateModdalTipos";
+import UpdateModalCategorias from "@/components/administrador/productos/categorias/updateModalCategoria";
 import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
 import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
@@ -388,6 +389,10 @@ function ProductosDashboard() {
                 getSelects();
             } else if (selectedButton === "Tipos") {
                 getTipos();
+            } else if (selectedButton === "Categorias") {
+                getCategorias();
+            } else if (selectedButton === "Subcategorias") {
+                getSubategorias();
             }
             setUpdate(false);
         }
@@ -701,9 +706,9 @@ function ProductosDashboard() {
                                 <td>{Categoria.Categoria}</td>
                                 <td>{Categoria.Tipo}</td>
                                 <td>{Categoria.Cantidad}</td>
-                                <td className="px-4 py-2 whitespace-nowrap text-center">
+                                <td>
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdProducto={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModalCategorias IdCategoria={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Categoria.IdCategoria)}
