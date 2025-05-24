@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/productos/addModal";
 import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
 import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
-import UpdateModal from "@/components/administrador/clientes/updateModal";
+import UpdateModal from "@/components/administrador/productos/updateModal"
 import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
 import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
@@ -633,7 +633,7 @@ function ProductosDashboard() {
                                     <td>${Producto.Precio}</td>
                                     <td>
                                         <div className="flex gap-3 w-full justify-center">
-                                            <UpdateModal IdCliente={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
+                                            <UpdateModal IdProducto={Producto.IdProducto} onGuardado={() => setUpdate(true)} />
                                             <button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" onClick={() => handleDelete(Producto.IdProducto)}><Trash strokeWidth={2} size={25} /></button>
                                         </div>
                                     </td>
@@ -667,7 +667,7 @@ function ProductosDashboard() {
                                 <td>{Tipo.Cantidad}</td>
                                 <td className="px-4 py-2 whitespace-nowrap text-center">
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdCliente={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModal IdProducto={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Tipo.IdTipo)}
@@ -702,7 +702,7 @@ function ProductosDashboard() {
                                 <td>{Categoria.Cantidad}</td>
                                 <td className="px-4 py-2 whitespace-nowrap text-center">
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdCliente={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModal IdProducto={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Categoria.IdCategoria)}
@@ -739,7 +739,7 @@ function ProductosDashboard() {
                                 <td>{Subcategoria.Cantidad}</td>
                                 <td className="px-4 py-2 whitespace-nowrap text-center">
                                     <div className="flex gap-2 justify-center">
-                                        <UpdateModal IdCliente={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
+                                        <UpdateModal IdProducto={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
                                         <button
                                             className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
                                             onClick={() => handleDelete(Subcategoria.IdSubcategoria)}

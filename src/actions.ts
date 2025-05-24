@@ -329,3 +329,16 @@ export const deleteSubcategoria = async (id: number) => {
     const data = response.data;
     return data;
 }
+
+export const updateBitacoraProducto = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/productos/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+
+}
