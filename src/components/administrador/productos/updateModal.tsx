@@ -101,7 +101,6 @@ function UpdateModal({ IdProducto, onGuardado }: UpdateModalProps) {
 
         if (e.target instanceof HTMLSelectElement) {
             selectedText = e.target.options[e.target.selectedIndex].text;
-            console.log(selectedText);
         }
 
         const { name, value } = e.target;
@@ -171,8 +170,10 @@ function UpdateModal({ IdProducto, onGuardado }: UpdateModalProps) {
     }, [bitacora]);
 
     useEffect(() => {
-        if (isOpen) {
+        if (inputValue.Tipo !== "") {
             getSelects();
+        }
+        if (isOpen) {
             setInputValue({
                 ...inputValue,
                 Categoria: "",
@@ -186,6 +187,10 @@ function UpdateModal({ IdProducto, onGuardado }: UpdateModalProps) {
         const response = await axios.get(`/api/users/administrador/productos/${IdProducto}`);
         const data = response.data;
         setProducto(data);
+        setInputValue({
+            ...inputValue,
+            Tipo: data.Tipo,
+        })
         setInputValue({
             Descripcion: data.Descripcion,
             Tipo: data.Tipo,
