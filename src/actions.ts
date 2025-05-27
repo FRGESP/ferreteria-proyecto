@@ -94,6 +94,13 @@ interface Subcategoria {
     costoBase: string;
 }
 
+//Interface para los cargos
+interface Cargo {
+    nombre: string;
+    cargo: string;
+    tipo: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -380,5 +387,31 @@ export const updateBitacoraSubcategoria = async (id: number, bitacora: Bitacora[
             return { status: status, message: response }
         }
     })
+}
 
+//Administrador/Cargos
+
+export const addCargo = async (cargo: Cargo) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/cargos/${session.userId}`,cargo)
+    const status = response.status;
+    return status;
+}
+
+export const deleteCargos = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/administrador/cargos/${id}/${session.userId}`);
+    const data = response.data;
+    return data;
+}
+export const updateBitacoraCargo = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/cargos/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
 }
