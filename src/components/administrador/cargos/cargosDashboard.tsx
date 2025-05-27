@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddModal from "@/components/administrador/cargos/addModal";
 import UpdateModalCargos from "./updateModalCargos";
+import UpdateModalCargoGeneral from "./generales/updateModalCargoGeneral";
 import { deleteCargos } from "@/actions";
 
 
@@ -237,7 +238,7 @@ function CargosDashboard() {
                                     <td>${Cargo.Cargo}</td>
                                     <td>
                                         <div className="flex gap-3 w-full justify-center">
-                                            <UpdateModalCargos IdCargo={Cargo.IdCargoGeneral} onGuardado={() => setUpdate(true)} />
+                                            <UpdateModalCargoGeneral IdCargo={Cargo.IdCargoGeneral} onGuardado={() => setUpdate(true)} />
                                         </div>
                                     </td>
                                 </tr>

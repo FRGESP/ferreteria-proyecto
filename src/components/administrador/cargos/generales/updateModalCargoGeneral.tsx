@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Car, Pencil } from "lucide-react";
 import axios from "axios";
-import { updateBitacoraCargo } from "@/actions";
+import { updateBitacoraCargoGeneral } from "@/actions";
 import { useRouter } from "next/navigation";
 
 
-interface UpdateModalCargosProps {
+interface UpdateModalCargoGeneralProps {
     IdCargo: number;
     onGuardado: () => void;
 }
@@ -17,6 +17,7 @@ interface UpdateModalCargosProps {
 export interface Cargo {
     Nombre: string;
     Cargo: string;
+    Parametro: string;
 }
 
 //Va a guardar la bitacora de los cambios
@@ -32,7 +33,7 @@ interface SelectOption {
     label: string;
 }
 
-function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
+function UpdateModalCargoGeneral({ IdCargo, onGuardado }: UpdateModalCargoGeneralProps) {
     const { toast } = useToast();
     const router = useRouter();
 
@@ -59,6 +60,7 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
     const [inputValue, setInputValue] = useState({
         Nombre: "",
         Cargo: "",
+        Parametro: "",
     });
 
 
@@ -114,6 +116,7 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
         setInputValue({
             Nombre: "",
             Cargo: "",
+            Parametro: "",
         });
         setBitacora({});
         setIsBitacoraEmpty(false);
@@ -132,13 +135,14 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
 
     //Funcion para obtener el id del Cargo
     const getCargo = async () => {
-        const response = await axios.get(`/api/users/administrador/cargos/${IdCargo}`);
+        const response = await axios.get(`/api/users/administrador/cargos/general/${IdCargo}`);
         const data = response.data;
         setCargo(data);
         console.log(data);
         setInputValue({
             Nombre: data.Nombre,
             Cargo: data.Cargo,
+            Parametro: data.Parametro,
         });
     }
 
@@ -150,10 +154,10 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
             if (String(value).trim() === "") {
                 newErrors[Key] = "Este campo es obligatorio"
             }
-            if ((Key === "Cargo")) {
+            if ((Key === "Cargo" || Key === "Parametro")) {
                 if (isNaN(Number(value))) {
                     newErrors[Key] = "Este campo debe ser un número";
-                } else if (Number(value) <= 0 && Key === "Cargo" && value.trim() !== "") {
+                } else if (Number(value) <= 0 && (Key === "Cargo" || Key == 'Parametro') && value.trim() !== "") {
                     newErrors[Key] = "Este campo debe ser mayor a 0";
                 }
 
@@ -170,8 +174,8 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
             }));
             console.log(registrosBitacoras);
             console.log(inputValue);
-            const response = await updateBitacoraCargo(IdCargo, registrosBitacoras);
-            const responseUpdate = await axios.put(`/api/users/administrador/cargos/${IdCargo}/actualizacion`, inputValue)
+            const response = await updateBitacoraCargoGeneral(IdCargo, registrosBitacoras);
+            const responseUpdate = await axios.put(`/api/users/administrador/cargos/general/${IdCargo}`, inputValue)
 
             if (responseUpdate.status === 200) {
                 onGuardado();
@@ -229,15 +233,31 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
                                 </div>
                                 <div className="w-full mt-3">
                                     <label
+                                        htmlFor="Parametro"
+                                        className="font-bold text-lg flex-grow text-left"
+                                    >
+                                        Parámetro
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className={`border rounded-md w-full py-2 px-2 ${errors["Parametro"] ? "border-red-500" : "border-black"}`}
+                                        name="Parametro"
+                                        defaultValue={Cargo?.Parametro}
+                                        onChange={handleChange}
+                                    />
+                                    {errors["Parametro"] && (<span className="text-sm text-red-500">{errors["Parametro"]}</span>)}
+                                </div>
+                                <div className="w-full mt-3">
+                                    <label
                                         htmlFor="Cargo"
                                         className="font-bold text-lg flex-grow text-left"
                                     >
-                                        Cargo por Kg
+                                        Cargo
                                     </label>
                                     <input
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Cargo"] ? "border-red-500" : "border-black"}`}
-                                        name="cargo"
+                                        name="Cargo"
                                         defaultValue={Cargo?.Cargo}
                                         onChange={handleChange}
                                     />
@@ -268,4 +288,4 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
     );
 }
 
-export default UpdateModalCargos;
+export default UpdateModalCargoGeneral;

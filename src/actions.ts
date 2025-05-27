@@ -415,3 +415,17 @@ export const updateBitacoraCargo = async (id: number, bitacora: Bitacora[]) => {
         }
     })
 }
+
+//Administrador/Cargos/General
+
+export const updateBitacoraCargoGeneral = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/cargos/general/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+}
