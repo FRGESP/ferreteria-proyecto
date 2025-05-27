@@ -1,4 +1,5 @@
 import React from 'react'
+import SucursalIdDashboard from '@/components/administrador/sucursales/sucursalidDashboard';
 
 interface SucursalIdpageProps {
     params: {
@@ -8,7 +9,7 @@ interface SucursalIdpageProps {
 
 function SucursalIdpage({ params }: SucursalIdpageProps) {
   return (
-    <div>SucursalIdpage {params.id}</div>
+    <SucursalIdDashboard IdSucursalProp={params.id} />
   )
 }
 

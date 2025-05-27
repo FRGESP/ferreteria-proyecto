@@ -101,6 +101,13 @@ interface Cargo {
     tipo: string;
 }
 
+//Interface para el stock
+interface Stock {
+    producto: number;
+    cantidad: string;
+    sucursal: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -423,6 +430,27 @@ export const updateBitacoraCargoGeneral = async (id: number, bitacora: Bitacora[
     bitacora.map(async (item) => {
         console.log(item)
         const response = await axios.put(`${process.env.URL}/api/users/administrador/cargos/general/${id}/${session.userId}`, item)
+        const status = response.status;
+        if (status !== 200) {
+            return { status: status, message: response }
+        }
+    })
+}
+
+//Administrador/Sucursales/Productos
+
+export const addStock = async (producto: Stock) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/sucursales/sucursalid/productos/${session.userId}`,producto)
+    const status = response.status;
+    return status;
+}
+
+export const updateBitacoraInventarioSucursal = async (id: number, bitacora: Bitacora[]) => {
+    const session = await getSession();
+    bitacora.map(async (item) => {
+        console.log(item)
+        const response = await axios.put(`${process.env.URL}/api/users/administrador/sucursales/sucursalid/productos/${id}/${session.userId}`, item)
         const status = response.status;
         if (status !== 200) {
             return { status: status, message: response }
