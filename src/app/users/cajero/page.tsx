@@ -1,6 +1,9 @@
 import React from 'react'
+import { checkRole } from '@/actions'
 
-function cajeroPage() {
+
+async function cajeroPage() {
+  await checkRole(0);
   return (
     <div>cajeroPage</div>
   )

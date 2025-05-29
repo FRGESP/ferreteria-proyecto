@@ -8,12 +8,14 @@ export interface SessionData {
     isLoggedIn: boolean;
     isAdmin: boolean;
     sucursal: number;
+    nota: number;
 }
 
 export const defaultSession: SessionData = {
     isLoggedIn: false,
     isAdmin: false,
     sucursal: 0,
+    nota: 0,
 }
 
 export const sessionOptions: SessionOptions = {

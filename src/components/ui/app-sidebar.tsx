@@ -86,19 +86,13 @@ const itemsAdmin = [
   }
 ];
 
-const itemsEntradas = [
+const itemsCajero = [
   {
-    title: "Guias",
-    url: "/users/entradas/guias",
-    icon: "/assets/Entradas/Guias.png",
-    iconBold: "/assets/Entradas/GuiasVerde.png",
+    title: "Ventas",
+    url: "/users/cajero/ventas",
+    icon: "/assets/cajero/Ventas.png",
+    iconBold: "/assets/cajero/VentasVerde.png",
   },
-  {
-    title: "Corrales",
-    url: "/users/entradas/corrales",
-    icon: "/assets/Entradas/Corrales.png",
-    iconBold: "/assets/Entradas/CorralesVerde.png",
-  }
 ];
 
 export function AppSidebar() {
@@ -113,9 +107,9 @@ export function AppSidebar() {
     setLogout(false);
   };
 
-  const isEntradas = pathname.toString().substring(0,15) == "/users/entradas";
+  const isCajero = pathname.toString().substring(0,13) == "/users/cajero";
   const isadmin = pathname.toString().substring(0,12) == "/users/admin";
-  const itemsChoice = isadmin ? itemsAdmin : isEntradas ? itemsEntradas : itemsAlmacen;
+  const itemsChoice = isadmin ? itemsAdmin : isCajero ? itemsCajero : itemsAlmacen;
 
   return (
     <Sidebar collapsible="icon">
@@ -126,7 +120,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-lg">{isadmin ? "Administrador" : isEntradas ? "Entradas" : "Almacen"}</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-lg">{isadmin ? "Administrador" : isCajero ? "Caja" : "Vendedor"}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {itemsChoice.map((item) => (

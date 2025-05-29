@@ -4,6 +4,7 @@ import { conn } from "@/libs/mysql";
 export async function POST(request, { params }) {
     const req = await request.json();
     try {
+        console.log(`CALL SP_ADDCLIENTE(${req.codigo},${req.colonia},'${req.calle}','${req.nombre}','${req.apellidoPat}','${req.apellidoMat}','${req.telefono}','${req.edad}',${req.rango},${req.creditoMaximo},${req.vendedor},${params.id})`)
         const [response] = await conn.query("CALL SP_ADDCLIENTE(?,?,?,?,?,?,?,?,?,?,?,?)", [req.codigo, req.colonia, req.calle, req.nombre, req.apellidoPat, req.apellidoMat, req.telefono, req.edad, req.rango, req.creditoMaximo, req.vendedor, params.id]);
 
         return NextResponse.json(response, { status: 200 });
