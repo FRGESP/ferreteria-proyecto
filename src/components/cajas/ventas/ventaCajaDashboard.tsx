@@ -5,7 +5,8 @@ import { X, Search, ArrowRight, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddClienteModal from "@/components/cajas/ventas/addClienteModal";
-import { getNotaVenta, addProductoVenta, getNotaNumber } from "@/actions";
+import { getNotaVenta, addProductoVenta, getNotaNumber, deleteVenta } from "@/actions";
+import { get } from "http";
 
 
 function VentaCajaDashboard() {
@@ -20,6 +21,7 @@ function VentaCajaDashboard() {
         Descripcion: string;
         PrecioUnitario: string;
         Piezas: string;
+        Stock: string;
         Importe: string
     }
 
@@ -33,6 +35,9 @@ function VentaCajaDashboard() {
         Descripcion: string;
     }
 
+
+    //Controla el estado de los errores
+    const [errors, setErrors] = useState<Record<string, string>>({});
 
     //Guarda los nombres de los productos o de cualquier otra información
     const [nombresProductos, setNombresProductos] = useState<Nombres[]>([]);
@@ -64,6 +69,9 @@ function VentaCajaDashboard() {
     //Total de envío
     const [totalEnvio, setTotalEnvio] = useState(0);
 
+    //Guarda el numero de la nota de venta
+    const [numeroNotaVenta, setNumeroNotaVenta] = useState(0);
+
     //Guarda la informacion de la busqueda
     const [inputValue, setInputValue] = useState({
         nombreCliente: "",
@@ -80,10 +88,40 @@ function VentaCajaDashboard() {
         setNombresProductos(response.data[1]);
     }
     const handleChange = (e: any) => {
+        const { name, value } = e.target;
         setInputValue({
             ...inputValue,
             [e.target.name]: e.target.value,
         });
+        if (value.trim() === "") {
+            setErrors((prev) => ({
+                ...prev,
+                [name]: "Este campo es obligatorio",
+            }));
+        } else {
+            setErrors((prev) => {
+                const newErrors = { ...prev };
+                delete newErrors[name];
+                return newErrors;
+            });
+        }
+
+        if (name === "piezas") {
+            if (isNaN(value) || parseInt(value) <= 0) {
+                setErrors((prev) => ({
+                    ...prev,
+                    [name]: "Este campo debe ser un número válido y mayor a 0",
+                }));
+            }
+            else {
+                setErrors((prev) => {
+                    const newErrors = { ...prev };
+                    delete newErrors[name];
+                    return newErrors;
+                });
+            }
+
+        }
         console.log(inputValue);
     }
 
@@ -106,15 +144,45 @@ function VentaCajaDashboard() {
         }
     }
 
+    const handleDeletePedido = async (id: number) => {
+        if (confirm("¿Estás seguro de que deseas cancelar el pedido?")) {
+            const response = await deleteVenta(id);
+            if (response === 200) {
+                toast({
+                    title: "Pedido eliminado",
+                    description: "El Pedido ha sido eliminado correctamente",
+                    variant: "success",
+                });
+                setClienteSeleccionado(null);
+                setProductos([]);
+                setTotalVenta(0);
+                setNumeroProductos(0);
+                setTotalEnvio(0);
+                setNumeroNotaVenta(0);
+                getNombres();
+                setProductoSeleccionado(null);
+            }
+            else {
+                toast({
+                    title: "Error",
+                    description: "No se pudo eliminar el Pedido",
+                    variant: "destructive",
+                });
+            }
+        }
+    }
+
     const handleAddProducto = async (e: any) => {
         e.preventDefault();
-        console.log("Agregar producto");
-        setProductoSeleccionado(null);
-        setInputValue({
-            ...inputValue,
-            piezas: "1",
-        });
-        await addProducto();
+        if (!errors["piezas"]) {
+            console.log("Agregar producto");
+            setProductoSeleccionado(null);
+            setInputValue({
+                ...inputValue,
+                piezas: "1",
+            });
+            await addProducto();
+        }
     }
 
     const handleSearch = async (e: any) => {
@@ -139,21 +207,23 @@ function VentaCajaDashboard() {
     //Funcion para obtener la nota de venta
     const getNotaVentaData = async () => {
         console.log("Obteniendo nota de venta");
-        if (clienteSeleccionado) {
-            const response = await getNotaVenta();
-            console.log("Response de la nota de venta", response);
-            if (response) {
-                setProductos(response[0]);
-                setTotalVenta(response[1][0].Total);
-                setNumeroProductos(response[2][0].NumeroProductos);
-                setTotalEnvio(response[3][0].Cargo);
-            } else {
-                toast({
-                    title: "Error",
-                    description: "No se pudo obtener la nota de venta",
-                    variant: "destructive",
-                });
-            }
+        const response = await getNotaVenta();
+        console.log("Response de la nota de venta", response);
+        if (response) {
+            setClienteSeleccionado(nombresClientes.find(cliente => Number(cliente.Id) == response[4][0].IdCliente) || null);
+            console.log("Cliente res:", response[4][0].IdCliente);
+            console.log("Nombres clientes:", nombresClientes);
+            console.log("Cliente seleccionado:", clienteSeleccionado);
+            setProductos(response[0]);
+            setTotalVenta(response[1][0].Total);
+            setNumeroProductos(response[2][0].NumeroProductos);
+            setTotalEnvio(response[3][0].Cargo);
+        } else {
+            toast({
+                title: "Error",
+                description: "No se pudo obtener la nota de venta",
+                variant: "destructive",
+            });
         }
     }
 
@@ -165,8 +235,42 @@ function VentaCajaDashboard() {
                 "cliente": clienteSeleccionado.Id,
                 "piezas": inputValue.piezas,
             });
+            if (response != 0) {
+                setErrors({
+                    ...errors,
+                    [productoSeleccionado.Id]: "1",
+                });
+                setTimeout(function () {
+                    setErrors((prev) => {
+                        const newErrors = { ...prev };
+                        delete newErrors[productoSeleccionado.Id];
+                        return newErrors;
+                    });
+                }, 1500);
+                setErrors({
+                    ...errors,
+                    [productoSeleccionado.Id]: "1",
+                });
+                setTimeout(function () {
+                    setErrors((prev) => {
+                        const newErrors = { ...prev };
+                        delete newErrors[productoSeleccionado.Id];
+                        return newErrors;
+                    });
+                }, 1500);
+                
+            }
         }
         getNotaVentaData();
+    }
+
+    const getNumeroNotaVenta = async () => {
+        const result = await getNotaNumber();
+        console.log("Resultado de getNotaNumber:", result);
+        if (result != 0) {
+            setNumeroNotaVenta(result);
+            getNotaVentaData();
+        }
     }
 
     const nombresClientesFiltrados = nombresClientes.filter((nombre) =>
@@ -179,8 +283,15 @@ function VentaCajaDashboard() {
 
 
     useEffect(() => {
-        getNombres();
+        const fetchNombres = async () => {
+            await getNombres();
+        };
+        fetchNombres();
     }, [])
+
+    useEffect(() => {
+        getNumeroNotaVenta();
+    }, [nombresClientes])
 
     useEffect(() => {
         if (update) {
@@ -202,17 +313,6 @@ function VentaCajaDashboard() {
             }
         }
     }, [productoSeleccionado, clienteSeleccionado]);
-
-    useEffect(() => {
-        const fetchNotaNumber = async () => {
-            const result = await getNotaNumber();
-            console.log("Resultado de getNotaNumber:", result);
-            if(result != 0) {
-                getNotaVentaData();
-            }
-        };
-        fetchNotaNumber();
-    }, []);
 
     return (
         <div className='flex flex-col h-[90vh] w-full p-[1%] gap-3 bg-[#F5F5F5]'>
@@ -259,7 +359,7 @@ function VentaCajaDashboard() {
                         <p className="text-2xl mr-1"><span className="font-bold">Cliente:</span> {clienteSeleccionado?.Descripcion}</p>
                     )}
                     {!clienteSeleccionado && (<AddClienteModal onGuardado={() => setUpdate(true)} />)}
-                    {(clienteSeleccionado && productos.length == 0) && (<button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" onClick={() => setClienteSeleccionado(null)}><X strokeWidth={4} size={40} /></button>)}
+                    {(clienteSeleccionado && productos.length == 0 && numeroNotaVenta == 0) && (<button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" onClick={() => setClienteSeleccionado(null)}><X strokeWidth={4} size={40} /></button>)}
                 </div>
                 <div className='flex-[6] rounded-lg border border-[#c9c9c9d7] border-solid] bg-white'>
                     <div className='flex h-full w-full'>
@@ -271,6 +371,7 @@ function VentaCajaDashboard() {
                                             <th className="bg-white">ID</th>
                                             <th className="px-4 py-2 bg-white">Producto</th>
                                             <th className="px-4 py-2 bg-white">Piezas</th>
+                                            <th className="px-4 py-2 bg-white">Stock</th>
                                             <th className="px-4 py-2 bg-white">Precio Unitario</th>
                                             <th className="px-4 py-2 bg-white">Importe</th>
                                             <th className="bg-white"></th>
@@ -285,10 +386,11 @@ function VentaCajaDashboard() {
                                         </button> */}
                                         {productos.length > 0 ? (
                                             productos.map((producto) => (
-                                                <tr key={producto.IdNotaProducto} className="hover:bg-gray-100">
+                                                <tr key={producto.IdNotaProducto} className={`transition-colors duration-200 hover:bg-gray-100 ${errors[producto.IdProducto] ? "bg-yellow-300" : "bg-white"}`}>
                                                     <td className="px-4 py-2">{producto.IdProducto}</td>
                                                     <td className="px-4 py-2">{producto.Descripcion}</td>
                                                     <td className="px-4 py-2">{producto.Piezas}</td>
+                                                    <td className="px-4 py-2">{producto.Stock}</td>
                                                     <td className="px-4 py-2">${producto.PrecioUnitario}</td>
                                                     <td className="px-4 py-2">${producto.Importe}</td>
                                                     <td className="px-4 py-2">
@@ -303,7 +405,7 @@ function VentaCajaDashboard() {
                                             ))
                                         ) : (
                                             <tr>
-                                                <td colSpan={6} className="text-center py-4">No hay productos en la venta</td>
+                                                <td colSpan={7} className="text-center py-4">No hay productos en la venta</td>
                                             </tr>
                                         )}
                                     </tbody>
@@ -313,9 +415,9 @@ function VentaCajaDashboard() {
                         <div className="w-1/3 flex p-4 justify-center items-center">
                             <div className="bg-white w-full shadow-lg rounded-2xl p-6 flex flex-col items-center gap-1 border border-gray-200">
                                 <div className="w-full text-center space-y-1">
-                                    <p className="text-gray-600 text-base">Cantidad de Productos</p>
-                                    <p className="text-lg font-medium">{numeroProductos}</p>
-                                    <p className="text-gray-600 text-base">Total de Envío</p>
+                                    <p className="text-gray-600 text-base">Número de Productos</p>
+                                    <p className="text-lg font-medium">{numeroProductos ? numeroProductos : 0}</p>
+                                    <p className="text-gray-600 text-base">Costo de Envío</p>
                                     <p className="text-lg font-medium">${totalEnvio}</p>
 
                                     <p className="text-gray-600 text-base">Total de Productos</p>
@@ -332,7 +434,7 @@ function VentaCajaDashboard() {
                                 <button disabled={(productos.length > 0 && clienteSeleccionado) ? false : true} className={`mt-2 w-full ${productos.length > 0 && clienteSeleccionado ? "bg-acento hover:bg-acentohover" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
                                     Terminar Pedido
                                 </button>
-                                <button disabled={(productos.length > 0 && clienteSeleccionado) ? false : true} className={`w-full ${productos.length > 0 && clienteSeleccionado ? "bg-red-500 hover:bg-red-700" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
+                                <button onClick={() => handleDeletePedido(numeroNotaVenta)} disabled={(clienteSeleccionado && (numeroNotaVenta != 0 || productos.length > 0)) ? false : true} className={`w-full ${clienteSeleccionado && (numeroNotaVenta != 0 || productos.length > 0) ? "bg-red-500 hover:bg-red-700" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
                                     Cancelar Pedido
                                 </button>
                             </div>
@@ -381,19 +483,24 @@ function VentaCajaDashboard() {
                     {productoSeleccionado && (<button className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded" onClick={() => setProductoSeleccionado(null)}><X strokeWidth={4} size={45} /></button>)}
                     <div className="flex justify-center items-center ml-[2%]">
                         <form onSubmit={handleAddProducto} className="flex items-center gap-2">
-                            <input
-                                type="text"
-                                name="piezas"
-                                disabled={productoSeleccionado ? false : true}
-                                onChange={handleChange}
-                                value={inputValue.piezas}
-                                autoComplete="off"
-                                id="inputPiezas"
-                                className="w-full border border-gray-400 shadow-lg rounded-2xl py-2 pl-5 pr-3 text-lg"
-                                placeholder={`Número de Piezas`}
-                            />
-                            {productoSeleccionado && (<button className="hover:bg-gray-200 text-green-600 ml-2 py-1 rounded" onClick={handleAddProducto}><ArrowRight strokeWidth={4} size={40} /></button>
-                            )}
+                            <div className="flex flex-col">
+                                <div className="flex items-center gap-2">
+                                    <input
+                                        type="text"
+                                        name="piezas"
+                                        disabled={productoSeleccionado ? false : true}
+                                        onChange={handleChange}
+                                        value={inputValue.piezas}
+                                        autoComplete="off"
+                                        id="inputPiezas"
+                                        className="w-fit border border-gray-400 shadow-lg rounded-2xl py-2 pl-5 pr-3 text-lg"
+                                        placeholder={`Número de Piezas`}
+                                    />
+                                    {productoSeleccionado && (<button className="hover:bg-gray-200 text-green-600 ml-2 py-1 rounded" onClick={handleAddProducto}><ArrowRight strokeWidth={4} size={40} /></button>
+                                    )}
+                                </div>
+                                {errors["piezas"] && (<span className="text-sm text-red-500">{errors["piezas"]}</span>)}
+                            </div>
                         </form>
                     </div>
                 </div>

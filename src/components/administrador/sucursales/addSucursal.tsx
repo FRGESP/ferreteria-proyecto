@@ -149,6 +149,9 @@ function AddSucursal({ onGuardado }: AddSucursalProps) {
                         newErrors[Key] = "Este campo debe ser numérico";
                     } 
                 }
+            if(Key === "telefono" && value.trim() !== "" && value.length > 10) {
+                    newErrors[Key] = "El número de teléfono debe tener 10 dígitos";
+                }
         })
         setErrors(newErrors);
 

@@ -176,6 +176,9 @@ function AddModal({ onGuardado }: AddModalProps) {
                 } else if (Number(value) <= 0 && Key === "edad" && value.trim() !== "") {
                     newErrors[Key] = "Este campo debe ser mayor a 0";
                 }
+                if(Key === "telefono" && value.trim() !== "" && value.length > 10) {
+                    newErrors[Key] = "El número de teléfono debe tener 10 dígitos";
+                }
 
             }
         })

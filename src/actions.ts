@@ -477,12 +477,11 @@ export const addProductoVenta = async (producto: ProductoVenta) => {
         "piezas": producto.piezas,
         "nota": session.nota
     })
-    if (response.data.Nota !== 0) {
-        session.nota = response.data.Nota;
+    if (response.data[0].Nota !== 0) {
+        session.nota = response.data[0].Nota;
         await session.save();
-    }
-    const status = response.status;
-    return status;
+    };
+    return response.data[1].Error;
 }
 
 export const getNotaVenta = async () => {
@@ -495,4 +494,12 @@ export const getNotaVenta = async () => {
 export const getNotaNumber = async () => {
     const session = await getSession();
     return session.nota;
+}
+
+export const deleteVenta = async (id: number) => {
+    const session = await getSession();
+    const response = await axios.delete(`${process.env.URL}/api/users/cajero/ventas/${session.userId}/${id}`);
+    session.nota = 0;
+    await session.save();
+    return response.status;
 }

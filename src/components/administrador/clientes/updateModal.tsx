@@ -270,7 +270,9 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
                 } else if (Number(value) <= 0 && Key === "Edad" && value.trim() !== "") {
                     newErrors[Key] = "Este campo debe ser mayor a 0";
                 }
-
+                if(Key === "Telefono" && value.trim() !== "" && value.length > 10) {
+                    newErrors[Key] = "El número de teléfono debe tener 10 dígitos";
+                }
             }
         })
         setErrors(newErrors);
