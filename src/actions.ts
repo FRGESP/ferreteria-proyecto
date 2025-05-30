@@ -108,6 +108,13 @@ interface Stock {
     sucursal: string;
 }
 
+//Interface para el producto de venta
+interface ProductoVenta {
+    producto: string;
+    cliente: string;
+    piezas: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -133,6 +140,8 @@ export const login = async (credentials: Credentials) => {
         session.name = datos.Nombre;
         session.lastname = datos.Apellido;
         session.sucursal = datos.Sucursal;
+        session.nota = 0;
+        session.isAdmin = false;
 
         if (datos.IdRol === 3) {
             session.isAdmin = true;
@@ -456,4 +465,34 @@ export const updateBitacoraInventarioSucursal = async (id: number, bitacora: Bit
             return { status: status, message: response }
         }
     })
+}
+
+//Cajero/Ventas
+export const addProductoVenta = async (producto: ProductoVenta) => {
+    const session = await getSession();
+    console.log(session)
+    const response = await axios.put(`${process.env.URL}/api/users/cajero/ventas/${session.userId}`, {
+        "producto": producto.producto,
+        "cliente": producto.cliente,
+        "piezas": producto.piezas,
+        "nota": session.nota
+    })
+    if (response.data.Nota !== 0) {
+        session.nota = response.data.Nota;
+        await session.save();
+    }
+    const status = response.status;
+    return status;
+}
+
+export const getNotaVenta = async () => {
+    const session = await getSession();
+    const response = await axios.get(`${process.env.URL}/api/users/cajero/ventas/${session.nota}`);
+    const data = response.data;
+    return data;
+}
+
+export const getNotaNumber = async () => {
+    const session = await getSession();
+    return session.nota;
 }

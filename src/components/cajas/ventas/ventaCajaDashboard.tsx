@@ -5,6 +5,7 @@ import { X, Search, ArrowRight, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddClienteModal from "@/components/cajas/ventas/addClienteModal";
+import { getNotaVenta, addProductoVenta, getNotaNumber } from "@/actions";
 
 
 function VentaCajaDashboard() {
@@ -14,10 +15,12 @@ function VentaCajaDashboard() {
 
     //Interface para los productos
     interface Producto {
-        Id: number;
+        IdNotaProducto: number;
+        IdProducto: number;
         Descripcion: string;
-        Precio: number;
-        Piezas: number;
+        PrecioUnitario: string;
+        Piezas: string;
+        Importe: string
     }
 
     interface paginacion {
@@ -85,7 +88,22 @@ function VentaCajaDashboard() {
     }
 
     const handleDelete = async (id: number) => {
-
+        const response = await axios.delete(`/api/users/cajero/ventas/${id}`);
+        if (response.status === 200) {
+            toast({
+                title: "Producto eliminado",
+                description: "El producto ha sido eliminado correctamente",
+                variant: "success",
+            });
+            getNotaVentaData();
+        }
+        else {
+            toast({
+                title: "Error",
+                description: "No se pudo eliminar el producto",
+                variant: "destructive",
+            });
+        }
     }
 
     const handleAddProducto = async (e: any) => {
@@ -96,6 +114,7 @@ function VentaCajaDashboard() {
             ...inputValue,
             piezas: "1",
         });
+        await addProducto();
     }
 
     const handleSearch = async (e: any) => {
@@ -111,10 +130,43 @@ function VentaCajaDashboard() {
         inputPiezas.focus();
     }
 
-     //Para que el input de producto se ponga en focus
+    //Para que el input de producto se ponga en focus
     const focusInputProducto = () => {
         const inputNombreProducto = document.getElementById("inputNombreProducto") as HTMLInputElement;
         inputNombreProducto.focus();
+    }
+
+    //Funcion para obtener la nota de venta
+    const getNotaVentaData = async () => {
+        console.log("Obteniendo nota de venta");
+        if (clienteSeleccionado) {
+            const response = await getNotaVenta();
+            console.log("Response de la nota de venta", response);
+            if (response) {
+                setProductos(response[0]);
+                setTotalVenta(response[1][0].Total);
+                setNumeroProductos(response[2][0].NumeroProductos);
+                setTotalEnvio(response[3][0].Cargo);
+            } else {
+                toast({
+                    title: "Error",
+                    description: "No se pudo obtener la nota de venta",
+                    variant: "destructive",
+                });
+            }
+        }
+    }
+
+    //Funcion para añdir productos a la venta
+    const addProducto = async () => {
+        if (clienteSeleccionado && productoSeleccionado) {
+            const response = await addProductoVenta({
+                "producto": productoSeleccionado.Id,
+                "cliente": clienteSeleccionado.Id,
+                "piezas": inputValue.piezas,
+            });
+        }
+        getNotaVentaData();
     }
 
     const nombresClientesFiltrados = nombresClientes.filter((nombre) =>
@@ -149,7 +201,18 @@ function VentaCajaDashboard() {
                 focusInputProducto();
             }
         }
-    },[productoSeleccionado, clienteSeleccionado]);
+    }, [productoSeleccionado, clienteSeleccionado]);
+
+    useEffect(() => {
+        const fetchNotaNumber = async () => {
+            const result = await getNotaNumber();
+            console.log("Resultado de getNotaNumber:", result);
+            if(result != 0) {
+                getNotaVentaData();
+            }
+        };
+        fetchNotaNumber();
+    }, []);
 
     return (
         <div className='flex flex-col h-[90vh] w-full p-[1%] gap-3 bg-[#F5F5F5]'>
@@ -200,7 +263,7 @@ function VentaCajaDashboard() {
                 </div>
                 <div className='flex-[6] rounded-lg border border-[#c9c9c9d7] border-solid] bg-white'>
                     <div className='flex h-full w-full'>
-                        <div className="flex-1 flex-col overflow-y-auto flex border-r border-gray-200 border-solid p-5">
+                        <div className="flex-1 flex-col overflow-y-auto flex border-r border-gray-200 border-solid p-5 max-h-[60vh]">
                             <div>
                                 <table>
                                     <thead>
@@ -208,7 +271,8 @@ function VentaCajaDashboard() {
                                             <th className="bg-white">ID</th>
                                             <th className="px-4 py-2 bg-white">Producto</th>
                                             <th className="px-4 py-2 bg-white">Piezas</th>
-                                            <th className="px-4 py-2 bg-white">Precio</th>
+                                            <th className="px-4 py-2 bg-white">Precio Unitario</th>
+                                            <th className="px-4 py-2 bg-white">Importe</th>
                                             <th className="bg-white"></th>
                                         </tr>
                                     </thead>
@@ -219,6 +283,29 @@ function VentaCajaDashboard() {
                                         >
                                             <Trash strokeWidth={2} size={20} />
                                         </button> */}
+                                        {productos.length > 0 ? (
+                                            productos.map((producto) => (
+                                                <tr key={producto.IdNotaProducto} className="hover:bg-gray-100">
+                                                    <td className="px-4 py-2">{producto.IdProducto}</td>
+                                                    <td className="px-4 py-2">{producto.Descripcion}</td>
+                                                    <td className="px-4 py-2">{producto.Piezas}</td>
+                                                    <td className="px-4 py-2">${producto.PrecioUnitario}</td>
+                                                    <td className="px-4 py-2">${producto.Importe}</td>
+                                                    <td className="px-4 py-2">
+                                                        <button
+                                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded border-none"
+                                                            onClick={() => handleDelete(producto.IdNotaProducto)}
+                                                        >
+                                                            <Trash strokeWidth={2} size={20} />
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            ))
+                                        ) : (
+                                            <tr>
+                                                <td colSpan={6} className="text-center py-4">No hay productos en la venta</td>
+                                            </tr>
+                                        )}
                                     </tbody>
                                 </table>
                             </div>
@@ -229,16 +316,16 @@ function VentaCajaDashboard() {
                                     <p className="text-gray-600 text-base">Cantidad de Productos</p>
                                     <p className="text-lg font-medium">{numeroProductos}</p>
                                     <p className="text-gray-600 text-base">Total de Envío</p>
-                                    <p className="text-lg font-medium">${totalEnvio.toFixed(2)}</p>
+                                    <p className="text-lg font-medium">${totalEnvio}</p>
 
                                     <p className="text-gray-600 text-base">Total de Productos</p>
-                                    <p className="text-lg font-medium">${totalVenta.toFixed(2)}</p>
+                                    <p className="text-lg font-medium">${totalVenta - totalEnvio}</p>
                                 </div>
 
                                 <div className="mt-4 text-center">
                                     <p className="text-xl font-bold text-gray-700">Total</p>
                                     <p className="text-3xl font-semibold text-green-600">
-                                        ${(totalVenta + totalEnvio).toFixed(2)}
+                                        ${totalVenta}
                                     </p>
                                 </div>
 
