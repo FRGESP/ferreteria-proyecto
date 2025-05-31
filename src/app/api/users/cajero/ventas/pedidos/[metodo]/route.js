@@ -40,3 +40,13 @@ export async function PUT(request, { params }) {
         return NextResponse.json({ error: "Error al registrar la venta" }, { status: 500 });
     }
 }
+
+export async function GET(request, { params }) {
+    try {
+        const [response] = await conn.query("CALL SP_GETNOTATICKET(?)", [params.metodo]);
+        return NextResponse.json([response[0], response[1][0],response[2][0], response[3][0], response[4][0],response[5][0], response[6][0], response[7][0]], { status: 200 });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ error: "Error al obtener el cliente" }, { status: 500 });
+    }
+}

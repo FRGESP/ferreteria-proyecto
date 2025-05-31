@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, X, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import axios from "axios";
 import { pago, addPedido } from "@/actions";
 
@@ -26,7 +26,6 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
 
     //Bandera para verificar si es valido
     const [isValid, setIsValid] = useState(false);
-
 
 
     //Guarda la informacion del input
@@ -84,7 +83,7 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
     };
 
     //Funcion para verificar si el credito es valido
-    const verificarCredito = async (e:any) => {
+    const verificarCredito = async (e: any) => {
         e.preventDefault();
         console.log(inputValue.montoCredito);
         if (inputValue.montoCredito.trim() === "") {
@@ -94,14 +93,14 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
             }));
             return;
         }
-        if( isNaN(Number(inputValue.montoCredito)) || Number(inputValue.montoCredito) <= 0) {
+        if (isNaN(Number(inputValue.montoCredito)) || Number(inputValue.montoCredito) <= 0) {
             setErrors((prev) => ({
                 ...prev,
                 montoCredito: "El monto debe ser un número positivo",
             }));
             return;
         }
-        if( Number(inputValue.montoCredito) > totalVenta) {
+        if (Number(inputValue.montoCredito) > totalVenta) {
             setErrors((prev) => ({
                 ...prev,
                 montoCredito: `El monto no puede ser mayor al total de la venta ($${totalVenta}).`,
@@ -109,19 +108,19 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
             return;
         }
 
-        const response = await axios.post(`/api/users/cajero/ventas/pedidos`,{
+        const response = await axios.post(`/api/users/cajero/ventas/pedidos`, {
             montoCredito: inputValue.montoCredito,
             cliente: IdCliente,
         });
         const data = response.data;
         console.log(data.Deficit);
-        if(data.Deficit !== 0){
+        if (data.Deficit !== 0) {
             setErrors((prev) => ({
                 ...prev,
                 montoCredito: `El cliente tiene un déficit de $${data.Deficit}, no puede aplicar crédito. Crédito máximo de $${data.Credito}.`,
             }));
             setIsValid(false);
-        } else{
+        } else {
             setErrors((prev) => ({
                 ...prev,
                 montoCredito: "",
@@ -144,14 +143,14 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
         const newErrors: Record<string, string> = {};
 
         Object.entries(inputValue).forEach(([Key, value]) => {
-            if(inputValue.metodoPago ===  "Transferencia") {
+            if (inputValue.metodoPago === "Transferencia") {
                 if (Key === "titular" || Key === "banco" || Key === "concepto") {
                     if (value.trim() === "") {
                         newErrors[Key] = "Este campo es obligatorio";
                     }
                 }
             }
-            if(inputValue.metodoPago ===  "Cheque") {
+            if (inputValue.metodoPago === "Cheque") {
                 if (Key === "titular" || Key === "banco" || Key === "numeroCheque") {
                     if (value.trim() === "") {
                         newErrors[Key] = "Este campo es obligatorio";
@@ -161,17 +160,17 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
                     }
                 }
             }
-            if(inputValue.credito === "si") {
+            if (inputValue.credito === "si") {
                 if (Key === "montoCredito") {
                     if (value.trim() === "") {
                         newErrors[Key] = "Este campo es obligatorio";
-                    } 
+                    }
                 }
                 if (Key === "montoCredito" && !isValid) {
                     newErrors[Key] = "El crédito no ha sido verificado o no es válido";
                 }
             }
-            if( (Key === "receptor" || Key === "metodoPago" || Key === "credito") && value.trim() === "") {
+            if ((Key === "receptor" || Key === "metodoPago" || Key === "credito") && value.trim() === "") {
                 newErrors[Key] = "Este campo es obligatorio";
             }
         })
@@ -180,23 +179,23 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
 
 
         if (Object.keys(newErrors).length == 0) {
-            
+
             const metodoPago = inputValue.metodoPago === "Efectivo" ? 1 : inputValue.metodoPago === "Transferencia" ? 2 : 3;
-            
+
             let info;
 
-            if(metodoPago === 1) {
+            if (metodoPago === 1) {
                 info = {
                     montoPago: totalVenta - (inputValue.credito === "si" ? Number(inputValue.montoCredito) : 0),
                 };
-            } else if(metodoPago === 2) {
+            } else if (metodoPago === 2) {
                 info = {
                     montoPago: totalVenta - (inputValue.credito === "si" ? Number(inputValue.montoCredito) : 0),
                     titular: inputValue.titular,
                     banco: inputValue.banco,
                     concepto: inputValue.concepto,
                 };
-            } else if(metodoPago === 3) {
+            } else if (metodoPago === 3) {
                 info = {
                     montoPago: totalVenta - (inputValue.credito === "si" ? Number(inputValue.montoCredito) : 0),
                     titular: inputValue.titular,
@@ -205,9 +204,9 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
                 };
             }
 
-            const IdPago = await pago(info, metodoPago); 
+            const IdPago = await pago(info, metodoPago);
 
-            if(IdPago) {
+            if (IdPago) {
                 const response = await addPedido({
                     receptor: inputValue.receptor,
                     montoCredito: inputValue.credito === "si" ? Number(inputValue.montoCredito) : 0,
@@ -216,21 +215,21 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
                     metodoPago: inputValue.metodoPago,
                 })
                 if (response === 200) {
-                setIsOpen(false);
+                    setIsOpen(false);
 
-                toast({
-                    title: "Pedido agregado",
-                    description: "El pedido ha sido realizado de manera exitosa",
-                    variant: "success",
-                });
-                onGuardado();
-            } else {
-                toast({
-                    title: "Error",
-                    description: "No se pudo realizar el pedido",
-                    variant: "destructive",
-                });
-            }
+                    toast({
+                        title: "Pedido agregado",
+                        description: "El pedido ha sido realizado de manera exitosa",
+                        variant: "success",
+                    });
+                    onGuardado();
+                } else {
+                    toast({
+                        title: "Error",
+                        description: "No se pudo realizar el pedido",
+                        variant: "destructive",
+                    });
+                }
             }
         }
     };
@@ -319,7 +318,7 @@ function PedidoModal({ onGuardado, totalVenta, IdCliente }: PedidoModalProps) {
                                                     className={`border rounded-md w-full py-2 px-2 ${errors["montoCredito"] ? "border-red-500" : "border-black"} ${isValid ? "border-green-500" : ""}`}
                                                     name="montoCredito"
                                                     onChange={handleChange}
-                                                    // defaultValue={codigo}
+                                                // defaultValue={codigo}
                                                 />
                                             </div>
                                             <button

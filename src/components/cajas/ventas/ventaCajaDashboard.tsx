@@ -5,8 +5,10 @@ import { X, Search, ArrowRight, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddClienteModal from "@/components/cajas/ventas/addClienteModal";
-import { getNotaVenta, addProductoVenta, getNotaNumber, deleteVenta } from "@/actions";
+import { getNotaVenta, addProductoVenta, getNotaNumber, deleteVenta, getTicket } from "@/actions";
 import PedidoModal from "@/components/cajas/ventas/pedidoModal";
+import React from "react";
+import jsPDF from "jspdf";
 
 function VentaCajaDashboard() {
 
@@ -32,6 +34,11 @@ function VentaCajaDashboard() {
     interface Nombres {
         Id: string;
         Descripcion: string;
+    }
+
+    interface datosClienteSucursal {
+        Nombre: string;
+        Direccion: string;
     }
 
 
@@ -71,6 +78,30 @@ function VentaCajaDashboard() {
     //Guarda el numero de la nota de venta
     const [numeroNotaVenta, setNumeroNotaVenta] = useState(0);
 
+    //Guarda la informacion de los datos del cliente
+    const [datosCliente, setDatosCliente] = useState<datosClienteSucursal>(
+        {
+            Nombre: "",
+            Direccion: "",
+        }
+    );
+
+    //Guarda la informacion de los datos de la sucursal
+    const [datosSucursal, setDatosSucursal] = useState<datosClienteSucursal>(
+        {
+            Nombre: "",
+            Direccion: "",
+        }
+    );
+
+    //Guarda la informaciond de los datos del emplado
+    const [datosEmpleado, setDatosEmpleado] = useState<datosClienteSucursal>(
+        {
+            Nombre: "",
+            Direccion: "",
+        }
+    );
+
     //Guarda la informacion de la busqueda
     const [inputValue, setInputValue] = useState({
         nombreCliente: "",
@@ -83,6 +114,131 @@ function VentaCajaDashboard() {
 
     //Bandera para actualizar la tabla
     const [finPedido, setFinPedido] = useState(false);
+
+    const obtenerInfoTicket = async () => {
+        const data = await getTicket();
+        console.log("Datos del ticket:", data);
+        console.log("Datos del ticket[4]:", data[4])
+        console.log("Datos del ticket[5]sas:", data[4].Nombre);
+        if (data) {
+            setProductos(data[0]);
+            setTotalVenta(data[1].Total);
+            setNumeroProductos(data[2].NumeroProductos);
+            setTotalEnvio(data[3].Cargo);
+            setDatosCliente({
+                Nombre: data[4].Nombre,
+                Direccion: data[4].Direccion,
+            });
+            setDatosSucursal(
+                {
+                    Nombre: data[5].Nombre,
+                    Direccion: data[5].Direccion,
+                }
+            );
+            setDatosEmpleado(
+                {
+                    Nombre: data[6].Nombre,
+                    Direccion: data[6].Direccion,
+                }
+            );
+            setNumeroNotaVenta(Number(data[7].Nota));
+        }
+    }
+
+    const generarPDF = () => {
+        const doc = new jsPDF({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: 'a5',
+        });
+
+        let y = 5;
+
+        doc.setFont("helvetica");
+        doc.setFontSize(8);
+
+        doc.setFont("helvetica", "bold");
+        const centerX = 148 / 2;
+        doc.text(`${datosSucursal?.Nombre}`, centerX, y, { align: 'center' }); y += 5;
+        doc.setFont("helvetica", "normal");
+        doc.text(`${datosSucursal?.Direccion}`, centerX, y, { align: 'center' }); y += 5;
+        doc.text(`${datosEmpleado.Direccion}: ${datosEmpleado.Nombre}`, centerX, y, { align: 'center' }); y += 5;
+
+        y += 10;
+
+        doc.line(10, y, 130, y); y += 4;
+
+        doc.setFont("helvetica", "bold");
+        doc.text("Cliente:", 10, y); y += 5;
+        doc.setFont("helvetica", "normal");
+        doc.text(`Nombre: ${datosCliente?.Nombre}`, 10, y); y += 4;
+        doc.text(`Entrega: ${datosCliente?.Direccion}`, 10, y); y += 5;
+
+        doc.text(`Fecha: ${new Date().toLocaleDateString()}`, 10, y);
+        doc.text(`Hora: ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`, 60, y); y += 5;
+        doc.text(`Folio: ${numeroNotaVenta}`, 10, y); y += 7;
+
+        doc.setFont("helvetica", "bold");
+        doc.text('Cant', 10, y);
+        doc.text('Descripción', 30, y);
+        doc.text('P.Unit', 100, y, { align: 'right' });
+        doc.text('Importe', 130, y, { align: 'right' }); y += 2;
+        doc.line(10, y, 130, y); y += 4;
+
+        doc.setFont("helvetica", "normal");
+
+        productos.forEach(p => {
+            const descripcion = p.Descripcion.length > 30
+                ? p.Descripcion.slice(0, 30) + '…'
+                : p.Descripcion;
+
+            doc.text(String(p.Piezas), 10, y);
+            doc.text(descripcion, 30, y);
+            doc.text(p.PrecioUnitario, 100, y, { align: 'right' });
+            doc.text(p.Importe, 130, y, { align: 'right' });
+            y += 5;
+
+            // Si el contenido se pasa del A5, agregamos página (opcional)
+            if (y > 190) {
+                doc.addPage();
+                y = 10;
+            }
+        });
+
+        doc.line(10, y, 130, y); y += 6;
+
+        doc.setFont("helvetica", "normal");
+        doc.text(`Envío:`, 100, y, { align: 'right' });
+        doc.text(`$${totalEnvio}`, 130, y, { align: 'right' }); y += 5;
+        doc.text(`Subtotal:`, 100, y, { align: 'right' });
+        doc.text(`$${(Number(totalVenta) - Number(totalEnvio)).toFixed(2)}`, 130, y, { align: 'right' }); y += 5;
+        doc.setFont("helvetica", "bold");
+        doc.text(`TOTAL:`, 100, y, { align: 'right' });
+        doc.text(`$${(Number(totalVenta))}`, 130, y, { align: 'right' }); y += 10;
+
+        doc.setFont("helvetica", "normal");
+        doc.text('¡Gracias por su compra!', centerX, y, { align: 'center' });
+
+        doc.save(`ticket_${numeroNotaVenta}.pdf`);
+
+        setNumeroNotaVenta(0);
+        setProductos([]);
+        setTotalVenta(0);
+        setNumeroProductos(0);
+        setTotalEnvio(0);
+    };
+
+    const handlePrint = async () => {
+        if (productos.length > 0 && clienteSeleccionado) {
+            await obtenerInfoTicket(); // Espera correctamente
+        } else {
+            toast({
+                title: "Error",
+                description: "No hay productos en la venta o no hay cliente seleccionado",
+                variant: "destructive",
+            });
+        }
+    };
 
     const getNombres = async () => {
         const response = await axios.get('/api/users/cajero/ventas');
@@ -311,17 +467,19 @@ function VentaCajaDashboard() {
 
     useEffect(() => {
         if (finPedido) {
+            handlePrint();
             setClienteSeleccionado(null);
-            setProductos([]);
-            setTotalVenta(0);
-            setNumeroProductos(0);
-            setTotalEnvio(0);
-            setNumeroNotaVenta(0);
             getNombres();
             setProductoSeleccionado(null);
         }
-        setFinPedido(false);
     }, [finPedido]);
+
+    useEffect(() => {
+        if (finPedido) {
+            generarPDF();
+            setFinPedido(false);
+        }
+    }, [datosSucursal])
 
     useEffect(() => {
         if (productoSeleccionado) {
@@ -441,7 +599,7 @@ function VentaCajaDashboard() {
                                     <p className="text-gray-600 text-base">Número de Productos</p>
                                     <p className="text-lg font-medium">{numeroProductos ? numeroProductos : 0}</p>
                                     <p className="text-gray-600 text-base">Costo de Envío</p>
-                                    <p className="text-lg font-medium">${totalEnvio}</p>
+                                    <p className="text-lg font-medium">${productos.length > 0 ? totalEnvio : 0}</p>
 
                                     <p className="text-gray-600 text-base">Total de Productos</p>
                                     <p className="text-lg font-medium">${totalVenta - totalEnvio}</p>
@@ -450,7 +608,7 @@ function VentaCajaDashboard() {
                                 <div className="mt-4 text-center">
                                     <p className="text-xl font-bold text-gray-700">Total</p>
                                     <p className="text-3xl font-semibold text-green-600">
-                                        ${totalVenta}
+                                        ${productos.length > 0 ? totalVenta : 0}
                                     </p>
                                 </div>
                                 {(productos.length > 0 && clienteSeleccionado) ? (

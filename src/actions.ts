@@ -529,9 +529,20 @@ export const addPedido = async (pedido: Pedido) => {
         "nota": session.nota
     })
     const status = response.status;
+    return status;
+}
+
+export const getTicket = async () => {
+    const session = await getSession();
+        console.log("Obteniendo ticket de la nota: " + session.nota);
+
+    const response = await axios.get(`${process.env.URL}/api/users/cajero/ventas/pedidos/${String(session.nota)}`)
+    console.log("Respuesta del ticket: ", response.data);
+    const data = response.data;
+    const status = response.status;
     if (status === 200) {
         session.nota = 0;
         await session.save();
     }
-    return status;
+    return data;
 }
