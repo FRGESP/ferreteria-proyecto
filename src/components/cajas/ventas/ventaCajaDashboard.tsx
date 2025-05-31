@@ -6,8 +6,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import AddClienteModal from "@/components/cajas/ventas/addClienteModal";
 import { getNotaVenta, addProductoVenta, getNotaNumber, deleteVenta } from "@/actions";
-import { get } from "http";
-
+import PedidoModal from "@/components/cajas/ventas/pedidoModal";
 
 function VentaCajaDashboard() {
 
@@ -81,6 +80,9 @@ function VentaCajaDashboard() {
 
     //Bandera para actualizar la tabla
     const [update, setUpdate] = useState(false);
+
+    //Bandera para actualizar la tabla
+    const [finPedido, setFinPedido] = useState(false);
 
     const getNombres = async () => {
         const response = await axios.get('/api/users/cajero/ventas');
@@ -235,6 +237,13 @@ function VentaCajaDashboard() {
                 "cliente": clienteSeleccionado.Id,
                 "piezas": inputValue.piezas,
             });
+            if (response == -1) {
+                toast({
+                    title: "Error",
+                    description: "No se pudo agregar el producto, el stock es 0",
+                    variant: "destructive",
+                });
+            }
             if (response != 0) {
                 setErrors({
                     ...errors,
@@ -258,7 +267,7 @@ function VentaCajaDashboard() {
                         return newErrors;
                     });
                 }, 1500);
-                
+
             }
         }
         getNotaVentaData();
@@ -299,6 +308,20 @@ function VentaCajaDashboard() {
             setUpdate(false);
         }
     }, [update]);
+
+    useEffect(() => {
+        if (finPedido) {
+            setClienteSeleccionado(null);
+            setProductos([]);
+            setTotalVenta(0);
+            setNumeroProductos(0);
+            setTotalEnvio(0);
+            setNumeroNotaVenta(0);
+            getNombres();
+            setProductoSeleccionado(null);
+        }
+        setFinPedido(false);
+    }, [finPedido]);
 
     useEffect(() => {
         if (productoSeleccionado) {
@@ -430,10 +453,14 @@ function VentaCajaDashboard() {
                                         ${totalVenta}
                                     </p>
                                 </div>
-
-                                <button disabled={(productos.length > 0 && clienteSeleccionado) ? false : true} className={`mt-2 w-full ${productos.length > 0 && clienteSeleccionado ? "bg-acento hover:bg-acentohover" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
+                                {(productos.length > 0 && clienteSeleccionado) ? (
+                                    <div className="w-full">
+                                        <PedidoModal onGuardado={() => setFinPedido(true)} totalVenta={totalVenta} IdCliente={clienteSeleccionado.Id} />
+                                    </div>
+                                ) : (<button disabled={(productos.length > 0 && clienteSeleccionado) ? false : true} className={`mt-2 w-full ${productos.length > 0 && clienteSeleccionado ? "bg-acento hover:bg-acentohover" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
                                     Terminar Pedido
-                                </button>
+                                </button>)}
+
                                 <button onClick={() => handleDeletePedido(numeroNotaVenta)} disabled={(clienteSeleccionado && (numeroNotaVenta != 0 || productos.length > 0)) ? false : true} className={`w-full ${clienteSeleccionado && (numeroNotaVenta != 0 || productos.length > 0) ? "bg-red-500 hover:bg-red-700" : "bg-gray-400"} text-white rounded-xl py-3 font-semibold transition duration-200`}>
                                     Cancelar Pedido
                                 </button>

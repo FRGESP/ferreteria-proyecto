@@ -115,6 +115,15 @@ interface ProductoVenta {
     piezas: string;
 }
 
+//Interface para el pedido
+interface Pedido {
+    receptor: string;
+    idPago: number;
+    metodoPago: string;
+    montoCredito: number;
+    monto: number;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -470,7 +479,6 @@ export const updateBitacoraInventarioSucursal = async (id: number, bitacora: Bit
 //Cajero/Ventas
 export const addProductoVenta = async (producto: ProductoVenta) => {
     const session = await getSession();
-    console.log(session)
     const response = await axios.put(`${process.env.URL}/api/users/cajero/ventas/${session.userId}`, {
         "producto": producto.producto,
         "cliente": producto.cliente,
@@ -502,4 +510,28 @@ export const deleteVenta = async (id: number) => {
     session.nota = 0;
     await session.save();
     return response.status;
+}
+
+export const pago = async (pago: any, metodo: number) => {
+    const response = await axios.post(`${process.env.URL}/api/users/cajero/ventas/pedidos/${metodo}`,pago)
+    const data = response.data;
+    return data;
+}
+
+export const addPedido = async (pedido: Pedido) => {
+    const session = await getSession();
+    const response = await axios.put(`${process.env.URL}/api/users/cajero/ventas/pedidos/${session.userId}`,{
+        "receptor": pedido.receptor,
+        "idPago": pedido.idPago,
+        "metodoPago": pedido.metodoPago,
+        "montoCredito": pedido.montoCredito,
+        "monto": pedido.monto,
+        "nota": session.nota
+    })
+    const status = response.status;
+    if (status === 200) {
+        session.nota = 0;
+        await session.save();
+    }
+    return status;
 }

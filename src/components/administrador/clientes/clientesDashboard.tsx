@@ -108,7 +108,7 @@ function ClientesDashboard() {
                         <th>Dirección</th>
                         <th>Edad</th>
                         <th>Rango del Cliente</th>
-                        <th>Saldo</th>
+                        <th>Deuda</th>
                         <th>Crédito Máximo</th>
                         <th>Fecha de Registro</th>
                         <th>Vendedor</th>
