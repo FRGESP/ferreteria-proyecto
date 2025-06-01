@@ -1584,7 +1584,54 @@ CREATE PROCEDURE SP_GETPEDIDOS(IN SUCURSALIN INT, IN NOTAIN INT)
         end if;
     end;
 
-call SP_GETPEDIDOS(2,0);
+DROP PROCEDURE IF EXISTS SP_GETPEDIDODETALLE;
+CREATE PROCEDURE SP_GETPEDIDODETALLE(IN IDPEDIDOIN INT)
+    BEGIN
+        DECLARE IDPAGOVAR INT;
+        DECLARE METODOVAR VARCHAR(20);
+
+        DECLARE CLIENTERANGOVAR INT;
+        DECLARE USERVAR INT;
+        DECLARE IDCLIENTEVAR INT;
+        DECLARE NUMPRODUCTOS INT;
+
+        SET IDPAGOVAR = (SELECT P.IdPago FROM PEDIDO AS P WHERE IdNota = IDPEDIDOIN LIMIT 1);
+        SET METODOVAR = (SELECT P.MetodoPago FROM PEDIDO AS P WHERE IdNota = IDPEDIDOIN LIMIT 1);
+
+        SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Receptor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdNota = IDPEDIDOIN;
+
+        IF METODOVAR = 'Efectivo' THEN
+            SELECT * FROM EFECTIVO WHERE IdEfectivo = IDPAGOVAR;
+        end if;
+
+        IF METODOVAR = 'Transferencia' THEN
+            SELECT * FROM TRANSFERENCIA WHERE IdTransferencia = IDPAGOVAR;
+        end if;
+
+        IF METODOVAR = 'Cheque' THEN
+            SELECT * FROM CHEQUE WHERE IdCheque = IDPAGOVAR;
+        end if;
+
+        SET NUMPRODUCTOS = (SELECT SUM(Piezas) FROM NOTA_PRODUCTOS WHERE IdNota = IDPEDIDOIN);
+        SET IDCLIENTEVAR = (SELECT N.IdCliente FROM NOTA AS N WHERE N.IdNota = IDPEDIDOIN LIMIT 1);
+        SET USERVAR = (SELECT U.IdUsuario FROM NOTA AS N INNER JOIN EMPLEADO E on N.IdEmpleado = E.IdEmpleado INNER JOIN USUARIO U on E.IdEmpleado = U.IdEmpleado WHERE N.IdNota = IDPEDIDOIN LIMIT 1);
+        SET CLIENTERANGOVAR = (SELECT P.RangoCliente FROM PEDIDO AS P WHERE P.IdNota = IDPEDIDOIN LIMIT 1);
+        SELECT NP.IdNotaProducto, P.IdProducto, I.Stock ,P.Descripcion, NP.Piezas, FORMAT((SELECT FN_GETPRECIO(P.IdProducto, CLIENTERANGOVAR)),2) AS PrecioUnitario, FORMAT(((SELECT FN_GETPRECIO(P.IdProducto, CLIENTERANGOVAR))*NP.Piezas),2) AS Importe FROM NOTA_PRODUCTOS AS NP INNER JOIN PRODUCTO AS P ON NP.IdProducto = P.IdProducto INNER JOIN NOTA N on NP.IdNota = N.IdNota INNER JOIN INVENTARIO_SUCURSAL I on P.IdProducto = I.IdProducto INNER JOIN EMPLEADO E2 on N.IdEmpleado = E2.IdEmpleado WHERE NP.IdNota = IDPEDIDOIN AND I.Estatus != 3 AND I.IdProducto = P.IdProducto AND I.IdSucursal = E2.IdSucursal;
+        SELECT FN_CALCULARTOTAL(IDPEDIDOIN, CLIENTERANGOVAR, USERVAR, IDCLIENTEVAR) AS Total;
+        SELECT NUMPRODUCTOS AS NumeroProductos;
+        CALL SP_CALCULARENVIO(IDCLIENTEVAR,USERVAR);
+        SELECT IdCliente FROM NOTA WHERE IdNota = IDPEDIDOIN;
+        SELECT CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Nombre, R.Rol  FROM NOTA AS N INNER JOIN EMPLEADO AS E ON N.IdEmpleado = E.IdEmpleado INNER JOIN ROL AS R ON E.IdRol = R.IdRol INNER JOIN PERSONA P2 on E.IdPersona = P2.IdPersona WHERE N.IdNota = IDPEDIDOIN;
+    end;
+
+DROP PROCEDURE IF EXISTS SP_GETVENDEDORESSUCURSAL;
+CREATE PROCEDURE SP_GETVENDEDORESSUCURSAL(IN PEDIDOIN INT)
+    BEGIN
+        DECLARE INSUCURSAL INT;
+        SET INSUCURSAL = (SELECT P.IdSucursal FROM PEDIDO AS P WHERE IdNota = PEDIDOIN LIMIT 1);
+        SELECT E.IdEmpleado, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre FROM EMPLEADO AS E INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE E.IdRol = 1 AND E.IdEstatus = 1 AND E.IdSucursal = INSUCURSAL;
+    end;
+
 -- SELECT P.IdProducto, P.Descripcion, P.IdSubcategoria, P.CostoExtra, S.CostoBase, FN_GETPRECIO(P.IdProducto,1), P2.PesoInicial, P2.PesoFinal, P2.PesoPromedio FROM PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso WHERE P.IdCategoria = 17;
 
 -- s

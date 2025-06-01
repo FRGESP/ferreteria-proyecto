@@ -1,7 +1,6 @@
 "use client";
 import React from 'react'
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import dayjs from "dayjs";
 import { getPedidosAction } from '@/actions';
 import { useRouter } from 'next/navigation';
@@ -64,7 +63,7 @@ function PedidosDashboard() {
             </div>
             <div className='w-full flex flex-col items-center justify-center gap-3 '>
                 {pedidos.map((pedido) => (
-                    <div key={pedido.IdPedido} className='flex flex-col gap-2 border border-black border-solid rounded-lg cursor-pointer hover:bg-gray-100 w-full'>
+                    <div onClick={() => router.push(`/users/cajero/pedidos/${pedido.IdPedido}`)} key={pedido.IdPedido} className='flex flex-col gap-2 border border-black border-solid rounded-lg cursor-pointer hover:bg-gray-50 w-full'>
                         <div className='grid grid-cols-3 gap-4 bg-[#e8e8e8] rounded-lg p-3 border-b border-black border-solid'>
                             <p>#{pedido.IdPedido}</p>
                             <p>{dayjs(pedido.Fecha).format("DD/MM/YYYY")}</p>
