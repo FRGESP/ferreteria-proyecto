@@ -546,3 +546,16 @@ export const getTicket = async () => {
     }
     return data;
 }
+
+//Cajero/Pedidos
+export const getPedidosAction = async (pedido: string) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/cajero/pedidos`,
+        {
+            "sucursal": session.sucursal,
+            "pedido": pedido
+        }
+    );
+    const data = response.data;
+    return data;
+}
