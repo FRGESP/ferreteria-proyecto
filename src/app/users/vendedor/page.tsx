@@ -1,6 +1,8 @@
 import React from 'react'
+import { checkRole } from '@/actions'
 
-function vendedorPage() {
+async function vendedorPage() {
+  await checkRole(0);
   return (
     <div>vendedorPage</div>
   )

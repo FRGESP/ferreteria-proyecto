@@ -19,32 +19,19 @@ import {
 } from "@/components/ui/sidebar";
 
 // Menu items.
-const itemsAlmacen = [
+const itemsVendedor = [
   {
-    title: "Dietas",
-    url: "/users/almacen/dietas",
-    icon: "/assets/Almacen/Maiz.png",
-    iconBold: "/assets/Almacen/MaizVerde.png",
+    title: "Clientes",
+    url: "/users/vendedor/clientes",
+    icon: "/assets/administrador/Clientes.png",
+    iconBold: "/assets/administrador/ClientesVerde.png",
   },
   {
-    title: "Almacén",
-    url: "/users/almacen/almacenpage",
-    icon: "/assets/Almacen/Almacen.png",
-    iconBold: "/assets/Almacen/AlmacenVerde.png",
-
+    title: "Pedidos",
+    url: "/users/vendedor/pedidos",
+    icon: "/assets/cajero/Pedidos.png",
+    iconBold: "/assets/cajero/PedidosVerde.png",
   },
-  {
-    title: "Medicamento",
-    url: "/users/almacen/medicamento",
-    icon: "/assets/Almacen/Medicamentos.png",
-    iconBold: "/assets/Almacen/MedicamentosVerde.png",
-  },
-  {
-    title: "Ganado",
-    url: "/users/almacen/ganado",
-    icon: "/assets/Admin/Ganado.png",
-    iconBold: "/assets/Admin/GanadoVerde.png",
-  }
 ];
 
 const itemsAdmin = [
@@ -115,7 +102,7 @@ export function AppSidebar() {
 
   const isCajero = pathname.toString().substring(0,13) == "/users/cajero";
   const isadmin = pathname.toString().substring(0,12) == "/users/admin";
-  const itemsChoice = isadmin ? itemsAdmin : isCajero ? itemsCajero : itemsAlmacen;
+  const itemsChoice = isadmin ? itemsAdmin : isCajero ? itemsCajero : itemsVendedor;
 
   return (
     <Sidebar collapsible="icon">

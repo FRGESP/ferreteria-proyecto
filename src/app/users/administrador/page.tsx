@@ -1,6 +1,8 @@
 import React from 'react'
+import { checkRole } from '@/actions'
 
-function administradorPage() {
+async function administradorPage() {
+  await checkRole(0);
   return (
     <div>administradorPage</div>
   )

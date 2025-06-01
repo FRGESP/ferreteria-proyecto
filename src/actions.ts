@@ -172,7 +172,7 @@ export const roles = async () => {
     const session = await getSession();
     switch (session.rol) {
         case 1:
-            redirect("/users/vendedor");
+            redirect("/users/vendedor/clientes");
             break;
         case 2:
             redirect("/users/cajero/ventas");
@@ -572,4 +572,16 @@ export const actualizarPedido = async (pedido: ActualizarPedido) => {
     const response = await axios.put(`${process.env.URL}/api/users/cajero/pedidos/${session.userId}`, pedido)
     const status = response.status;
     return status;
+}
+
+//Vendedor/Clientes
+
+export const getClientesAction = async (nombre: string) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/vendedor/clientes`, {
+        vendedor: session.userId,
+        nombre: nombre
+    });
+    const data = response.data;
+    return data;
 }
