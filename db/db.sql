@@ -1574,13 +1574,29 @@ CREATE PROCEDURE SP_GETNOTATICKET(IN IDNOTAIN INT)
 
 -- CAJERO/PEDIDOS
 
+DROP FUNCTION IF EXISTS FN_OBTENERNOMBREBYIDEMP;
+CREATE FUNCTION FN_OBTENERNOMBREBYIDEMP(IDEMP INT)
+RETURNS VARCHAR(100)
+    DETERMINISTIC
+    BEGIN
+        DECLARE NOMBREVAR VARCHAR(100);
+
+        IF IDEMP IS NULL THEN
+            SET NOMBREVAR = NULL;
+        ELSE
+            SET NOMBREVAR = (SELECT CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) FROM EMPLEADO AS E INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE E.IdEmpleado = IDEMP);
+        end if;
+
+        RETURN NOMBREVAR;
+    end;
+
 DROP PROCEDURE IF EXISTS SP_GETPEDIDOS;
 CREATE PROCEDURE SP_GETPEDIDOS(IN SUCURSALIN INT, IN NOTAIN INT)
     BEGIN
         IF NOTAIN = 0 THEN
-            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdSucursal = SUCURSALIN ORDER BY P.IdNota;
+            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, (SELECT FN_OBTENERNOMBREBYIDEMP(P.Repartidor)) AS NombreRepartidor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdSucursal = SUCURSALIN ORDER BY P.IdNota;
         ELSE
-            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdSucursal = SUCURSALIN AND P.IdNota = NOTAIN ORDER BY P.IdNota;
+            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, (SELECT FN_OBTENERNOMBREBYIDEMP(P.Repartidor)) AS NombreRepartidor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdSucursal = SUCURSALIN AND P.IdNota = NOTAIN ORDER BY P.IdNota;
         end if;
     end;
 
@@ -1731,7 +1747,19 @@ CREATE PROCEDURE SP_GETCLIENTESVENDEDORPAGE(IN USERID INT, IN NOMBREIN VARCHAR(1
         SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion FROM VENDEDOR_CLIENTE AS VC INNER JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE VC.IdEmpleado = IDVENDEDOR AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
     end;
 
-CALL SP_GETCLIENTESVENDEDORPAGE(3,'')
+DROP PROCEDURE IF EXISTS SP_GETPEDIDOSVENDEDOR;
+CREATE PROCEDURE SP_GETPEDIDOSVENDEDOR(IN USERID INT, IN NOTAIN INT)
+    BEGIN
+        DECLARE REPARTIDORIN INT;
+
+        SET REPARTIDORIN = (SELECT U.IdEmpleado FROM USUARIO AS U WHERE U.IdUsuario = USERID LIMIT 1);
+
+        IF NOTAIN = 0 THEN
+            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, (SELECT FN_GETNAMEBYUSERID(USERID)) AS NombreRepartidor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.Repartidor = REPARTIDORIN AND P.Estatus != 'Cancelado' AND P.Estatus != 'Pendiente' AND P.Estatus != 'Entregado' ORDER BY P.IdNota;
+        ELSE
+            SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, (SELECT FN_GETNAMEBYUSERID(USERID)) AS NombreRepartidor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.Repartidor = REPARTIDORIN AND P.Estatus != 'Cancelado' AND P.Estatus != 'Pendiente' AND P.Estatus != 'Entregado' AND P.IdNota = NOTAIN ORDER BY P.IdNota;
+        end if;
+    end;
 
 -- SELECT P.IdProducto, P.Descripcion, P.IdSubcategoria, P.CostoExtra, S.CostoBase, FN_GETPRECIO(P.IdProducto,1), P2.PesoInicial, P2.PesoFinal, P2.PesoPromedio FROM PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso WHERE P.IdCategoria = 17;
 

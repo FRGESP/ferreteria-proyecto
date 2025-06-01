@@ -585,3 +585,16 @@ export const getClientesAction = async (nombre: string) => {
     const data = response.data;
     return data;
 }
+
+//Vendedor/Pedidos
+export const getPedidosVendedorAction = async (pedido: string) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/vendedor/pedidos`,
+        {
+            "empleado": session.userId,
+            "pedido": pedido
+        }
+    );
+    const data = response.data;
+    return data;
+}

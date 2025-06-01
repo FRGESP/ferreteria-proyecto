@@ -2,11 +2,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import dayjs from "dayjs";
-import { getPedidosAction } from '@/actions';
+import { getPedidosVendedorAction } from '@/actions';
 import { useRouter } from 'next/navigation';
 import { Search } from 'lucide-react';
 
-function PedidosDashboard() {
+function PedidosVendedor() {
     const router = useRouter();
 
     //Interface para las pedidos
@@ -39,7 +39,7 @@ function PedidosDashboard() {
     }
 
     const getPedidos = async () => {
-        const data = await getPedidosAction(searchValue.pedido ? searchValue.pedido : "0");
+        const data = await getPedidosVendedorAction(searchValue.pedido ? searchValue.pedido : "0");
         setPedido(data);
         console.log(data);
     }
@@ -64,7 +64,7 @@ function PedidosDashboard() {
             </div>
             <div className='w-full flex flex-col items-center justify-center gap-3 '>
                 {pedidos.map((pedido) => (
-                    <div onClick={() => router.push(`/users/cajero/pedidos/${pedido.IdPedido}`)} key={pedido.IdPedido} className='flex flex-col gap-2 border border-black border-solid rounded-lg cursor-pointer hover:bg-gray-50 w-full'>
+                    <div onClick={() => router.push(`/users/vendedor/pedidos/${pedido.IdPedido}`)} key={pedido.IdPedido} className='flex flex-col gap-2 border border-black border-solid rounded-lg cursor-pointer hover:bg-gray-50 w-full'>
                         <div className='grid grid-cols-3 gap-4 bg-[#e8e8e8] rounded-lg p-3 border-b border-black border-solid'>
                             <p>#{pedido.IdPedido}</p>
                             <p>{dayjs(pedido.Fecha).format("DD/MM/YYYY")}</p>
@@ -72,7 +72,7 @@ function PedidosDashboard() {
                         </div>
                         <div className='grid grid-cols-3 gap-4 p-3'>
                             <p className='text-lg'><span className='font-bold'>Sucursal: </span>{pedido.Sucursal}</p>
-                            <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido.Estatus === "Entregado" ? "bg-acento rounded-lg" : pedido?.Estatus === "Cancelado" ? "bg-red-500 text-white rounded-lg" : "bg-gray-500 text-white rounded-lg"}`}>{pedido.Estatus}</span></p>
+                            <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido.Estatus === "Pagado" ? "bg-yellow-300 rounded-lg" : "bg-acento rounded-lg"}`}>{pedido.Estatus}</span></p>
                             <p className='text-lg'><span className='font-bold'>Repartidor: </span>{pedido.Repartidor ? pedido.NombreRepartidor : 'Sin repartidor asignado'}</p>
                         </div>
                         <div className='grid grid-cols-3 gap-4 p-3'>
@@ -88,4 +88,4 @@ function PedidosDashboard() {
     )
 }
 
-export default PedidosDashboard
+export default PedidosVendedor

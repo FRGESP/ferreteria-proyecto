@@ -1,8 +1,11 @@
 import React from 'react'
+import PedidosVendedor from '@/components/vendedor/pedidosVendedor'
 
 function PedidosVendedorPage() {
   return (
-    <div>PedidosVendedorPage</div>
+    <div>
+        <PedidosVendedor />
+    </div>
   )
 }
 
