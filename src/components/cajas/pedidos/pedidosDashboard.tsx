@@ -71,7 +71,7 @@ function PedidosDashboard() {
                         </div>
                         <div className='grid grid-cols-3 gap-4 p-3'>
                             <p className='text-lg'><span className='font-bold'>Sucursal: </span>{pedido.Sucursal}</p>
-                            <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido.Estatus === "Entregado" ? "bg-acento rounded-lg" : "bg-gray-500 text-white rounded-lg"}`}>{pedido.Estatus}</span></p>
+                            <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido.Estatus === "Entregado" ? "bg-acento rounded-lg" : pedido?.Estatus === "Cancelado" ? "bg-red-500 text-white rounded-lg" : "bg-gray-500 text-white rounded-lg"}`}>{pedido.Estatus}</span></p>
                             <p className='text-lg'><span className='font-bold'>Repartidor: </span>{pedido.Repartidor ? pedido.Repartidor : 'Sin repartidor asignado'}</p>
                         </div>
                         <div className='grid grid-cols-3 gap-4 p-3'>

@@ -131,7 +131,7 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     const metodoPago = data[0].MetodoPago;
     setMetodoPago(metodoPago);
     setPedido(data[0])
-    setEstatus(data[0].Estatus === "Pendiente" ? 1 : data[0].Estatus === "Pagado" ? 2 : data[0].Estatus === "Enviado" ? 3 : 4);
+    setEstatus(data[0].Estatus === "Pendiente" ? 1 : data[0].Estatus === "Pagado" ? 2 : data[0].Estatus === "Enviado" ? 3 : data[0].Estatus === "Entregado" ? 4 : 0);
 
     if(data[0].Repartidor) {
       setRepartidorSeleccionado(String(data[0].Repartidor));
@@ -188,7 +188,7 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
 
       const newErrors: Record<string, string> = {};
 
-      if (repartidorSeleccionado.trim() === "") {
+      if (repartidorSeleccionado.trim() === "" || (repartidorSeleccionado == "0" && estatusSeleccionado == 3)) {
         newErrors["Vendedor"] = "Seleccione un repartidor";
       }
       setErrors(newErrors);
@@ -222,7 +222,7 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
       const response = await actualizarPedido({
         pedido: IdPedidoProp,
         estatus: "Pendiente",
-        repartidor: ""
+        repartidor: "0"
       });
 
       if (response === 200) {
@@ -266,6 +266,26 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     }
   }
 
+  const handleCancelarPedido = async () => {
+    if (confirm("¿Estás seguro de que deseas cancelar este pedido?")) {
+      const response = await actualizarPedido({
+        pedido: IdPedidoProp,
+        estatus: "Cancelado",
+        repartidor: "0"
+      });
+      if (response === 200) {
+        toast({
+          title: "Pedido cancelado",
+          description: "El pedido ha sido cancelado correctamente",
+          variant: "success",
+        });
+        setEstatusSeleccionado(0);
+        getDetallePedido();
+        getVendedores();
+      }
+    }
+  }
+
   useEffect(() => {
     getDetallePedido();
     getVendedores();
@@ -287,14 +307,20 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
               <p className='text-lg'><span className='font-bold'>Fecha del pedido: </span>{dayjs(pedido?.Fecha).format("DD/MM/YYYY")}</p>
             </div>
             <div className='flex flex-col justify-center items-end'>
-              {((estatus < estatusSeleccionado && estatusSeleccionado != 0) || (pedido?.Repartidor == null && repartidorSeleccionado == "" ? false : repartidorSeleccionado ? repartidorSeleccionado != pedido?.Repartidor : false)) && (
+              {(((estatus < estatusSeleccionado && estatusSeleccionado != 0) || (pedido?.Repartidor == null && repartidorSeleccionado == "" ? false : repartidorSeleccionado ? repartidorSeleccionado != pedido?.Repartidor : false)) && estatus != 0) && (
                 <button onClick={handleSubmit} className={`mt-2 w-1/2 bg-acento hover:bg-acentohover text-white rounded-xl py-3 font-semibold transition duration-200`}>
                   Guardar
                 </button>
               )}
+              { ((estatus == 1 || estatus == 2) && ( estatusSeleccionado == 0 || estatusSeleccionado == 1)) && (
+                <button onClick={handleCancelarPedido} className={`mt-2 w-1/2 bg-red-500 hover:bg-red-700 text-white rounded-xl py-3 font-semibold transition duration-200`}>
+                  Cancelar Pedido
+                </button>
+              )}
             </div>
           </div>
-          <div className='grid grid-cols-7 gap-4 my-5'>
+          {estatus != 0 ? (
+            <div className='grid grid-cols-7 gap-4 my-5'>
             <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:bg-gray-50' onClick={() => setEstatusSeleccionado(1)}>
               <img src={`${estatus >= 1 ? "/assets/cajero/pedidos/pendiente3.png" : "/assets/cajero/pedidos/pendiente2.png"}`} alt="pendiente" width={55} />
               <p>Pendiente</p>
@@ -317,12 +343,20 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
               <img src={`${estatus > 3 ? "/assets/cajero/pedidos/flecha3.png" : estatusSeleccionado > 3 ? "/assets/cajero/pedidos/flecha2.png" : "/assets/cajero/pedidos/flecha1.png"}`} alt="flecha" width={55} />
             </div>
             <div className='flex flex-col justify-center items-center gap-2'>
-              <img src={`${estatus == 4 ? "/assets/cajero/pedidos/entregado3.png" : estatusSeleccionado == 4 ? "/assets/cajero/pedidos/entregado2.png" : "/assets/cajero/pedidos/entregado1.png"}`} alt="pendiente" width={55} />
+              <img src={`${estatus == 4 ? "/assets/cajero/pedidos/entregado3.png" : estatusSeleccionado == 4 ? "/assets/cajero/pedidos/entregado2.png" : "/assets/cajero/pedidos/entregado1.png"}`} alt="entregado" width={55} />
               <p>Entregado</p>
             </div>
           </div>
+          ) : (
+            <div className='flex items-center justify-center w-full'>
+              <div className='flex flex-col justify-center items-center gap-2'>
+              <img src="/assets/cajero/pedidos/cancelado.png" alt="cancelado" width={55} />
+              <p>Pedido Cancelado</p>
+            </div>
+          </div>
+          )}
           <p className='text-lg'><span className='font-bold'>Sucursal: </span>{pedido?.Sucursal}</p>
-          <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido?.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido?.Estatus === "Entregado" ? "bg-acento rounded-lg" : "bg-gray-500 text-white rounded-lg"}`}>{pedido?.Estatus}</span></p>
+          <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido?.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido?.Estatus === "Entregado" ? "bg-acento rounded-lg" : pedido?.Estatus === "Cancelado" ? "bg-red-500 text-white rounded-lg" : "bg-gray-500 text-white rounded-lg" }`}>{pedido?.Estatus}</span></p>
           <p className='text-lg'><span className='font-bold'>Vendido por: </span>{empleado?.Nombre} ({empleado?.Rol})</p>
           <div className='flex flex-col mb-8 gap-2'>
             <p className='text-lg'><span className='font-bold'>Repartidor: </span>{((estatus == 2 || (estatusSeleccionado == 2 || estatusSeleccionado == 3)) && estatus < 3) ? "" : pedido?.Repartidor ? pedido.NombreRepartidor : "Sin repartidor asignado"}</p>
