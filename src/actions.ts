@@ -555,11 +555,11 @@ export const getTicket = async () => {
 }
 
 //Cajero/Pedidos
-export const getPedidosAction = async (pedido: string) => {
+export const getPedidosAction = async (pedido: string, sucursalProp?:string) => {
     const session = await getSession();
     const response = await axios.post(`${process.env.URL}/api/users/cajero/pedidos`,
         {
-            "sucursal": session.sucursal,
+            "sucursal": sucursalProp ? sucursalProp : session.sucursal,
             "pedido": pedido
         }
     );

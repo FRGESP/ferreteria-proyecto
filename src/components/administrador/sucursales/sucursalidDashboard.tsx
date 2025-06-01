@@ -4,15 +4,12 @@ import axios from "axios";
 import { Trash, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
-import AddModalTipo from "@/components/administrador/productos/tipos/addModalTipos";
-import AddModalCategorias from "@/components/administrador/productos/categorias/addModalCategorias";
 import UpdateStockModal from "@/components/administrador/sucursales/productos/updateStockModal";
+
 import AddInventario from "@/components/administrador/sucursales/productos/addInventario";
 
-import UpdateModalTipos from "@/components/administrador/productos/tipos/updateModdalTipos";
-import UpdateModalCategorias from "@/components/administrador/productos/categorias/updateModalCategoria";
-import UpdateModalSubcategorias from "@/components/administrador/productos/subcategorias/updateModalSubcategoria";
-import AddModalSubcategorias from "@/components/administrador/productos/subcategorias/addModalSubcategorias";
+import PedidosDashboard from "@/components/administrador/sucursales/pedidos/pedidosDashboard";
+
 import { deleteProducto, deleteTipo, deleteCategoria, deleteSubcategoria } from "@/actions";
 
 interface SucursalIdDashboardProps {
@@ -470,19 +467,14 @@ function SucursalIdDashboard({ IdSucursalProp }: SucursalIdDashboardProps) {
                     <button onClick={() => handleButtonClick("Productos")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Productos" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
                         Productos
                     </button>
-                    <button onClick={() => handleButtonClick("Tipos")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Tipos" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
-                        Tipos
-                    </button>
-                    <button onClick={() => handleButtonClick("Categorias")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Categorias" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
-                        Categorías
-                    </button>
-                    <button onClick={() => handleButtonClick("Subcategorias")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Subcategorias" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
-                        Subcategorías
+                    <button onClick={() => handleButtonClick("Pedidos")} className={`font-bold border border-black border-solid px-3 py-2 rounded-lg ${selectedButton === "Pedidos" ? "bg-acento text-white" : "bg-white hover:bg-gray-200"}`}>
+                        Pedidos
                     </button>
                 </div>
             </div>
 
-            <div className="w-[100%] flex justify-between items-center mb-[1%]">
+            {selectedButton === "Productos" && (
+                <div className="w-[100%] flex justify-between items-center mb-[1%]">
                 <div className={`flex items-center flex-1 gap-2 ${selectedButton === "Productos" ? "mr-[2%]" : "mr-1"}`}>
                     <form className="relative w-full" onSubmit={handleSearch}>
                         <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -555,16 +547,8 @@ function SucursalIdDashboard({ IdSucursalProp }: SucursalIdDashboardProps) {
                         </select>
                     </div>
                 )}
-                {selectedButton === "Tipos" && (
-                    <AddModalTipo onGuardado={() => setUpdate(true)} />
-                )}
-                {selectedButton === "Categorias" && (
-                    <AddModalCategorias onGuardado={() => setUpdate(true)} />
-                )}
-                {selectedButton === "Subcategorias" && (
-                    <AddModalSubcategorias onGuardado={() => setUpdate(true)} />
-                )}
             </div>
+            )}
 
             {selectedButton === "Productos" ? (
                 Productos.length > 0 ? (
@@ -614,121 +598,8 @@ function SucursalIdDashboard({ IdSucursalProp }: SucursalIdDashboardProps) {
 
             ) : ''}
 
-            {selectedButton === "Tipos" && (
-                <table className="table-auto border-collapse w-full">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Tipo</th>
-                            <th>Ganancia Público1</th>
-                            <th>Ganancia Herrero2</th>
-                            <th>Ganancia Herrero3</th>
-                            <th>Ganancia Herrero4</th>
-                            <th>Ganancia Mayoreo1</th>
-                            <th>Ganancia Mayoreo2</th>
-                            <th>Cantidad de Productos</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Tipos.map((Tipo) => (
-                            <tr key={Tipo.IdTipo} className="border-t">
-                                <td>{Tipo.IdTipo}</td>
-                                <td>{Tipo.Tipo}</td>
-                                <td>{Tipo.GP1}%</td>
-                                <td>{Tipo.GH2}%</td>
-                                <td>{Tipo.GH3}%</td>
-                                <td>{Tipo.GH4}%</td>
-                                <td>{Tipo.GMY1}%</td>
-                                <td>{Tipo.GMY2}%</td>
-                                <td>{Tipo.Cantidad}</td>
-                                <td>
-                                    <div className="flex gap-2 justify-center">
-                                        <UpdateModalTipos IdTipo={Tipo.IdTipo} onGuardado={() => setUpdate(true)} />
-                                        <button
-                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
-                                            onClick={() => handleDelete(Tipo.IdTipo)}
-                                        >
-                                            <Trash strokeWidth={2} size={20} />
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            )}
-
-            {selectedButton === "Categorias" && (
-                <table className="table-auto border-collapse w-full">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Categoría</th>
-                            <th>Tipo</th>
-                            <th>Cantidad de Productos</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Categorias.map((Categoria) => (
-                            <tr key={Categoria.IdCategoria} className="border-t">
-                                <td>{Categoria.IdCategoria}</td>
-                                <td>{Categoria.Categoria}</td>
-                                <td>{Categoria.Tipo}</td>
-                                <td>{Categoria.Cantidad}</td>
-                                <td>
-                                    <div className="flex gap-2 justify-center">
-                                        <UpdateModalCategorias IdCategoria={Categoria.IdCategoria} onGuardado={() => setUpdate(true)} />
-                                        <button
-                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
-                                            onClick={() => handleDelete(Categoria.IdCategoria)}
-                                        >
-                                            <Trash strokeWidth={2} size={20} />
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            )}
-
-            {selectedButton === "Subcategorias" && (
-                <table className="table-auto border-collapse w-full">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Subcategoría</th>
-                            <th>Tipo</th>
-                            <th>Costo Base</th>
-                            <th>Cantidad de Productos</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Subcategorias.map((Subcategoria) => (
-                            <tr key={Subcategoria.IdSubcategoria} className="border-t">
-                                <td>{Subcategoria.IdSubcategoria}</td>
-                                <td>{Subcategoria.Subcategoria}</td>
-                                <td>{Subcategoria.Tipo}</td>
-                                <td>${Subcategoria.CostoBase}</td>
-                                <td>{Subcategoria.Cantidad}</td>
-                                <td>
-                                    <div className="flex gap-2 justify-center">
-                                        <UpdateModalSubcategorias IdSubcategoria={Subcategoria.IdSubcategoria} onGuardado={() => setUpdate(true)} />
-                                        <button
-                                            className="hover:bg-gray-200 text-red-500 px-2 py-1 rounded"
-                                            onClick={() => handleDelete(Subcategoria.IdSubcategoria)}
-                                        >
-                                            <Trash strokeWidth={2} size={20} />
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+            {selectedButton === "Pedidos" && (
+                <PedidosDashboard IdSucursalProp={IdSucursalProp} />
             )}
 
             {totalPages && (
