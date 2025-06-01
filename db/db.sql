@@ -1598,7 +1598,7 @@ CREATE PROCEDURE SP_GETPEDIDODETALLE(IN IDPEDIDOIN INT)
         SET IDPAGOVAR = (SELECT P.IdPago FROM PEDIDO AS P WHERE IdNota = IDPEDIDOIN LIMIT 1);
         SET METODOVAR = (SELECT P.MetodoPago FROM PEDIDO AS P WHERE IdNota = IDPEDIDOIN LIMIT 1);
 
-        SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Receptor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona WHERE P.IdNota = IDPEDIDOIN;
+        SELECT P.IdNota AS IdPedido, P.Fecha, S.Nombre AS Sucursal, P.Estatus, P.Repartidor, FORMAT(P.Monto,2) AS Monto, P.MetodoPago, CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno, ' ', P2.ApellidoMaterno) AS Cliente, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, P.Receptor, (SELECT FN_GETNAMEBYUSERID(U2.IdUsuario)) AS NombreRepartidor FROM PEDIDO AS P INNER JOIN SUCURSAL S on P.IdSucursal = S.IdSucursal INNER JOIN NOTA N on N.IdNota = P.IdNota INNER JOIN CLIENTE C on N.IdCliente = C.IdCliente INNER JOIN PERSONA P2 on C.IdPersona = P2.IdPersona LEFT JOIN USUARIO U2 on P.Repartidor = U2.IdEmpleado WHERE P.IdNota = IDPEDIDOIN;
 
         IF METODOVAR = 'Efectivo' THEN
             SELECT * FROM EFECTIVO WHERE IdEfectivo = IDPAGOVAR;
@@ -1631,6 +1631,38 @@ CREATE PROCEDURE SP_GETVENDEDORESSUCURSAL(IN PEDIDOIN INT)
         SET INSUCURSAL = (SELECT P.IdSucursal FROM PEDIDO AS P WHERE IdNota = PEDIDOIN LIMIT 1);
         SELECT E.IdEmpleado, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre FROM EMPLEADO AS E INNER JOIN PERSONA AS P ON E.IdPersona = P.IdPersona WHERE E.IdRol = 1 AND E.IdEstatus = 1 AND E.IdSucursal = INSUCURSAL;
     end;
+
+DROP PROCEDURE IF EXISTS SP_ACTUALIZARPEDIDO;
+CREATE PROCEDURE SP_ACTUALIZARPEDIDO(IN PEDIDOIN INT, IN ESTATUSIN VARCHAR(20), IN REPARTIDORIN INT, IN USERID INT)
+    BEGIN
+        DECLARE ESTATUSVAR VARCHAR(20);
+        DECLARE REPARTIDORVAR INT;
+        DECLARE REPARTIDORNOMBREVAR VARCHAR(100);
+        DECLARE REPARTIDORNOMBREIN VARCHAR(100);
+
+        SET ESTATUSVAR = (SELECT P.Estatus FROM PEDIDO AS P WHERE IdNota = PEDIDOIN LIMIT 1);
+        SET REPARTIDORVAR = (SELECT P.Repartidor FROM PEDIDO AS P WHERE P.IdNota = PEDIDOIN LIMIT 1);
+
+        IF ESTATUSVAR != ESTATUSIN THEN
+            UPDATE PEDIDO SET Estatus = ESTATUSIN WHERE IdNota = PEDIDOIN;
+            INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'PEDIDO', PEDIDOIN, 'Estatus', ESTATUSVAR, ESTATUSIN);
+        end if;
+
+        IF REPARTIDORVAR IS NULL OR REPARTIDORVAR != REPARTIDORIN THEN
+
+            IF REPARTIDORIN = 0 THEN
+                SET REPARTIDORIN = NULL;
+            end if;
+
+            SET REPARTIDORNOMBREVAR = (SELECT CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno) FROM EMPLEADO AS E INNER JOIN PERSONA P2 on E.IdPersona = P2.IdPersona WHERE E.IdEmpleado = REPARTIDORVAR);
+            SET REPARTIDORNOMBREIN = (SELECT CONCAT(P2.Nombre, ' ', P2.ApellidoPaterno) FROM EMPLEADO AS E INNER JOIN PERSONA P2 on E.IdPersona = P2.IdPersona WHERE E.IdEmpleado = REPARTIDORIN);
+
+            UPDATE PEDIDO SET Repartidor = REPARTIDORIN WHERE IdNota = PEDIDOIN;
+            INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'PEDIDO', PEDIDOIN, 'Repartidor', REPARTIDORNOMBREVAR, REPARTIDORNOMBREIN);
+        end if;
+    end;
+
+SELECT * FROM BITACORA;
 
 -- SELECT P.IdProducto, P.Descripcion, P.IdSubcategoria, P.CostoExtra, S.CostoBase, FN_GETPRECIO(P.IdProducto,1), P2.PesoInicial, P2.PesoFinal, P2.PesoPromedio FROM PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso WHERE P.IdCategoria = 17;
 

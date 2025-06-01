@@ -3,13 +3,18 @@ import React, { use } from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import dayjs from "dayjs";
-import { get } from 'http';
+import { actualizarPedido } from '@/actions';
+import { useToast } from "@/hooks/use-toast";
+
 
 interface PedidoDetallePageProps {
   IdPedidoProp: string;
 }
 
 function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
+
+  const { toast } = useToast();
+
   //Interface para las pedidos
   interface Pedido {
     IdPedido: number;
@@ -21,6 +26,8 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     MetodoPago: string;
     Cliente: string;
     Direccion: string;
+    NombreRepartidor: string;
+    Receptor: string;
   }
 
   interface Transferencia {
@@ -72,6 +79,9 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     Nombre: string;
   }
 
+  //Controla el estado de los errores
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
   //Guarda la informacion del pedido
   const [pedido, setPedido] = useState<Pedido | null>(null);
 
@@ -103,7 +113,10 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
   const [metodoPago, setMetodoPago] = useState<string>("");
 
   //Guarda el estatus del pedido
-  const [estatus, setEstatus] = useState<string>("");
+  const [estatus, setEstatus] = useState<number>(0);
+
+  //Guarda la informacion del estatus seleccionado
+  const [estatusSeleccionado, setEstatusSeleccionado] = useState<number>(0);
 
   //Guarda la informacion de los vendedores
   const [vendedores, setVendedores] = useState<Vendedor[]>([]);
@@ -118,7 +131,12 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     const metodoPago = data[0].MetodoPago;
     setMetodoPago(metodoPago);
     setPedido(data[0])
-    setEstatus(data[0].Estatus);
+    setEstatus(data[0].Estatus === "Pendiente" ? 1 : data[0].Estatus === "Pagado" ? 2 : data[0].Estatus === "Enviado" ? 3 : 4);
+
+    if(data[0].Repartidor) {
+      setRepartidorSeleccionado(String(data[0].Repartidor));
+    }
+
     if (metodoPago === "Transferencia") {
       setTransferencia(data[1]);
     } else if (metodoPago === "Efectivo") {
@@ -139,7 +157,7 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
 
   //Funcion para obtener a los vendedores
   const getVendedores = async () => {
-    const response = await axios.put("/api/users/cajero/pedidos",{
+    const response = await axios.put("/api/users/cajero/pedidos", {
       pedido: IdPedidoProp
     });
     setVendedores(response.data);
@@ -147,7 +165,105 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
 
   const handleChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     const vendedorId = e.target.value;
+    const value = e.target.value;
+    const name = e.target.name;
+
     setRepartidorSeleccionado(vendedorId);
+    if (value.trim() === "") {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "Este campo es obligatorio",
+      }));
+    } else {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+  }
+
+  const handleSubmit = async () => {
+    if (estatusSeleccionado == 2 || estatusSeleccionado == 3 || estatusSeleccionado == 4) {
+
+      const newErrors: Record<string, string> = {};
+
+      if (repartidorSeleccionado.trim() === "") {
+        newErrors["Vendedor"] = "Seleccione un repartidor";
+      }
+      setErrors(newErrors);
+
+      if (Object.keys(newErrors).length == 0) {
+
+        const response = await actualizarPedido({
+          pedido: IdPedidoProp,
+          estatus: estatusSeleccionado == 2 ? "Pagado" : estatusSeleccionado == 3 ? "Enviado" : "Entregado",
+          repartidor: repartidorSeleccionado
+        })
+
+        if (response === 200) {
+          toast({
+            title: "Pedido actualizado",
+            description: `El pedido ha sido actualizado a ${estatusSeleccionado == 2 ? "Pagado" : estatusSeleccionado == 3 ? "Enviado" : "Entregado"}`,
+            variant: "success",
+          });
+          setEstatusSeleccionado(0);
+          getDetallePedido();
+          getVendedores();
+        } else {
+          toast({
+            title: "Error",
+            description: "No se pudo actualizar el pedido",
+            variant: "destructive",
+          });
+        }
+      }
+    } else if (estatusSeleccionado == 1) {
+      const response = await actualizarPedido({
+        pedido: IdPedidoProp,
+        estatus: "Pendiente",
+        repartidor: ""
+      });
+
+      if (response === 200) {
+        toast({
+          title: "Pedido actualizado",
+          description: "El pedido ha sido actualizado a Pendiente",
+          variant: "success",
+        });
+        setEstatusSeleccionado(0);
+        getDetallePedido();
+        getVendedores();
+      } else {
+        toast({
+          title: "Error",
+          description: "No se pudo actualizar el pedido",
+          variant: "destructive",
+        });
+      }
+    } else if (repartidorSeleccionado != pedido?.Repartidor && repartidorSeleccionado != "") {
+      const response = await actualizarPedido({
+        pedido: IdPedidoProp,
+        estatus: pedido?.Estatus ? pedido.Estatus : "Pendiente",
+        repartidor: repartidorSeleccionado
+      });
+      if (response === 200) {
+        toast({
+          title: "Pedido actualizado",
+          description: "El repartidor ha sido actualizado correctamente",
+          variant: "success",
+        });
+        setEstatusSeleccionado(0);
+        getDetallePedido();
+        getVendedores();
+      } else {
+        toast({
+          title: "Error",
+          description: "No se pudo actualizar el pedido",
+          variant: "destructive",
+        });
+      }
+    }
   }
 
   useEffect(() => {
@@ -155,58 +271,84 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
     getVendedores();
   }, [])
 
+  useEffect(() => {
+    if (estatusSeleccionado == 1) {
+      setRepartidorSeleccionado("");
+    }
+  }, [estatusSeleccionado]);
+
   return (
     <div className='w-full h-full flex flex-col items-center justify-center p-[2%]'>
       <div className='w-full grid grid-cols-2 gap-4'>
         <div className='flex flex-col gap-2 border border-black border-solid rounded-lg p-3 w-full h-fit'>
-          <h1 className='text-2xl font-bold mb-2'>Pedido #{pedido?.IdPedido}</h1>
-          <p className='text-lg'><span className='font-bold mb-3'>Fecha del pedido: </span>{dayjs(pedido?.Fecha).format("DD/MM/YYYY")}</p>
+          <div className='grid grid-cols-2 mb-3'>
+            <div className='flex flex-col justify-start'>
+              <h1 className='text-2xl font-bold mb-2'>Pedido #{pedido?.IdPedido}</h1>
+              <p className='text-lg'><span className='font-bold'>Fecha del pedido: </span>{dayjs(pedido?.Fecha).format("DD/MM/YYYY")}</p>
+            </div>
+            <div className='flex flex-col justify-center items-end'>
+              {((estatus < estatusSeleccionado && estatusSeleccionado != 0) || (pedido?.Repartidor == null && repartidorSeleccionado == "" ? false : repartidorSeleccionado ? repartidorSeleccionado != pedido?.Repartidor : false)) && (
+                <button onClick={handleSubmit} className={`mt-2 w-1/2 bg-acento hover:bg-acentohover text-white rounded-xl py-3 font-semibold transition duration-200`}>
+                  Guardar
+                </button>
+              )}
+            </div>
+          </div>
           <div className='grid grid-cols-7 gap-4 my-5'>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/pendiente3.png" : "/assets/cajero/pedidos/pendiente2.png"}`} alt="pendiente" width={55} />
+            <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:bg-gray-50' onClick={() => setEstatusSeleccionado(1)}>
+              <img src={`${estatus >= 1 ? "/assets/cajero/pedidos/pendiente3.png" : "/assets/cajero/pedidos/pendiente2.png"}`} alt="pendiente" width={55} />
               <p>Pendiente</p>
             </div>
-            <div className='flex flex-col justify-center items-center'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/flecha1.png" : "/assets/cajero/pedidos/flecha2.png"}`} alt="flecha" width={55} />
+            <div className='flex flex-col justify-center items-center '>
+              <img src={`${estatus > 1 ? "/assets/cajero/pedidos/flecha3.png" : estatusSeleccionado > 1 ? "/assets/cajero/pedidos/flecha2.png" : "/assets/cajero/pedidos/flecha1.png"}`} alt="flecha" width={55} />
             </div>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/pagado1.png" : "/assets/cajero/pedidos/pagado2.png"}`} alt="pendiente" width={55} />
+            <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:bg-gray-50' onClick={() => setEstatusSeleccionado(2)}>
+              <img src={`${estatus >= 2 ? "/assets/cajero/pedidos/pagado3.png" : estatusSeleccionado >= 2 ? "/assets/cajero/pedidos/pagado2.png" : "/assets/cajero/pedidos/pagado1.png"}`} alt="pagado" width={55} />
               <p>Pagado</p>
             </div>
             <div className='flex flex-col justify-center items-center'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/flecha1.png" : "/assets/cajero/pedidos/flecha2.png"}`} alt="flecha" width={55} />
+              <img src={`${estatus > 2 ? "/assets/cajero/pedidos/flecha3.png" : estatusSeleccionado > 2 ? "/assets/cajero/pedidos/flecha2.png" : "/assets/cajero/pedidos/flecha1.png"}`} alt="flecha" width={55} />
             </div>
-            <div className='flex flex-col justify-center items-center gap-2'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/enviado1.png" : "/assets/cajero/pedidos/enviado2.png"}`} alt="pendiente" width={55} />
+            <div className='flex flex-col justify-center items-center gap-2 cursor-pointer hover:bg-gray-50' onClick={() => setEstatusSeleccionado(3)}>
+              <img src={`${estatus >= 3 ? "/assets/cajero/pedidos/enviado3.png" : estatusSeleccionado >= 3 ? "/assets/cajero/pedidos/enviado2.png" : "/assets/cajero/pedidos/enviado1.png"}`} alt="enviado" width={55} />
               <p>Enviado</p>
             </div>
             <div className='flex flex-col justify-center items-center'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/flecha1.png" : "/assets/cajero/pedidos/flecha2.png"}`} alt="flecha" width={55} />
+              <img src={`${estatus > 3 ? "/assets/cajero/pedidos/flecha3.png" : estatusSeleccionado > 3 ? "/assets/cajero/pedidos/flecha2.png" : "/assets/cajero/pedidos/flecha1.png"}`} alt="flecha" width={55} />
             </div>
             <div className='flex flex-col justify-center items-center gap-2'>
-              <img src={`${estatus == "Pendiente" ? "/assets/cajero/pedidos/entregado1.png" : "/assets/cajero/pedidos/entregado2.png"}`} alt="pendiente" width={55} />
+              <img src={`${estatus == 4 ? "/assets/cajero/pedidos/entregado3.png" : estatusSeleccionado == 4 ? "/assets/cajero/pedidos/entregado2.png" : "/assets/cajero/pedidos/entregado1.png"}`} alt="pendiente" width={55} />
               <p>Entregado</p>
             </div>
           </div>
           <p className='text-lg'><span className='font-bold'>Sucursal: </span>{pedido?.Sucursal}</p>
-          <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : estatus === "Entregado" ? "bg-acento rounded-lg" : "bg-red-600 text-white rounded-lg"}`}>{pedido?.Estatus}</span></p>
+          <p className='text-lg'><span className='font-bold'>Estatus: </span><span className={`px-2 py-1 ${pedido?.Estatus === "Pendiente" ? "bg-yellow-300 rounded-lg" : pedido?.Estatus === "Entregado" ? "bg-acento rounded-lg" : "bg-gray-500 text-white rounded-lg"}`}>{pedido?.Estatus}</span></p>
           <p className='text-lg'><span className='font-bold'>Vendido por: </span>{empleado?.Nombre} ({empleado?.Rol})</p>
           <div className='flex flex-col mb-8 gap-2'>
-            <p className='text-lg'><span className='font-bold'>Repartidor: </span></p>
-            <select onChange={handleChange} name="Vendedor" defaultValue={String(pedido?.Repartidor ? pedido.Repartidor : 0)} className={`border rounded-md w-full py-2 px-2 border-black`}>
-              <option value="0">Sin Repartidor Asignado</option>
-              {vendedores.map((vendedor: Vendedor) => (
-                <option key={vendedor.IdEmpleado} value={vendedor.IdEmpleado}>
-                  {vendedor.Nombre}
-                </option>
-              ))}
-            </select>
+            <p className='text-lg'><span className='font-bold'>Repartidor: </span>{((estatus == 2 || (estatusSeleccionado == 2 || estatusSeleccionado == 3)) && estatus < 3) ? "" : pedido?.Repartidor ? pedido.NombreRepartidor : "Sin repartidor asignado"}</p>
+            {((estatus === 2 || estatusSeleccionado == 2 || estatusSeleccionado == 3) && estatus < 3) ? (
+              <div>
+                <select onChange={handleChange} name="Vendedor" defaultValue={String(pedido?.Repartidor ? pedido.Repartidor : 0)} className={`border rounded-md w-full py-2 px-2 border-black`}>
+                  <option value="0">Sin Repartidor Asignado</option>
+                  {vendedores.map((vendedor: Vendedor) => (
+                    <option key={vendedor.IdEmpleado} value={vendedor.IdEmpleado}>
+                      {vendedor.Nombre}
+                    </option>
+                  ))}
+                </select>
+                {errors["Vendedor"] && (<span className="text-sm text-red-500">{errors["Vendedor"]}</span>)}
+              </div>
+            ) : (
+              ""
+            )}
           </div>
 
           <p className='text-lg'><span className='font-bold'>Cliente: </span>{pedido?.Cliente}</p>
-          <p className='text-lg mb-8'><span className='font-bold'>Dirección: </span>{pedido?.Direccion}</p>
-          <p className='text-lg'><span className='font-bold'>Método de pago: </span>{pedido?.MetodoPago}</p>
+          <p className='text-lg'><span className='font-bold'>Dirección: </span>{pedido?.Direccion}</p>
+          <p className='text-lg mb-8'><span className='font-bold'>Receptor: </span>{pedido?.Receptor}</p>
 
+
+          <p className='text-lg'><span className='font-bold'>Método de pago: </span>{pedido?.MetodoPago}</p>
           {metodoPago === "Transferencia" && (
             <>
               <p className='text-lg'><span className='font-bold'>Titular</span>: {transferencia?.NombreTitular}</p>

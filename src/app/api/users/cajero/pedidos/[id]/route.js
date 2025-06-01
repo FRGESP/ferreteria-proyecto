@@ -10,3 +10,14 @@ export async function GET(request, { params }) {
         return NextResponse.json({ error: "Error al obtener el detalle del pedido" }, { status: 500 });
     }
 }
+
+export async function PUT(request, { params }) {
+    try {
+        const req = await request.json();
+        const [response] = await conn.query("CALL SP_ACTUALIZARPEDIDO(?,?,?,?)", [req.pedido, req.estatus, req.repartidor, params.id]);
+        return NextResponse.json({ status: 200 });
+    } catch (error) {
+        console.error(error);
+        return NextResponse.json({ error: "Error al actualizar el pedido" }, { status: 500 });
+    }
+}

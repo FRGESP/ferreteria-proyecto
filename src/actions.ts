@@ -124,6 +124,13 @@ interface Pedido {
     monto: number;
 }
 
+//Interface para actualizar pedidos
+interface ActualizarPedido {
+    pedido: string;
+    estatus: string;
+    repartidor: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -301,7 +308,7 @@ export const updateBitacoraCliente = async (id: number, bitacora: Bitacora[]) =>
 export const addProducto = async (producto: Producto, metodo: number) => {
     const session = await getSession();
     console.log(producto)
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/${metodo}/${session.userId}`,producto)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/${metodo}/${session.userId}`, producto)
     const status = response.status;
     return status;
 }
@@ -332,7 +339,7 @@ export const updateBitacoraProducto = async (id: number, bitacora: Bitacora[]) =
 export const addTipo = async (tipo: Tipo) => {
     const session = await getSession();
     console.log(tipo)
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/tipos/${session.userId}`,tipo)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/tipos/${session.userId}`, tipo)
     const status = response.status;
     return status;
 }
@@ -361,7 +368,7 @@ export const updateBitacoraTipo = async (id: number, bitacora: Bitacora[]) => {
 
 export const addCategoria = async (categoria: Categoria) => {
     const session = await getSession();
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/categorias/${session.userId}`,categoria)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/categorias/${session.userId}`, categoria)
     const status = response.status;
     return status;
 }
@@ -390,7 +397,7 @@ export const updateBitacoraCategoria = async (id: number, bitacora: Bitacora[]) 
 
 export const addSubcategoria = async (subcategoria: Subcategoria) => {
     const session = await getSession();
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/subcategorias/${session.userId}`,subcategoria)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/productos/subcategorias/${session.userId}`, subcategoria)
     const status = response.status;
     return status;
 }
@@ -418,7 +425,7 @@ export const updateBitacoraSubcategoria = async (id: number, bitacora: Bitacora[
 
 export const addCargo = async (cargo: Cargo) => {
     const session = await getSession();
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/cargos/${session.userId}`,cargo)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/cargos/${session.userId}`, cargo)
     const status = response.status;
     return status;
 }
@@ -459,7 +466,7 @@ export const updateBitacoraCargoGeneral = async (id: number, bitacora: Bitacora[
 
 export const addStock = async (producto: Stock) => {
     const session = await getSession();
-    const response = await axios.post(`${process.env.URL}/api/users/administrador/sucursales/sucursalid/productos/${session.userId}`,producto)
+    const response = await axios.post(`${process.env.URL}/api/users/administrador/sucursales/sucursalid/productos/${session.userId}`, producto)
     const status = response.status;
     return status;
 }
@@ -513,14 +520,14 @@ export const deleteVenta = async (id: number) => {
 }
 
 export const pago = async (pago: any, metodo: number) => {
-    const response = await axios.post(`${process.env.URL}/api/users/cajero/ventas/pedidos/${metodo}`,pago)
+    const response = await axios.post(`${process.env.URL}/api/users/cajero/ventas/pedidos/${metodo}`, pago)
     const data = response.data;
     return data;
 }
 
 export const addPedido = async (pedido: Pedido) => {
     const session = await getSession();
-    const response = await axios.put(`${process.env.URL}/api/users/cajero/ventas/pedidos/${session.userId}`,{
+    const response = await axios.put(`${process.env.URL}/api/users/cajero/ventas/pedidos/${session.userId}`, {
         "receptor": pedido.receptor,
         "idPago": pedido.idPago,
         "metodoPago": pedido.metodoPago,
@@ -534,7 +541,7 @@ export const addPedido = async (pedido: Pedido) => {
 
 export const getTicket = async () => {
     const session = await getSession();
-        console.log("Obteniendo ticket de la nota: " + session.nota);
+    console.log("Obteniendo ticket de la nota: " + session.nota);
 
     const response = await axios.get(`${process.env.URL}/api/users/cajero/ventas/pedidos/${String(session.nota)}`)
     console.log("Respuesta del ticket: ", response.data);
@@ -558,4 +565,11 @@ export const getPedidosAction = async (pedido: string) => {
     );
     const data = response.data;
     return data;
+}
+
+export const actualizarPedido = async (pedido: ActualizarPedido) => {
+    const session = await getSession();
+    const response = await axios.put(`${process.env.URL}/api/users/cajero/pedidos/${session.userId}`, pedido)
+    const status = response.status;
+    return status;
 }
