@@ -71,7 +71,8 @@ function ClientesVendedorDashboard() {
                 </form>
                 <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch}/></button>
             </div>
-            <table>
+            {Clientes.length > 0 ? (
+                <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -100,6 +101,11 @@ function ClientesVendedorDashboard() {
                     ))}
                 </tbody>
             </table>
+            ) : (
+                <div className="flex flex-col items-center justify-center h-full">
+                    <h1 className="text-2xl font-bold">Sin clientes asignados</h1>
+                </div>
+            )}
         </div>
     )
 }

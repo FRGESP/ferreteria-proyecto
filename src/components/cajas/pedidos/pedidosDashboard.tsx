@@ -62,7 +62,8 @@ function PedidosDashboard() {
                 </form>
                 <button className="hover:bg-gray-100 ml-5 rounded-md"><Search strokeWidth={2} size={45} onClick={handleSearch} /></button>
             </div>
-            <div className='w-full flex flex-col items-center justify-center gap-3 '>
+            {pedidos.length > 0 ? (
+                <div className='w-full flex flex-col items-center justify-center gap-3 '>
                 {pedidos.map((pedido) => (
                     <div onClick={() => router.push(`/users/cajero/pedidos/${pedido.IdPedido}`)} key={pedido.IdPedido} className='flex flex-col gap-2 border border-black border-solid rounded-lg cursor-pointer hover:bg-gray-50 w-full'>
                         <div className='grid grid-cols-3 gap-4 bg-[#e8e8e8] rounded-lg p-3 border-b border-black border-solid'>
@@ -84,6 +85,11 @@ function PedidosDashboard() {
                     </div>
                 ))}
             </div>
+            ) : (
+                <div className='w-full h-full flex items-center justify-center'>
+                    <p className='text-2xl font-bold'>No hay pedidos registrados aún</p>
+                </div>
+            )}
         </div>
     )
 }
