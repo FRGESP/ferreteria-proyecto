@@ -646,7 +646,7 @@ CREATE PROCEDURE SP_UPDATECLIENTE(IN CLIENTEIN INT, IN NOMBREIN VARCHAR(50), IN 
 -- REGISTROS
 
 DROP PROCEDURE IF EXISTS SP_GETREGISTROS;
-CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50), IN NOMBREIN VARCHAR(150))
+CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50), IN NOMBREIN VARCHAR(150), IN SUCURSALIN VARCHAR(10))
     BEGIN
         IF TABLAIN = 'CLIENTE' THEN
             SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN CLIENTE C on B.IdRegistro = C.IdCliente INNER JOIN PERSONA P on C.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'CLIENTE' AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
@@ -655,11 +655,21 @@ CREATE PROCEDURE SP_GETREGISTROS(IN TABLAIN VARCHAR(50), IN NOMBREIN VARCHAR(150
             SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORA AS B INNER JOIN EMPLEADO E on B.IdRegistro = E.IdEmpleado INNER JOIN PERSONA P on E.IdPersona = P.IdPersona WHERE B.TablaAfectada = 'EMPLEADO' AND CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
         end if;
         IF TABLAIN = 'PRODUCTO' THEN
-            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, P.Descripcion AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha FROM BITACORA AS B INNER JOIN PRODUCTO AS P ON B.IdRegistro = P.IdProducto WHERE B.TablaAfectada = 'PRODUCTO' ORDER BY B.IdBitacora;
+            SELECT B.IdBitacora, B.Accion ,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, P.Descripcion AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha FROM BITACORA AS B INNER JOIN PRODUCTO AS P ON B.IdRegistro = P.IdProducto WHERE B.TablaAfectada = 'PRODUCTO' AND P.Descripcion LIKE CONCAT(NOMBREIN,'%') ORDER BY B.IdBitacora;
+        end if;
+        IF TABLAIN = 'PEDIDO' THEN
+            SELECT B.IdBitacora, B.Accion, (SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, B.IdRegistro AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha FROM BITACORA AS B WHERE TablaAfectada = 'PEDIDO' AND B.IdRegistro LIKE CONCAT('%',NOMBREIN,'%');
+        end if;
+        IF TABLAIN = 'STOCK' THEN
+            SELECT B.IdBitacoraInventario AS IdBitacora, B.Accion,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, P.Descripcion AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORAINVENTARIO AS B INNER JOIN PRODUCTO P on B.IdProducto = P.IdProducto WHERE B.Sucursal LIKE CONCAT(SUCURSALIN,'%') AND P.Descripcion LIKE CONCAT(NOMBREIN,'%');
         end if;
     end;
 
-SELECT * FROM BITACORA;
+DROP PROCEDURE IF EXISTS SP_GETREGISTROSSTOCK;
+CREATE PROCEDURE SP_GETREGISTROSSTOCK(IN SUCURSALIN INT)
+    BEGIN
+        SELECT B.IdBitacoraInventario AS IdBitacora, B.Accion,(SELECT FN_GETNAMEBYUSERID(B.Usuario)) AS Usuario, P.Descripcion AS RegistroAfectado, B.Campo, B.ValorAnterior, B.ValorNuevo, B.Fecha  FROM BITACORAINVENTARIO AS B INNER JOIN PRODUCTO P on B.IdProducto = P.IdProducto WHERE B.Sucursal = SUCURSALIN;
+    end;
 
 -- PRODUCTOS/PROUCTOS
 

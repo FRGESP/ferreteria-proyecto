@@ -4,10 +4,9 @@ import { conn } from "@/libs/mysql";
 export async function POST(request, { params }) {
     try {
         const req = await request.json();
-        const [response] = await conn.query("CALL SP_GETREGISTROS(?,?)", [params.tabla, req.nombre]);
-        // if (response[0].length === 0) {
-        //     return NextResponse.json({ message: "No hay registros" }, { status: 200 });
-        // }
+        console.log(req);
+        const [response] = await conn.query("CALL SP_GETREGISTROS(?,?,?)", [params.tabla, req.nombre, req.sucursal]);
+
         return NextResponse.json(response[0], { status: 200 });
     } catch (error) {
         console.error(error);
