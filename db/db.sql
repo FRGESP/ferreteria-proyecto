@@ -1744,7 +1744,7 @@ CREATE PROCEDURE SP_GETCLIENTESVENDEDORPAGE(IN USERID INT, IN NOMBREIN VARCHAR(1
     BEGIN
         DECLARE IDVENDEDOR INT;
         SET IDVENDEDOR = (SELECT U.IdEmpleado FROM USUARIO AS U WHERE U.IdUsuario = USERID);
-        SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion FROM VENDEDOR_CLIENTE AS VC INNER JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE VC.IdEmpleado = IDVENDEDOR AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
+        SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, FORMAT(C.Credito,2)AS Deuda FROM VENDEDOR_CLIENTE AS VC INNER JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE VC.IdEmpleado = IDVENDEDOR AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
     end;
 
 DROP PROCEDURE IF EXISTS SP_GETPEDIDOSVENDEDOR;
@@ -1761,7 +1761,24 @@ CREATE PROCEDURE SP_GETPEDIDOSVENDEDOR(IN USERID INT, IN NOTAIN INT)
         end if;
     end;
 
--- SELECT P.IdProducto, P.Descripcion, P.IdSubcategoria, P.CostoExtra, S.CostoBase, FN_GETPRECIO(P.IdProducto,1), P2.PesoInicial, P2.PesoFinal, P2.PesoPromedio FROM PRODUCTO AS P INNER JOIN SUBCATEGORIA S on P.IdSubcategoria = S.IdSubcategoria INNER JOIN PESO P2 on P.IdPeso = P2.IdPeso WHERE P.IdCategoria = 17;
+DROP PROCEDURE IF EXISTS SP_GETDEUDACLIENTE;
+CREATE PROCEDURE SP_GETDEUDACLIENTE(IN IDCL INT)
+    BEGIN
+        SELECT C.IdCliente, C.Credito AS Deuda FROM CLIENTE AS C WHERE C.IdCliente = IDCL;
+    end;
+
+DROP PROCEDURE IF EXISTS SP_PAGARDEUDA;
+CREATE PROCEDURE SP_PAGARDEUDA(IN IDCL INT, IN MONTO DECIMAL(65,30), IN USERID INT)
+    BEGIN
+        DECLARE DEUDAACTUAL DECIMAL(65,30);
+
+        SET DEUDAACTUAL = (SELECT C.Credito AS Deuda FROM CLIENTE AS C WHERE C.IdCliente = IDCL);
+
+        UPDATE CLIENTE SET Credito = DEUDAACTUAL - MONTO WHERE IdCliente = IDCL;
+
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'CLIENTE', IDCL, 'Deuda', DEUDAACTUAL, DEUDAACTUAL-MONTO);
+
+    end;
 
 SELECT * FROM BITACORAINVENTARIO;
 
@@ -2604,8 +2621,6 @@ INSERT INTO CARGOGENERAL (NombreCargoGeneral, Parametro, Cargo) VALUES ('IVA', 1
 INSERT INTO CARGOGENERAL (NombreCargoGeneral, Parametro, Cargo) VALUES ('Flete General', 60, 3);
 
 --
-
-
 
 -- CALL SP_REGISTRARSUCURSAL('38800', 72856, 'Ejemplo 21', 'Sucursal Ejemplo', '4451239843',1001);
 

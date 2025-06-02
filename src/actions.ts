@@ -131,6 +131,12 @@ interface ActualizarPedido {
     repartidor: string;
 }
 
+//Interface para el abono del credito
+interface AbonoCredito {
+    IdCliente: number;
+    Monto: string;
+}
+
 export const getSession = async () => {
     const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
@@ -585,6 +591,14 @@ export const getClientesAction = async (nombre: string) => {
     const data = response.data;
     return data;
 }
+
+export const addAbonoCredito = async (credito: AbonoCredito) => {
+    const session = await getSession();
+    const response = await axios.post(`${process.env.URL}/api/users/vendedor/clientes/deuda/${session.userId}`, credito)
+    const status = response.status;
+    return status;
+}
+
 
 //Vendedor/Pedidos
 export const getPedidosVendedorAction = async (pedido: string) => {

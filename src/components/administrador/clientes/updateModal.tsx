@@ -78,6 +78,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
         Colonia: "",
         Rango: "",
         CreditoMaximo: "",
+        Vendedor: "",
     });
 
     //Empieza las funciones del componente direccion
@@ -210,6 +211,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
             Colonia: "",
             Rango: "",
             CreditoMaximo: "",
+            Vendedor: "",
         });
         setBitacora({});
         setIsBitacoraEmpty(false);
@@ -243,6 +245,7 @@ function UpdateModal({ IdCliente, onGuardado }: UpdateModalProps) {
             Colonia: data.Colonia,
             Rango: data.Rango,
             CreditoMaximo: data.CreditoMaximo,
+            Vendedor: data.Vendedor,
         });
     }
 

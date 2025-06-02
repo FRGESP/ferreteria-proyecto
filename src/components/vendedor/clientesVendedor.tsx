@@ -5,6 +5,7 @@ import { Search, ArrowBigRightDash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { getClientesAction } from "@/actions";
+import UpdateCredito from "@/components/vendedor/updateCredito";
 
 function ClientesVendedorDashboard() {
 
@@ -16,6 +17,7 @@ function ClientesVendedorDashboard() {
         Nombre: string;
         Telefono: string;
         Direccion: string;
+        Deuda: string;
     }
 
     //Guarda la informacion de los Clientes
@@ -75,7 +77,8 @@ function ClientesVendedorDashboard() {
                         <th>Nombre</th>
                         <th>Teléfono</th>
                         <th>Dirección</th>
-                        <th>Venta</th>
+                        <th>Deuda</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,9 +88,12 @@ function ClientesVendedorDashboard() {
                             <td>{Cliente.Nombre}</td>
                             <td>{Cliente.Telefono}</td>
                             <td>{Cliente.Direccion}</td>
+                            <td>${Cliente.Deuda}</td>
+
                             <td>
                                 <div className="flex gap-3 w-full justify-center">
-                                    <button className="hover:bg-gray-200 text-green-500 px-2 py-1 rounded" ><ArrowBigRightDash strokeWidth={2} size={65} onClick={() => router.push(`/users/vendedor/clientes/${Cliente.IdCliente}`)} /></button>
+                                    {Cliente.Deuda !== "0.00" && <UpdateCredito IdClienteProp={Cliente.IdCliente} onGuardado={() => setUpdate(true)} />}
+                                    <button className="hover:bg-gray-200 text-acento px-2 py-1 rounded" ><ArrowBigRightDash strokeWidth={2} size={65} onClick={() => router.push(`/users/vendedor/clientes/${Cliente.IdCliente}`)} /></button>
                                 </div>
                             </td>
                         </tr>

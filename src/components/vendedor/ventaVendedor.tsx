@@ -398,7 +398,7 @@ function VentaVendedor({ IdClienteProp }: VentaVendedorProps) {
             });
             if (response == -1) {
                 toast({
-                    title: "Error",
+                    title: "No hay stock",
                     description: "No se pudo agregar el producto, el stock es 0",
                     variant: "destructive",
                 });
