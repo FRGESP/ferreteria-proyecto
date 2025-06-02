@@ -582,10 +582,10 @@ export const actualizarPedido = async (pedido: ActualizarPedido) => {
 
 //Vendedor/Clientes
 
-export const getClientesAction = async (nombre: string) => {
+export const getClientesAction = async (nombre: string, cajas?:number) => {
     const session = await getSession();
     const response = await axios.post(`${process.env.URL}/api/users/vendedor/clientes`, {
-        vendedor: session.userId,
+        vendedor: cajas == 0 ? 0 : session.userId,
         nombre: nombre
     });
     const data = response.data;

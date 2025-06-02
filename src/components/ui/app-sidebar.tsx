@@ -86,6 +86,12 @@ const itemsCajero = [
     icon: "/assets/cajero/Pedidos.png",
     iconBold: "/assets/cajero/PedidosVerde.png",
   },
+  {
+    title: "Clientes",
+    url: "/users/cajero/clientes",
+    icon: "/assets/administrador/Clientes.png",
+    iconBold: "/assets/administrador/ClientesVerde.png",
+  },
 ];
 
 export function AppSidebar() {

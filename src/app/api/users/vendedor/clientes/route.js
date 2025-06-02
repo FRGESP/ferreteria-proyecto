@@ -4,6 +4,7 @@ import { conn } from "@/libs/mysql";
 export async function POST(request) {
     const req = await request.json();
     try {
+        console.log(req);
         const { vendedor, nombre } = req;
         const [response] = await conn.query("CALL SP_GETCLIENTESVENDEDORPAGE(?,?)", [vendedor, nombre]);
         return NextResponse.json(response[0], { status: 200 });

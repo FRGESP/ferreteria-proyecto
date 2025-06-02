@@ -1543,7 +1543,7 @@ CREATE PROCEDURE SP_ADDPEDIDO(IN IDNOTAIN INT, IN RECEPTORIN VARCHAR(100), IN ID
             SET CLIENTEVAR = (SELECT N.IdCliente FROM NOTA AS N WHERE N.IdNota = IDNOTAIN);
             SET DEUDAVAR = (SELECT C.Credito FROM CLIENTE AS C WHERE C.IdCliente = CLIENTEVAR);
             UPDATE CLIENTE SET Credito = (Credito+CREDITOIN) WHERE IdCliente = CLIENTEVAR;
-            INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'CLIENTE', CLIENTEVAR, 'Deuda', DEUDAVAR, (DEUDAVAR+CREDITOIN));
+            INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'CLIENTE', CLIENTEVAR, 'Deuda', DEUDAVAR, FORMAT((DEUDAVAR+CREDITOIN),2));
         end if;
 
         INSERT INTO PEDIDO (IdNota, IdSucursal, RangoCliente, Receptor, MetodoPago, IdPago, Monto) VALUES (IDNOTAIN, SUCURSALVAR,CLIENTERANGOVAR, RECEPTORIN, METPAGOIN, IDPAGOIN, MONTOIN);
@@ -1743,8 +1743,12 @@ DROP PROCEDURE IF EXISTS SP_GETCLIENTESVENDEDORPAGE;
 CREATE PROCEDURE SP_GETCLIENTESVENDEDORPAGE(IN USERID INT, IN NOMBREIN VARCHAR(150))
     BEGIN
         DECLARE IDVENDEDOR INT;
-        SET IDVENDEDOR = (SELECT U.IdEmpleado FROM USUARIO AS U WHERE U.IdUsuario = USERID);
-        SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, FORMAT(C.Credito,2)AS Deuda FROM VENDEDOR_CLIENTE AS VC INNER JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE VC.IdEmpleado = IDVENDEDOR AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
+        IF USERID = 0 THEN
+            SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, FORMAT(C.Credito,2)AS Deuda FROM VENDEDOR_CLIENTE AS VC RIGHT JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE C.Credito != 0 AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
+        ELSE
+            SET IDVENDEDOR = (SELECT U.IdEmpleado FROM USUARIO AS U WHERE U.IdUsuario = USERID);
+            SELECT C.IdCliente, CONCAT(P.Nombre, ' ', P.ApellidoPaterno, ' ', P.ApellidoMaterno) AS Nombre, P.Telefono, (SELECT FN_OBTENERDIRECCION(C.IdDireccion)) AS Direccion, FORMAT(C.Credito,2)AS Deuda FROM VENDEDOR_CLIENTE AS VC INNER JOIN CLIENTE AS C ON VC.IdCliente = C.IdCliente INNER JOIN PERSONA AS P ON C.IdPersona = P.IdPersona WHERE VC.IdEmpleado = IDVENDEDOR AND CONCAT(P.Nombre, ' ',P.ApellidoPaterno, ' ', P.ApellidoMaterno) LIKE CONCAT(NOMBREIN,'%');
+        end if;
     end;
 
 DROP PROCEDURE IF EXISTS SP_GETPEDIDOSVENDEDOR;
@@ -1776,11 +1780,11 @@ CREATE PROCEDURE SP_PAGARDEUDA(IN IDCL INT, IN MONTO DECIMAL(65,30), IN USERID I
 
         UPDATE CLIENTE SET Credito = DEUDAACTUAL - MONTO WHERE IdCliente = IDCL;
 
-        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'CLIENTE', IDCL, 'Deuda', DEUDAACTUAL, DEUDAACTUAL-MONTO);
+        INSERT INTO BITACORA (Usuario, Accion, TablaAfectada, IdRegistro, Campo, ValorAnterior, ValorNuevo) VALUES (USERID, 'UPDATE', 'CLIENTE', IDCL, 'Deuda', FORMAT(DEUDAACTUAL, 2), FORMAT((DEUDAACTUAL-MONTO),2));
 
     end;
 
-SELECT * FROM BITACORAINVENTARIO;
+SELECT * FROM BITACORA;
 
 -- DATOS INICIALES
 
