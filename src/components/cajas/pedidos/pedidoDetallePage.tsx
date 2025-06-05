@@ -363,7 +363,7 @@ function PedidoDetallePage({ IdPedidoProp }: PedidoDetallePageProps) {
             {((estatus === 2 || estatusSeleccionado == 2 || estatusSeleccionado == 3) && estatus < 3) ? (
               <div>
                 <select onChange={handleChange} name="Vendedor" defaultValue={String(pedido?.Repartidor ? pedido.Repartidor : 0)} className={`border rounded-md w-full py-2 px-2 border-black`}>
-                  <option value="0">Sin Repartidor Asignado</option>
+                  <option value="0" hidden={pedido?.Repartidor != '0'}>Sin Repartidor Asignado</option>
                   {vendedores.map((vendedor: Vendedor) => (
                     <option key={vendedor.IdEmpleado} value={vendedor.IdEmpleado}>
                       {vendedor.Nombre}

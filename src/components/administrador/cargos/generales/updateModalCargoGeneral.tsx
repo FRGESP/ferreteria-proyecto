@@ -182,13 +182,13 @@ function UpdateModalCargoGeneral({ IdCargo, onGuardado }: UpdateModalCargoGenera
                 setIsOpen(false);
                 toast({
                     title: "Cargo actualizado",
-                    description: "La Cargo ha sido actualizado correctamente",
+                    description: "El Cargo ha sido actualizado correctamente",
                     variant: "success",
                 });
             } else {
                 toast({
                     title: "Error",
-                    description: "La Cargo no ha sido actualizado",
+                    description: "El Cargo no ha sido actualizado",
                     variant: "destructive",
                 });
             }

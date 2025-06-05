@@ -178,13 +178,13 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
                 setIsOpen(false);
                 toast({
                     title: "Cargo actualizado",
-                    description: "La Cargo ha sido actualizado correctamente",
+                    description: "El Cargo ha sido actualizado correctamente",
                     variant: "success",
                 });
             } else {
                 toast({
                     title: "Error",
-                    description: "La Cargo no ha sido actualizado",
+                    description: "EL Cargo no ha sido actualizado",
                     variant: "destructive",
                 });
             }
@@ -237,7 +237,7 @@ function UpdateModalCargos({ IdCargo, onGuardado }: UpdateModalCargosProps) {
                                     <input
                                         type="text"
                                         className={`border rounded-md w-full py-2 px-2 ${errors["Cargo"] ? "border-red-500" : "border-black"}`}
-                                        name="cargo"
+                                        name="Cargo"
                                         defaultValue={Cargo?.Cargo}
                                         onChange={handleChange}
                                     />

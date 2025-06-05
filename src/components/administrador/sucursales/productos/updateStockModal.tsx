@@ -28,7 +28,7 @@ export interface Bitacora {
     ValorNuevo: string;
 }
 
-function UpdateStockModal({ IdProducto, IdSucursalPropMod, NombreProducto,onGuardado }: UpdateStockModalProps) {
+function UpdateStockModal({ IdProducto, IdSucursalPropMod, NombreProducto, onGuardado }: UpdateStockModalProps) {
     const { toast } = useToast();
     const router = useRouter();
 
@@ -107,7 +107,7 @@ function UpdateStockModal({ IdProducto, IdSucursalPropMod, NombreProducto,onGuar
         setErrors({});
         setInputValue({
             Stock: "",
-        StockMinimo: "",
+            StockMinimo: "",
         });
         setBitacora({});
         setIsBitacoraEmpty(false);
@@ -147,8 +147,6 @@ function UpdateStockModal({ IdProducto, IdSucursalPropMod, NombreProducto,onGuar
             if ((Key === "Stock" || Key === "StockMinimo")) {
                 if (isNaN(Number(value))) {
                     newErrors[Key] = "Este campo debe ser un número";
-                } else if (Number(value) <= 0 && (Key === "Stock" || Key == 'StockMinimo') && value.trim() !== "") {
-                    newErrors[Key] = "Este campo debe ser mayor a 0";
                 } else if (Key === "Stock" && Number(value) > Number(Producto!.Stock)) {
                     newErrors[Key] = "El valor no puede ser mayor al stock actual";
                 }

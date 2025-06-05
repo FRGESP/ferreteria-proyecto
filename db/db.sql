@@ -868,16 +868,16 @@ CREATE PROCEDURE SP_GETPRECIO(IDPROD INT, RANGOCL INT)
 DROP PROCEDURE IF EXISTS SP_GET_PRODUCTOS_SELECT;
 CREATE PROCEDURE SP_GET_PRODUCTOS_SELECT(IN IDTIPOIN INT)
     BEGIN
-        SELECT IdTipoProdcuto AS value, Tipo AS label FROM TIPOPRODUCTO ORDER BY Tipo;
+        SELECT IdTipoProdcuto AS value, Tipo AS label FROM TIPOPRODUCTO WHERE Estatus = 1 ORDER BY Tipo;
         IF IDTIPOIN = 0 THEN -- CATEGORIAS
-            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C ORDER BY C.Categoria;
+            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C WHERE C.Estatus = 1 ORDER BY C.Categoria;
             ELSE
-            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C WHERE IdTipo = IDTIPOIN ORDER BY C.Categoria;
+            SELECT C.IdCategoria AS value, C.Categoria AS label FROM CATEGORIAPRODUCTO AS C WHERE IdTipo = IDTIPOIN AND C.Estatus = 1 ORDER BY C.Categoria;
         end if;
         IF IDTIPOIN = 0 THEN -- SUBCATEGORIAS
-                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S ORDER BY S.Subcategoria;
+                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S WHERE S.ESTATUS = 1 ORDER BY S.Subcategoria;
             ELSE
-                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S WHERE S.IdTipo = IDTIPOIN ORDER BY S.Subcategoria;
+                SELECT S.IdSubcategoria AS value, S.Subcategoria AS label FROM SUBCATEGORIA AS S WHERE S.IdTipo = IDTIPOIN AND S.ESTATUS = 1 ORDER BY S.Subcategoria;
         end if;
         SELECT IdRangoCliente AS value, Rango AS label FROM RANGOCLIENTE;
         SELECT Descripcion, IdProducto AS Id FROM PRODUCTO WHERE Estatus = 1;
@@ -1501,7 +1501,7 @@ CREATE PROCEDURE SP_CONSULTARCREDITO(IN IDCL INT, IN MONTOIN DECIMAL(65,30))
         SET DEUDA = (SELECT C.Credito FROM CLIENTE AS C WHERE C.IdCliente = IDCL LIMIT 1);
 
         IF (DEUDA+MONTOIN) > CREDITOMAX THEN
-            SELECT FORMAT((CREDITOMAX-DEUDA+MONTOIN),2) AS Deficit, FORMAT(CREDITOMAX-DEUDA,2) AS Credito;
+            SELECT FORMAT((MONTOIN-CREDITOMAX-DEUDA),2) AS Deficit, FORMAT(CREDITOMAX-DEUDA,2) AS Credito;
         ELSE
             SELECT 0 AS Deficit, 0 AS Credito;
         end if;
@@ -1794,8 +1794,6 @@ CREATE PROCEDURE SP_PAGARDEUDA(IN IDCL INT, IN MONTO DECIMAL(65,30), IN USERID I
 
     end;
 
-SELECT * FROM BITACORA;
-
 -- DATOS INICIALES
 
 INSERT INTO ESTADO (Estado) SELECT E.Estado FROM ESTADOCSV AS E;
@@ -1821,9 +1819,11 @@ INSERT INTO PERSONA (Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Edad) V
 INSERT INTO EMPLEADO (IdPersona, IdRol, IdEstatus, IdSucursal) VALUES ((SELECT LAST_INSERT_ID()), 3, 1, 1);
 INSERT INTO USUARIO (Contraseña, IdEmpleado) VALUES ('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq', 1);
 
-CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Francisco', 'Leal', 'Medina', '4459721648', '32', 2, 1, 2,1001);
-CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Jaime', 'Lara', 'Piña', '4543794322', '21', 1, 1, 2,1001);
+CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Francisco', 'Leal', 'Medina', '4459721648', '32', 2, 1, 1,1001);
+CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Jaime', 'Lara', 'Piña', '4543794322', '21', 1, 1, 1,1001);
 
+CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Diego', 'Blanco', 'Gutierrez', '4443753122', '41', 2, 1, 2,1001);
+CALL SP_REGISTRAREMPLEADO('$2b$10$VuHF8B70UNBN.MmD6vS20eigaxYkUjkCi.mcxtRVJqQwpnDkua2jq','Francisco', 'Alvarez', 'Pérez', '4458764397', '31', 1, 1, 2,1001);
 
 INSERT INTO RANGOCLIENTE (Rango) VALUES ('Público 1');
 INSERT INTO RANGOCLIENTE (Rango) VALUES ('Herrero 2');
@@ -2633,8 +2633,3 @@ INSERT INTO CARGO (NombreCargo, Cargo, IdTipo) VALUES ('Descarga', 0.12, 2);
 
 INSERT INTO CARGOGENERAL (NombreCargoGeneral, Parametro, Cargo) VALUES ('IVA', 1, 16);
 INSERT INTO CARGOGENERAL (NombreCargoGeneral, Parametro, Cargo) VALUES ('Flete General', 60, 3);
-
---
-
--- CALL SP_REGISTRARSUCURSAL('38800', 72856, 'Ejemplo 21', 'Sucursal Ejemplo', '4451239843',1001);
-
