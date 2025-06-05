@@ -92,6 +92,12 @@ const itemsCajero = [
     icon: "/assets/administrador/Clientes.png",
     iconBold: "/assets/administrador/ClientesVerde.png",
   },
+  {
+    title: "Productos",
+    url: "/users/cajero/productos",
+    icon: "/assets/administrador/Productos.png",
+    iconBold: "/assets/administrador/ProductosVerde.png",
+  },
 ];
 
 export function AppSidebar() {
